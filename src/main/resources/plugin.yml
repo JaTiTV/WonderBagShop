@@ -1,0 +1,25 @@
+name: WonderBagShop
+version: 1.0_Snapshot
+main: de.jatitv.wonderbagshop.main.Main
+api-version: 1.16
+depend:
+  - Vault
+softdepend:
+  - Economy
+  - EssentialsX
+  - CMI
+authors: [ JaTiTV ]
+description: WonderBagShop von JaTiTV
+commands:
+  wonderbagshop:
+  wbs:
+  wbsrl:
+permissions:
+  wonderbagshop.command:
+    default: op
+  wonderbagshop.command.info:
+    default: op
+  wonderbagshop.command.reload:
+    default: op
+  wonderbagshop.admin:
+    default: op

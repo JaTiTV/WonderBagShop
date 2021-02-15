@@ -71,7 +71,7 @@ public class UpdateChecker {
                     inputStream.close();
                 }
             } catch (IOException var10) {
-                this.plugin.getLogger().severe("[VillagerMarket] Cannot look for updates: " + var10.getMessage());
+                this.plugin.getLogger().severe("§8[§2W§6B§9S§8]§4 Cannot look for updates: " + var10.getMessage());
             }
 
         });

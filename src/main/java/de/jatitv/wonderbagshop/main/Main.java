@@ -19,6 +19,7 @@ import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -58,10 +59,10 @@ public final class Main extends JavaPlugin {
         (new UpdateChecker(this, 88889)).getVersion((version) -> {
             String currentVersion = this.getDescription().getVersion();
             if (!currentVersion.equalsIgnoreCase(version)) {
-                String foundVersion = ("§bA new version of VillagerMarket was found!");
-                String latestVersion = ("§bLatest version: §a" + version + "§b");
-                String yourVersion = ("§bYour version §c" + currentVersion + "§b.");
-                String downloadVersion = ("§bGet it here for the latest features and bug fixes: §ehttps://www.spigotmc.org/resources/villager-market.82965/");
+                String foundVersion = ("§6A new version of §8[§2W§6B§9S§8]§6 was found!");
+                String yourVersion = ("§6Your version §c" + currentVersion + "§b.");
+                String latestVersion = ("§6Current version: §a" + version + "§b");
+                String downloadVersion = ("§6You can download it here: §eComming Soon!");
                 Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + foundVersion);
                 Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + latestVersion);
                 Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + yourVersion);
@@ -71,8 +72,10 @@ public final class Main extends JavaPlugin {
                 while(var7.hasNext()) {
                     Player player = (Player)var7.next();
                     if (player.hasPermission("wonderbagshop.admin")) {
-                        player.sendMessage(Messages.PrefixHC + " " + foundVersion);
-                        player.sendMessage(Messages.PrefixHC + " " + foundVersion);
+                        player.sendMessage(Messages.PrefixHC + foundVersion);
+                        player.sendMessage(Messages.PrefixHC + latestVersion);
+                        player.sendMessage(Messages.PrefixHC + yourVersion);
+                        player.sendMessage(Messages.PrefixHC + downloadVersion);
                     }
                 }
             }

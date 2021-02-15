@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class Shop {
 
     public static void openShop(Player player){
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, de.jatitv.wonderbagshop.config.Shop.ShopName);
+        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, de.jatitv.wonderbagshop.config.Shop.ShopName_GUI);
 
         ItemStack item = new ItemStack(Material.CHEST);
         ItemMeta itemMeta = item.getItemMeta();

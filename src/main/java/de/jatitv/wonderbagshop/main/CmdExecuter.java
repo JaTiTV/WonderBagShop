@@ -33,6 +33,7 @@ public class CmdExecuter implements CommandExecutor {
                     case "plugin":
                     case "pl":
                     case "version":
+                    case "ver":
                         if (player.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
                             sender.sendMessage(Messages.Prefix + "§8-------- §4Plugin-Info §8--------");
                             sender.sendMessage(Messages.Prefix + "§2");
@@ -47,7 +48,8 @@ public class CmdExecuter implements CommandExecutor {
                             sender.sendMessage(Messages.Prefix + "§2");
                             sender.sendMessage(Messages.Prefix + "§8--------------------------");
                         } else {
-                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop info").replace("[permission]", "wonderbagshop.command.info"));
+                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop info")
+                                    .replace("[permission]", "wonderbagshop.command.info"));
                         }
                         break;
                     case "reload":
@@ -55,7 +57,8 @@ public class CmdExecuter implements CommandExecutor {
                         if (player.hasPermission("wonderbagshop.command.reload") || player.isOp()){
                         Reload.reloadConfirmPlayer(player);
                         } else {
-                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop reload").replace("[permission]", "wonderbagshop.command.reload"));
+                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop reload")
+                                    .replace("[permission]", "wonderbagshop.command.reload"));
                         }
                         break;
                     case "help":
@@ -63,7 +66,8 @@ public class CmdExecuter implements CommandExecutor {
                         if (player.hasPermission("wonderbagshop.command.admin") || player.isOp()){
                             player.sendMessage(Messages.Help);
                         } else {
-                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop help").replace("[permission]", "wonderbagshop.command"));
+                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop help")
+                                    .replace("[permission]", "wonderbagshop.command"));
                         }
                         break;
                 }
@@ -75,21 +79,25 @@ public class CmdExecuter implements CommandExecutor {
                     case "plugin":
                     case "pl":
                     case "version":
-                        sender.sendMessage(Messages.Prefix + "§8-------- §4Plugin-Info §8--------");
-                        sender.sendMessage(Messages.Prefix + "§2");
-                        sender.sendMessage(Messages.Prefix + "§2This plugin was developed by §9JaTiTV §8(german)§2.");
-                        sender.sendMessage(Messages.Prefix + "§2");
-                        sender.sendMessage(Messages.Prefix + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
-                        sender.sendMessage(Messages.Prefix + "§2Support-Discord: §eComming Soon!");
-                        sender.sendMessage(Messages.Prefix + "§2Spigot: §eComming Soon!");
-                        sender.sendMessage(Messages.Prefix + "§2");
-                        sender.sendMessage(Messages.Prefix + "§2Version: §9" + Main.getPlugin().getDescription().getVersion());
-                        sender.sendMessage(Messages.Prefix + "§2API: §9" + Main.getPlugin().getDescription().getAPIVersion());
-                        sender.sendMessage(Messages.Prefix + "§2");
-                        sender.sendMessage(Messages.Prefix + "§8-----------------------------");
+                    case "ver":
+                        sender.sendMessage(Messages.PrefixHC + "§8-------- §4Plugin-Info §8--------");
+                        sender.sendMessage(Messages.PrefixHC + "§2");
+                        sender.sendMessage(Messages.PrefixHC + "§2This plugin was developed by §9JaTiTV §8(german)§2.");
+                        sender.sendMessage(Messages.PrefixHC + "§2");
+                        sender.sendMessage(Messages.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
+                        sender.sendMessage(Messages.PrefixHC + "§2Support-Discord: §eComming Soon!");
+                        sender.sendMessage(Messages.PrefixHC + "§2Spigot: §eComming Soon!");
+                        sender.sendMessage(Messages.PrefixHC + "§2");
+                        sender.sendMessage(Messages.PrefixHC + "§2Version: §9" + Main.getPlugin().getDescription().getVersion());
+                        sender.sendMessage(Messages.PrefixHC + "§2API: §9" + Main.getPlugin().getDescription().getAPIVersion());
+                        sender.sendMessage(Messages.PrefixHC + "§2");
+                        sender.sendMessage(Messages.PrefixHC + "§8-----------------------------");
                         break;
                     default:
-                        sender.sendMessage(Messages.Help);
+                        sender.sendMessage("§4\n" + Messages.PrefixHC + "§8------ §2Wonder§6Bag§9Shop §chelp §8------§4\n" + Messages.PrefixHC +
+                                "§4\n" + Messages.PrefixHC + "§8'§b/wonderbagshop§8' §eOeffnet diese help.§4\n" + Messages.PrefixHC +
+                                "§8'§b/wonderbagshop shop§8' §eOeffnet den Shop.§4\n" + Messages.PrefixHC + "§8'§b/wonderbagshop reload§8' §eLaed die Cofig neu.§4\n"
+                                + Messages.PrefixHC + "§4\n" + Messages.PrefixHC + "§8----------------------------");
                         break;
                     case "rl":
                     case "reload":

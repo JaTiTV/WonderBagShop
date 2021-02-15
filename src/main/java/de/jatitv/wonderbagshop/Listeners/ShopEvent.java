@@ -23,7 +23,7 @@ public class ShopEvent implements Listener {
         if (!(e.getWhoClicked() instanceof Player)) return;
         Player player = (Player) e.getWhoClicked();
         if(e.getInventory() !=null && e.getCurrentItem()!= null){
-            if (e.getWhoClicked().getOpenInventory().getTitle().equals(Shop.ShopName)) {
+            if (e.getWhoClicked().getOpenInventory().getTitle().equals(Shop.ShopName_GUI)) {
                 e.setCancelled(true);
                 switch (e.getCurrentItem().getType()) {
                     case CHEST:
@@ -44,7 +44,7 @@ public class ShopEvent implements Listener {
                                     item.setAmount(1);
                                     player.getInventory().addItem(item);
 
-                                    player.sendMessage(Shop.WB1buy_msg);
+                                    player.sendMessage(Messages.WB1buy_msg);
 
                                 } else {
                                     player.sendMessage(Messages.No_money);
@@ -64,7 +64,7 @@ public class ShopEvent implements Listener {
                                     item.setAmount(1);
                                     player.getInventory().addItem(item);
 
-                                    player.sendMessage(Shop.WB2buy_msg);
+                                    player.sendMessage(Messages.WB2buy_msg);
 
                                 } else {
                                     player.sendMessage(Messages.No_money);
@@ -84,7 +84,7 @@ public class ShopEvent implements Listener {
                                     item.setAmount(1);
                                     player.getInventory().addItem(item);
 
-                                    player.sendMessage(Shop.WB3buy_msg);
+                                    player.sendMessage(Messages.WB3buy_msg);
                                 } else {
                                     player.sendMessage(Messages.No_money);
                                 }

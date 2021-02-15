@@ -48,10 +48,11 @@ public class Config {
     }
 
     public static void configDisable(){
-        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Config successfully deactivated.");
+        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4config.yml successfully deactivated.");
     }
 
     private static String replace(String Text) {
-        return Text.replace("&", "§").replace("%ue%", "ü").replace("%UE%", "Ü").replace("%oe%", "ö").replace("%OE%", "Ö").replace("%ae%", "ä").replace("%AE%", "Ä");
+        return Text.replace("&", "§").replace("%ue%", "ü").replace("%UE%", "Ü").replace("%oe%", "ö")
+                .replace("%OE%", "Ö").replace("%ae%", "ä").replace("%AE%", "Ä");
     }
 }

@@ -38,7 +38,6 @@ public class Load {
         Shop.shopCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Vault.loadVault();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2-----------------------------------------------------------------------------------");

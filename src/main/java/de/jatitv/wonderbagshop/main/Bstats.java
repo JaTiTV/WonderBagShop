@@ -12,8 +12,7 @@
 // ___________________________________________________________________________________
 
 package de.jatitv.wonderbagshop.main;
-
-public class Languge {
+public class Bstats {
 
 
 }

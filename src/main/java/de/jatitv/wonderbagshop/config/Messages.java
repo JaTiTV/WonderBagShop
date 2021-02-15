@@ -1,5 +1,15 @@
 // This claas was created by JaTiTV
 
+// ___________________________________________________________________________________
+//  __          __             _           ____               _____ _
+//  \ \        / /            | |         |  _ \             / ____| |
+//   \ \  /\  / /__  _ __   __| | ___ _ __| |_) | __ _  __ _| (___ | |__   ___  _ __
+//    \ \/  \/ / _ \| '_ \ / _` |/ _ \ '__|  _ < / _` |/ _` |\___ \| '_ \ / _ \| '_ \
+//     \  /\  / (_) | | | | (_| |  __/ |  | |_) | (_| | (_| |____) | | | | (_) | |_) |
+//      \/  \/ \___/|_| |_|\__,_|\___|_|  |____/ \__,_|\__, |_____/|_| |_|\___/| .__/
+//                                                      __/ |                  | |
+//                                                     |___/                   |_|
+// ___________________________________________________________________________________
 
 package de.jatitv.wonderbagshop.config;
 
@@ -93,21 +103,21 @@ public class Messages {
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_1")){
             WB1buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_1"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_1", "[prefix] &bDu hast dir [WB1Name] &bfür [WB1Price] [currency] &bgekauft!");
+            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_1", "[prefix] &bDu hast dir [WB1Name] &bf[ue]r [WB1Price] [currency] &bgekauft!");
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Message §6WonderBag Item_1 buy_msg §4was added to §9messages.yml§4!");
         }
 
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_2")){
             WB2buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_2"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_2", "[prefix] &bDu hast dir [WB2Name] &bfür [WB2Price] [currency] &bgekauft!");
+            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_2", "[prefix] &bDu hast dir [WB2Name] &bf[ue]r [WB2Price] [currency] &bgekauft!");
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Message §6WonderBag Item_2 buy_msg §4was added to §9messages.yml§4!");
         }
 
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_3")){
             WB3buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_3"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_3", "[prefix] &bDu hast dir [WB3Name] &bfür [WB3Price] [currency] &bgekauft!");
+            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_3", "[prefix] &bDu hast dir [WB3Name] &bf[ue]r [WB3Price] [currency] &bgekauft!");
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Message §6WonderBag Item_3 buy_msg §4was added to §9messages.yml§4!");
         }
 

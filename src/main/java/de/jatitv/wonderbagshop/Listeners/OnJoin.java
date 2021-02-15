@@ -11,9 +11,13 @@
 //                                                     |___/                   |_|
 // ___________________________________________________________________________________
 
-package de.jatitv.wonderbagshop.main;
+package de.jatitv.wonderbagshop.Listeners;
 
-public class Languge {
+import de.jatitv.wonderbagshop.main.Main;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+public class OnJoin implements Listener {
 
 
 }

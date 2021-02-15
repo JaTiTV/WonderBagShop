@@ -6,7 +6,6 @@ package de.jatitv.wonderbagshop.commands;
 import de.jatitv.wonderbagshop.config.Config;
 import de.jatitv.wonderbagshop.config.Messages;
 import de.jatitv.wonderbagshop.config.Shop;
-import de.jatitv.wonderbagshop.main.Main;
 import de.jatitv.wonderbagshop.main.Vault;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

@@ -10,7 +10,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -36,11 +35,11 @@ public class ShopEvent implements Listener {
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
                                     itemMeta.setDisplayName(Shop.WB1ChestName);
-
-
-
                                     ArrayList<String> lore = new ArrayList<>();
+                                    lore.add("§klsif3153s1fSEsfsS");
+                                    lore.add("§k42se2f1s2e4fs21fe");
                                     itemMeta.setLore(lore);
+                                    itemMeta.setUnbreakable(itemMeta.isUnbreakable());
                                     item.setItemMeta(itemMeta);
                                     item.setAmount(1);
                                     player.getInventory().addItem(item);

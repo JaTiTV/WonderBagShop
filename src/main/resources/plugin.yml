@@ -1,5 +1,5 @@
 name: WonderBagShop
-version: 1.2_Snapshot
+version: 3
 main: de.jatitv.wonderbagshop.main.Main
 api-version: 1.16
 depend:

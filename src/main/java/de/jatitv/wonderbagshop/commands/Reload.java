@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 public class Reload {
 
     public static void reloadConfirmPlayer(Player player) {
-        player.sendMessage(Messages.Prefix + Messages.ReloadStart);
+        player.sendMessage(Messages.PrefixHC + Messages.ReloadStart);
 
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§6Plugin reload...");
@@ -22,11 +22,11 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
-        Messages.messagesCreate();
+        Shop.shopCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
-        Shop.shopCreate();
+        Messages.messagesCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
@@ -36,7 +36,7 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2Plugin successfully reloaded.");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
 
-        player.sendMessage(Messages.Prefix + Messages.ReloadEnd);
+        player.sendMessage(Messages.PrefixHC + Messages.ReloadEnd);
     }
     public static void reloadConfirmConsole() {
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
@@ -46,11 +46,11 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
-        Messages.messagesCreate();
+        Shop.shopCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
-        Shop.shopCreate();
+        Messages.messagesCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");

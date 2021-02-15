@@ -26,7 +26,7 @@ public class Shop {
         itemMeta.setDisplayName(de.jatitv.wonderbagshop.config.Shop.WB1Name);
         ArrayList<String> lore = new ArrayList<>();
         lore.add("§8-------------");
-        lore.add(de.jatitv.wonderbagshop.config.Shop.WB1price + Config.Currency);
+        lore.add(de.jatitv.wonderbagshop.config.Shop.WB1price + " " + Config.Currency);
         itemMeta.setLore(lore);
         item.setItemMeta(itemMeta);
         item.setAmount(1);
@@ -37,7 +37,7 @@ public class Shop {
         itemMeta2.setDisplayName(de.jatitv.wonderbagshop.config.Shop.WB2Name);
         ArrayList<String> lore2 = new ArrayList<>();
         lore2.add("§8-------------");
-        lore2.add(de.jatitv.wonderbagshop.config.Shop.WB2price + Config.Currency);
+        lore2.add(de.jatitv.wonderbagshop.config.Shop.WB2price + " " + Config.Currency);
         itemMeta2.setLore(lore2);
         item2.setItemMeta(itemMeta2);
         item2.setAmount(2);
@@ -48,7 +48,7 @@ public class Shop {
         itemMeta3.setDisplayName(de.jatitv.wonderbagshop.config.Shop.WB3Name);
         ArrayList<String> lore3 = new ArrayList<>();
         lore3.add("§8-------------");
-        lore3.add(de.jatitv.wonderbagshop.config.Shop.WB3price + Config.Currency);
+        lore3.add(de.jatitv.wonderbagshop.config.Shop.WB3price + " " + Config.Currency);
         itemMeta3.setLore(lore3);
         item3.setItemMeta(itemMeta3);
         item3.setAmount(3);

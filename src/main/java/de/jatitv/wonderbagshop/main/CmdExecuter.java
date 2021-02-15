@@ -25,7 +25,7 @@ public class CmdExecuter implements CommandExecutor {
                 if (player.hasPermission("wonderbagshop.command")) {
                     Shop.openShop(player);
                 } else {
-                    player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop").replace("[permission]", "wonderbagshop.command"));
+                    player.sendMessage(Messages.NoPermission.replace("[cmd]", "/wonderbagshop").replace("[perm]", "wonderbagshop.command"));
                 }
             } else {
                 switch (args[0].toLowerCase()) {
@@ -48,8 +48,8 @@ public class CmdExecuter implements CommandExecutor {
                             sender.sendMessage(Messages.Prefix + "§2");
                             sender.sendMessage(Messages.Prefix + "§8--------------------------");
                         } else {
-                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop info")
-                                    .replace("[permission]", "wonderbagshop.command.info"));
+                            player.sendMessage(Messages.NoPermission.replace("[cmd]", "/wonderbagshop info")
+                                    .replace("[perm]", "wonderbagshop.command.info"));
                         }
                         break;
                     case "reload":
@@ -57,8 +57,8 @@ public class CmdExecuter implements CommandExecutor {
                         if (player.hasPermission("wonderbagshop.command.reload") || player.isOp()){
                         Reload.reloadConfirmPlayer(player);
                         } else {
-                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop reload")
-                                    .replace("[permission]", "wonderbagshop.command.reload"));
+                            player.sendMessage(Messages.NoPermission.replace("[cmd]", "/wonderbagshop reload")
+                                    .replace("[perm]", "wonderbagshop.command.reload"));
                         }
                         break;
                     case "help":
@@ -66,8 +66,8 @@ public class CmdExecuter implements CommandExecutor {
                         if (player.hasPermission("wonderbagshop.command.admin") || player.isOp()){
                             player.sendMessage(Messages.Help);
                         } else {
-                            player.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop help")
-                                    .replace("[permission]", "wonderbagshop.command"));
+                            player.sendMessage(Messages.NoPermission.replace("[cmd]", "/wonderbagshop help")
+                                    .replace("[perm]", "wonderbagshop.command"));
                         }
                         break;
                 }

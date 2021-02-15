@@ -31,11 +31,11 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
-        Messages.messagesCreate();
+        Shop.shopCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
-        Shop.shopCreate();
+        Messages.messagesCreate();
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§8-------------------------------");
         Vault.loadVault();

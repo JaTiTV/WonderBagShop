@@ -32,6 +32,8 @@ public class ShopEvent implements Listener {
                                 player.closeInventory();
                                 if (de.jatitv.wonderbagshop.commands.Shop.buy(player, Shop.WB1price)) {
 
+                                    player.sendMessage(String.valueOf(Shop.WB1price));
+
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
                                     itemMeta.setDisplayName(Shop.WB1ChestName);

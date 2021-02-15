@@ -22,8 +22,8 @@ public class CmdExecuter_wbsrl implements CommandExecutor {
                 if (sender.hasPermission("wonderbagshop.command.reload") || sender.hasPermission("wondershop.admin") || sender.isOp()){
                     Reload.reloadConfirmPlayer((Player) sender);
                 } else {
-                    sender.sendMessage(Messages.NoPermission.replace("[command]", "/wonderbagshop info")
-                            .replace("[permission]", "wonderbagshop.command.reload"));
+                    sender.sendMessage(Messages.NoPermission.replace("[cmd]", "/wonderbagshop info")
+                            .replace("[perm]", "wonderbagshop.command.reload"));
                 }
             }
         } else {

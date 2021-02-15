@@ -38,9 +38,9 @@ public class TabComplete implements TabCompleter {
                 } else if (args[0].charAt(0) == 'r' && args[0].length() < 3) {
                     list.add("reload");
                     list.add("rl");
-                } else if (args[0].charAt(0) == 'r' && args[0].charAt(2) == 'l') {
+                } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'e') {
                     list.add("reload");
-                } else if (args[0].charAt(0) == 'r' && args[0].charAt(2) == 'l') {
+                } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'l') {
                     list.add("rl");
                 } else if (args[0].charAt(0) == 'h') {
                     list.add("help");

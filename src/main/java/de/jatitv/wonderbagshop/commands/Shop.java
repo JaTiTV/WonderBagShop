@@ -16,6 +16,8 @@ package de.jatitv.wonderbagshop.commands;
 import de.jatitv.wonderbagshop.config.Config;
 import de.jatitv.wonderbagshop.config.Messages;
 import de.jatitv.wonderbagshop.main.Main;
+import de.tr7zw.nbtapi.NBTContainer;
+import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

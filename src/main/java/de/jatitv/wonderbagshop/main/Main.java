@@ -17,14 +17,11 @@ import de.jatitv.wonderbagshop.Listeners.ShopEvent;
 import de.jatitv.wonderbagshop.config.Messages;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Iterator;
 import java.util.logging.Logger;
@@ -85,6 +82,8 @@ public final class Main extends JavaPlugin {
     public static Plugin thisp() {
         return plugin;
     }
+
+
 
     @Override
     public void onDisable() {

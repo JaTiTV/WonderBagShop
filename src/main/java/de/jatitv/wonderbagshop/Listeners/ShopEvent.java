@@ -15,6 +15,7 @@ package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.config.Messages;
 import de.jatitv.wonderbagshop.config.Shop;
+import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -48,13 +49,13 @@ public class ShopEvent implements Listener {
                                     ItemMeta itemMeta = item.getItemMeta();
                                     itemMeta.setDisplayName(Shop.WB1ChestName);
                                     ArrayList<String> lore = new ArrayList<>();
-                                    lore.add("§klsif3153s1fSEsfsS");
-                                    lore.add("§k42se2f1s2e4fs21fe");
                                     itemMeta.setLore(lore);
                                     itemMeta.setUnbreakable(itemMeta.isUnbreakable());
                                     item.setItemMeta(itemMeta);
                                     item.setAmount(1);
-                                    player.getInventory().addItem(item);
+                                    NBTItem nbti1 = new NBTItem(item);
+                                    nbti1.setBoolean("loot_chest_1", true);
+                                    player.getInventory().addItem(nbti1.getItem());
 
                                     player.sendMessage(Messages.WB1buy_msg);
 

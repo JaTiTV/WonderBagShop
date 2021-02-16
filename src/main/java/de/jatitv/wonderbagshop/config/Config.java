@@ -25,6 +25,10 @@ public class Config {
     public static String Lang = "EN";
     public static String Currency = "$";
 
+    public static String WB1Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
+    public static String WB2Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
+    public static String WB3Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
+
     public static void configCreate(){
 
         Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Config load...");
@@ -40,12 +44,32 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Setting §6Language §4was added to §9config.yml§4!");
         }
 
-
         if (yamlConfiguration_config.contains("Currency")) {
             Currency = yamlConfiguration_config.getString("Currency");
         } else {
             yamlConfiguration_config.set("Currency", "$");
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Setting §6Currency §4was added to §9config.yml§4!");
+        }
+
+        if(yamlConfiguration_config.contains("ItemList.WonderBag_1")){
+            WB1Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_1"));
+        }else{
+            yamlConfiguration_config.set("ItemList.WonderBag_1", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
+            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_1 §4was added to §9config.yml§4!");
+        }
+
+        if(yamlConfiguration_config.contains("ItemList.WonderBag_2")){
+            WB2Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_2"));
+        }else{
+            yamlConfiguration_config.set("ItemList.WonderBag_2", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
+            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_2 §4was added to §9config.yml§4!");
+        }
+
+        if(yamlConfiguration_config.contains("ItemList.WonderBag_3")){
+            WB3Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_3"));
+        }else{
+            yamlConfiguration_config.set("ItemList.WonderBag_3", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
+            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_3 §4was added to §9config.yml§4!");
         }
 
         try {

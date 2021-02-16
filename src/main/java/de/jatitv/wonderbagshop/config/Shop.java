@@ -25,15 +25,15 @@ public class Shop {
     public static String ShopName_GUI = "§2Wonder§6Bag§9Shop";
     public static String WB1Name = "§2Wonder§6Bag §91";
     public static String WB1ChestName = "§2Wonder§6Bag §91";
-    public static String WB1Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
+
     public static Integer WB1price = 1000;
     public static String WB2Name = "§2Wonder§6Bag §92";
     public static String WB2ChestName = "§2Wonder§6Bag §92";
-    public static String WB2Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
+
     public static Integer WB2price = 2000;
     public static String WB3Name = "§2Wonder§6Bag §93";
     public static String WB3ChestName = "§2Wonder§6Bag §93";
-    public static String WB3Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
+
     public static Integer WB3price = 3000;
 
     public static void shopCreate(){
@@ -73,13 +73,6 @@ public class Shop {
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6WonderBag Item_1 price §4was added to §9shop.yml§4!");
         }
 
-        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_1.Items")){
-            WB1Items = replace(yamlConfiguration_shop.getString("WonderBag.WonderBag_1.Items"));
-        }else{
-            yamlConfiguration_shop.set("WonderBag.WonderBag_1.Items", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6WonderBag Item_1 Items §4was added to §9shop.yml§4!");
-        }
-
         // Item 2
 
         if(yamlConfiguration_shop.contains("WonderBag.WonderBag_2.Name")){
@@ -103,13 +96,6 @@ public class Shop {
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6WonderBag Item_2 price §4was added to §9shop.yml§4!");
         }
 
-        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_2.Items")){
-            WB2Items = replace(yamlConfiguration_shop.getString("WonderBag.WonderBag_2.Items"));
-        }else{
-            yamlConfiguration_shop.set("WonderBag.WonderBag_2.Items", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6WonderBag Item_2 Items §4was added to §9shop.yml§4!");
-        }
-
         // Item 3
 
         if(yamlConfiguration_shop.contains("WonderBag.WonderBag_3.Name")){
@@ -131,13 +117,6 @@ public class Shop {
         }else{
             yamlConfiguration_shop.set("WonderBag.WonderBag_3.price", "3000");
             Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6WonderBag Item_3 price §4was added to §9shop.yml§4!");
-        }
-
-        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_3.Items")){
-            WB3Items = replace(yamlConfiguration_shop.getString("WonderBag.WonderBag_3.Items"));
-        }else{
-            yamlConfiguration_shop.set("WonderBag.WonderBag_3.Items", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6WonderBag Item_3 Items §4was added to §9shop.yml§4!");
         }
 
         try {

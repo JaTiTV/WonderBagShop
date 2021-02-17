@@ -13,11 +13,13 @@
 
 package de.jatitv.wonderbagshop.main;
 
+import de.jatitv.wonderbagshop.Listeners.OpenChest;
 import de.jatitv.wonderbagshop.Listeners.ShopEvent;
 import de.jatitv.wonderbagshop.config.Messages;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -43,12 +45,16 @@ public final class Main extends JavaPlugin {
         getCommand("wonderbagshop").setTabCompleter(new TabComplete());
         getCommand("wbs").setTabCompleter(new TabComplete());
         getCommand("wbsrl").setExecutor(new CmdExecuter_wbsrl());
+
         a = this;
         Bukkit.getServer().getPluginManager().registerEvents(new ShopEvent(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new OpenChest(), this);
         Load.LoadSend(getDescription().getVersion());
 
-        int pluginId = 10342; // <-- Replace with the id of your plugin!
-        Metrics metrics = new Metrics(this, pluginId);
+        //TODO Bstats wieder aktivieren
+
+        // int pluginId = 10342; // <-- Replace with the id of your plugin!
+        // Metrics metrics = new Metrics(this, pluginId);
 
         // Optional: Add custom charts
         // metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));

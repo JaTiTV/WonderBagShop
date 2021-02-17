@@ -22,54 +22,47 @@ import java.io.IOException;
 
 public class Config {
 
-    public static String Lang = "EN";
-    public static String Currency = "$";
-
-    public static String WB1Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
-    public static String WB2Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
-    public static String WB3Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
-
     public static void configCreate(){
 
-        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Config load...");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config load...");
 
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
 
         if (yamlConfiguration_config.contains("Language")) {
-            Lang = yamlConfiguration_config.getString("Language");
+            DefultValue.Lang = yamlConfiguration_config.getString("Language");
         } else {
             yamlConfiguration_config.set("Language", "EN");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Setting §6Language §4was added to §9config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Language §4was added to §9config.yml§4!");
         }
 
         if (yamlConfiguration_config.contains("Currency")) {
-            Currency = yamlConfiguration_config.getString("Currency");
+            DefultValue.Currency = yamlConfiguration_config.getString("Currency");
         } else {
             yamlConfiguration_config.set("Currency", "$");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Setting §6Currency §4was added to §9config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9config.yml§4!");
         }
 
         if(yamlConfiguration_config.contains("ItemList.WonderBag_1")){
-            WB1Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_1"));
+            DefultValue.WB1Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_1"));
         }else{
-            yamlConfiguration_config.set("ItemList.WonderBag_1", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_1 §4was added to §9config.yml§4!");
+            yamlConfiguration_config.set("ItemList.WonderBag_1", DefultValue.WB1ItemsLIST);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_1 §4was added to §9config.yml§4!");
         }
 
         if(yamlConfiguration_config.contains("ItemList.WonderBag_2")){
-            WB2Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_2"));
+            DefultValue.WB2Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_2"));
         }else{
-            yamlConfiguration_config.set("ItemList.WonderBag_2", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_2 §4was added to §9config.yml§4!");
+            yamlConfiguration_config.set("ItemList.WonderBag_2", DefultValue.WB2ItemsLIST);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_2 §4was added to §9config.yml§4!");
         }
 
         if(yamlConfiguration_config.contains("ItemList.WonderBag_3")){
-            WB3Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_3"));
+            DefultValue.WB3Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_3"));
         }else{
-            yamlConfiguration_config.set("ItemList.WonderBag_3", "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD");
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_3 §4was added to §9config.yml§4!");
+            yamlConfiguration_config.set("ItemList.WonderBag_3", DefultValue.WB3ItemsLIST);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_3 §4was added to §9config.yml§4!");
         }
 
         try {
@@ -78,11 +71,11 @@ public class Config {
             e.printStackTrace();
         }
 
-        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§2Config loaded successfully.");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config loaded successfully.");
     }
 
     public static void configDisable(){
-        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4config.yml successfully deactivated.");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4config.yml successfully deactivated.");
     }
 
     private static String replace(String Text) {

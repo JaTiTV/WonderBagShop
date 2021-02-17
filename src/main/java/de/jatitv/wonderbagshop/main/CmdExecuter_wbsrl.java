@@ -14,6 +14,7 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.commands.Reload;
+import de.jatitv.wonderbagshop.config.DefultValue;
 import de.jatitv.wonderbagshop.config.Messages;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -32,7 +33,7 @@ public class CmdExecuter_wbsrl implements CommandExecutor {
                 if (sender.hasPermission("wonderbagshop.command.reload") || sender.hasPermission("wondershop.admin") || sender.isOp()){
                     Reload.reloadConfirmPlayer((Player) sender);
                 } else {
-                    sender.sendMessage(Messages.NoPermission.replace("[cmd]", "/wonderbagshop info")
+                    sender.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop info")
                             .replace("[perm]", "wonderbagshop.command.reload"));
                 }
             }

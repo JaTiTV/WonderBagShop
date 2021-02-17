@@ -15,6 +15,7 @@ package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.Listeners.OpenChest;
 import de.jatitv.wonderbagshop.Listeners.ShopEvent;
+import de.jatitv.wonderbagshop.config.DefultValue;
 import de.jatitv.wonderbagshop.config.Messages;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
@@ -66,19 +67,19 @@ public final class Main extends JavaPlugin {
                 String yourVersion = ("§6Your version §c" + currentVersion + "§b.");
                 String latestVersion = ("§6Current version: §a" + version + "§b");
                 String downloadVersion = ("§6You can download it here: §eComming Soon!");
-                Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + foundVersion);
-                Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + latestVersion);
-                Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + yourVersion);
-                Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + downloadVersion);
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + foundVersion);
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + latestVersion);
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + yourVersion);
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + downloadVersion);
                 Iterator var7 = Bukkit.getOnlinePlayers().iterator();
 
                 while(var7.hasNext()) {
                     Player player = (Player)var7.next();
                     if (player.hasPermission("wonderbagshop.admin")) {
-                        player.sendMessage(Messages.PrefixHC + foundVersion);
-                        player.sendMessage(Messages.PrefixHC + latestVersion);
-                        player.sendMessage(Messages.PrefixHC + yourVersion);
-                        player.sendMessage(Messages.PrefixHC + downloadVersion);
+                        player.sendMessage(DefultValue.PrefixHC + foundVersion);
+                        player.sendMessage(DefultValue.PrefixHC + latestVersion);
+                        player.sendMessage(DefultValue.PrefixHC + yourVersion);
+                        player.sendMessage(DefultValue.PrefixHC + downloadVersion);
                     }
                 }
             }

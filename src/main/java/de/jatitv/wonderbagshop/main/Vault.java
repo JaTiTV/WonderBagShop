@@ -13,6 +13,7 @@
 
 package de.jatitv.wonderbagshop.main;
 
+import de.jatitv.wonderbagshop.config.DefultValue;
 import de.jatitv.wonderbagshop.config.Messages;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
@@ -26,20 +27,20 @@ public class Vault {
             if(rsp != null){
                 Main.eco = rsp.getProvider();
                 if(Main.eco != null){
-                    Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§r\n" + Messages.PrefixHC + "§2Vault / Economy successfully connected!");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§r\n" + DefultValue.PrefixHC + "§2Vault / Economy successfully connected!");
                 }else{
-                    Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4\n" + Messages.PrefixHC + "§4Economy could not be connected / found!");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Economy could not be connected / found!");
                 }
             }else{
-                Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4\n" + Messages.PrefixHC + "§4Economy could not be connected / found!");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Economy could not be connected / found!");
             }
         }else{
-            Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4\n" + Messages.PrefixHC + "§4Vault / Economy could not be connected / found!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault / Economy could not be connected / found!");
         }
     }
 
     public static void vaultDisable(){
-        Bukkit.getConsoleSender().sendMessage(Messages.PrefixHC + "§4Vault / Economy successfully deactivated.");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Vault / Economy successfully deactivated.");
     }
 
 }

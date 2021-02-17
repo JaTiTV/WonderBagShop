@@ -19,7 +19,7 @@ public class OpenChest implements Listener {
 
     @EventHandler
     public void onPlace(BlockPlaceEvent event) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, de.jatitv.wonderbagshop.config.Shop.ShopName_GUI);
+        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, de.jatitv.wonderbagshop.config.DefultValue.ShopName_GUI);
         Block block = event.getBlock();
         ItemStack item = event.getItemInHand();
         NBTItem nbti1 = new NBTItem(item);

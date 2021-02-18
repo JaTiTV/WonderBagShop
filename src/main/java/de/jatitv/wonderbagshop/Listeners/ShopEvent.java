@@ -24,6 +24,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class ShopEvent implements Listener {
@@ -52,9 +53,9 @@ public class ShopEvent implements Listener {
                                     itemMeta.setUnbreakable(itemMeta.isUnbreakable());
                                     item.setItemMeta(itemMeta);
                                     item.setAmount(1);
-                                    NBTItem nbti1 = new NBTItem(item);
-                                    nbti1.setBoolean("loot_chest_1", true);
-                                    player.getInventory().addItem(nbti1.getItem());
+                                    NBTItem nbti = new NBTItem(item);
+                                    nbti.setBoolean("loot_chest_1", true);
+                                    player.getInventory().addItem(nbti.getItem());
 
                                     player.sendMessage(DefultValue.WB1buy_msg);
 
@@ -74,7 +75,9 @@ public class ShopEvent implements Listener {
                                     itemMeta.setLore(lore);
                                     item.setItemMeta(itemMeta);
                                     item.setAmount(1);
-                                    player.getInventory().addItem(item);
+                                    NBTItem nbti = new NBTItem(item);
+                                    nbti.setBoolean("loot_chest_2", true);
+                                    player.getInventory().addItem(nbti.getItem());
 
                                     player.sendMessage(DefultValue.WB2buy_msg);
 
@@ -94,7 +97,9 @@ public class ShopEvent implements Listener {
                                     itemMeta.setLore(lore);
                                     item.setItemMeta(itemMeta);
                                     item.setAmount(1);
-                                    player.getInventory().addItem(item);
+                                    NBTItem nbti = new NBTItem(item);
+                                    nbti.setBoolean("loot_chest_3", true);
+                                    player.getInventory().addItem(nbti.getItem());
 
                                     player.sendMessage(DefultValue.WB3buy_msg);
                                 } else {

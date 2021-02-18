@@ -63,9 +63,9 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Help")) {
             DefultValue.Help = replace(yamlConfiguration_msg.getString("Help"));
         } else {
-            yamlConfiguration_msg.set("Help", "§8[§2W§6B§9S§8] §8----- §2Wonder§6Bag§9Shop §chelp §8-----\n§8[§2W§6B§9S§8]\n§8[§2W§6B§9S§8] '§b/wonderbagshop§e' Öffnet diese help." +
-                    "\n§8[§2W§6B§9S§8] '§b/wonderbagshop shop§e' Öffnet den Shop.\n§8[§2W§6B§9S§8] '§b/wonderbagshop reload§e' Läd die Cofig neu.\n§8[§2W§6B§9S§8]\n" +
-                    "§8[§2W§6B§9S§8] §8----------------------------");
+            yamlConfiguration_msg.set("Help", "&8[&2W&6B&9S&8] &8----- &2Wonder&6Bag&9Shop &chelp &8-----\n&8[&2W&6B&9S&8]\n&8[&2W&6B&9S&8] '&b/wonderbagshop&e' Öffnet diese help." +
+                    "\n&8[&2W&6B&9S&8] '&b/wonderbagshop shop&e' Öffnet den Shop.\n&8[&2W&6B&9S&8] '&b/wonderbagshop reload&e' Läd die Cofig neu.\n&8[&2W&6B&9S&8]\n" +
+                    "&8[&2W&6B&9S&8] &8----------------------------");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help §4was added to §9messages.yml§4!");
         }
 

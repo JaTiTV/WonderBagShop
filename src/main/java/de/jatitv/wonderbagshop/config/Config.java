@@ -29,7 +29,6 @@ public class Config {
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
-
         if (yamlConfiguration_config.contains("Language")) {
             DefultValue.Lang = yamlConfiguration_config.getString("Language");
         } else {

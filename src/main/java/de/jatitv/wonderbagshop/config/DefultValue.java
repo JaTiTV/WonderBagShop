@@ -10,12 +10,20 @@ public class DefultValue {
     public static String Lang = "EN";
     public static String Currency = "$";
 
-    public static String WB1Items = "";
+    public static String WB1Items = "GOLD_BLOCK\nDIAMOND\nDIAMOND_SWORD";
     public static String WB2Items = "";
     public static String WB3Items = "";
     public static String[] WB1ItemsLIST = new String[] { "GOLD_BLOCK", "DIAMOND", "DIAMOND_SWORD" };
     public static String[] WB2ItemsLIST = new String[] { "GOLD_BLOCK", "DIAMOND", "DIAMOND_SWORD" };
     public static String[] WB3ItemsLIST = new String[] { "GOLD_BLOCK", "DIAMOND", "DIAMOND_SWORD" };
+
+    public static Integer WB1Item_anz = 5;
+    public static Integer WB2Item_anz = 8;
+    public static Integer WB3Item_anz = 10;
+
+    public static Integer WB1Item_max_Stack = 10;
+    public static Integer WB2Item_max_Stack = 10;
+    public static Integer WB3Item_max_Stack = 10;
 
     // Messages
 

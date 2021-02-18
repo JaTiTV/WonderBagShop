@@ -59,6 +59,20 @@ public class Shop {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_1 price §4was added to §9shop.yml§4!");
         }
 
+        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_1.Item_amount_(1-15)")){
+            DefultValue.WB1Item_anz = Integer.valueOf(yamlConfiguration_shop.getString("WonderBag.WonderBag_1.Item_amount_(1-15)"));
+        }else{
+            yamlConfiguration_shop.set("WonderBag.WonderBag_1.Item_amount_(1-15)", "5");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_1 Item_amount_(1-15) §4was added to §9shop.yml§4!");
+        }
+
+        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_1.Item_MaxStack_(1-64)")){
+            DefultValue.WB1Item_max_Stack = Integer.valueOf(yamlConfiguration_shop.getString("WonderBag.WonderBag_1.Item_MaxStack_(1-64)"));
+        }else{
+            yamlConfiguration_shop.set("WonderBag.WonderBag_1.Item_MaxStack_(1-64)", "10");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_1 Item_MaxStack_(1-64) §4was added to §9shop.yml§4!");
+        }
+
         // Item 2
 
         if(yamlConfiguration_shop.contains("WonderBag.WonderBag_2.Name")){
@@ -82,6 +96,20 @@ public class Shop {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_2 price §4was added to §9shop.yml§4!");
         }
 
+        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_2.Item_amount_(1-15)")){
+            DefultValue.WB2Item_anz = Integer.valueOf(yamlConfiguration_shop.getString("WonderBag.WonderBag_2.Item_amount_(1-15)"));
+        }else{
+            yamlConfiguration_shop.set("WonderBag.WonderBag_2.Item_amount_(1-15)", "8");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_2 Item_amount_(1-15) §4was added to §9shop.yml§4!");
+        }
+
+        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_2.Item_MaxStack_(1-64)")){
+            DefultValue.WB2Item_max_Stack = Integer.valueOf(yamlConfiguration_shop.getString("WonderBag.WonderBag_2.Item_MaxStack_(1-64)"));
+        }else{
+            yamlConfiguration_shop.set("WonderBag.WonderBag_2.Item_MaxStack_(1-64)", "10");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_2 Item_MaxStack_(1-64) §4was added to §9shop.yml§4!");
+        }
+
         // Item 3
 
         if(yamlConfiguration_shop.contains("WonderBag.WonderBag_3.Name")){
@@ -103,6 +131,20 @@ public class Shop {
         }else{
             yamlConfiguration_shop.set("WonderBag.WonderBag_3.price", "3000");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_3 price §4was added to §9shop.yml§4!");
+        }
+
+        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_3.Item_amount_(1-15)")){
+            DefultValue.WB3Item_anz = Integer.valueOf(yamlConfiguration_shop.getString("WonderBag.WonderBag_3.Item_amount_(1-15)"));
+        }else{
+            yamlConfiguration_shop.set("WonderBag.WonderBag_3.Item_amount_(1-15)", "8");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_3 Item_amount_(1-15) §4was added to §9shop.yml§4!");
+        }
+
+        if(yamlConfiguration_shop.contains("WonderBag.WonderBag_3.Item_MaxStack_(1-64)")){
+            DefultValue.WB3Item_max_Stack = Integer.valueOf(yamlConfiguration_shop.getString("WonderBag.WonderBag_3.Item_MaxStack_(1-64)"));
+        }else{
+            yamlConfiguration_shop.set("WonderBag.WonderBag_3.Item_MaxStack_(1-64)", "10");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBag Item_3 Item_MaxStack_(1-64) §4was added to §9shop.yml§4!");
         }
 
         try {

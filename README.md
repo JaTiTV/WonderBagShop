@@ -4,7 +4,7 @@
 
 ---
 
-#English
+# English
 
 With the WonderBagShop players can buy 3 different WonderBags (boxes) with random items in them.
 
@@ -24,7 +24,7 @@ This will be changed with later versions.
 Just come to the support Discord for further questions.
 
 
-#German
+# German
 
 Mit dem WonderBagShop können Spieler 3 Verschiedene WonderBags (Kisten) kaufen in dem Zufällige Items liegen.
 

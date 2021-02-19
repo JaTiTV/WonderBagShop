@@ -477,7 +477,4 @@ public class WonderBag_2 {
                 .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB2.Name)
                 .replace("[WB2Price]", String.valueOf(yamlConfiguration_wb2.get("Shop.price")));
     }
-
-
-
 }

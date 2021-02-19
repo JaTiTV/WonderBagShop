@@ -73,7 +73,6 @@ public class UpdateChecker {
             } catch (IOException var10) {
                 this.plugin.getLogger().severe("§8[§2W§6B§9S§8]§4 Cannot look for updates: " + var10.getMessage());
             }
-
         });
     }
 }

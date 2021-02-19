@@ -67,6 +67,4 @@ public class Load {
         }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2-----------------------------------------------------------------------------------");
     }
-
-
 }

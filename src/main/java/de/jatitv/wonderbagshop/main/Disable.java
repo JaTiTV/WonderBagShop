@@ -48,5 +48,4 @@ public class Disable {
         Vault.vaultDisable();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-----------------------------------------------------------------------------------");
     }
-
 }

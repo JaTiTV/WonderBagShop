@@ -101,5 +101,4 @@ public final class Main extends JavaPlugin {
     }
 
     public static Main getPlugin() {return plugin;}
-
 }

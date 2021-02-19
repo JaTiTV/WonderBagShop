@@ -129,7 +129,4 @@ public class Messages {
                 .replace("[WB2Price]", String.valueOf(yamlConfiguration_wb2.get("Shop.price")))
                 .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("Shop.price")));
     }
-
-
-
 }

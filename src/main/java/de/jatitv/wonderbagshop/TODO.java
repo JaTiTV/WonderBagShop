@@ -15,6 +15,8 @@ package de.jatitv.wonderbagshop;
 
 public class TODO {
 
+    // ToDo If you have ideas or wishes, please send them to me via Discord: https://discord.gg/vRyXFFterJ
 
+    // ToDo Wenn ihr ideen habt oder Wünsche denn meldet sie mir via Discord: https://discord.gg/vRyXFFterJ
 
 }

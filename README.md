@@ -24,7 +24,7 @@ This will be changed with later versions.
 Just come to the support Discord for further questions.
 
 
-# German
+### German
 
 Mit dem WonderBagShop können Spieler 3 Verschiedene WonderBags (Kisten) kaufen in dem Zufällige Items liegen.
 
@@ -42,7 +42,7 @@ Dies wird mit späteren Versionen geändert.
 
 Komm für weitere Fragen einfach auf den Support Discord.
 
-## Links
+# Links
 * [Download]()
 * [Discord](https://discord.gg/vRyXFFterJ)
 * [Translations](https://github.com/JaTiTV/WonderBagShop-privat-/tree/master/Languages)

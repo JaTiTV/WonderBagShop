@@ -37,7 +37,6 @@ public class Vault {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault / Economy could not be connected / found!");
         }
     }
-
     public static void vaultDisable(){
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Vault / Economy successfully deactivated.");
     }

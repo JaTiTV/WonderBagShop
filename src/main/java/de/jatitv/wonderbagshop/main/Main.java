@@ -102,6 +102,5 @@ public final class Main extends JavaPlugin {
         // Plugin shutdown logic
         Disable.disableSend(getDescription().getVersion());
     }
-
     public static Main getPlugin() {return plugin;}
 }

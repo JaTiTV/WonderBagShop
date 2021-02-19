@@ -15,6 +15,8 @@ package de.jatitv.wonderbagshop.config;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -114,16 +116,22 @@ public class Messages {
     }
 
     private static String replace(String Text) {
-        File shopYML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_1.yml");
-        YamlConfiguration yamlConfiguration_wb1 = YamlConfiguration.loadConfiguration(shopYML);
+        File WB1YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_1.yml");
+        YamlConfiguration yamlConfiguration_wb1 = YamlConfiguration.loadConfiguration(WB1YML);
+
+        File WB2YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_2.yml");
+        YamlConfiguration yamlConfiguration_wb2 = YamlConfiguration.loadConfiguration(WB2YML);
+
+        File WB3YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_3.yml");
+        YamlConfiguration yamlConfiguration_wb3 = YamlConfiguration.loadConfiguration(WB3YML);
 
         return Text.replace("[prefix]", DefultValue.Prefix).replace("&", "§").replace("[currency]", DefultValue.Currency)
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
                 .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB1.Name)
-                //.replace("[WB2Name]", DefultValue_WB2.Name).replace("[WB3Name]", DefultValue_WB3.Name)
-                .replace("[WB1Price]", String.valueOf(yamlConfiguration_wb1.get("WonderBag.WonderBag_1.price")));
-                //.replace("[WB2Price]", String.valueOf(yamlConfiguration_shop.get("WonderBag.WonderBag_2.price")))
-                //.replace("[WB3Price]", String.valueOf(yamlConfiguration_shop.get("WonderBag.WonderBag_3.price")));
+                .replace("[WB2Name]", DefultValue_WB2.Name).replace("[WB3Name]", DefultValue_WB3.Name)
+                .replace("[WB1Price]", String.valueOf(yamlConfiguration_wb1.get("WonderBag.WonderBag_1.price")))
+                .replace("[WB2Price]", String.valueOf(yamlConfiguration_wb2.get("WonderBag.WonderBag_2.price")))
+                .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("WonderBag.WonderBag_3.price")));
     }
 
 

@@ -23,6 +23,7 @@ This will be changed with later versions.
 
 Just come to the support Discord for further questions.
 
+---
 
 ### German
 

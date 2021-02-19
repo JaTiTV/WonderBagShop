@@ -129,9 +129,9 @@ public class Messages {
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
                 .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB1.Name)
                 .replace("[WB2Name]", DefultValue_WB2.Name).replace("[WB3Name]", DefultValue_WB3.Name)
-                .replace("[WB1Price]", String.valueOf(yamlConfiguration_wb1.get("WonderBag.WonderBag_1.price")))
-                .replace("[WB2Price]", String.valueOf(yamlConfiguration_wb2.get("WonderBag.WonderBag_2.price")))
-                .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("WonderBag.WonderBag_3.price")));
+                .replace("[WB1Price]", String.valueOf(yamlConfiguration_wb1.get("Shop.price")))
+                .replace("[WB2Price]", String.valueOf(yamlConfiguration_wb2.get("Shop.price")))
+                .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("Shop.price")));
     }
 
 

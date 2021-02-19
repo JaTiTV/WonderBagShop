@@ -10,7 +10,7 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 0.5_Snapshot
+version: 0.6_Snapshot
 main: de.jatitv.wonderbagshop.main.Main
 api-version: 1.16
 depend:

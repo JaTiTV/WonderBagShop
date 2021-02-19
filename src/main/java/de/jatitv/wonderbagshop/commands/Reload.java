@@ -46,7 +46,6 @@ public class Reload {
         Messages.messagesCreate();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Vault.loadVault();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
@@ -78,7 +77,6 @@ public class Reload {
         Messages.messagesCreate();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Vault.loadVault();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");

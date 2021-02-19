@@ -4,6 +4,7 @@
 package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
@@ -28,7 +29,7 @@ public class PlaceChestWB3 implements Listener {
         ItemStack item = event.getItemInHand();
         NBTItem nbti = new NBTItem(item);
         if (block.getType() == Material.CHEST) {
-            if(nbti.hasKey("loot_chest_2")) {
+            if(nbti.hasKey("loot_chest_3")) {
                 Chest chest = (Chest) block.getState();
 
                 ItemStack Item1 = null;
@@ -895,7 +896,7 @@ public class PlaceChestWB3 implements Listener {
                         break;
                 }
 
-                if (DefultValue_WB3.Item_anz == 1 || DefultValue_WB3.Item_anz > 1){
+                if (DefultValue_WB3.Item_anz == 1 || DefultValue_WB3.Item_anz > 1 || DefultValue_WB3.Item_anz < 1){
                     chest.getInventory().addItem(Item1);
                 }
                 if (DefultValue_WB3.Item_anz == 2 || DefultValue_WB3.Item_anz > 2) {

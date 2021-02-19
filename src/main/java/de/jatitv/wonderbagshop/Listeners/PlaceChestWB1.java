@@ -905,7 +905,7 @@ public class PlaceChestWB1 implements Listener {
                         break;
                 }
 
-                if (DefultValue_WB1.Item_anz == 1 || DefultValue_WB1.Item_anz > 1){
+                if (DefultValue_WB1.Item_anz == 1 || DefultValue_WB1.Item_anz > 1 || DefultValue_WB1.Item_anz < 1){
                     chest.getInventory().addItem(Item1);
                 }
                 if (DefultValue_WB1.Item_anz == 2 || DefultValue_WB1.Item_anz > 2) {
@@ -932,6 +932,8 @@ public class PlaceChestWB1 implements Listener {
                 if (DefultValue_WB1.Item_anz == 9 || DefultValue_WB1.Item_anz > 9) {
                     chest.getInventory().addItem(Item9);
                 }
+
+
 
             }
         }

@@ -460,12 +460,12 @@ public class WonderBag_3 {
     }
 
     private static String replace(String Text) {
-        File shopYML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_3.yml");
-        YamlConfiguration yamlConfiguration_WB3 = YamlConfiguration.loadConfiguration(shopYML);
+        File WB3YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_3.yml");
+        YamlConfiguration yamlConfiguration_wb3 = YamlConfiguration.loadConfiguration(WB3YML);
         return Text.replace("[prefix]", DefultValue.Prefix).replace("&", "§").replace("[currency]", DefultValue.Currency)
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
                 .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB3.Name)
-                .replace("[WB3Price]", String.valueOf(yamlConfiguration_WB3.get("WonderBag.WonderBag_3.price")));
+                .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("Shop.price")));
     }
 
 

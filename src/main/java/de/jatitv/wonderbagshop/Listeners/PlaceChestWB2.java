@@ -4,6 +4,7 @@
 package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
 import de.jatitv.wonderbagshop.main.Main;
 import de.tr7zw.nbtapi.NBTItem;
@@ -898,7 +899,7 @@ public class PlaceChestWB2 implements Listener {
                         break;
                 }
 
-                if (DefultValue_WB2.Item_anz == 1 || DefultValue_WB2.Item_anz > 1){
+                if (DefultValue_WB2.Item_anz == 1 || DefultValue_WB2.Item_anz > 1 || DefultValue_WB2.Item_anz < 1){
                     chest.getInventory().addItem(Item1);
                 }
                 if (DefultValue_WB2.Item_anz == 2 || DefultValue_WB2.Item_anz > 2) {

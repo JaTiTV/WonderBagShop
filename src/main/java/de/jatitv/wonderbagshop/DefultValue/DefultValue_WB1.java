@@ -13,6 +13,9 @@ public class DefultValue_WB1 {
     public static String ChestName = "§2Wonder§6Bag §91";
     public static Integer Item_anz = 9;
 
+    public static boolean Efficiency_V = true;
+
+
     public static String Item1_Item = "DIAMOND";
     public static Integer Item1_StackSize = 1;
 

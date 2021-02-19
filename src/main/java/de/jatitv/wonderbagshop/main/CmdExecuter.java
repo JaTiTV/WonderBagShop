@@ -16,6 +16,7 @@ package de.jatitv.wonderbagshop.main;
 import de.jatitv.wonderbagshop.commands.Reload;
 import de.jatitv.wonderbagshop.commands.Shop;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -33,7 +34,14 @@ public class CmdExecuter implements CommandExecutor {
             Player player = (Player) sender;
             if (args.length == 0) {
                 if (player.hasPermission("wonderbagshop.command")) {
-                    Shop.openShop(player);
+                    if (Bukkit.getPluginManager().getPlugin("NBTAPI") != null) {
+                        Shop.openShop(player);
+                    } else {
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! " +
+                                "§9Please download it here: §6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                        player.sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                                "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                    }
                 } else {
                     player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop").replace("[perm]", "wonderbagshop.command"));
                 }
@@ -57,6 +65,20 @@ public class CmdExecuter implements CommandExecutor {
                             sender.sendMessage(DefultValue.Prefix + "§2API: §9" + Main.getPlugin().getDescription().getAPIVersion());
                             sender.sendMessage(DefultValue.Prefix + "§2");
                             sender.sendMessage(DefultValue.Prefix + "§8--------------------------");
+
+                            if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
+                                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                                        "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                                player.sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                                        "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                            }
+                            if (Bukkit.getPluginManager().getPlugin("Vault") == null) {
+                                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault could not be connected / found! §9Please download it here: " +
+                                        "§6https://www.spigotmc.org/resources/vault.34315/§4\n" + DefultValue.PrefixHC);
+                                player.sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                                        "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                            }
+
                         } else {
                             player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop info")
                                     .replace("[perm]", "wonderbagshop.command.info"));

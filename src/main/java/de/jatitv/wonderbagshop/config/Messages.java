@@ -60,7 +60,7 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Plugin.VaultNotSetUp")) {
             DefultValue.VaultNotSetUp = replace(yamlConfiguration_msg.getString("Plugin.VaultNotSetUp"));
         } else {
-            yamlConfiguration_msg.set("Plugin.VaultNotSetUp", "&4Vault / Economy not set up!");
+            yamlConfiguration_msg.set("Plugin.VaultNotSetUp", "[prefix] &4Vault / Economy not set up!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6VaultNotSetUp §4was added to §9Messages.yml§4!");
         }
 

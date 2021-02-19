@@ -10,12 +10,11 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 0.6_Snapshot
+version: 0.7_Snapshot
 main: de.jatitv.wonderbagshop.main.Main
 api-version: 1.16
-depend:
-  - Vault
 softdepend:
+  - Vault
   - Economy
   - EssentialsX
   - CMI

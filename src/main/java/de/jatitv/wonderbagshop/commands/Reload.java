@@ -48,6 +48,14 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Vault.loadVault();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                    "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+        }
+        if (Bukkit.getPluginManager().getPlugin("Vault") == null) {
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault could not be connected / found! §9Please download it here: " +
+                    "§6https://www.spigotmc.org/resources/vault.34315/§4\n" + DefultValue.PrefixHC);
+        }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Plugin successfully reloaded.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
@@ -79,6 +87,14 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Vault.loadVault();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                    "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+        }
+        if (Bukkit.getPluginManager().getPlugin("Vault") == null) {
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault could not be connected / found! §9Please download it here: " +
+                    "§6https://www.spigotmc.org/resources/vault.34315/§4\n" + DefultValue.PrefixHC);
+        }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Plugin successfully reloaded.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");

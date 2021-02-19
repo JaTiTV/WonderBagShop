@@ -18,6 +18,7 @@ import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.tr7zw.nbtapi.NBTItem;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -102,11 +103,11 @@ public class ShopEvent implements Listener {
                                     player.getInventory().addItem(nbti.getItem());
 
                                     player.sendMessage(DefultValue.WB3buy_msg);
+
                                 } else {
                                     player.sendMessage(DefultValue.No_money);
                                 }
                                 break;
-
                         }
                         break;
                     default:

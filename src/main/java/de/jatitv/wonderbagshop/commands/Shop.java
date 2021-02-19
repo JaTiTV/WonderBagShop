@@ -33,8 +33,6 @@ public class Shop {
     public static void openShop(Player player){
         Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
-
-
         ItemStack item = new ItemStack(Material.CHEST);
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.setDisplayName(DefultValue_WB1.Name);
@@ -68,12 +66,11 @@ public class Shop {
         item3.setAmount(3);
         inventory.setItem(15, item3);
 
-
         player.openInventory(inventory);
     }
     public static boolean buy(Player p, Integer preis){
         if(Main.eco == null ){
-            p.sendMessage(DefultValue.Prefix + DefultValue.VaultNotSetUp);
+            p.sendMessage(DefultValue.Prefix+ "\n" + DefultValue.VaultNotSetUp + "\n" + DefultValue.Prefix);
         }else {
             if (Main.eco.getBalance(p) < preis) {
                 return false;
@@ -84,5 +81,4 @@ public class Shop {
         }
         return false;
     }
-
 }

@@ -10,11 +10,12 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 1.0_Snapshot
+version: 1.1_Snapshot
 main: de.jatitv.wonderbagshop.main.Main
 api-version: 1.16
 softdepend:
   - Vault
+  - NBTAPI
   - Economy
   - EssentialsX
   - CMI
@@ -22,8 +23,11 @@ authors: [ JaTiTV ]
 description: WonderBagShop von JaTiTV
 commands:
   wonderbagshop:
+    description: Open the WonderBagShop.
   wbs:
+    description: Open the WonderBagShop.
   wbsrl:
+    description: Reload the WonderBagShop Plugin.
 permissions:
   wonderbagshop.command:
     default: op

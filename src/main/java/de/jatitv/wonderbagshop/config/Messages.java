@@ -68,7 +68,7 @@ public class Messages {
             DefultValue.Help = replace(yamlConfiguration_msg.getString("Help"));
         } else {
             yamlConfiguration_msg.set("Help", "&8[&2W&6B&9S&8] &8----- &2Wonder&6Bag&9Shop &chelp &8-----\n&8[&2W&6B&9S&8]\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop&8' &eOpens this help." +
-                    "\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop shop&8' &eOpens the store.\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop reload&8' &eReloads the Plugin.\n&8[&2W&6B&9S&8]\n" +
+                    "\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop shop&8' &eOpens the shop.\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop reload&8' &eReloads the Plugin.\n&8[&2W&6B&9S&8]\n" +
                     "&8[&2W&6B&9S&8] &8----------------------------");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help §4was added to §9Messages.yml§4!");
         }

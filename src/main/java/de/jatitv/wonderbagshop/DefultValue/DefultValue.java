@@ -24,11 +24,11 @@ public class DefultValue {
     public static String VaultNotSetUp = "§8[§2W§6B§9S§8] §4Vault / Economy not set up!";
 
     public static String Help = "§8[§2W§6B§9S§8] §8----- §2Wonder§6Bag§9Shop §chelp §8-----\n§8[§2W§6B§9S§8]\n§8[§2W§6B§9S§8] §8'§b/wonderbagshop§8' §eOpens this help." +
-            "\n§8[§2W§6B§9S§8] §8'§b/wonderbagshop shop§8' §eOpens the store.\n§8[§2W§6B§9S§8] §8'§b/wonderbagshop reload§8' §eReloads the Plugin.\n§8[§2W§6B§9S§8]\n" +
+            "\n§8[§2W§6B§9S§8] §8'§b/wonderbagshop shop§8' §eOpens the shop.\n§8[§2W§6B§9S§8] §8'§b/wonderbagshop reload§8' §eReloads the Plugin.\n§8[§2W§6B§9S§8]\n" +
             "§8[§2W§6B§9S§8] §8----------------------------";
     public static String HelpConsole = "§4\n" + DefultValue.PrefixHC + "§8------ §2Wonder§6Bag§9Shop §chelp §8------§4\n" + DefultValue.PrefixHC +
             "§4\n" + DefultValue.PrefixHC + "§8'§b/wonderbagshop§8' §eOpens this help.§4\n" + DefultValue.PrefixHC +
-            "§8'§b/wonderbagshop shop§8' §eOpens the store.§4\n" + DefultValue.PrefixHC + "§8'§b/wonderbagshop reload§8' §eReloads the Plugin.§4\n"
+            "§8'§b/wonderbagshop shop§8' §eOpens the shop.§4\n" + DefultValue.PrefixHC + "§8'§b/wonderbagshop reload§8' §eReloads the Plugin.§4\n"
             + DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§8----------------------------";
 
     public static String No_money = "§8[§2W§6B§9S§8] §cYou do not have enough money!";

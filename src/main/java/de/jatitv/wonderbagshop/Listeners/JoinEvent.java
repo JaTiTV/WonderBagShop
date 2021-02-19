@@ -9,11 +9,12 @@ import de.jatitv.wonderbagshop.main.UpdateChecker;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public class JoinEvent implements Listener {
 
     @EventHandler
-    public void onJoinEvent(JoinEvent){
+    public void onJoinEvent(PlayerJoinEvent event){
         Player player = (Player) player.getPlayer();
         if(player.hasPermission("wonderbagshop.admin")) {
             if(Main.update_version != null) {

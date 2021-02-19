@@ -7,11 +7,11 @@ public class DefultValue_WB1 {
 
     // WonderBag_1
 
-    public static String Name = "§2Wonder§6Bag §91";
+    public static String Name = "§2Wonder§6Bag §9small";
     public static Integer price = 1000;
 
-    public static String ChestName = "§2Wonder§6Bag §91";
-    public static Integer Item_anz = 9;
+    public static String ChestName = "§2Wonder§6Bag §9small";
+    public static Integer Item_anz = 5;
 
     public static boolean Efficiency_V = true;
 

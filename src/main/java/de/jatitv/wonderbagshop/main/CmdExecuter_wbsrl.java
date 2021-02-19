@@ -29,10 +29,10 @@ public class CmdExecuter_wbsrl implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0) {
-                if (sender.hasPermission("wonderbagshop.command.reload") || sender.hasPermission("wondershop.admin") || sender.isOp()){
+                if (sender.hasPermission("wonderbagshop.command.reload") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()){
                     Reload.reloadConfirmPlayer((Player) sender);
                 } else {
-                    sender.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop info")
+                    sender.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
                             .replace("[perm]", "wonderbagshop.command.reload"));
                 }
             }

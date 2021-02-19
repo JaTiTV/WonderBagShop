@@ -33,8 +33,8 @@ public class CmdExecuter implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args.length == 0) {
-                if (player.hasPermission("wonderbagshop.command")) {
-                    if (Bukkit.getPluginManager().getPlugin("NBTAPI") != null) {
+                if (player.hasPermission("wonderbagshop.command")  || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                     if (Bukkit.getPluginManager().getPlugin("NBTAPI") != null) {
                         Shop.openShop(player);
                     } else {
                         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! " +
@@ -53,16 +53,16 @@ public class CmdExecuter implements CommandExecutor {
                     case "version":
                     case "ver":
                         if (player.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
-                            sender.sendMessage(DefultValue.Prefix + "§8-------- §4Plugin-Info §8--------");
-                            sender.sendMessage(DefultValue.Prefix + "§2");
-                            sender.sendMessage(DefultValue.Prefix + "§2This plugin was developed by §9JaTiTV §8(german)§2.");
-                            sender.sendMessage(DefultValue.Prefix + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
-                            sender.sendMessage(DefultValue.Prefix + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
-                            sender.sendMessage(DefultValue.Prefix + "§2Spigot: §eComming Soon!");
-                            sender.sendMessage(DefultValue.Prefix + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
-                            sender.sendMessage(DefultValue.Prefix + "§2API: §6" + Main.getPlugin().getDescription().getAPIVersion());
-                            sender.sendMessage(DefultValue.Prefix + "§2");
-                            sender.sendMessage(DefultValue.Prefix + "§8--------------------------");
+                            sender.sendMessage(DefultValue.PrefixHC + "§8-------- §4Plugin-Info §8--------");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2This plugin was developed by §9JaTiTV");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §eComming Soon!");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
+                            sender.sendMessage(DefultValue.PrefixHC + "§2API: §6" + Main.getPlugin().getDescription().getAPIVersion());
+                            sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");
 
                             if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
                                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
@@ -84,7 +84,7 @@ public class CmdExecuter implements CommandExecutor {
                         break;
                     case "reload":
                     case "rl":
-                        if (player.hasPermission("wonderbagshop.command.reload") || player.isOp()){
+                        if (player.hasPermission("wonderbagshop.command.reload") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
                         Reload.reloadConfirmPlayer(player);
                         } else {
                             player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
@@ -93,7 +93,7 @@ public class CmdExecuter implements CommandExecutor {
                         break;
                     case "help":
                     default:
-                        if (player.hasPermission("wonderbagshop.command.admin") || player.isOp()){
+                        if (player.hasPermission("wonderbagshop.command")  || player.hasPermission("wonderbagshop.admin") || player.isOp()){
                             player.sendMessage(DefultValue.Help);
                         } else {
                             player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop help")
@@ -111,7 +111,7 @@ public class CmdExecuter implements CommandExecutor {
                     case "version":
                     case "ver":
                         sender.sendMessage(DefultValue.PrefixHC + "§8-------- §4Plugin-Info §8--------");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2This plugin was developed by §9JaTiTV §8(german)§2.");
+                        sender.sendMessage(DefultValue.PrefixHC + "§2This plugin was developed by §9JaTiTV");
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");

@@ -30,14 +30,14 @@ public class TabComplete implements TabCompleter {
             Player player = (Player) sender;
             if (args.length == 0 || args.length == 1) {
                 if (args[0].isEmpty()) {
-                    if (player.hasPermission("wonderbagshop.command.reload") || player.isOp()) {
+                    if (player.hasPermission("wonderbagshop.command.reload") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("reload");
                         list.add("rl");
                     }
-                    if (player.hasPermission("wonderbagshop.command") || player.isOp()) {
+                    if (player.hasPermission("wonderbagshop.command") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("help");
                     }
-                    if (player.hasPermission("wonderbagshop.command.info") || player.isOp()) {
+                    if (player.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("info");
                     }
                     return list;

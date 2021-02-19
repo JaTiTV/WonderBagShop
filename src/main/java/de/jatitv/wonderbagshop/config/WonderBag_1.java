@@ -27,7 +27,7 @@ public class WonderBag_1 {
         if(yamlConfiguration_wb1.contains("Shop.Name")){
             DefultValue_WB1.Name = replace(yamlConfiguration_wb1.getString("Shop.Name"));
         }else{
-            yamlConfiguration_wb1.set("Shop.Name", "&2Wonder&6Bag &91");
+            yamlConfiguration_wb1.set("Shop.Name", "&2Wonder&6Bag &9small");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag_1 Setting §6Shop Name §4was added to §9WonderBag_1.yml§4!");
         }
 
@@ -43,7 +43,7 @@ public class WonderBag_1 {
         if(yamlConfiguration_wb1.contains("WonderBag.ChestName")){
             DefultValue_WB1.ChestName = replace(yamlConfiguration_wb1.getString("WonderBag.ChestName"));
         }else{
-            yamlConfiguration_wb1.set("WonderBag.ChestName", "&2Wonder&6Bag &91");
+            yamlConfiguration_wb1.set("WonderBag.ChestName", "&2Wonder&6Bag &9small");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag_1 Setting §6WonderBag ChestName §4was added to §9WonderBag_1.yml§4!");
         }
 

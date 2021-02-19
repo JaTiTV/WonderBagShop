@@ -14,8 +14,7 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.commands.Reload;
-import de.jatitv.wonderbagshop.config.DefultValue;
-import de.jatitv.wonderbagshop.config.Messages;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

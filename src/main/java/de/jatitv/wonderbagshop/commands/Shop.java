@@ -13,7 +13,8 @@
 
 package de.jatitv.wonderbagshop.commands;
 
-import de.jatitv.wonderbagshop.config.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -28,27 +29,28 @@ import java.util.ArrayList;
 public class Shop {
 
     public static void openShop(Player player){
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, de.jatitv.wonderbagshop.config.DefultValue.ShopName_GUI);
+        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
 
 
         ItemStack item = new ItemStack(Material.CHEST);
         ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName(de.jatitv.wonderbagshop.config.DefultValue.WB1Name);
+        itemMeta.setDisplayName(DefultValue_WB1.Name);
         ArrayList<String> lore = new ArrayList<>();
         lore.add("§8-------------");
-        lore.add(de.jatitv.wonderbagshop.config.DefultValue.WB1price + " " + DefultValue.Currency);
+        lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
         itemMeta.setLore(lore);
         item.setItemMeta(itemMeta);
         item.setAmount(1);
         inventory.setItem(11, item);
 
+        /*
         ItemStack item2 = new ItemStack(Material.CHEST);
         ItemMeta itemMeta2 = item2.getItemMeta();
-        itemMeta2.setDisplayName(de.jatitv.wonderbagshop.config.DefultValue.WB2Name);
+        itemMeta2.setDisplayName(DefultValue_WB2.Name);
         ArrayList<String> lore2 = new ArrayList<>();
         lore2.add("§8-------------");
-        lore2.add(de.jatitv.wonderbagshop.config.DefultValue.WB2price + " " + DefultValue.Currency);
+        lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
         itemMeta2.setLore(lore2);
         item2.setItemMeta(itemMeta2);
         item2.setAmount(2);
@@ -56,14 +58,15 @@ public class Shop {
 
         ItemStack item3 = new ItemStack(Material.CHEST);
         ItemMeta itemMeta3 = item3.getItemMeta();
-        itemMeta3.setDisplayName(de.jatitv.wonderbagshop.config.DefultValue.WB3Name);
+        itemMeta3.setDisplayName(DefultValue_WB2.Name);
         ArrayList<String> lore3 = new ArrayList<>();
         lore3.add("§8-------------");
-        lore3.add(de.jatitv.wonderbagshop.config.DefultValue.WB3price + " " + DefultValue.Currency);
+        lore3.add(DefultValue_WB2.price + " " + DefultValue.Currency);
         itemMeta3.setLore(lore3);
         item3.setItemMeta(itemMeta3);
         item3.setAmount(3);
         inventory.setItem(15, item3);
+        */
 
         player.openInventory(inventory);
     }

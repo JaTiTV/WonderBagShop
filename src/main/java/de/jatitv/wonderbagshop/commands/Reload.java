@@ -14,9 +14,9 @@
 package de.jatitv.wonderbagshop.commands;
 
 import de.jatitv.wonderbagshop.config.Config;
-import de.jatitv.wonderbagshop.config.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.config.Messages;
-import de.jatitv.wonderbagshop.config.Shop;
+import de.jatitv.wonderbagshop.config.WonderBag_1;
 import de.jatitv.wonderbagshop.main.Vault;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -33,7 +33,7 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
-        Shop.shopCreate();
+        WonderBag_1.WB1Create();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
@@ -57,7 +57,7 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
-        Shop.shopCreate();
+        WonderBag_1.WB1Create();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");

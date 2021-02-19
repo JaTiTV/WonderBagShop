@@ -13,7 +13,7 @@
 
 package de.jatitv.wonderbagshop.commands;
 
-import de.jatitv.wonderbagshop.config.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

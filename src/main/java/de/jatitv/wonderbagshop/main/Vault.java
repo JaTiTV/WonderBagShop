@@ -13,8 +13,7 @@
 
 package de.jatitv.wonderbagshop.main;
 
-import de.jatitv.wonderbagshop.config.DefultValue;
-import de.jatitv.wonderbagshop.config.Messages;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;

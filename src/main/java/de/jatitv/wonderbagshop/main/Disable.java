@@ -14,9 +14,9 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.config.Config;
-import de.jatitv.wonderbagshop.config.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.config.Messages;
-import de.jatitv.wonderbagshop.config.Shop;
+import de.jatitv.wonderbagshop.config.WonderBag_1;
 import org.bukkit.Bukkit;
 
 public class Disable {
@@ -41,7 +41,7 @@ public class Disable {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Messages.messagesDisable();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Shop.shopDisable();
+        WonderBag_1.WB1Disable();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Vault.vaultDisable();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-----------------------------------------------------------------------------------");

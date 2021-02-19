@@ -13,7 +13,8 @@
 
 package de.jatitv.wonderbagshop.Listeners;
 
-import de.jatitv.wonderbagshop.config.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -24,7 +25,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 
 public class ShopEvent implements Listener {
@@ -34,20 +34,20 @@ public class ShopEvent implements Listener {
         if (!(e.getWhoClicked() instanceof Player)) return;
         Player player = (Player) e.getWhoClicked();
         if(e.getInventory() !=null && e.getCurrentItem()!= null){
-            if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.ShopName_GUI)) {
+            if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.GUI_Name)) {
                 e.setCancelled(true);
                 switch (e.getCurrentItem().getType()) {
                     case CHEST:
                         switch (e.getCurrentItem().getAmount()) {
                             case 1:
                                 player.closeInventory();
-                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue.WB1price)) {
+                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB1.price)) {
 
-                                    player.sendMessage(String.valueOf(DefultValue.WB1price));
+                                    player.sendMessage(String.valueOf(DefultValue_WB1.price));
 
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValue.WB1ChestName);
+                                    itemMeta.setDisplayName(DefultValue_WB1.ChestName);
                                     ArrayList<String> lore = new ArrayList<>();
                                     itemMeta.setLore(lore);
                                     itemMeta.setUnbreakable(itemMeta.isUnbreakable());
@@ -63,7 +63,7 @@ public class ShopEvent implements Listener {
                                     player.sendMessage(DefultValue.No_money);
                                 }
                                 break;
-
+/*
                             case 2:
                                 player.closeInventory();
                                 if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue.WB2price)) {
@@ -106,6 +106,7 @@ public class ShopEvent implements Listener {
                                     player.sendMessage(DefultValue.No_money);
                                 }
                                 break;
+                                */
                         }
                         break;
                     default:

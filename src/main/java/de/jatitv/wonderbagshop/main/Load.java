@@ -14,9 +14,9 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.config.Config;
-import de.jatitv.wonderbagshop.config.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.config.Messages;
-import de.jatitv.wonderbagshop.config.Shop;
+import de.jatitv.wonderbagshop.config.WonderBag_1;
 import org.bukkit.Bukkit;
 
 public class Load {
@@ -42,7 +42,7 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
-        Shop.shopCreate();
+        WonderBag_1.WB1Create();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");

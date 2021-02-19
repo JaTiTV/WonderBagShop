@@ -13,6 +13,8 @@
 
 package de.jatitv.wonderbagshop.config;
 
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -24,9 +26,9 @@ public class Messages {
 
     public static void messagesCreate(){
 
-        DefultValue.WB1price_ST = String.valueOf(DefultValue.WB1price);
-        DefultValue.WB2price_ST = String.valueOf(DefultValue.WB2price);
-        DefultValue.WB3price_ST = String.valueOf(DefultValue.WB3price);
+        DefultValue.WB1price_ST = String.valueOf(DefultValue_WB1.price);
+        //DefultValue.WB2price_ST = String.valueOf(DefultValue_WB2.price);
+        //DefultValue.WB3price_ST = String.valueOf(DefultValue_WB3.price);
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Messages load...");
 
@@ -116,8 +118,8 @@ public class Messages {
         YamlConfiguration yamlConfiguration_shop = YamlConfiguration.loadConfiguration(shopYML);
         return Text.replace("[prefix]", DefultValue.Prefix).replace("&", "§").replace("[currency]", DefultValue.Currency)
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
-                .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue.WB1Name)
-                .replace("[WB2Name]", DefultValue.WB2Name).replace("[WB3Name]", DefultValue.WB3Name)
+                .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB1.Name)
+                //.replace("[WB2Name]", DefultValue_WB2.Name).replace("[WB3Name]", DefultValue_WB3.Name)
                 .replace("[WB1Price]", String.valueOf(yamlConfiguration_shop.get("WonderBag.WonderBag_1.price")))
                 .replace("[WB2Price]", String.valueOf(yamlConfiguration_shop.get("WonderBag.WonderBag_2.price")))
                 .replace("[WB3Price]", String.valueOf(yamlConfiguration_shop.get("WonderBag.WonderBag_3.price")));

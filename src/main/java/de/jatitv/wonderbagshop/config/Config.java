@@ -13,6 +13,7 @@
 
 package de.jatitv.wonderbagshop.config;
 
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -36,32 +37,18 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Language §4was added to §9config.yml§4!");
         }
 
-        if (yamlConfiguration_config.contains("Currency")) {
-            DefultValue.Currency = yamlConfiguration_config.getString("Currency");
+        if(yamlConfiguration_config.contains("Shop.GUI_Name")){
+            DefultValue.GUI_Name = replace(yamlConfiguration_config.getString("Shop.GUI_Name"));
+        }else{
+            yamlConfiguration_config.set("Shop.GUI_Name", "&2Wonder&6Bag&9Shop");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9shop.yml§4!");
+        }
+
+        if (yamlConfiguration_config.contains("Shop.Currency")) {
+            DefultValue.Currency = yamlConfiguration_config.getString("Shop.Currency");
         } else {
-            yamlConfiguration_config.set("Currency", "$");
+            yamlConfiguration_config.set("Shop.Currency", "$");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9config.yml§4!");
-        }
-
-        if(yamlConfiguration_config.contains("ItemList.WonderBag_1")){
-            DefultValue.WB1Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_1"));
-        }else{
-            yamlConfiguration_config.set("ItemList.WonderBag_1", DefultValue.WB1ItemsLIST);
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_1 §4was added to §9config.yml§4!");
-        }
-
-        if(yamlConfiguration_config.contains("ItemList.WonderBag_2")){
-            DefultValue.WB2Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_2"));
-        }else{
-            yamlConfiguration_config.set("ItemList.WonderBag_2", DefultValue.WB2ItemsLIST);
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_2 §4was added to §9config.yml§4!");
-        }
-
-        if(yamlConfiguration_config.contains("ItemList.WonderBag_3")){
-            DefultValue.WB3Items = replace(yamlConfiguration_config.getString("ItemList.WonderBag_3"));
-        }else{
-            yamlConfiguration_config.set("ItemList.WonderBag_3", DefultValue.WB3ItemsLIST);
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ItemList/WonderBag_3 §4was added to §9config.yml§4!");
         }
 
         try {

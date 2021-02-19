@@ -46,6 +46,6 @@ Komm für weitere Fragen einfach auf den Support Discord.
 ---
 
 # Links
-* [Download]()
+* [Download](https://www.spigotmc.org/resources/wonderbagshop.89234/)
 * [Discord](https://discord.gg/vRyXFFterJ)
 * [Translations](https://github.com/JaTiTV/WonderBagShop-privat-/tree/master/Languages)

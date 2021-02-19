@@ -50,10 +50,8 @@ public final class Main extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB1(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB2(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB3(), this);
-        Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
 
         Load.LoadSend(getDescription().getVersion());
-        JoinEvent.onJoinEvent(getDescription().getVersion());
 
 
         int pluginId = 10342; // <-- Replace with the id of your plugin!

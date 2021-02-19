@@ -34,5 +34,5 @@ Komm für weitere Fragen einfach auf den Support Discord.
 
 ## Links
 * [Download]()
-* [Discord](https://discord.gg/vRyXFFterJ
+* [Discord](https://discord.gg/vRyXFFterJ)
 * [Translations](https://github.com/JaTiTV/WonderBagShop-privat-/tree/master/Languages)

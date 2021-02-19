@@ -13,10 +13,8 @@
 
 package de.jatitv.wonderbagshop.commands;
 
-import de.jatitv.wonderbagshop.config.Config;
+import de.jatitv.wonderbagshop.config.*;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.config.Messages;
-import de.jatitv.wonderbagshop.config.WonderBag_1;
 import de.jatitv.wonderbagshop.main.Vault;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -34,6 +32,14 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBag_1.WB1Create();
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        WonderBag_2.WB2Create();
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        WonderBag_3.WB3Create();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
@@ -58,6 +64,14 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBag_1.WB1Create();
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        WonderBag_2.WB2Create();
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        WonderBag_3.WB3Create();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");

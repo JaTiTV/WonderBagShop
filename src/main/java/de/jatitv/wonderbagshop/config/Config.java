@@ -25,30 +25,30 @@ public class Config {
 
     public static void configCreate(){
 
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config load...");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config.yml load...");
 
-        File configYML = new File(Main.thisp().getDataFolder().getPath(), "config.yml");
+        File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
         if (yamlConfiguration_config.contains("Language")) {
             DefultValue.Lang = yamlConfiguration_config.getString("Language");
         } else {
             yamlConfiguration_config.set("Language", "EN");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Language §4was added to §9config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Language §4was added to §9Config.yml§4!");
         }
 
         if(yamlConfiguration_config.contains("Shop.GUI_Name")){
             DefultValue.GUI_Name = replace(yamlConfiguration_config.getString("Shop.GUI_Name"));
         }else{
             yamlConfiguration_config.set("Shop.GUI_Name", "&2Wonder&6Bag&9Shop");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9shop.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
         }
 
         if (yamlConfiguration_config.contains("Shop.Currency")) {
             DefultValue.Currency = yamlConfiguration_config.getString("Shop.Currency");
         } else {
             yamlConfiguration_config.set("Shop.Currency", "$");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9Config.yml§4!");
         }
 
         try {
@@ -57,11 +57,11 @@ public class Config {
             e.printStackTrace();
         }
 
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config loaded successfully.");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config.yml loaded successfully.");
     }
 
     public static void configDisable(){
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4config.yml successfully deactivated.");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config.yml successfully deactivated.");
     }
 
     private static String replace(String Text) {

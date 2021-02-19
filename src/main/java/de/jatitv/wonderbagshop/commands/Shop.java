@@ -15,6 +15,8 @@ package de.jatitv.wonderbagshop.commands;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -44,7 +46,6 @@ public class Shop {
         item.setAmount(1);
         inventory.setItem(11, item);
 
-        /*
         ItemStack item2 = new ItemStack(Material.CHEST);
         ItemMeta itemMeta2 = item2.getItemMeta();
         itemMeta2.setDisplayName(DefultValue_WB2.Name);
@@ -58,15 +59,15 @@ public class Shop {
 
         ItemStack item3 = new ItemStack(Material.CHEST);
         ItemMeta itemMeta3 = item3.getItemMeta();
-        itemMeta3.setDisplayName(DefultValue_WB2.Name);
+        itemMeta3.setDisplayName(DefultValue_WB3.Name);
         ArrayList<String> lore3 = new ArrayList<>();
         lore3.add("§8-------------");
-        lore3.add(DefultValue_WB2.price + " " + DefultValue.Currency);
+        lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
         itemMeta3.setLore(lore3);
         item3.setItemMeta(itemMeta3);
         item3.setAmount(3);
         inventory.setItem(15, item3);
-        */
+
 
         player.openInventory(inventory);
     }

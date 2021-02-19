@@ -14,6 +14,8 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.Listeners.PlaceChestWB1;
+import de.jatitv.wonderbagshop.Listeners.PlaceChestWB2;
+import de.jatitv.wonderbagshop.Listeners.PlaceChestWB3;
 import de.jatitv.wonderbagshop.Listeners.ShopEvent;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import net.milkbowl.vault.economy.Economy;
@@ -47,7 +49,11 @@ public final class Main extends JavaPlugin {
 
         a = this;
         Bukkit.getServer().getPluginManager().registerEvents(new ShopEvent(), this);
+
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB1(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB2(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB3(), this);
+
         Load.LoadSend(getDescription().getVersion());
 
         //TODO Bstats wieder aktivieren
@@ -88,13 +94,12 @@ public final class Main extends JavaPlugin {
         return plugin;
     }
 
-
-
     @Override
     public void onDisable() {
         // Plugin shutdown logic
         Disable.disableSend(getDescription().getVersion());
     }
+
     public static Main getPlugin() {return plugin;}
 
 }

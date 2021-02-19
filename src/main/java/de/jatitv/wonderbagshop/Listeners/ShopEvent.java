@@ -15,6 +15,8 @@ package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
+import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -63,14 +65,14 @@ public class ShopEvent implements Listener {
                                     player.sendMessage(DefultValue.No_money);
                                 }
                                 break;
-/*
+
                             case 2:
                                 player.closeInventory();
-                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue.WB2price)) {
+                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB2.price)) {
 
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValue.WB2ChestName);
+                                    itemMeta.setDisplayName(DefultValue_WB2.ChestName);
                                     ArrayList<String> lore = new ArrayList<>();
                                     itemMeta.setLore(lore);
                                     item.setItemMeta(itemMeta);
@@ -88,11 +90,11 @@ public class ShopEvent implements Listener {
 
                             case 3:
                                 player.closeInventory();
-                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue.WB3price)) {
+                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB3.price)) {
 
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValue.WB3ChestName);
+                                    itemMeta.setDisplayName(DefultValue_WB3.ChestName);
                                     ArrayList<String> lore = new ArrayList<>();
                                     itemMeta.setLore(lore);
                                     item.setItemMeta(itemMeta);
@@ -106,7 +108,7 @@ public class ShopEvent implements Listener {
                                     player.sendMessage(DefultValue.No_money);
                                 }
                                 break;
-                                */
+
                         }
                         break;
                     default:

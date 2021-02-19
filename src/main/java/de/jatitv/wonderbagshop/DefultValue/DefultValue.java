@@ -10,6 +10,7 @@ public class DefultValue {
     public static String Lang = "EN";
     public static String Currency = "$";
     public static String GUI_Name = "§2Wonder§6Bag§9Shop";
+    public static Boolean ItemNumbers = true;
 
     // Messages
 

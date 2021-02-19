@@ -53,6 +53,13 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9Config.yml§4!");
         }
 
+        if (yamlConfiguration_config.contains("Shop.ItemNumbers")) {
+            DefultValue.ItemNumbers = yamlConfiguration_config.getBoolean("Shop.ItemNumbers");
+        } else {
+            yamlConfiguration_config.set("Shop.ItemNumbers", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
+        }
+
         try {
             yamlConfiguration_config.save(configYML);
         } catch (IOException e) {

@@ -51,7 +51,6 @@ public class ShopEvent implements Listener {
                                     itemMeta.setDisplayName(DefultValue_WB1.ChestName);
                                     ArrayList<String> lore = new ArrayList<>();
                                     itemMeta.setLore(lore);
-                                    itemMeta.setUnbreakable(itemMeta.isUnbreakable());
                                     item.setItemMeta(itemMeta);
                                     item.setAmount(1);
                                     NBTItem nbti = new NBTItem(item);

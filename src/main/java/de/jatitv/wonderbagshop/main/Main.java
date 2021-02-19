@@ -14,10 +14,7 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.Listeners.PlaceChestWB1;
-import de.jatitv.wonderbagshop.Listeners.PlaceChestWB2;
-import de.jatitv.wonderbagshop.Listeners.PlaceChestWB3;
-import de.jatitv.wonderbagshop.Listeners.ShopEvent;
+import de.jatitv.wonderbagshop.Listeners.*;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -53,10 +50,11 @@ public final class Main extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB1(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB2(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB3(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
 
         Load.LoadSend(getDescription().getVersion());
+        JoinEvent.onJoinEvent(getDescription().getVersion());
 
-        //TODO Bstats / UpdateChecker wieder aktivieren
 
         int pluginId = 10342; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);

@@ -4,7 +4,6 @@
 package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;

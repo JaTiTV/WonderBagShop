@@ -56,13 +56,11 @@ public class CmdExecuter implements CommandExecutor {
                             sender.sendMessage(DefultValue.Prefix + "§8-------- §4Plugin-Info §8--------");
                             sender.sendMessage(DefultValue.Prefix + "§2");
                             sender.sendMessage(DefultValue.Prefix + "§2This plugin was developed by §9JaTiTV §8(german)§2.");
-                            sender.sendMessage(DefultValue.Prefix + "§2");
                             sender.sendMessage(DefultValue.Prefix + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
-                            sender.sendMessage(DefultValue.Prefix + "§2Support-Discord: §eComming Soon!");
+                            sender.sendMessage(DefultValue.Prefix + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
                             sender.sendMessage(DefultValue.Prefix + "§2Spigot: §eComming Soon!");
-                            sender.sendMessage(DefultValue.Prefix + "§2");
-                            sender.sendMessage(DefultValue.Prefix + "§2Version: §9" + Main.getPlugin().getDescription().getVersion());
-                            sender.sendMessage(DefultValue.Prefix + "§2API: §9" + Main.getPlugin().getDescription().getAPIVersion());
+                            sender.sendMessage(DefultValue.Prefix + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
+                            sender.sendMessage(DefultValue.Prefix + "§2API: §6" + Main.getPlugin().getDescription().getAPIVersion());
                             sender.sendMessage(DefultValue.Prefix + "§2");
                             sender.sendMessage(DefultValue.Prefix + "§8--------------------------");
 
@@ -113,23 +111,18 @@ public class CmdExecuter implements CommandExecutor {
                     case "version":
                     case "ver":
                         sender.sendMessage(DefultValue.PrefixHC + "§8-------- §4Plugin-Info §8--------");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2This plugin was developed by §9JaTiTV §8(german)§2.");
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §eComming Soon!");
+                        sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §eComming Soon!");
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2Version: §9" + Main.getPlugin().getDescription().getVersion());
-                        sender.sendMessage(DefultValue.PrefixHC + "§2API: §9" + Main.getPlugin().getDescription().getAPIVersion());
-                        sender.sendMessage(DefultValue.PrefixHC + "§2");
+                        sender.sendMessage(DefultValue.PrefixHC + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
+                        sender.sendMessage(DefultValue.PrefixHC + "§2API: §6" + Main.getPlugin().getDescription().getAPIVersion());
                         sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");
                         break;
                     default:
-                        sender.sendMessage("§4\n" + DefultValue.PrefixHC + "§8------ §2Wonder§6Bag§9Shop §chelp §8------§4\n" + DefultValue.PrefixHC +
-                                "§4\n" + DefultValue.PrefixHC + "§8'§b/wonderbagshop§8' §eOeffnet diese help.§4\n" + DefultValue.PrefixHC +
-                                "§8'§b/wonderbagshop shop§8' §eOeffnet den Shop.§4\n" + DefultValue.PrefixHC + "§8'§b/wonderbagshop reload§8' §eLaed die Cofig neu.§4\n"
-                                + DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§8----------------------------");
+                        sender.sendMessage(DefultValue.HelpConsole);
                         break;
                     case "rl":
                     case "reload":

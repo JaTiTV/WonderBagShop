@@ -56,7 +56,7 @@ public final class Main extends JavaPlugin {
 
         Load.LoadSend(getDescription().getVersion());
 
-        //TODO Bstats wieder aktivieren
+        //TODO Bstats / UpdateChecker wieder aktivieren
 
         // int pluginId = 10342; // <-- Replace with the id of your plugin!
         // Metrics metrics = new Metrics(this, pluginId);
@@ -64,7 +64,8 @@ public final class Main extends JavaPlugin {
         // Optional: Add custom charts
         // metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
 
-        (new UpdateChecker(this, 88889)).getVersion((version) -> {
+        /*
+        (new UpdateChecker(this, XXXX)).getVersion((version) -> {
             String currentVersion = this.getDescription().getVersion();
             if (!currentVersion.equalsIgnoreCase(version)) {
                 String foundVersion = ("§6A new version of §8[§2W§6B§9S§8]§6 was found!");
@@ -89,6 +90,7 @@ public final class Main extends JavaPlugin {
             }
 
         });
+        */
     }
     public static Plugin thisp() {
         return plugin;

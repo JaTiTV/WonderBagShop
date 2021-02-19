@@ -28,7 +28,7 @@ public class Messages {
 
     public static void messagesCreate(){
 
-        DefultValue.WB1price_ST = String.valueOf(DefultValue_WB1.price);
+        // DefultValue.WB1price_ST = String.valueOf(DefultValue_WB1.price);
         //DefultValue.WB2price_ST = String.valueOf(DefultValue_WB2.price);
         //DefultValue.WB3price_ST = String.valueOf(DefultValue_WB3.price);
 
@@ -40,7 +40,7 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Plugin.NoPermission")) {
             DefultValue.NoPermission = replace(yamlConfiguration_msg.getString("Plugin.NoPermission"));
         } else {
-            yamlConfiguration_msg.set("Plugin.NoPermission", "[prefix] &cF[ue]r &b[cmd] &cfehlt dir die Permission &6[perm]&c!");
+            yamlConfiguration_msg.set("Plugin.NoPermission", "[prefix] &cFor &b[cmd] &cyou lack the permission &6[perm]&c!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6NoPermission §4was added to §9Messages.yml§4!");
         }
 
@@ -67,8 +67,8 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Help")) {
             DefultValue.Help = replace(yamlConfiguration_msg.getString("Help"));
         } else {
-            yamlConfiguration_msg.set("Help", "&8[&2W&6B&9S&8] &8----- &2Wonder&6Bag&9Shop &chelp &8-----\n&8[&2W&6B&9S&8]\n&8[&2W&6B&9S&8] '&b/wonderbagshop&e' Öffnet diese help." +
-                    "\n&8[&2W&6B&9S&8] '&b/wonderbagshop shop&e' Öffnet den Shop.\n&8[&2W&6B&9S&8] '&b/wonderbagshop reload&e' Läd die Cofig neu.\n&8[&2W&6B&9S&8]\n" +
+            yamlConfiguration_msg.set("Help", "&8[&2W&6B&9S&8] &8----- &2Wonder&6Bag&9Shop &chelp &8-----\n&8[&2W&6B&9S&8]\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop&8' &eOpens this help." +
+                    "\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop shop&8' &eOpens the store.\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop reload&8' &eReloads the Plugin.\n&8[&2W&6B&9S&8]\n" +
                     "&8[&2W&6B&9S&8] &8----------------------------");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help §4was added to §9Messages.yml§4!");
         }
@@ -76,28 +76,28 @@ public class Messages {
         if(yamlConfiguration_msg.contains("Shop.No_money")){
             DefultValue.No_money = replace(yamlConfiguration_msg.getString("Shop.No_money"));
         }else{
-            yamlConfiguration_msg.set("Shop.No_money", "[prefix] &cDu hast nicht gen[ue]gend Geld!");
+            yamlConfiguration_msg.set("Shop.No_money", "[prefix] &cYou do not have enough money!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6No_money §4was added to §9Messages.yml§4!");
         }
 
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_1")){
             DefultValue.WB1buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_1"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_1", "[prefix] &bDu hast dir [WB1Name] &bf[ue]r [WB1Price] [currency] &bgekauft!");
+            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_1", "[prefix] &bYou bought [WB1Name] &bfor [WB1Price] [currency]");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6WonderBag Item_1 buy_msg §4was added to §9Messages.yml§4!");
         }
 
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_2")){
             DefultValue.WB2buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_2"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_2", "[prefix] &bDu hast dir [WB2Name] &bf[ue]r [WB2Price] [currency] &bgekauft!");
+            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_2", "[prefix] &bYou bought [WB2Name] &bfor [WB2Price] [currency]");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6WonderBag Item_2 buy_msg §4was added to §9Messages.yml§4!");
         }
 
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_3")){
             DefultValue.WB3buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_3"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_3", "[prefix] &bDu hast dir [WB3Name] &bf[ue]r [WB3Price] [currency] &bgekauft!");
+            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_3", "[prefix] &bYou bought [WB3Name] &bfor [WB3Price] [currency]");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6WonderBag Item_3 buy_msg §4was added to §9Messages.yml§4!");
         }
 

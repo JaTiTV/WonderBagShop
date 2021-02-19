@@ -5,14 +5,11 @@ package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
-import de.jatitv.wonderbagshop.main.Main;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
@@ -20,20 +17,12 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
-import java.io.File;
 import java.util.Random;
 
 public class PlaceChestWB1 implements Listener {
 
     @EventHandler
     public void onPlace(BlockPlaceEvent event) {
-
-        File configYML = new File(Main.thisp().getDataFolder().getPath(), "config.yml");
-        YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
-
-        File shopYML = new File(Main.thisp().getDataFolder().getPath(), "shop.yml");
-        YamlConfiguration yamlConfiguration_shop = YamlConfiguration.loadConfiguration(shopYML);
-
         Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
         Block block = event.getBlock();
         ItemStack item = event.getItemInHand();
@@ -933,17 +922,6 @@ public class PlaceChestWB1 implements Listener {
                 if (DefultValue_WB1.Item_anz == 9 || DefultValue_WB1.Item_anz > 9) {
                     chest.getInventory().addItem(Item9);
                 }
-
-
-                Player player = (Player) event.getBlockPlaced();
-                if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
-                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
-                            "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
-                    player.sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
-                            "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
-                }
-
-
             }
         }
     }

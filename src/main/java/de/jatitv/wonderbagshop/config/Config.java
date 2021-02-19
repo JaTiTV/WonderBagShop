@@ -30,15 +30,6 @@ public class Config {
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
-        /*
-        if (yamlConfiguration_config.contains("Language")) {
-            DefultValue.Lang = yamlConfiguration_config.getString("Language");
-        } else {
-            yamlConfiguration_config.set("Language", "EN");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Language §4was added to §9Config.yml§4!");
-        }
-        */
-
         if(yamlConfiguration_config.contains("Shop.GUI_Name")){
             DefultValue.GUI_Name = replace(yamlConfiguration_config.getString("Shop.GUI_Name"));
         }else{

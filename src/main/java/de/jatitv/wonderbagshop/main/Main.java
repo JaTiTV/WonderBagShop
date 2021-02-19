@@ -17,10 +17,8 @@ import de.jatitv.wonderbagshop.Listeners.PlaceChestWB1;
 import de.jatitv.wonderbagshop.Listeners.PlaceChestWB2;
 import de.jatitv.wonderbagshop.Listeners.PlaceChestWB3;
 import de.jatitv.wonderbagshop.Listeners.ShopEvent;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;

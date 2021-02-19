@@ -63,9 +63,9 @@ public class Shop {
         itemMeta2.setLore(lore2);
         item2.setItemMeta(itemMeta2);
         if(DefultValue.ItemNumbers){
-            item.setAmount(2);
+            item2.setAmount(2);
         } else {
-            item.setAmount(1);
+            item2.setAmount(1);
         }
         inventory.setItem(13, item2);
 
@@ -78,9 +78,9 @@ public class Shop {
         itemMeta3.setLore(lore3);
         item3.setItemMeta(itemMeta3);
         if(DefultValue.ItemNumbers){
-            item.setAmount(3);
+            item3.setAmount(3);
         } else {
-            item.setAmount(1);
+            item3.setAmount(1);
         }
         inventory.setItem(15, item3);
 

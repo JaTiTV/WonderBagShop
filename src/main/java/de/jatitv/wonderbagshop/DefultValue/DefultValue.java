@@ -1,5 +1,15 @@
 // This claas was created by JaTiTV
 
+// ___________________________________________________________________________________
+//  __          __             _           ____               _____ _
+//  \ \        / /            | |         |  _ \             / ____| |
+//   \ \  /\  / /__  _ __   __| | ___ _ __| |_) | __ _  __ _| (___ | |__   ___  _ __
+//    \ \/  \/ / _ \| '_ \ / _` |/ _ \ '__|  _ < / _` |/ _` |\___ \| '_ \ / _ \| '_ \
+//     \  /\  / (_) | | | | (_| |  __/ |  | |_) | (_| | (_| |____) | | | | (_) | |_) |
+//      \/  \/ \___/|_| |_|\__,_|\___|_|  |____/ \__,_|\__, |_____/|_| |_|\___/| .__/
+//                                                      __/ |                  | |
+//                                                     |___/                   |_|
+// ___________________________________________________________________________________
 
 package de.jatitv.wonderbagshop.DefultValue;
 
@@ -7,7 +17,6 @@ public class DefultValue {
 
     // Config
 
-    public static String Lang = "EN";
     public static String Currency = "$";
     public static String GUI_Name = "§2Wonder§6Bag§9Shop";
     public static Boolean ItemNumbers = true;
@@ -37,9 +46,4 @@ public class DefultValue {
     public static String WB1buy_msg = "§8[§2W§6B§9S§8] §bYou bought §2Wonder§6Bag §91 §bfor §61000 $";
     public static String WB2buy_msg = "§8[§2W§6B§9S§8] §bYou bought §2Wonder§6Bag §92 §bfor §62000 $";
     public static String WB3buy_msg = "§8[§2W§6B§9S§8] §bYou bought §2Wonder§6Bag §93 §bfor §63000 $";
-
-    // public static String WB1price_ST = String.valueOf(DefultValue_WB1.price);
-
-
-
 }

@@ -28,10 +28,6 @@ public class Messages {
 
     public static void messagesCreate(){
 
-        // DefultValue.WB1price_ST = String.valueOf(DefultValue_WB1.price);
-        //DefultValue.WB2price_ST = String.valueOf(DefultValue_WB2.price);
-        //DefultValue.WB3price_ST = String.valueOf(DefultValue_WB3.price);
-
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Messages.yml load...");
 
         File messagesYML = new File(Main.thisp().getDataFolder().getPath(), "Messages.yml");

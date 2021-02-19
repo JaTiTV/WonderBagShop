@@ -24,10 +24,6 @@ import org.bukkit.entity.Player;
 
 public class CmdExecuter implements CommandExecutor {
 
-    private void Version(String version) {
-        String VER = version;
-    }
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {

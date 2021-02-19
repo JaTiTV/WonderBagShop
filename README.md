@@ -42,6 +42,8 @@ Dies wird mit späteren Versionen geändert.
 
 Komm für weitere Fragen einfach auf den Support Discord.
 
+---
+
 # Links
 * [Download]()
 * [Discord](https://discord.gg/vRyXFFterJ)

@@ -169,34 +169,34 @@ public class PlaceChestWB1 implements Listener {
                         Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item9_Item), DefultValue_WB1.Item9_StackSize);
                         break;
                     case 9:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item10_Item), DefultValue_WB1.Item10_StackSize);
                         break;
                     case 10:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item21_Item), DefultValue_WB1.Item21_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item11_Item), DefultValue_WB1.Item11_StackSize);
                         break;
                     case 11:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item22_Item), DefultValue_WB1.Item22_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item12_Item), DefultValue_WB1.Item12_StackSize);
                         break;
                     case 12:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item23_Item), DefultValue_WB1.Item23_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item13_Item), DefultValue_WB1.Item13_StackSize);
                         break;
                     case 13:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item24_Item), DefultValue_WB1.Item24_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item14_Item), DefultValue_WB1.Item14_StackSize);
                         break;
                     case 14:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item25_Item), DefultValue_WB1.Item25_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item15_Item), DefultValue_WB1.Item15_StackSize);
                         break;
                     case 15:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item26_Item), DefultValue_WB1.Item26_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item16_Item), DefultValue_WB1.Item16_StackSize);
                         break;
                     case 16:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item27_Item), DefultValue_WB1.Item27_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item17_Item), DefultValue_WB1.Item17_StackSize);
                         break;
                     case 17:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item28_Item), DefultValue_WB1.Item28_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item18_Item), DefultValue_WB1.Item18_StackSize);
                         break;
                     case 18:
-                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
+                        Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item19_Item), DefultValue_WB1.Item19_StackSize);
                         break;
                     case 19:
                         Item2 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
@@ -421,7 +421,7 @@ public class PlaceChestWB1 implements Listener {
                         Item4 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
                         break;
                     case 29:
-                        Item4 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item4 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item30_Item), DefultValue_WB1.Item30_StackSize);
                         break;
                 }
 
@@ -517,7 +517,7 @@ public class PlaceChestWB1 implements Listener {
                         Item5 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
                         break;
                     case 29:
-                        Item5 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item5 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item30_Item), DefultValue_WB1.Item30_StackSize);
                         break;
                 }
 
@@ -613,7 +613,7 @@ public class PlaceChestWB1 implements Listener {
                         Item6 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
                         break;
                     case 29:
-                        Item6 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item6 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item30_Item), DefultValue_WB1.Item30_StackSize);
                         break;
                 }
 
@@ -709,7 +709,7 @@ public class PlaceChestWB1 implements Listener {
                         Item7 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
                         break;
                     case 29:
-                        Item7 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item7 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item30_Item), DefultValue_WB1.Item30_StackSize);
                         break;
                 }
 
@@ -805,7 +805,7 @@ public class PlaceChestWB1 implements Listener {
                         Item8 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
                         break;
                     case 29:
-                        Item8 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item8 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item30_Item), DefultValue_WB1.Item30_StackSize);
                         break;
                 }
 
@@ -901,7 +901,7 @@ public class PlaceChestWB1 implements Listener {
                         Item9 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item29_Item), DefultValue_WB1.Item29_StackSize);
                         break;
                     case 29:
-                        Item9 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item20_Item), DefultValue_WB1.Item20_StackSize);
+                        Item9 = new ItemStack(Material.getMaterial(DefultValue_WB1.Item30_Item), DefultValue_WB1.Item30_StackSize);
                         break;
                 }
 

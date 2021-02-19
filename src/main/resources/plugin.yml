@@ -10,8 +10,9 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 1.1
+version: 1.2
 main: de.jatitv.wonderbagshop.main.Main
+api-version: 1.13
 softdepend:
   - Vault
   - NBTAPI
@@ -19,7 +20,6 @@ softdepend:
   - EssentialsX
   - CMI
 authors: [ JaTiTV ]
-description: WonderBagShop von JaTiTV
 website: https://www.spigotmc.org/resources/wonderbagshop.89234/
 commands:
   wonderbagshop:

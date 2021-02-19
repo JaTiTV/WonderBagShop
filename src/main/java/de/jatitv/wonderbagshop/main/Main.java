@@ -31,6 +31,7 @@ public final class Main extends JavaPlugin {
     public static Main plugin;
     public static Plugin a;
     public static Economy eco = null;
+    public static String update_version = null;
 
     @Override
     public void onEnable() {
@@ -50,6 +51,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB1(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB2(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChestWB3(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
 
         Load.LoadSend(getDescription().getVersion());
 
@@ -64,9 +66,10 @@ public final class Main extends JavaPlugin {
         (new UpdateChecker(this, 89234)).getVersion((version) -> {
             String currentVersion = this.getDescription().getVersion();
             if (!currentVersion.equalsIgnoreCase(version)) {
-                String foundVersion = ("§6A new version of §8[§2W§6B§9S§8]§6 was found!");
-                String yourVersion = ("§6Your version §c" + currentVersion + "§b.");
-                String latestVersion = ("§6Current version: §a" + version + "§b");
+                update_version = version;
+                String foundVersion = ("§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
+                String yourVersion = ("§6Your version §c" + currentVersion);
+                String latestVersion = ("§6Current version: §a" + version);
                 String downloadVersion = ("§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + foundVersion);
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + latestVersion);
@@ -84,9 +87,7 @@ public final class Main extends JavaPlugin {
                     }
                 }
             }
-
         });
-
     }
     public static Plugin thisp() {
         return plugin;

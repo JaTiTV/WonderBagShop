@@ -4,7 +4,7 @@
 
 ---
 
-# English
+### English
 
 With the WonderBagShop players can buy 3 different WonderBags (boxes) with random items in them.
 

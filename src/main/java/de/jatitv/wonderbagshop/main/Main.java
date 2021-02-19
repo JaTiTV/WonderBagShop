@@ -13,12 +13,14 @@
 
 package de.jatitv.wonderbagshop.main;
 
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.Listeners.PlaceChestWB1;
 import de.jatitv.wonderbagshop.Listeners.PlaceChestWB2;
 import de.jatitv.wonderbagshop.Listeners.PlaceChestWB3;
 import de.jatitv.wonderbagshop.Listeners.ShopEvent;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -56,20 +58,20 @@ public final class Main extends JavaPlugin {
 
         //TODO Bstats / UpdateChecker wieder aktivieren
 
-        // int pluginId = 10342; // <-- Replace with the id of your plugin!
-        // Metrics metrics = new Metrics(this, pluginId);
+        int pluginId = 10342; // <-- Replace with the id of your plugin!
+        Metrics metrics = new Metrics(this, pluginId);
 
         // Optional: Add custom charts
         // metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
 
-        /*
-        (new UpdateChecker(this, XXXX)).getVersion((version) -> {
+
+        (new UpdateChecker(this, 89234)).getVersion((version) -> {
             String currentVersion = this.getDescription().getVersion();
             if (!currentVersion.equalsIgnoreCase(version)) {
                 String foundVersion = ("§6A new version of §8[§2W§6B§9S§8]§6 was found!");
                 String yourVersion = ("§6Your version §c" + currentVersion + "§b.");
                 String latestVersion = ("§6Current version: §a" + version + "§b");
-                String downloadVersion = ("§6You can download it here: §eComming Soon!");
+                String downloadVersion = ("§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + foundVersion);
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + latestVersion);
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + yourVersion);
@@ -88,7 +90,7 @@ public final class Main extends JavaPlugin {
             }
 
         });
-        */
+
     }
     public static Plugin thisp() {
         return plugin;

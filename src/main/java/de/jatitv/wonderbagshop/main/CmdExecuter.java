@@ -54,10 +54,9 @@ public class CmdExecuter implements CommandExecutor {
                             sender.sendMessage(DefultValue.PrefixHC + "§2");
                             sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
                             sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
-                            sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §eComming Soon!");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
                             sender.sendMessage(DefultValue.PrefixHC + "§2");
                             sender.sendMessage(DefultValue.PrefixHC + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
-                            sender.sendMessage(DefultValue.PrefixHC + "§2API: §6" + Main.getPlugin().getDescription().getAPIVersion());
                             sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");
 
                             if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
@@ -111,10 +110,9 @@ public class CmdExecuter implements CommandExecutor {
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §eComming Soon!");
+                        sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
-                        sender.sendMessage(DefultValue.PrefixHC + "§2API: §6" + Main.getPlugin().getDescription().getAPIVersion());
                         sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");
                         break;
                     default:

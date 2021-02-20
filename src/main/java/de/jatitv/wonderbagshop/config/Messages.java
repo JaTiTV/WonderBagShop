@@ -112,21 +112,22 @@ public class Messages {
     }
 
     private static String replace(String Text) {
-        File WB1YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_1.yml");
-        YamlConfiguration yamlConfiguration_wb1 = YamlConfiguration.loadConfiguration(WB1YML);
 
-        File WB2YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_2.yml");
-        YamlConfiguration yamlConfiguration_wb2 = YamlConfiguration.loadConfiguration(WB2YML);
+        File WB1YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_1.yml");
+        YamlConfiguration yamlConfiguration_WB1 = YamlConfiguration.loadConfiguration(WB1YML);
 
-        File WB3YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_3.yml");
-        YamlConfiguration yamlConfiguration_wb3 = YamlConfiguration.loadConfiguration(WB3YML);
+        File WB2YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_2.yml");
+        YamlConfiguration yamlConfiguration_WB2 = YamlConfiguration.loadConfiguration(WB2YML);
+
+        File WB3YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_3.yml");
+        YamlConfiguration yamlConfiguration_WB3 = YamlConfiguration.loadConfiguration(WB3YML);
 
         return Text.replace("[prefix]", DefultValue.Prefix).replace("&", "§").replace("[currency]", DefultValue.Currency)
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
                 .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB1.Name)
                 .replace("[WB2Name]", DefultValue_WB2.Name).replace("[WB3Name]", DefultValue_WB3.Name)
-                .replace("[WB1Price]", String.valueOf(yamlConfiguration_wb1.get("Shop.price")))
-                .replace("[WB2Price]", String.valueOf(yamlConfiguration_wb2.get("Shop.price")))
-                .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("Shop.price")));
+                .replace("[WB1Price]", String.valueOf(yamlConfiguration_WB1.get("Shop.price")))
+                .replace("[WB2Price]", String.valueOf(yamlConfiguration_WB2.get("Shop.price")))
+                .replace("[WB3Price]", String.valueOf(yamlConfiguration_WB3.get("Shop.price")));
     }
 }

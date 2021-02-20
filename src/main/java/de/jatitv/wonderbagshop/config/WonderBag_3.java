@@ -28,7 +28,7 @@ public class WonderBag_3 {
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag_3.yml load...");
 
-        File WB3YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_3.yml");
+        File WB3YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_3.yml");
         YamlConfiguration yamlConfiguration_WB3 = YamlConfiguration.loadConfiguration(WB3YML);
 
 
@@ -470,11 +470,13 @@ public class WonderBag_3 {
     }
 
     private static String replace(String Text) {
-        File WB3YML = new File(Main.thisp().getDataFolder().getPath(), "WonderBag_3.yml");
-        YamlConfiguration yamlConfiguration_wb3 = YamlConfiguration.loadConfiguration(WB3YML);
+
+        File WB3YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_3.yml");
+        YamlConfiguration yamlConfiguration_WB3 = YamlConfiguration.loadConfiguration(WB3YML);
+
         return Text.replace("[prefix]", DefultValue.Prefix).replace("&", "§").replace("[currency]", DefultValue.Currency)
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
                 .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB3.Name)
-                .replace("[WB3Price]", String.valueOf(yamlConfiguration_wb3.get("Shop.price")));
+                .replace("[WB3Price]", String.valueOf(yamlConfiguration_WB3.get("Shop.price")));
     }
 }

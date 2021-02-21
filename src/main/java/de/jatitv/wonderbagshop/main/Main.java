@@ -14,6 +14,7 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
+import de.jatitv.wonderbagshop.Listeners.BreakChest;
 import de.jatitv.wonderbagshop.Listeners.PlaceChest;
 import de.jatitv.wonderbagshop.Listeners.ShopEvent;
 import de.jatitv.wonderbagshop.Listeners.JoinEvent;
@@ -51,6 +52,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new ShopEvent(), this);
 
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChest(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new BreakChest(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
 
         Load.LoadSend(getDescription().getVersion());

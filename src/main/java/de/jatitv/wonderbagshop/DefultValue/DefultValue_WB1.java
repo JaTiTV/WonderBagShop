@@ -21,6 +21,8 @@ public class DefultValue_WB1 {
     public static String ChestName = "§2Wonder§6Bag §9small";
     public static Integer Item_anz = 5;
 
+    public static Boolean ENCHANTED_BOOK = true;
+
     public static String Item1_Item = "DIAMOND";
     public static Integer Item1_StackSize = 1;
 

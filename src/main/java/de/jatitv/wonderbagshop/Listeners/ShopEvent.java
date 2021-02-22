@@ -20,6 +20,7 @@ import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -34,93 +35,142 @@ public class ShopEvent implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
+
         if (!(e.getWhoClicked() instanceof Player)) return;
         Player player = (Player) e.getWhoClicked();
         if(e.getInventory() !=null && e.getCurrentItem()!= null){
             if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.GUI_Name)) {
-                for (int i = 0; i < player.getInventory().getSize(); i++) {
-                    if (player.getInventory().getItem(i) == null) {
-                        e.setCancelled(true);
-                        switch (e.getCurrentItem().getType()) {
-                            case CHEST:
+                e.setCancelled(true);
+                switch (e.getCurrentItem().getType()) {
+                    case CHEST:
+                        if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB1.Name)
+                                || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2.Name)
+                                || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3.Name)){
+                            boolean empty = false;
+                            for (int i = 0; i < player.getInventory().getSize() - 5; i++) {
+                                if (player.getInventory().getItem(i) == null) {
+                                    empty = true;
+
+                                    break;
+                                }
+                            }
+                            if (empty) {
                                 switch (e.getCurrentItem().getAmount()) {
                                     case 1:
-                                        player.closeInventory();
-                                        if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB1.price)) {
+                                        if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB1.Name)){
+                                            if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB1.price)) {
+                                                player.closeInventory();
 
-                                            ItemStack item = new ItemStack(Material.CHEST);
-                                            ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB1.ChestName);
-                                            ArrayList<String> lore = new ArrayList<>();
-                                            itemMeta.setLore(lore);
-                                            item.setItemMeta(itemMeta);
-                                            item.setAmount(1);
-                                            NBTItem nbti = new NBTItem(item);
-                                            nbti.setBoolean("loot_chest_1", true);
-                                            player.getInventory().addItem(nbti.getItem());
-                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop, 3, 2);
+                                                ItemStack item = new ItemStack(Material.CHEST);
+                                                ItemMeta itemMeta = item.getItemMeta();
+                                                itemMeta.setDisplayName(DefultValue_WB1.ChestName);
+                                                ArrayList<String> lore = new ArrayList<>();
+                                                itemMeta.setLore(lore);
+                                                item.setItemMeta(itemMeta);
+                                                item.setAmount(1);
+                                                NBTItem nbti = new NBTItem(item);
+                                                nbti.setBoolean("loot_chest_1", true);
+                                                player.getInventory().addItem(nbti.getItem());
 
-                                            player.sendMessage(DefultValue.WB1buy_msg);
+                                                player.sendMessage(DefultValue.WB1buy_msg);
 
-                                        } else {
-                                            player.sendMessage(DefultValue.No_money);
-                                        }
-                                        return;
+                                                if (DefultValue.Sound_Shop_Buy_Enable){
+                                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_Buy,3,1);
+                                                }
+
+                                            } else {
+                                                player.closeInventory();
+                                                player.sendMessage(DefultValue.No_money);
+                                                if (DefultValue.Sound_Shop_NoMoney_Enable){
+                                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_NoMoney,3,1);
+                                                }
+
+                                            }
+                                            break;
+                                        }break;
 
                                     case 2:
-                                        player.closeInventory();
-                                        if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB2.price)) {
+                                        if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2.Name)){
+                                            if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB2.price)) {
+                                                player.closeInventory();
 
-                                            ItemStack item = new ItemStack(Material.CHEST);
-                                            ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB2.ChestName);
-                                            ArrayList<String> lore = new ArrayList<>();
-                                            itemMeta.setLore(lore);
-                                            item.setItemMeta(itemMeta);
-                                            item.setAmount(1);
-                                            NBTItem nbti = new NBTItem(item);
-                                            nbti.setBoolean("loot_chest_2", true);
-                                            player.getInventory().addItem(nbti.getItem());
+                                                ItemStack item = new ItemStack(Material.CHEST);
+                                                ItemMeta itemMeta = item.getItemMeta();
+                                                itemMeta.setDisplayName(DefultValue_WB2.ChestName);
+                                                ArrayList<String> lore = new ArrayList<>();
+                                                itemMeta.setLore(lore);
+                                                item.setItemMeta(itemMeta);
+                                                item.setAmount(1);
+                                                NBTItem nbti = new NBTItem(item);
+                                                nbti.setBoolean("loot_chest_2", true);
+                                                player.getInventory().addItem(nbti.getItem());
 
-                                            player.sendMessage(DefultValue.WB2buy_msg);
+                                                player.sendMessage(DefultValue.WB2buy_msg);
 
-                                        } else {
-                                            player.sendMessage(DefultValue.No_money);
-                                        }
-                                        return;
+                                                if (DefultValue.Sound_Shop_Buy_Enable){
+                                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_Buy,3,1);
+                                                }
+
+                                            } else {
+                                                player.closeInventory();
+                                                player.sendMessage(DefultValue.No_money);
+                                                if (DefultValue.Sound_Shop_NoMoney_Enable){
+                                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_NoMoney,3,1);
+                                                }
+
+                                            }
+                                            break;
+                                        }break;
 
                                     case 3:
-                                        player.closeInventory();
-                                        if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB3.price)) {
+                                        if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3.Name)){
+                                            if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB3.price)) {
+                                                player.closeInventory();
 
-                                            ItemStack item = new ItemStack(Material.CHEST);
-                                            ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB3.ChestName);
-                                            ArrayList<String> lore = new ArrayList<>();
-                                            itemMeta.setLore(lore);
-                                            item.setItemMeta(itemMeta);
-                                            item.setAmount(1);
-                                            NBTItem nbti = new NBTItem(item);
-                                            nbti.setBoolean("loot_chest_3", true);
-                                            player.getInventory().addItem(nbti.getItem());
+                                                ItemStack item = new ItemStack(Material.CHEST);
+                                                ItemMeta itemMeta = item.getItemMeta();
+                                                itemMeta.setDisplayName(DefultValue_WB3.ChestName);
+                                                ArrayList<String> lore = new ArrayList<>();
+                                                itemMeta.setLore(lore);
+                                                item.setItemMeta(itemMeta);
+                                                item.setAmount(1);
+                                                NBTItem nbti = new NBTItem(item);
+                                                nbti.setBoolean("loot_chest_3", true);
+                                                player.getInventory().addItem(nbti.getItem());
 
-                                            player.sendMessage(DefultValue.WB3buy_msg);
+                                                player.sendMessage(DefultValue.WB3buy_msg);
 
-                                        } else {
-                                            player.sendMessage(DefultValue.No_money);
-                                        }
-                                        return;
+                                                if (DefultValue.Sound_Shop_Buy_Enable){
+                                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_Buy,3,1);
+                                                }
+                                            } else {
+                                                player.closeInventory();
+                                                player.sendMessage(DefultValue.No_money);
+                                                if (DefultValue.Sound_Shop_NoMoney_Enable){
+                                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_NoMoney,3,1);
+                                                }
+
+                                            }
+                                            break;
+                                        }break;
                                 }
                                 break;
-                            default:
-                                break;
-                        }
-                    } else {
-                        player.closeInventory();
-                        player.sendMessage(DefultValue.NoInventorySpace);
-                        return;
-                    }
+
+                            } else {
+                                e.setCancelled(true);
+                                player.closeInventory();
+                                player.sendMessage(DefultValue.NoInventorySpace);
+
+                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable){
+                                    player.playSound(player.getLocation(),DefultValue.Sound_Shop_NoInventorySpace,3,1);
+                                }
+
+                            }
+                        }default:
+                        break;
                 }
+            }else {
+                return;
             }
         }
     }

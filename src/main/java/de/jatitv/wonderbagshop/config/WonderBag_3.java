@@ -37,7 +37,7 @@ public class WonderBag_3 {
         if(yamlConfiguration_WB3.contains("Shop.Name")){
             DefultValue_WB3.Name = replace(yamlConfiguration_WB3.getString("Shop.Name"));
         }else{
-            yamlConfiguration_WB3.set("Shop.Name", "&2Wonder&6Bag &9large");
+            yamlConfiguration_WB3.set("Shop.Name", "&2Wonder&6Bag&7: &9large");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag_3 Setting §6Shop Name §4was added to §9WonderBag_3.yml§4!");
         }
 

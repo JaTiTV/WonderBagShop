@@ -30,8 +30,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
-import org.bukkit.metadata.MetadataValue;
-import org.bukkit.plugin.Plugin;
 
 import java.util.Random;
 
@@ -944,7 +942,7 @@ public class PlaceChest implements Listener {
                 if (DefultValue_WB1.Item_anz == 9 || DefultValue_WB1.Item_anz > 9) {
                     chest.getInventory().addItem(Item9);
                 }
-                block.setMetadata("WB1", new FixedMetadataValue(Main.getPlugin(), true));
+                block.setMetadata("WB1MD58625", new FixedMetadataValue(Main.getPlugin(), true));
 
             }
         }
@@ -1855,6 +1853,7 @@ public class PlaceChest implements Listener {
                 if (DefultValue_WB2.Item_anz == 9 || DefultValue_WB2.Item_anz > 9) {
                     chest.getInventory().addItem(Item9);
                 }
+                block.setMetadata("WB1MD58625", new FixedMetadataValue(Main.getPlugin(), true));
 
             }
         }
@@ -2765,7 +2764,7 @@ public class PlaceChest implements Listener {
                 if (DefultValue_WB3.Item_anz == 9 || DefultValue_WB3.Item_anz > 9) {
                     chest.getInventory().addItem(Item9);
                 }
-
+                block.setMetadata("WB1MD58625", new FixedMetadataValue(Main.getPlugin(), true));
             }
         }
     }

@@ -22,14 +22,22 @@ public class DefultValue {
 
     public static String Currency = "$";
     public static String GUI_Name = "§2Wonder§6Bag§9Shop";
-    public static Sound Sound_Shop = Sound.ENTITY_PLAYER_LEVELUP;
-    public static String Sound_Shop_input;
 
+    public static Boolean Sound_Shop_Buy_Enable = true;
+    public static Sound Sound_Shop_Buy = Sound.ENTITY_PLAYER_LEVELUP;
+    public static String Sound_Shop_Buy_input = "ENTITY_PLAYER_LEVELUP";
 
+    public static Boolean Sound_Shop_NoMoney_Enable = true;
+    public static Sound Sound_Shop_NoMoney = Sound.BLOCK_NOTE_BLOCK_HARP;
+    public static String Sound_Shop_NoMoney_input = "BLOCK_NOTE_BLOCK_HARP";
+
+    public static Boolean Sound_Shop_NoInventorySpace_Enable = true;
+    public static Sound Sound_Shop_NoInventorySpace = Sound.BLOCK_NOTE_BLOCK_GUITAR;
+    public static String Sound_Shop_NoInventorySpace_input = "BLOCK_NOTE_BLOCK_GUITAR";
 
     public static Boolean ItemNumbers = true;
 
-    public static Boolean BlockChestDrop = true;
+    public static Boolean ChestDrop = false;
 
     // Messages
 
@@ -52,7 +60,7 @@ public class DefultValue {
             + DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§8----------------------------";
 
     public static String No_money = "§8[§2W§6B§9S§8] §cYou do not have enough money!";
-    public static String NoInventorySpace = "§8[§2W§6B§9S§8] §4No free inventory space!";
+    public static String NoInventorySpace = "§8[§2W§6B§9S§8] §cNo free inventory space!";
 
     public static String WB1buy_msg = "§8[§2W§6B§9S§8] §bYou bought §2Wonder§6Bag §91 §bfor §61000 $";
     public static String WB2buy_msg = "§8[§2W§6B§9S§8] §bYou bought §2Wonder§6Bag §92 §bfor §62000 $";

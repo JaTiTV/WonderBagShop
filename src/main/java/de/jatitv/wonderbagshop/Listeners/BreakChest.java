@@ -1,46 +1,47 @@
 // This claas was created by JaTiTV
 
+// ___________________________________________________________________________________
+//  __          __             _           ____               _____ _
+//  \ \        / /            | |         |  _ \             / ____| |
+//   \ \  /\  / /__  _ __   __| | ___ _ __| |_) | __ _  __ _| (___ | |__   ___  _ __
+//    \ \/  \/ / _ \| '_ \ / _` |/ _ \ '__|  _ < / _` |/ _` |\___ \| '_ \ / _ \| '_ \
+//     \  /\  / (_) | | | | (_| |  __/ |  | |_) | (_| | (_| |____) | | | | (_) | |_) |
+//      \/  \/ \___/|_| |_|\__,_|\___|_|  |____/ \__,_|\__, |_____/|_| |_|\___/| .__/
+//                                                      __/ |                  | |
+//                                                     |___/                   |_|
+// ___________________________________________________________________________________
 
 package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.HashMap;
-import java.util.Iterator;
-
-
 public class BreakChest implements Listener {
 
     @EventHandler
-    public void onBlockBreakWB1(BlockBreakEvent e) {
+    public void onBlockBreak(BlockBreakEvent e) {
         Block block = e.getBlock();
-        Player player = e.getPlayer();
-        World world = player.getWorld();
 
-        if (DefultValue.BlockChestDrop){
+        if (DefultValue.ChestDrop){
             if (block.getType() == Material.CHEST){
-                if(block.hasMetadata("WB1")){
+                if(block.hasMetadata("WB1MD58625")){
                     block.setType(Material.AIR);
-                    block.removeMetadata("WB1", Main.getPlugin());
+                    e.getBlock().getLocation().getWorld().dropItem(e.getBlock().getLocation(), new ItemStack(Material.CHEST));
+                    block.removeMetadata("WB1MD58625", Main.getPlugin());
                 }
             }
-        } else
-            System.out.println("HIIIIIIIIIIIIIIIII");
+        } else {
             if (block.getType() == Material.CHEST){
-            if(block.hasMetadata("WB1")){
-                block.setType(Material.AIR);
-                ItemStack item = new ItemStack(Material.CHEST);
-                player.getInventory().addItem(item);
-                block.removeMetadata("WB1", Main.getPlugin());
+                if(block.hasMetadata("WB1MD58625")){
+                    block.setType(Material.AIR);
+                    block.removeMetadata("WB1MD58625", Main.getPlugin());
+                }
             }
         }
     }

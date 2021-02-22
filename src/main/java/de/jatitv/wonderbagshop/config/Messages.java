@@ -79,7 +79,7 @@ public class Messages {
         if(yamlConfiguration_msg.contains("Shop.NoInventorySpace")){
             DefultValue.NoInventorySpace = replace(yamlConfiguration_msg.getString("Shop.NoInventorySpace"));
         }else{
-            yamlConfiguration_msg.set("Shop.NoInventorySpace", "[prefix] §4No free inventory space!");
+            yamlConfiguration_msg.set("Shop.NoInventorySpace", "[prefix] §cNo free inventory space!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6NoInventorySpace §4was added to §9Messages.yml§4!");
         }
 

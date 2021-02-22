@@ -15,7 +15,7 @@ package de.jatitv.wonderbagshop.DefultValue;
 
 public class DefultValue_WB1 {
 
-    public static String Name = "§2Wonder§6Bag §9small";
+    public static String Name = "§2Wonder§6Bag§7: §9small";
     public static Integer price = 1000;
 
     public static String ChestName = "§2Wonder§6Bag §9small";

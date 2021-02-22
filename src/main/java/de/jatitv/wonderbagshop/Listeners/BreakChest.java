@@ -4,41 +4,44 @@
 package de.jatitv.wonderbagshop.Listeners;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
-import de.tr7zw.nbtapi.NBTBlock;
-import de.tr7zw.nbtapi.NBTItem;
-import org.bukkit.Chunk;
-import org.bukkit.Location;
+import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.block.Chest;
-import org.bukkit.block.data.BlockData;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.loot.LootTable;
-import org.bukkit.material.MaterialData;
-import org.bukkit.metadata.MetadataValue;
-import org.bukkit.persistence.PersistentDataContainer;
-import org.bukkit.plugin.Plugin;
+import org.bukkit.inventory.ItemStack;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Iterator;
+
 
 public class BreakChest implements Listener {
 
-
-
-
     @EventHandler
-    public void onBlockBreak(BlockBreakEvent e) {
+    public void onBlockBreakWB1(BlockBreakEvent e) {
         Block block = e.getBlock();
+        Player player = e.getPlayer();
+        World world = player.getWorld();
 
-        if (block.getType() == Material.CHEST && Ches){
-
+        if (DefultValue.BlockChestDrop){
+            if (block.getType() == Material.CHEST){
+                if(block.hasMetadata("WB1")){
+                    block.setType(Material.AIR);
+                    block.removeMetadata("WB1", Main.getPlugin());
+                }
+            }
+        } else
+            System.out.println("HIIIIIIIIIIIIIIIII");
+            if (block.getType() == Material.CHEST){
+            if(block.hasMetadata("WB1")){
                 block.setType(Material.AIR);
-
+                ItemStack item = new ItemStack(Material.CHEST);
+                player.getInventory().addItem(item);
+                block.removeMetadata("WB1", Main.getPlugin());
+            }
         }
     }
 }

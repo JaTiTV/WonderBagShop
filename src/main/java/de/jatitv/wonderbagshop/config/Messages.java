@@ -76,6 +76,13 @@ public class Messages {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6No_money §4was added to §9Messages.yml§4!");
         }
 
+        if(yamlConfiguration_msg.contains("Shop.NoInventorySpace")){
+            DefultValue.NoInventorySpace = replace(yamlConfiguration_msg.getString("Shop.NoInventorySpace"));
+        }else{
+            yamlConfiguration_msg.set("Shop.NoInventorySpace", "[prefix] §4No free inventory space!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6NoInventorySpace §4was added to §9Messages.yml§4!");
+        }
+
         if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_1")){
             DefultValue.WB1buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_1"));
         }else{

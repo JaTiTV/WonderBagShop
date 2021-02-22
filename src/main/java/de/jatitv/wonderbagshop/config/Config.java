@@ -16,6 +16,7 @@ package de.jatitv.wonderbagshop.config;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.main.Main;
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -37,6 +38,15 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
         }
 
+
+        if (yamlConfiguration_config.contains("Shop.Sound")) {
+            DefultValue.Sound_Shop_input = yamlConfiguration_config.getString("Shop.Sound");
+        } else {
+            yamlConfiguration_config.set("Shop.Sound", "ENTITY_PLAYER_LEVELUP");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound §4was added to §9Config.yml§4!");
+        }
+
+
         if (yamlConfiguration_config.contains("Shop.Currency")) {
             DefultValue.Currency = yamlConfiguration_config.getString("Shop.Currency");
         } else {
@@ -51,10 +61,27 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
         }
 
+        if (yamlConfiguration_config.contains("WonderBags.BlockChestDrop")) {
+            DefultValue.BlockChestDrop = yamlConfiguration_config.getBoolean("WonderBags.BlockChestDrop");
+        } else {
+            yamlConfiguration_config.set("WonderBags.BlockChestDrop", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
+        }
+
+
+
         try {
             yamlConfiguration_config.save(configYML);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        Sound sound_shop = Sound.valueOf(DefultValue.Sound_Shop_input);
+        if(sound_shop == null){
+            Bukkit.getConsoleSender().sendMessage("[Booster] Der Sound Shop wurde nicht gefunden!");
+            DefultValue.Sound_Shop = Sound.ENTITY_PLAYER_LEVELUP;
+        }else{
+            DefultValue.Sound_Shop = sound_shop;
         }
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config.yml loaded successfully.");

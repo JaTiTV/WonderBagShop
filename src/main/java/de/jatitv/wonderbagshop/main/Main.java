@@ -36,6 +36,7 @@ public final class Main extends JavaPlugin {
     public static Economy eco = null;
     public static String update_version = null;
 
+
     @Override
     public void onEnable() {
         // Plugin startup logic

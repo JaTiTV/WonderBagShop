@@ -22,7 +22,7 @@ public class DefultValue {
 
     public static String Currency = "$";
     public static String GUI_Name = "§2Wonder§6Bag§9Shop";
-    public static Sound Sound_Shop;
+    public static Sound Sound_Shop = Sound.ENTITY_PLAYER_LEVELUP;
     public static String Sound_Shop_input;
 
 

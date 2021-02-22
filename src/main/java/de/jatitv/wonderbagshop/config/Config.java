@@ -37,6 +37,7 @@ public class Config {
             yamlConfiguration_config.set("Shop.GUI_Name", "&2Wonder&6Bag&9Shop");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
         }
+      //  Bukkit.getConsoleSender().sendMessage("§51");
 
 
         if (yamlConfiguration_config.contains("Shop.Sound")) {
@@ -45,6 +46,7 @@ public class Config {
             yamlConfiguration_config.set("Shop.Sound", "ENTITY_PLAYER_LEVELUP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound §4was added to §9Config.yml§4!");
         }
+        //   Bukkit.getConsoleSender().sendMessage("§52");
 
 
         if (yamlConfiguration_config.contains("Shop.Currency")) {
@@ -53,6 +55,8 @@ public class Config {
             yamlConfiguration_config.set("Shop.Currency", "$");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9Config.yml§4!");
         }
+        //   Bukkit.getConsoleSender().sendMessage("§53");
+
 
         if (yamlConfiguration_config.contains("Shop.ItemNumbers")) {
             DefultValue.ItemNumbers = yamlConfiguration_config.getBoolean("Shop.ItemNumbers");
@@ -60,6 +64,7 @@ public class Config {
             yamlConfiguration_config.set("Shop.ItemNumbers", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
         }
+        //  Bukkit.getConsoleSender().sendMessage("§54");
 
         if (yamlConfiguration_config.contains("WonderBags.BlockChestDrop")) {
             DefultValue.BlockChestDrop = yamlConfiguration_config.getBoolean("WonderBags.BlockChestDrop");
@@ -67,23 +72,26 @@ public class Config {
             yamlConfiguration_config.set("WonderBags.BlockChestDrop", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
         }
-
-
+        //  Bukkit.getConsoleSender().sendMessage("§55");
 
         try {
             yamlConfiguration_config.save(configYML);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        //  Bukkit.getConsoleSender().sendMessage("§56");
+/*
         Sound sound_shop = Sound.valueOf(DefultValue.Sound_Shop_input);
         if(sound_shop == null){
             Bukkit.getConsoleSender().sendMessage("[Booster] Der Sound Shop wurde nicht gefunden!");
             DefultValue.Sound_Shop = Sound.ENTITY_PLAYER_LEVELUP;
+            Bukkit.getConsoleSender().sendMessage("§57");
         }else{
             DefultValue.Sound_Shop = sound_shop;
+            Bukkit.getConsoleSender().sendMessage("§8");
         }
-
+        Bukkit.getConsoleSender().sendMessage("§59");
+*/
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config.yml loaded successfully.");
     }
 

@@ -37,7 +37,7 @@ public class ShopEvent implements Listener {
         Player player = (Player) e.getWhoClicked();
         if(e.getInventory() !=null && e.getCurrentItem()!= null){
             if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.GUI_Name)) {
-                for (int i = 0; i < player.getInventory().getMaxStackSize(); i++) {
+                for (int i = 0; i < player.getInventory().getSize(); i++) {
                     if (player.getInventory().getItem(i) == null) {
                         e.setCancelled(true);
                         switch (e.getCurrentItem().getType()) {

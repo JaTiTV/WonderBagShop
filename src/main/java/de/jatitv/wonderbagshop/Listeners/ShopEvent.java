@@ -18,6 +18,7 @@ import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.tr7zw.nbtapi.NBTItem;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -57,7 +58,7 @@ public class ShopEvent implements Listener {
                                             NBTItem nbti = new NBTItem(item);
                                             nbti.setBoolean("loot_chest_1", true);
                                             player.getInventory().addItem(nbti.getItem());
-                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop, 3,2);
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop, 3, 2);
 
                                             player.sendMessage(DefultValue.WB1buy_msg);
 

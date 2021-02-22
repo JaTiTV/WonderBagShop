@@ -1,5 +1,5 @@
 # French Messages.yml from WonderBagShop
-# Version: 1.0
+# Version: 1.4
 
 Plugin:
   NoPermission: '[prefix] &cPour utiliser &b[cmd] &cil vous manque la permission &6[perm]&c!'
@@ -17,6 +17,7 @@ Help: |-
   &8[&2W&6B&9S&8] &8----------------------------
 Shop:
   No_money: '[prefix] &cVous n''avez pas assez d''argent !'
+  NoInventorySpace: '[prefix] §cVous n''avez pas de place dans votre inventaire!'
   WonderBag:
     buy_msg:
       WonderBag_1: '[prefix] &bVous avez acheté [WB1Name] &bpour [WB1Price] [currency]'

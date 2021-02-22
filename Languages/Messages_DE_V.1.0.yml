@@ -1,5 +1,5 @@
 # Deutsche Messages.yml von WonderBagShop
-# Version: 1.0
+# Version: 1.4
 
 Plugin:
   NoPermission: '[prefix] &cF[ue]r &b[cmd] &cfehlt dir die Permission &6[perm]&c!'
@@ -17,6 +17,7 @@ Help: |-
   &8[&2W&6B&9S&8] &8----------------------------
 Shop:
   No_money: '[prefix] &cDu hast nicht gen[ue]gend Geld!'
+  NoInventorySpace: '[prefix] §cKein freier Inventar Platz verfügbar!'
   WonderBag:
     buy_msg:
       WonderBag_1: '[prefix] &bDu hast dir [WB1Name] &bf[ue]r [WB1Price] [currency] &bgekauft!'

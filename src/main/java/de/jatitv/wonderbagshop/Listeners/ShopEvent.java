@@ -37,79 +37,88 @@ public class ShopEvent implements Listener {
         Player player = (Player) e.getWhoClicked();
         if(e.getInventory() !=null && e.getCurrentItem()!= null){
             if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.GUI_Name)) {
-                e.setCancelled(true);
-                switch (e.getCurrentItem().getType()) {
-                    case CHEST:
-                        switch (e.getCurrentItem().getAmount()) {
-                            case 1:
-                                player.closeInventory();
-                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB1.price)) {
+                for (int i = 0; i < player.getInventory().getMaxStackSize(); i++) {
+                    if (player.getInventory().getItem(i) == null) {
+                        e.setCancelled(true);
+                        switch (e.getCurrentItem().getType()) {
+                            case CHEST:
+                                switch (e.getCurrentItem().getAmount()) {
+                                    case 1:
+                                        player.closeInventory();
+                                        if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB1.price)) {
 
-                                    ItemStack item = new ItemStack(Material.CHEST);
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValue_WB1.ChestName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_chest_1", true);
-                                    player.getInventory().addItem(nbti.getItem());
+                                            ItemStack item = new ItemStack(Material.CHEST);
+                                            ItemMeta itemMeta = item.getItemMeta();
+                                            itemMeta.setDisplayName(DefultValue_WB1.ChestName);
+                                            ArrayList<String> lore = new ArrayList<>();
+                                            itemMeta.setLore(lore);
+                                            item.setItemMeta(itemMeta);
+                                            item.setAmount(1);
+                                            NBTItem nbti = new NBTItem(item);
+                                            nbti.setBoolean("loot_chest_1", true);
+                                            player.getInventory().addItem(nbti.getItem());
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop, 3,2);
 
-                                    player.sendMessage(DefultValue.WB1buy_msg);
+                                            player.sendMessage(DefultValue.WB1buy_msg);
 
-                                } else {
-                                    player.sendMessage(DefultValue.No_money);
+                                        } else {
+                                            player.sendMessage(DefultValue.No_money);
+                                        }
+                                        return;
+
+                                    case 2:
+                                        player.closeInventory();
+                                        if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB2.price)) {
+
+                                            ItemStack item = new ItemStack(Material.CHEST);
+                                            ItemMeta itemMeta = item.getItemMeta();
+                                            itemMeta.setDisplayName(DefultValue_WB2.ChestName);
+                                            ArrayList<String> lore = new ArrayList<>();
+                                            itemMeta.setLore(lore);
+                                            item.setItemMeta(itemMeta);
+                                            item.setAmount(1);
+                                            NBTItem nbti = new NBTItem(item);
+                                            nbti.setBoolean("loot_chest_2", true);
+                                            player.getInventory().addItem(nbti.getItem());
+
+                                            player.sendMessage(DefultValue.WB2buy_msg);
+
+                                        } else {
+                                            player.sendMessage(DefultValue.No_money);
+                                        }
+                                        return;
+
+                                    case 3:
+                                        player.closeInventory();
+                                        if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB3.price)) {
+
+                                            ItemStack item = new ItemStack(Material.CHEST);
+                                            ItemMeta itemMeta = item.getItemMeta();
+                                            itemMeta.setDisplayName(DefultValue_WB3.ChestName);
+                                            ArrayList<String> lore = new ArrayList<>();
+                                            itemMeta.setLore(lore);
+                                            item.setItemMeta(itemMeta);
+                                            item.setAmount(1);
+                                            NBTItem nbti = new NBTItem(item);
+                                            nbti.setBoolean("loot_chest_3", true);
+                                            player.getInventory().addItem(nbti.getItem());
+
+                                            player.sendMessage(DefultValue.WB3buy_msg);
+
+                                        } else {
+                                            player.sendMessage(DefultValue.No_money);
+                                        }
+                                        return;
                                 }
                                 break;
-
-                            case 2:
-                                player.closeInventory();
-                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB2.price)) {
-
-                                    ItemStack item = new ItemStack(Material.CHEST);
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValue_WB2.ChestName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_chest_2", true);
-                                    player.getInventory().addItem(nbti.getItem());
-
-                                    player.sendMessage(DefultValue.WB2buy_msg);
-
-                                } else {
-                                    player.sendMessage(DefultValue.No_money);
-                                }
-                                break;
-
-                            case 3:
-                                player.closeInventory();
-                                if (de.jatitv.wonderbagshop.commands.Shop.buy(player, DefultValue_WB3.price)) {
-
-                                    ItemStack item = new ItemStack(Material.CHEST);
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValue_WB3.ChestName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_chest_3", true);
-                                    player.getInventory().addItem(nbti.getItem());
-
-                                    player.sendMessage(DefultValue.WB3buy_msg);
-
-                                } else {
-                                    player.sendMessage(DefultValue.No_money);
-                                }
+                            default:
                                 break;
                         }
-                        break;
-                    default:
-                        break;
+                    } else {
+                        player.closeInventory();
+                        player.sendMessage(DefultValue.NoInventorySpace);
+                        return;
+                    }
                 }
             }
         }

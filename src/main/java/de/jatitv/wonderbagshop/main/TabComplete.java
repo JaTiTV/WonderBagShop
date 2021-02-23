@@ -13,12 +13,14 @@
 
 package de.jatitv.wonderbagshop.main;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TabComplete implements TabCompleter {
@@ -40,6 +42,9 @@ public class TabComplete implements TabCompleter {
                     if (player.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("info");
                     }
+                    if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("give");
+                    }
                     return list;
                 }
 
@@ -54,7 +59,19 @@ public class TabComplete implements TabCompleter {
                     list.add("rl");
                 } else if (args[0].charAt(0) == 'h') {
                     list.add("help");
+                } else if (args[0].charAt(0) == 'g') {
+                    list.add("give");
                 }
+                return list;
+                }
+            if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
+                Iterator var6 = Bukkit.getOnlinePlayers().iterator();
+
+                while (var6.hasNext()) {
+                    Player player1 = (Player)var6.next();
+                    list.add(player1.getName());
+                }
+
                 return list;
             }
         }

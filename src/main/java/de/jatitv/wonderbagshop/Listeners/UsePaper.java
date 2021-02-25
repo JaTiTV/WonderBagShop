@@ -28,8 +28,12 @@ public class UsePaper implements Listener {
         if (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB1.ChestName)
                 || (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB2.ChestName))
                 || (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB3.ChestName))) {
+
             for (int i = 0; i < 8; i++) {
-                ice.getPlayer().getLocation().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
+                if (ice.getInventory().getItem(i) != null){
+                    ice.getPlayer().getLocation().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
+                }
+
             }
         }
     }

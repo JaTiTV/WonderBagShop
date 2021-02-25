@@ -38,13 +38,13 @@ public class UsePaper implements Listener {
     public void onInteractWB1(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         ItemStack item = player.getItemInHand();
-        if (player.getItemOnCursor() != null,  && player.getItemOnCursor() != null) {
+        if (event.getItem().getType() == Material.valueOf(DefultValue.Item)) {
             NBTItem nbti = new NBTItem(item);
 
             Bukkit.broadcastMessage("§5Hi");
 
 
-            if (event.getItem().getType() == Material.valueOf(DefultValue.Item)) {
+
                 if (nbti.hasKey("loot_chest_1")) {
                     Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 1, "§6§9§l§r" + DefultValue_WB1.ChestName);
 
@@ -943,7 +943,7 @@ public class UsePaper implements Listener {
                     player.openInventory(inventory);
 
                 }
-            }
+            
         }
     }
 /*

@@ -26,6 +26,6 @@ public class TODO {
 
     // ToDo 2.0
 
-    // ToDo Defult Configs
+    // ToDO Paper in gift und give hinzufügen
 
 }

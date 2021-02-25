@@ -3,6 +3,7 @@
 
 package de.jatitv.wonderbagshop.Listeners;
 
+import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
@@ -34,17 +35,7 @@ import java.util.Random;
 
 public class UsePaper implements Listener {
 
-    @EventHandler
-    public void InventoryClose(InventoryCloseEvent ice){
 
-        if (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB1.ChestName)
-                || (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB2.ChestName))
-                || (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB3.ChestName))) {
-            for (int i = 0; i < ice.getInventory().getSize(); i++){
-                ice.getPlayer().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
-            }
-        }
-    }
 
 
 
@@ -53,7 +44,7 @@ public class UsePaper implements Listener {
         Player player = event.getPlayer();
         ItemStack item = player.getItemInHand();
         NBTItem nbti = new NBTItem(item);
-        if (event.getItem().getType() == Material.PAPER) {
+        if (event.getItem().getType() == Material.valueOf(DefultValue.Item)) {
             if (nbti.hasKey("loot_chest_1")) {
                 Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*1, "§6§9§l§r" + DefultValue_WB1.ChestName);
 
@@ -960,7 +951,7 @@ public class UsePaper implements Listener {
         Player player = event.getPlayer();
         ItemStack item = player.getItemInHand();
         NBTItem nbti = new NBTItem(item);
-        if (event.getItem().getType() == Material.PAPER) {
+        if (event.getItem().getType() == Material.valueOf(DefultValue.Item)) {
             if (nbti.hasKey("loot_chest_2")) {
                 Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*1, "§6§9§l§r" + DefultValue_WB3.ChestName);
 
@@ -1866,7 +1857,7 @@ public class UsePaper implements Listener {
         Player player = event.getPlayer();
         ItemStack item = player.getItemInHand();
         NBTItem nbti = new NBTItem(item);
-        if (event.getItem().getType() == Material.PAPER) {
+        if (event.getItem().getType() == Material.valueOf(DefultValue.Item)) {
             if (nbti.hasKey("loot_chest_3")) {
                 Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*1, "§6§9§l§r" + DefultValue_WB3.ChestName);
 
@@ -2766,5 +2757,18 @@ public class UsePaper implements Listener {
             }
         }
     }
+
+    @EventHandler
+    public void InventoryClose(InventoryCloseEvent ice){
+
+        if (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB1.ChestName)
+                || (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB2.ChestName))
+                || (ice.getView().getTitle().equals("§6§9§l§r" + DefultValue_WB3.ChestName))) {
+            for (int i = 0; i < ice.getInventory().getSize(); i++){
+                ice.getPlayer().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
+            }
+        }
+    }
+
 }
 

@@ -24,7 +24,8 @@ public class DefultValue {
 
     public static Boolean ItemNumbers = true;
 
-    public static Boolean UseChest = false;
+    public static Boolean UseChest = true;
+    public static String Item = "PAPER";
     public static Boolean ChestDrop = false;
 
     // Sound

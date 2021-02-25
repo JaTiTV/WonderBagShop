@@ -27,12 +27,19 @@ import java.util.ArrayList;
 public class ConfigGUI {
 
     public static void openConfig(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 6, "§2W§6B§9S §7| §4Settings §7| §9Config");
+        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*6, "§2W§6B§9S §7| §4Settings §7| §9Config");
+
+        ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+        ItemMeta itemMetaglass = glass.getItemMeta();
+        itemMetaglass.setDisplayName(" ");
+        glass.setItemMeta(itemMetaglass);
+        glass.setAmount(1);
+        for(int i = 0; i<9*6;i++){inventory.setItem(i, glass);}
 
         if (DefultValue.ItemNumbers) {
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Item Numbers");
+            itemMeta.setDisplayName(" ");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
             lore.add("§7Set the Config §6ItemNumbers");
@@ -107,6 +114,40 @@ public class ConfigGUI {
             inventory.setItem(2, item);
         }
 
+        ItemStack guiname = new ItemStack(Material.BLUE_WOOL);
+        ItemMeta itemMetaguiname = guiname.getItemMeta();
+        itemMetaguiname.setDisplayName("§6GUI_Name");
+        ArrayList<String> loreguiname = new ArrayList<>();
+        loreguiname.add("§8-------------");
+        loreguiname.add("§7Set the §6GUI_Name");
+        loreguiname.add("§4Comming Soon!");
+        itemMetaguiname.setLore(loreguiname);
+        guiname.setItemMeta(itemMetaguiname);
+        guiname.setAmount(1);
+        inventory.setItem(9, guiname);
+
+        ItemStack currency = new ItemStack(Material.BLUE_WOOL);
+        ItemMeta itemMetacurrency = currency.getItemMeta();
+        itemMetacurrency.setDisplayName("§6Currency");
+        ArrayList<String> lorecurrency = new ArrayList<>();
+        lorecurrency.add("§8-------------");
+        lorecurrency.add("§7Set the §6Currency");
+        lorecurrency.add("§4Comming Soon!");
+        itemMetacurrency.setLore(lorecurrency);
+        currency.setItemMeta(itemMetacurrency);
+        currency.setAmount(1);
+        inventory.setItem(10, currency);
+
+        ItemStack reset = new ItemStack(Material.ORANGE_WOOL);
+        ItemMeta itemMetareset = reset.getItemMeta();
+        itemMetareset.setDisplayName("§6Defult Config");
+        ArrayList<String> lorereset = new ArrayList<>();
+        lorereset.add("§8-------------");
+        lorereset.add("§4Reset to the default §6Config.yml");
+        itemMetareset.setLore(lorereset);
+        reset.setItemMeta(itemMetareset);
+        reset.setAmount(1);
+        inventory.setItem(8, reset);
 
 
         if (DefultValue.Sound_Shop_Buy_Enable){
@@ -415,16 +456,7 @@ public class ConfigGUI {
             inventory.setItem(41, item2);
         }
 
-        ItemStack item = new ItemStack(Material.ORANGE_WOOL);
-        ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName("§6Defult Config");
-        ArrayList<String> lore = new ArrayList<>();
-        lore.add("§8-------------");
-        lore.add("§4Reset to the default §6Config.yml");
-        itemMeta.setLore(lore);
-        item.setItemMeta(itemMeta);
-        item.setAmount(1);
-        inventory.setItem(52, item);
+
 
         ItemStack item2 = new ItemStack(Material.YELLOW_WOOL);
         ItemMeta itemMeta2 = item2.getItemMeta();
@@ -438,11 +470,20 @@ public class ConfigGUI {
         inventory.setItem(53, item2);
 
 
+
+
+
         player.openInventory(inventory);
     }
     public static void resetConfig(Player player) {
         Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 1, "§2W§6B§9S §7| §4RESET §7| §9Config");
 
+        ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+        ItemMeta itemMetaglass = glass.getItemMeta();
+        itemMetaglass.setDisplayName(" ");
+        glass.setItemMeta(itemMetaglass);
+        glass.setAmount(1);
+        for(int i = 0; i<9*1;i++){inventory.setItem(i, glass);}
 
         ItemStack item = new ItemStack(Material.GREEN_WOOL);
         ItemMeta itemMeta = item.getItemMeta();
@@ -466,15 +507,6 @@ public class ConfigGUI {
         item2.setAmount(1);
         inventory.setItem(5, item2);
 
-        ItemStack item3 = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
-        item3.setAmount(1);
-        inventory.setItem(0, item3);
-        inventory.setItem(1, item3);
-        inventory.setItem(2, item3);
-        inventory.setItem(4, item3);
-        inventory.setItem(6, item3);
-        inventory.setItem(7, item3);
-        inventory.setItem(8, item3);
 
         player.openInventory(inventory);
     }

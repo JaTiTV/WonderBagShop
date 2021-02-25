@@ -33,7 +33,14 @@ import java.util.ArrayList;
 public class SettingsGUI {
 
     public static void openSettings(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 1, "§2Wonder§6Bag§9Shop §7| §4Settings");
+        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*1, "§2Wonder§6Bag§9Shop §7| §4Settings");
+
+        ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+        ItemMeta itemMetaglass = glass.getItemMeta();
+        itemMetaglass.setDisplayName(" ");
+        glass.setItemMeta(itemMetaglass);
+        glass.setAmount(1);
+        for(int i = 0; i<9*1;i++){inventory.setItem(i, glass);}
 
         ItemStack config = new ItemStack(Material.PAPER);
         ItemMeta itemMeta = config.getItemMeta();
@@ -81,7 +88,6 @@ public class SettingsGUI {
         wb3.setItemMeta(itemMetawb3);
         wb3.setAmount(1);
         inventory.setItem(8, wb3);
-
 
         player.openInventory(inventory);
 

@@ -36,6 +36,8 @@ import java.util.ArrayList;
 
 public class ShopEvent implements Listener {
 
+    public static Material ItemItem = Material.getMaterial(DefultValue.Item);
+
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
 
@@ -187,14 +189,14 @@ public class ShopEvent implements Listener {
                         }
                         break;
 
-                    case PAPER:
+                       case Material.getMaterial(DefultValue.Item):  //ToDo
                         switch (e.getCurrentItem().getAmount()) {
                             case 1:
                                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB1.Name)) {
                                     if (Shop.buy(player, DefultValue_WB1.price)) {
                                         player.closeInventory();
 
-                                        ItemStack item = new ItemStack(Material.PAPER);
+                                        ItemStack item = new ItemStack(Material.valueOf(DefultValue.Item));
                                         ItemMeta itemMeta = item.getItemMeta();
                                         itemMeta.setDisplayName(DefultValue_WB1.ChestName);
                                         ArrayList<String> lore = new ArrayList<>();
@@ -230,7 +232,7 @@ public class ShopEvent implements Listener {
                                     if (Shop.buy(player, DefultValue_WB2.price)) {
                                         player.closeInventory();
 
-                                        ItemStack item = new ItemStack(Material.PAPER);
+                                        ItemStack item = new ItemStack(Material.valueOf(DefultValue.Item));
                                         ItemMeta itemMeta = item.getItemMeta();
                                         itemMeta.setDisplayName(DefultValue_WB2.ChestName);
                                         ArrayList<String> lore = new ArrayList<>();
@@ -266,7 +268,7 @@ public class ShopEvent implements Listener {
                                     if (Shop.buy(player, DefultValue_WB3.price)) {
                                         player.closeInventory();
 
-                                        ItemStack item = new ItemStack(Material.PAPER);
+                                        ItemStack item = new ItemStack(Material.valueOf(DefultValue.Item));
                                         ItemMeta itemMeta = item.getItemMeta();
                                         itemMeta.setDisplayName(DefultValue_WB3.ChestName);
                                         ArrayList<String> lore = new ArrayList<>();

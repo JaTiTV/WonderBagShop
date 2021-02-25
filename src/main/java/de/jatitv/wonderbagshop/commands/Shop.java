@@ -91,7 +91,7 @@ public class Shop {
 
             Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
-            ItemStack item = new ItemStack(Material.PAPER);
+            ItemStack item = new ItemStack(Material.valueOf(DefultValue.Item));
             ItemMeta itemMeta = item.getItemMeta();
             itemMeta.setDisplayName(DefultValue_WB1.Name);
             ArrayList<String> lore = new ArrayList<>();
@@ -106,7 +106,7 @@ public class Shop {
             }
             inventory.setItem(11, item);
 
-            ItemStack item2 = new ItemStack(Material.PAPER);
+            ItemStack item2 = new ItemStack(Material.valueOf(DefultValue.Item));
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName(DefultValue_WB2.Name);
             ArrayList<String> lore2 = new ArrayList<>();
@@ -121,7 +121,7 @@ public class Shop {
             }
             inventory.setItem(13, item2);
 
-            ItemStack item3 = new ItemStack(Material.PAPER);
+            ItemStack item3 = new ItemStack(Material.valueOf(DefultValue.Item));
             ItemMeta itemMeta3 = item3.getItemMeta();
             itemMeta3.setDisplayName(DefultValue_WB3.Name);
             ArrayList<String> lore3 = new ArrayList<>();

@@ -55,8 +55,15 @@ public class Config {
         if (yamlConfiguration_config.contains("WonderBags.UseChest")) {
             DefultValue.UseChest = yamlConfiguration_config.getBoolean("WonderBags.UseChest");
         } else {
-            yamlConfiguration_config.set("WonderBags.UseChest", false);
+            yamlConfiguration_config.set("WonderBags.UseChest", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest §4was added to §9Config.yml§4!");
+        }
+
+        if(yamlConfiguration_config.contains("WonderBags.Item")){
+            DefultValue.Item = replace(yamlConfiguration_config.getString("WonderBags.Item"));
+        }else{
+            yamlConfiguration_config.set("WonderBags.Item", "PAPER");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBags Item §4was added to §9Config.yml§4!");
         }
 
         if (yamlConfiguration_config.contains("WonderBags.ChestDrop")) {

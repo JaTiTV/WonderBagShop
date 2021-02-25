@@ -184,7 +184,124 @@ public class ShopEvent implements Listener {
                                 }
 
                             }
-                        }default:
+                        }
+                        break;
+
+                    case PAPER:
+                        switch (e.getCurrentItem().getAmount()) {
+                            case 1:
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB1.Name)) {
+                                    if (Shop.buy(player, DefultValue_WB1.price)) {
+                                        player.closeInventory();
+
+                                        ItemStack item = new ItemStack(Material.PAPER);
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValue_WB1.ChestName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_chest_1", true);
+                                        player.getInventory().addItem(nbti.getItem());
+
+                                        player.sendMessage(DefultValue.Buy_msg.replace("[wonderbag]", DefultValue_WB1.Name)
+                                                .replace("[price]", String.valueOf(yamlConfiguration_WB1.get("Shop.price")))
+                                                .replace("[currency]", DefultValue.Currency));
+
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+                                    } else {
+                                        player.closeInventory();
+                                        player.sendMessage(DefultValue.No_money);
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
+
+                                    }
+                                    break;
+                                }
+                                break;
+
+                            case 2:
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2.Name)) {
+                                    if (Shop.buy(player, DefultValue_WB2.price)) {
+                                        player.closeInventory();
+
+                                        ItemStack item = new ItemStack(Material.PAPER);
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValue_WB2.ChestName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_chest_2", true);
+                                        player.getInventory().addItem(nbti.getItem());
+
+                                        player.sendMessage(DefultValue.Buy_msg.replace("[wonderbag]", DefultValue_WB2.Name)
+                                                .replace("[price]", String.valueOf(yamlConfiguration_WB2.get("Shop.price")))
+                                                .replace("[currency]", DefultValue.Currency));
+
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+                                    } else {
+                                        player.closeInventory();
+                                        player.sendMessage(DefultValue.No_money);
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
+
+                                    }
+                                    break;
+                                }
+                                break;
+
+                            case 3:
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3.Name)) {
+                                    if (Shop.buy(player, DefultValue_WB3.price)) {
+                                        player.closeInventory();
+
+                                        ItemStack item = new ItemStack(Material.PAPER);
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValue_WB3.ChestName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_chest_3", true);
+                                        player.getInventory().addItem(nbti.getItem());
+
+                                        player.sendMessage(DefultValue.Buy_msg.replace("[wonderbag]", DefultValue_WB3.Name)
+                                                .replace("[price]", String.valueOf(yamlConfiguration_WB3.get("Shop.price")))
+                                                .replace("[currency]", DefultValue.Currency));
+
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+                                    } else {
+                                        player.closeInventory();
+                                        player.sendMessage(DefultValue.No_money);
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
+
+                                    }
+                                    break;
+                                }
+                                break;
+
+                        }
+                        break;
+
+
+                    default:
                         break;
                 }
             }else {

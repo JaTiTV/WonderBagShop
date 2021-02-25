@@ -37,54 +37,109 @@ public class Shop {
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
+        if (DefultValue.UseChest){
+            Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
-        ItemStack item = new ItemStack(Material.CHEST);
-        ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName(DefultValue_WB1.Name);
-        ArrayList<String> lore = new ArrayList<>();
-        lore.add("§8-------------");
-        lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
-        itemMeta.setLore(lore);
-        item.setItemMeta(itemMeta);
-        if(DefultValue.ItemNumbers){
-            item.setAmount(1);
+            ItemStack item = new ItemStack(Material.CHEST);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName(DefultValue_WB1.Name);
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            if(DefultValue.ItemNumbers){
+                item.setAmount(1);
+            } else {
+                item.setAmount(1);
+            }
+            inventory.setItem(11, item);
+
+            ItemStack item2 = new ItemStack(Material.CHEST);
+            ItemMeta itemMeta2 = item2.getItemMeta();
+            itemMeta2.setDisplayName(DefultValue_WB2.Name);
+            ArrayList<String> lore2 = new ArrayList<>();
+            lore2.add("§8-------------");
+            lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
+            itemMeta2.setLore(lore2);
+            item2.setItemMeta(itemMeta2);
+            if(DefultValue.ItemNumbers){
+                item2.setAmount(2);
+            } else {
+                item2.setAmount(1);
+            }
+            inventory.setItem(13, item2);
+
+            ItemStack item3 = new ItemStack(Material.CHEST);
+            ItemMeta itemMeta3 = item3.getItemMeta();
+            itemMeta3.setDisplayName(DefultValue_WB3.Name);
+            ArrayList<String> lore3 = new ArrayList<>();
+            lore3.add("§8-------------");
+            lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
+            itemMeta3.setLore(lore3);
+            item3.setItemMeta(itemMeta3);
+            if(DefultValue.ItemNumbers){
+                item3.setAmount(3);
+            } else {
+                item3.setAmount(1);
+            }
+            inventory.setItem(15, item3);
+            player.openInventory(inventory);
+
         } else {
-            item.setAmount(1);
-        }
-        inventory.setItem(11, item);
 
-        ItemStack item2 = new ItemStack(Material.CHEST);
-        ItemMeta itemMeta2 = item2.getItemMeta();
-        itemMeta2.setDisplayName(DefultValue_WB2.Name);
-        ArrayList<String> lore2 = new ArrayList<>();
-        lore2.add("§8-------------");
-        lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
-        itemMeta2.setLore(lore2);
-        item2.setItemMeta(itemMeta2);
-        if(DefultValue.ItemNumbers){
-            item2.setAmount(2);
-        } else {
-            item2.setAmount(1);
-        }
-        inventory.setItem(13, item2);
 
-        ItemStack item3 = new ItemStack(Material.CHEST);
-        ItemMeta itemMeta3 = item3.getItemMeta();
-        itemMeta3.setDisplayName(DefultValue_WB3.Name);
-        ArrayList<String> lore3 = new ArrayList<>();
-        lore3.add("§8-------------");
-        lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
-        itemMeta3.setLore(lore3);
-        item3.setItemMeta(itemMeta3);
-        if(DefultValue.ItemNumbers){
-            item3.setAmount(3);
-        } else {
-            item3.setAmount(1);
-        }
-        inventory.setItem(15, item3);
+            Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
-        player.openInventory(inventory);
+            ItemStack item = new ItemStack(Material.PAPER);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName(DefultValue_WB1.Name);
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            if(DefultValue.ItemNumbers){
+                item.setAmount(1);
+            } else {
+                item.setAmount(1);
+            }
+            inventory.setItem(11, item);
+
+            ItemStack item2 = new ItemStack(Material.PAPER);
+            ItemMeta itemMeta2 = item2.getItemMeta();
+            itemMeta2.setDisplayName(DefultValue_WB2.Name);
+            ArrayList<String> lore2 = new ArrayList<>();
+            lore2.add("§8-------------");
+            lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
+            itemMeta2.setLore(lore2);
+            item2.setItemMeta(itemMeta2);
+            if(DefultValue.ItemNumbers){
+                item2.setAmount(2);
+            } else {
+                item2.setAmount(1);
+            }
+            inventory.setItem(13, item2);
+
+            ItemStack item3 = new ItemStack(Material.PAPER);
+            ItemMeta itemMeta3 = item3.getItemMeta();
+            itemMeta3.setDisplayName(DefultValue_WB3.Name);
+            ArrayList<String> lore3 = new ArrayList<>();
+            lore3.add("§8-------------");
+            lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
+            itemMeta3.setLore(lore3);
+            item3.setItemMeta(itemMeta3);
+            if(DefultValue.ItemNumbers){
+                item3.setAmount(3);
+            } else {
+                item3.setAmount(1);
+            }
+            inventory.setItem(15, item3);
+
+            player.openInventory(inventory);
+        }
+
+
     }
     public static boolean buy(Player p, Integer preis){
         if(Main.eco == null ){

@@ -13,11 +13,9 @@
 
 package de.jatitv.wonderbagshop.main;
 
-import de.jatitv.wonderbagshop.commands.Give;
-import de.jatitv.wonderbagshop.commands.Reload;
-import de.jatitv.wonderbagshop.commands.Shop;
+import de.jatitv.wonderbagshop.commands.*;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.commands.ShopGift;
+import de.jatitv.wonderbagshop.settingsGUI.SettingsGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -80,15 +78,7 @@ public class CmdExecuter implements CommandExecutor {
                         }
                         break;
 
-                    case "reload":
-                    case "rl":
-                        if (player.hasPermission("wonderbagshop.command.reload") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
-                        Reload.reloadConfirmPlayer(player);
-                        } else {
-                            player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
-                                    .replace("[perm]", "wonderbagshop.command.reload"));
-                        }
-                        break;
+
 
                     case "give":
                         if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
@@ -140,6 +130,26 @@ public class CmdExecuter implements CommandExecutor {
                         }
                         break;
 
+                    case "reload":
+                    case "rl":
+                        if (player.hasPermission("wonderbagshop.command.reload") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
+                            Reload.reloadConfirmPlayer(player);
+                        } else {
+                            player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
+                                    .replace("[perm]", "wonderbagshop.command.reload"));
+                        }
+                        break;
+
+                    case "config":
+                    case "settings":
+                        if (player.hasPermission("wonderbagshop.admin") || player.isOp()){
+                            SettingsGUI.openSettings(player);
+                        } else {
+                            player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop settings")
+                                    .replace("[perm]", "wonderbagshop.admin"));
+                        }
+                        break;
+
 
                     case "help":
                     default:
@@ -150,6 +160,7 @@ public class CmdExecuter implements CommandExecutor {
                                     .replace("[perm]", "wonderbagshop.command"));
                         }
                         break;
+
                 }
             }
 

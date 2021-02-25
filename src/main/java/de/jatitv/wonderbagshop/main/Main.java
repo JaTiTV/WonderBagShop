@@ -15,6 +15,7 @@ package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.Listeners.*;
+import de.jatitv.wonderbagshop.settingsGUI.GUIListener;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -48,14 +49,18 @@ public final class Main extends JavaPlugin {
 
         a = this;
         Bukkit.getServer().getPluginManager().registerEvents(new ShopEvent(), this);
-        Bukkit.getServer().getPluginManager().registerEvents(new PlaceChest(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new UseChest(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new BreakChest(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new UsePaper(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUIListener(), this);
 
         Load.LoadSend(getDescription().getVersion());
-
+/*
         int pluginId = 10342; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);
+
+ */
 
         // Optional: Add custom charts
         // metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));

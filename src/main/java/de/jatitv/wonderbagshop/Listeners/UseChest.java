@@ -13,43 +13,38 @@
 
 package de.jatitv.wonderbagshop.Listeners;
 
-import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
 import de.jatitv.wonderbagshop.main.Main;
 import de.tr7zw.nbtapi.NBTItem;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
 
+import java.io.IOException;
 import java.util.Random;
 
-public class PlaceChest implements Listener {
+public class UseChest implements Listener {
+
 
     /**
-     *  PlaceEvent WonderBag 1
+     * PlaceEvent WonderBag 1
      */
 
     @EventHandler
     public void onPlaceWB1(BlockPlaceEvent event) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
         Block block = event.getBlock();
         ItemStack item = event.getItemInHand();
         NBTItem nbti = new NBTItem(item);
         if (block.getType() == Material.CHEST) {
-            if(nbti.hasKey("loot_chest_1")) {
+            if (nbti.hasKey("loot_chest_1")) {
                 Chest chest = (Chest) block.getState();
-
-
 
                 ItemStack Item1 = null;
                 Random a = new Random();
@@ -915,7 +910,7 @@ public class PlaceChest implements Listener {
                         break;
                 }
 
-                if (DefultValue_WB1.Item_anz == 1 || DefultValue_WB1.Item_anz > 1 || DefultValue_WB1.Item_anz < 1){
+                if (DefultValue_WB1.Item_anz == 1 || DefultValue_WB1.Item_anz > 1 || DefultValue_WB1.Item_anz < 1) {
                     chest.getInventory().addItem(Item1);
                 }
                 if (DefultValue_WB1.Item_anz == 2 || DefultValue_WB1.Item_anz > 2) {
@@ -949,17 +944,16 @@ public class PlaceChest implements Listener {
     }
 
     /**
-     *  PlaceEvent WonderBag 2
+     * PlaceEvent WonderBag 2
      */
 
     @EventHandler
     public void onPlaceWB2(BlockPlaceEvent event) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
         Block block = event.getBlock();
         ItemStack item = event.getItemInHand();
         NBTItem nbti = new NBTItem(item);
         if (block.getType() == Material.CHEST) {
-            if(nbti.hasKey("loot_chest_2")) {
+            if (nbti.hasKey("loot_chest_2")) {
                 Chest chest = (Chest) block.getState();
 
                 ItemStack Item1 = null;
@@ -1826,7 +1820,7 @@ public class PlaceChest implements Listener {
                         break;
                 }
 
-                if (DefultValue_WB2.Item_anz == 1 || DefultValue_WB2.Item_anz > 1 || DefultValue_WB2.Item_anz < 1){
+                if (DefultValue_WB2.Item_anz == 1 || DefultValue_WB2.Item_anz > 1 || DefultValue_WB2.Item_anz < 1) {
                     chest.getInventory().addItem(Item1);
                 }
                 if (DefultValue_WB2.Item_anz == 2 || DefultValue_WB2.Item_anz > 2) {
@@ -1860,17 +1854,16 @@ public class PlaceChest implements Listener {
     }
 
     /**
-     *  PlaceEvent WonderBag 3
+     * PlaceEvent WonderBag 3
      */
 
     @EventHandler
     public void onPlaceWB3(BlockPlaceEvent event) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
         Block block = event.getBlock();
         ItemStack item = event.getItemInHand();
         NBTItem nbti = new NBTItem(item);
         if (block.getType() == Material.CHEST) {
-            if(nbti.hasKey("loot_chest_3")) {
+            if (nbti.hasKey("loot_chest_3")) {
                 Chest chest = (Chest) block.getState();
 
                 ItemStack Item1 = null;
@@ -2737,7 +2730,7 @@ public class PlaceChest implements Listener {
                         break;
                 }
 
-                if (DefultValue_WB3.Item_anz == 1 || DefultValue_WB3.Item_anz > 1 || DefultValue_WB3.Item_anz < 1){
+                if (DefultValue_WB3.Item_anz == 1 || DefultValue_WB3.Item_anz > 1 || DefultValue_WB3.Item_anz < 1) {
                     chest.getInventory().addItem(Item1);
                 }
                 if (DefultValue_WB3.Item_anz == 2 || DefultValue_WB3.Item_anz > 2) {

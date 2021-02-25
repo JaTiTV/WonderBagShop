@@ -32,10 +32,6 @@ public class TabComplete implements TabCompleter {
             Player player = (Player) sender;
             if (args.length == 0 || args.length == 1) {
                 if (args[0].isEmpty()) {
-                    if (player.hasPermission("wonderbagshop.command.reload") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
-                        list.add("reload");
-                        list.add("rl");
-                    }
                     if (player.hasPermission("wonderbagshop.command") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("help");
                     }
@@ -47,6 +43,15 @@ public class TabComplete implements TabCompleter {
                     }
                     if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("gift");
+                    }
+
+                    if (player.hasPermission("wonderbagshop.command.reload") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("reload");
+                        list.add("rl");
+                    }
+                    if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("config");
+                        list.add("settings");
                     }
                     return list;
                 }
@@ -69,6 +74,10 @@ public class TabComplete implements TabCompleter {
                     list.add("give");
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'f') {
                     list.add("gift");
+                } else if (args[0].charAt(0) == 'c') {
+                    list.add("config");
+                } else if (args[0].charAt(0) == 's') {
+                    list.add("settings");
                 }
                 return list;
                 }

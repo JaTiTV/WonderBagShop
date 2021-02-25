@@ -39,6 +39,7 @@ public class UsePaper implements Listener {
         Player player = event.getPlayer();
         ItemStack item = player.getItemInHand();
         if (event.getItem().getType() == Material.valueOf(DefultValue.Item)) {
+            System.out.println("§4hi");
             NBTItem nbti = new NBTItem(item);
 
             Bukkit.broadcastMessage("§5Hi");
@@ -943,7 +944,7 @@ public class UsePaper implements Listener {
                     player.openInventory(inventory);
 
                 }
-            
+
         }
     }
 /*

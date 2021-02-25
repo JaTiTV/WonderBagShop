@@ -63,9 +63,16 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Help")) {
             DefultValue.Help = replace(yamlConfiguration_msg.getString("Help"));
         } else {
-            yamlConfiguration_msg.set("Help", "&8[&2W&6B&9S&8] &8----- &2Wonder&6Bag&9Shop &chelp &8-----\n&8[&2W&6B&9S&8]\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop&8' &eOpens this help." +
-                    "\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop shop&8' &eOpens the shop.\n&8[&2W&6B&9S&8] &8'&b/wonderbagshop reload&8' &eReloads the Plugin.\n&8[&2W&6B&9S&8]\n" +
-                    "&8[&2W&6B&9S&8] &8----------------------------");
+            yamlConfiguration_msg.set("Help",
+                    "[prefix] &8----- &2Wonder&6Bag&9Shop &chelp &8-----" +
+                            "\n[prefix]" +
+                            "\n[prefix] &8'&b/wonderbagshop&8' &eOpens this help." +
+                            "\n[prefix] &8'&b/wonderbagshop shop&8' &eOpens the shop." +
+                            "\n[prefix] &8'&b/wonderbagshop gift &7<player>&8' &eGive away a WonderBag." +
+                            "\n[prefix] &8'&b/wonderbagshop give &7<player> <size>&8' &eGive a player a WonderBag." +
+                            "\n[prefix] &8'&b/wonderbagshop reload&8' &eReloads the Plugin." +
+                            "\n[prefix]" +
+                            "\n[prefix] &8----------------------------");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help §4was added to §9Messages.yml§4!");
         }
 
@@ -79,30 +86,62 @@ public class Messages {
         if(yamlConfiguration_msg.contains("Shop.NoInventorySpace")){
             DefultValue.NoInventorySpace = replace(yamlConfiguration_msg.getString("Shop.NoInventorySpace"));
         }else{
-            yamlConfiguration_msg.set("Shop.NoInventorySpace", "[prefix] §cNo free inventory space!");
+            yamlConfiguration_msg.set("Shop.NoInventorySpace", "[prefix] &cNo free inventory space!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6NoInventorySpace §4was added to §9Messages.yml§4!");
         }
 
-        if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_1")){
-            DefultValue.WB1buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_1"));
+        if(yamlConfiguration_msg.contains("Shop.Buy_msg")){
+            DefultValue.Buy_msg = replace(yamlConfiguration_msg.getString("Shop.Buy_msg"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_1", "[prefix] &bYou bought [WB1Name] &bfor [WB1Price] [currency]");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6WonderBag Item_1 buy_msg §4was added to §9Messages.yml§4!");
+            yamlConfiguration_msg.set("Shop.Buy_msg", "[prefix] &2You bought [wonderbag] &2for &6[price] [currency]&2!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Buy_msg §4was added to §9Messages.yml§4!");
         }
 
-        if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_2")){
-            DefultValue.WB2buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_2"));
+        // give / gift
+
+        if(yamlConfiguration_msg.contains("Give.Sender")){
+            DefultValue.give = replace(yamlConfiguration_msg.getString("Give.Sender"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_2", "[prefix] &bYou bought [WB2Name] &bfor [WB2Price] [currency]");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6WonderBag Item_2 buy_msg §4was added to §9Messages.yml§4!");
+            yamlConfiguration_msg.set("Give.Sender", "[prefix] &2You gave &6[player] &2a [wonderbag]&2!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give Sender §4was added to §9Messages.yml§4!");
         }
 
-        if(yamlConfiguration_msg.contains("Shop.WonderBag.buy_msg.WonderBag_3")){
-            DefultValue.WB3buy_msg = replace(yamlConfiguration_msg.getString("Shop.WonderBag.buy_msg.WonderBag_3"));
+        if(yamlConfiguration_msg.contains("Give.Receiver")){
+            DefultValue.received = replace(yamlConfiguration_msg.getString("Give.Receiver"));
         }else{
-            yamlConfiguration_msg.set("Shop.WonderBag.buy_msg.WonderBag_3", "[prefix] &bYou bought [WB3Name] &bfor [WB3Price] [currency]");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6WonderBag Item_3 buy_msg §4was added to §9Messages.yml§4!");
+            yamlConfiguration_msg.set("Give.Receiver", "[prefix] &2You have received a [wonderbag] &2from &6[sender]&2!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give Receiver §4was added to §9Messages.yml§4!");
         }
+
+        if(yamlConfiguration_msg.contains("Gift.Sender")){
+            DefultValue.give = replace(yamlConfiguration_msg.getString("Gift.Sender"));
+        }else{
+            yamlConfiguration_msg.set("Gift.Sender", "[prefix] &2You gift &6[player] &2a [wonderbag] &2for &6[price] [currency]&2!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Gift Sender §4was added to §9Messages.yml§4!");
+        }
+
+        if(yamlConfiguration_msg.contains("Gift.Receiver")){
+            DefultValue.received = replace(yamlConfiguration_msg.getString("Gift.Receiver"));
+        }else{
+            yamlConfiguration_msg.set("Gift.Receiver", "[prefix] &2You have received a [wonderbag] &2as a gift from &6[sender]&2!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Gift Receiver §4was added to §9Messages.yml§4!");
+        }
+
+        if(yamlConfiguration_msg.contains("Give_&_Gift.PlayerNotFond")){
+            DefultValue.PlayerNotFound = replace(yamlConfiguration_msg.getString("Give_&_Gift.PlayerNotFond"));
+        }else{
+            yamlConfiguration_msg.set("Give_&_Gift.PlayerNotFond", "[prefix] &cThe player &6[player] &cwas not found or is not online!.");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give_&_Gift PlayerNotFond §4was added to §9Messages.yml§4!");
+        }
+
+        if(yamlConfiguration_msg.contains("Give_&_Gift.PlayerNoInventorySpace")){
+            DefultValue.PlayerNoInventorySpace = replace(yamlConfiguration_msg.getString("Give_&_Gift.PlayerNoInventorySpace"));
+        }else{
+            yamlConfiguration_msg.set("Give_&_Gift.PlayerNoInventorySpace", "[prefix] &6[player] &chas no free inventory space available!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give_&_Gift PlayerNoInventorySpace §4was added to §9Messages.yml§4!");
+        }
+
+
 
 
         try {

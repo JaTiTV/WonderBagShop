@@ -2,7 +2,7 @@
 #  __          __             _           ____               _____ _
 #  \ \        / /            | |         |  _ \             / ____| |
 #   \ \  /\  / /__  _ __   __| | ___ _ __| |_) | __ _  __ _| (___ | |__   ___  _ __
-#    \ \/  \/ / _ \| '_ \ / _` |/ _ \ '__|  _ < / _` |/ _` |\___ \| '_ \ / _ \| '_ \
+#    \ \/  \/ / _ \| '_ \ / _` |/ _ \ '__|  _ < / _` |/ _` |\___ \| '_ \ / _ \| '_ \f
 #     \  /\  / (_) | | | | (_| |  __/ |  | |_) | (_| | (_| |____) | | | | (_) | |_) |
 #      \/  \/ \___/|_| |_|\__,_|\___|_|  |____/ \__,_|\__, |_____/|_| |_|\___/| .__/
 #                                                      __/ |                  | |
@@ -10,7 +10,7 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 1.4.1
+version: 1.5
 main: de.jatitv.wonderbagshop.main.Main
 api-version: 1.13
 softdepend:
@@ -36,6 +36,8 @@ permissions:
   wonderbagshop.command.reload:
     default: op
   wonderbagshop.command.give:
+    default: op
+  wonderbagshop.command.gift:
     default: op
   wonderbagshop.admin:
     default: op

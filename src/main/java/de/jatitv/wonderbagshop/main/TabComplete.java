@@ -45,6 +45,9 @@ public class TabComplete implements TabCompleter {
                     if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("give");
                     }
+                    if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("gift");
+                    }
                     return list;
                 }
 
@@ -59,12 +62,45 @@ public class TabComplete implements TabCompleter {
                     list.add("rl");
                 } else if (args[0].charAt(0) == 'h') {
                     list.add("help");
-                } else if (args[0].charAt(0) == 'g') {
+                } else if (args[0].charAt(0) == 'g' && args[0].length() < 3) {
                     list.add("give");
+                    list.add("gift");
+                } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'v') {
+                    list.add("give");
+                } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'f') {
+                    list.add("gift");
                 }
                 return list;
                 }
             if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
+                Iterator var6 = Bukkit.getOnlinePlayers().iterator();
+
+                while (var6.hasNext()) {
+                    Player player1 = (Player)var6.next();
+                    list.add(player1.getName());
+                }
+                return list;
+
+            } else {
+                if (args.length == 3 && args[0].equalsIgnoreCase("give")){
+                    if (args[2].isEmpty()) {
+                        list.add("small");
+                        list.add("medium");
+                        list.add("large");
+                        return list;
+                    }
+                    if (args[2].charAt(0) == 's'){
+                        list.add("small");
+                    } else if (args[2].charAt(0) == 'm'){
+                        list.add("medium");
+                    } else if (args[2].charAt(0) == 'l') {
+                        list.add("large");
+                    }
+                    return list;
+                }
+            }
+
+            if (args.length == 2 && args[0].equalsIgnoreCase("gift")) {
                 Iterator var6 = Bukkit.getOnlinePlayers().iterator();
 
                 while (var6.hasNext()) {

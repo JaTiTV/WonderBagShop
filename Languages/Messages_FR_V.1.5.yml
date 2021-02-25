@@ -1,0 +1,32 @@
+# French Messages.yml from WonderBagShop
+# Version: 1.5
+
+Plugin:
+  NoPermission: '[prefix] &cPour utiliser &b[cmd] &cil vous manque la permission &6[perm]&c!'
+  Reload:
+    Start: '&6Le plugin recharge...'
+    End: '&2Le plugin est bien rechargé.'
+  VaultNotSetUp: '[prefix] &4Vault / Economie non configuré!'
+Help: |-
+  [prefix] &8----- &cAide &2Wonder&6Bag&9Shop &8-----
+  [prefix]
+  [prefix] &8'&b/wonderbagshop&8' &eOuvre cette aide.
+  [prefix] &8'&b/wonderbagshop shop&8' &eOuvre le magasin.
+  [prefix] &8'&b/wonderbagshop gift &7<player>&8' &eGive away a WonderBag.
+  [prefix] &8'&b/wonderbagshop give &7<player> <size>&8' &eGive a player a WonderBag.
+  [prefix] &8'&b/wonderbagshop reload&8' &eRecharge le plugin.
+  [prefix]
+  [prefix] &8----------------------------
+Shop:
+  No_money: '[prefix] &cVous n''avez pas assez d''argent !'
+  NoInventorySpace: '[prefix] §cVous n''avez pas de place dans votre inventaire!'
+  Buy_msg: '[prefix] &bVous avez acheté [wonderbag] &bpour [price] [currency]&2!'
+Give:
+  Sender: '[prefix] &2Vous avez donné &6[player] &2un [wonderbag]&2!'
+  Receiver: '[prefix] &2Vous avez reçu un [wonderbag] &2de &6[sender]&2!'
+Gift:
+  Sender: '[prefix] &2Vous offrez à &6[player] &2un [wonderbag] &2pour &6[price] [currency]&2!'
+  Receiver: '[prefix] &2Vous avez reçu un [wonderbag] &2comme cadeau de &6[sender]&2!'
+Give_&_Gift:
+  PlayerNotFond: '[prefix] &cLe joueur &6[player] &cn''a pas été trouvé ou n''est pas en ligne!.'
+  PlayerNoInventorySpace: '[prefix] &6[player] &cn''a pas d''espace d''inventaire gratuit disponible !'

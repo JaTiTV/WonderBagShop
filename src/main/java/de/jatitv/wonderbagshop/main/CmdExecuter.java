@@ -13,22 +13,16 @@
 
 package de.jatitv.wonderbagshop.main;
 
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.commands.Give;
 import de.jatitv.wonderbagshop.commands.Reload;
 import de.jatitv.wonderbagshop.commands.Shop;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.tr7zw.nbtapi.NBTItem;
+import de.jatitv.wonderbagshop.commands.ShopGift;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.ArrayList;
 
 public class CmdExecuter implements CommandExecutor {
 
@@ -99,29 +93,50 @@ public class CmdExecuter implements CommandExecutor {
                     case "give":
                         if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
 
-                            Player target = null;
-                            if ((args.length == 2 ||args.length == 3) && args[1].equalsIgnoreCase(String.valueOf(Bukkit.getPlayer(String.valueOf(target))))){
-                                ItemStack item = new ItemStack(Material.CHEST);
-                                ItemMeta itemMeta = item.getItemMeta();
-                                itemMeta.setDisplayName(DefultValue_WB1.ChestName);
-                                ArrayList<String> lore = new ArrayList<>();
-                                itemMeta.setLore(lore);
-                                item.setItemMeta(itemMeta);
-                                item.setAmount(1);
-                                NBTItem nbti = new NBTItem(item);
-                                nbti.setBoolean("loot_chest_1", true);
-                                target.getInventory().addItem(nbti.getItem());
+                            if (args.length == 3){
+                                if (Bukkit.getPlayer(args[1]) != null){
 
-                                target.sendMessage("§2Du wurdest von §6" + ((Player) sender).getDisplayName() + " §2geheilt!");
-                                player.sendMessage("§2Du hast §6 " + target.getDisplayName() + " §2geheilt.");
+                                    Give.giveCommand(player, args[1], args[2]);
+
+                                } else {
+                                    player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
+                                    if (DefultValue.Sound_PlayerNotFound_Enable){
+                                        player.playSound(player.getLocation(),DefultValue.Sound_PlayerNotFound,3,1);
+                                    }
+                                }
+
+                            } else {
+                                player.sendMessage(DefultValue.Help);
+                            }
+
+                        } else {
+                            player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop give")
+                                    .replace("[perm]", "wonderbagshop.command.give"));
+                        }
+                        break;
+
+                    case "gift":
+                        if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()){
+
+                            if (args.length == 2){
+                                if (Bukkit.getPlayer(args[1]) != null){
+                                    ShopGift.ShopSendSender.put(player, Bukkit.getPlayer(args[1]));
+                                    ShopGift.openShop(player);
+                                } else {
+                                    player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
+                                    if (DefultValue.Sound_PlayerNotFound_Enable){
+                                        player.playSound(player.getLocation(),DefultValue.Sound_PlayerNotFound,3,1);
+                                    }
+                                }
+
+                            } else {
+                                player.sendMessage(DefultValue.Help);
                             }
 
 
-
-
                         } else {
-                            player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
-                                    .replace("[perm]", "wonderbagshop.command.reload"));
+                            player.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop send")
+                                    .replace("[perm]", "wonderbagshop.command.gift"));
                         }
                         break;
 
@@ -157,7 +172,7 @@ public class CmdExecuter implements CommandExecutor {
                         sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");
                         break;
                     default:
-                        sender.sendMessage(DefultValue.HelpConsole);
+                        sender.sendMessage(DefultValue.Help);
                         break;
                     case "rl":
                     case "reload":

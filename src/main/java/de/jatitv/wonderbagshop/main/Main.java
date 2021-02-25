@@ -14,10 +14,7 @@
 package de.jatitv.wonderbagshop.main;
 
 import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.Listeners.BreakChest;
-import de.jatitv.wonderbagshop.Listeners.PlaceChest;
-import de.jatitv.wonderbagshop.Listeners.ShopEvent;
-import de.jatitv.wonderbagshop.Listeners.JoinEvent;
+import de.jatitv.wonderbagshop.Listeners.*;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -51,13 +48,11 @@ public final class Main extends JavaPlugin {
 
         a = this;
         Bukkit.getServer().getPluginManager().registerEvents(new ShopEvent(), this);
-
         Bukkit.getServer().getPluginManager().registerEvents(new PlaceChest(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new BreakChest(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
 
         Load.LoadSend(getDescription().getVersion());
-
 
         int pluginId = 10342; // <-- Replace with the id of your plugin!
         Metrics metrics = new Metrics(this, pluginId);
@@ -67,26 +62,29 @@ public final class Main extends JavaPlugin {
 
 
         (new UpdateChecker(this, 89234)).getVersion((version) -> {
-            String currentVersion = this.getDescription().getVersion();
-            if (!currentVersion.equalsIgnoreCase(version)) {
+            String foundVersion = this.getDescription().getVersion();
+            if (!foundVersion.equalsIgnoreCase(version)) {
                 update_version = version;
-                String foundVersion = ("§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
-                String yourVersion = ("§6Your version §c" + currentVersion);
-                String latestVersion = ("§6Current version: §a" + version);
+                String updateFound = ("§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
+                String yourVersion = ("§6Your version §c" + foundVersion);
+                String currentVersion = ("§6Current version: §a" + version);
                 String downloadVersion = ("§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
-                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + foundVersion);
-                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + latestVersion);
+                String discord = ("§6You can find more information about §8[§2Wonder§6Bag§9Shop§8]§6 on Discord: §ehttps://discord.com/invite/vRyXFFterJ");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + updateFound);
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + yourVersion);
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + currentVersion);
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + downloadVersion);
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + discord);
                 Iterator var7 = Bukkit.getOnlinePlayers().iterator();
 
                 while(var7.hasNext()) {
                     Player player = (Player)var7.next();
                     if (player.hasPermission("wonderbagshop.admin")) {
-                        player.sendMessage(DefultValue.PrefixHC + foundVersion);
-                        player.sendMessage(DefultValue.PrefixHC + latestVersion);
+                        player.sendMessage(DefultValue.PrefixHC + updateFound);
                         player.sendMessage(DefultValue.PrefixHC + yourVersion);
+                        player.sendMessage(DefultValue.PrefixHC + currentVersion);
                         player.sendMessage(DefultValue.PrefixHC + downloadVersion);
+                        player.sendMessage(DefultValue.PrefixHC + discord);
                     }
                 }
             }

@@ -38,62 +38,12 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
         }
 
-
-        if (yamlConfiguration_config.contains("Shop.Sound.BuyEnable")) {
-            DefultValue.Sound_Shop_Buy_Enable = yamlConfiguration_config.getBoolean("Shop.Sound.BuyEnable");
-        } else {
-            yamlConfiguration_config.set("Shop.Sound.BuyEnable", true);
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop Sound Buy Enable §4was added to §9Config.yml§4!");
-        }
-
-        if(yamlConfiguration_config.contains("Shop.Sound.Buy")){
-            DefultValue.Sound_Shop_Buy_input = replace(yamlConfiguration_config.getString("Shop.Sound.Buy"));
-        }else{
-            yamlConfiguration_config.set("Shop.Sound.Buy", "ENTITY_PLAYER_LEVELUP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6SShop Sound Buy §4was added to §9Config.yml§4!");
-        }
-
-
-        if (yamlConfiguration_config.contains("Shop.Sound.NoMoneyEnable")) {
-            DefultValue.Sound_Shop_NoMoney_Enable = yamlConfiguration_config.getBoolean("Shop.Sound.NoMoneyEnable");
-        } else {
-            yamlConfiguration_config.set("Shop.Sound.NoMoneyEnable", true);
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop Sound NoMoney Enable §4was added to §9Config.yml§4!");
-        }
-
-        if(yamlConfiguration_config.contains("Shop.Sound.NoMoney")){
-            DefultValue.Sound_Shop_NoMoney_input = replace(yamlConfiguration_config.getString("Shop.Sound.NoMoney"));
-        }else{
-            yamlConfiguration_config.set("Shop.Sound.NoMoney", "BLOCK_NOTE_BLOCK_HARP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Shop Sound NoMoney §4was added to §9Config.yml§4!");
-        }
-
-
-        if (yamlConfiguration_config.contains("Shop.Sound.NoInventorySpaceEnable")) {
-            DefultValue.Sound_Shop_NoInventorySpace_Enable = yamlConfiguration_config.getBoolean("Shop.Sound.NoInventorySpaceEnable");
-        } else {
-            yamlConfiguration_config.set("Shop.Sound.NoInventorySpaceEnable", true);
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
-        }
-
-        if(yamlConfiguration_config.contains("Shop.Sound.NoInventorySpace")){
-            DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Shop.Sound.NoInventorySpace"));
-        }else{
-            yamlConfiguration_config.set("Shop.Sound.NoInventorySpace", "BLOCK_NOTE_BLOCK_GUITAR");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Shop Sound NoInventorySpace §4was added to §9Config.yml§4!");
-        }
-
-
-
-
-
         if (yamlConfiguration_config.contains("Shop.Currency")) {
             DefultValue.Currency = yamlConfiguration_config.getString("Shop.Currency");
         } else {
             yamlConfiguration_config.set("Shop.Currency", "$");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9Config.yml§4!");
         }
-
 
         if (yamlConfiguration_config.contains("Shop.ItemNumbers")) {
             DefultValue.ItemNumbers = yamlConfiguration_config.getBoolean("Shop.ItemNumbers");
@@ -107,6 +57,107 @@ public class Config {
         } else {
             yamlConfiguration_config.set("WonderBags.ChestDrop", false);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
+        }
+
+        /**
+         *Sound
+         */
+
+        if (yamlConfiguration_config.contains("Sound.Buy.Enable")) {
+            DefultValue.Sound_Shop_Buy_Enable = yamlConfiguration_config.getBoolean("Sound.Buy.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.Buy.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.Buy.Sound")){
+            DefultValue.Sound_Shop_Buy_input = replace(yamlConfiguration_config.getString("Sound.Buy.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.Buy.Sound", "ENTITY_PLAYER_LEVELUP");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Buy §4was added to §9Config.yml§4!");
+        }
+
+
+        if (yamlConfiguration_config.contains("Sound.NoMoney.Enable")) {
+            DefultValue.Sound_Shop_NoMoney_Enable = yamlConfiguration_config.getBoolean("Sound.NoMoney.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.NoMoney.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.NoMoney.Sound")){
+            DefultValue.Sound_Shop_NoMoney_input = replace(yamlConfiguration_config.getString("Sound.NoMoney.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.NoMoney.Sound", "BLOCK_NOTE_BLOCK_HARP");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6 Sound NoMoney §4was added to §9Config.yml§4!");
+        }
+
+
+        if (yamlConfiguration_config.contains("Sound.NoInventorySpace.Enable")) {
+            DefultValue.Sound_Shop_NoInventorySpace_Enable = yamlConfiguration_config.getBoolean("Sound.NoInventorySpace.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.NoInventorySpace.Sound")){
+            DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Sound.NoInventorySpace.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
+        }
+
+
+        if (yamlConfiguration_config.contains("Sound.Give.Enable")) {
+            DefultValue.Sound_Give_Enable = yamlConfiguration_config.getBoolean("Sound.Give.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.Give.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.Give.Sound")){
+            DefultValue.Sound_Give_input = replace(yamlConfiguration_config.getString("Sound.Give.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.Give.Sound", "ENTITY_PLAYER_LEVELUP");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Give §4was added to §9Config.yml§4!");
+        }
+
+
+        if (yamlConfiguration_config.contains("Sound.Gift.Enable")) {
+            DefultValue.Sound_Gift_Enable = yamlConfiguration_config.getBoolean("Sound.Gift.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.Gift.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.Gift.Sound")){
+            DefultValue.Sound_Gift_input = replace(yamlConfiguration_config.getString("Sound.Gift.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.Gift.Sound", "ENTITY_PLAYER_LEVELUP");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Gift §4was added to §9Config.yml§4!");
+        }
+
+
+        if (yamlConfiguration_config.contains("Sound.PlayerNotFound.Enable")) {
+            DefultValue.Sound_PlayerNotFound_Enable = yamlConfiguration_config.getBoolean("Sound.PlayerNotFound.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.PlayerNotFound.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound PlayerNotFound Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.PlayerNotFound.Sound")){
+            DefultValue.Sound_PlayerNotFound_input = replace(yamlConfiguration_config.getString("Sound.PlayerNotFound.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.PlayerNotFound.Sound", "ENTITY_PLAYER_LEVELUP");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Send §4was added to §9Config.yml§4!");
+        }
+
+
+        if (yamlConfiguration_config.contains("Sound.NoInventorySpace.Enable")) {
+            DefultValue.Sound_Shop_NoInventorySpace_Enable = yamlConfiguration_config.getBoolean("Sound.NoInventorySpace.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
+        }
+        if(yamlConfiguration_config.contains("Sound.NoInventorySpace.Sound")){
+            DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Sound.NoInventorySpace.Sound"));
+        }else{
+            yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
         }
 
         try {
@@ -134,6 +185,27 @@ public class Config {
             DefultValue.Sound_Shop_NoInventorySpace = Sound.BLOCK_NOTE_BLOCK_GUITAR;
         }else{
             DefultValue.Sound_Shop_NoInventorySpace = sound_NoInventorySpace;
+        }
+
+        Sound sound_Give = Sound.valueOf(DefultValue.Sound_Give_input);
+        if(sound_Give == null){
+            DefultValue.Sound_Give = Sound.ENTITY_PLAYER_LEVELUP;
+        }else{
+            DefultValue.Sound_Give = sound_Give;
+        }
+
+        Sound sound_Gift = Sound.valueOf(DefultValue.Sound_Gift_input);
+        if(sound_Gift == null){
+            DefultValue.Sound_Gift = Sound.ENTITY_PLAYER_LEVELUP;
+        }else{
+            DefultValue.Sound_Gift = sound_Gift;
+        }
+
+        Sound sound_PlayerNotFound = Sound.valueOf(DefultValue.Sound_PlayerNotFound_input);
+        if(sound_PlayerNotFound == null){
+            DefultValue.Sound_PlayerNotFound = Sound.ENTITY_PLAYER_LEVELUP;
+        }else{
+            DefultValue.Sound_PlayerNotFound = sound_PlayerNotFound;
         }
 
 

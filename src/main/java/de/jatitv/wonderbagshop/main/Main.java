@@ -40,6 +40,7 @@ public final class Main extends JavaPlugin {
         // Plugin startup logic
         Logger logger = this.getLogger();
 
+
         plugin = this;
         getCommand("wonderbagshop").setExecutor(new CmdExecuter());
         getCommand("wbs").setExecutor(new CmdExecuter());

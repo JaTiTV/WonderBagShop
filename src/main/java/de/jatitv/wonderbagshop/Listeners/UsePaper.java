@@ -7,6 +7,7 @@ import de.jatitv.wonderbagshop.DefultValue.DefultValue;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
 import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
+import de.jatitv.wonderbagshop.main.Main;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -945,7 +946,6 @@ public class UsePaper implements Listener {
                         inventory.addItem(Item9);
                     }
                     player.openInventory(inventory);
-                    player.getInventory().remove(Material.valueOf(DefultValue_WB1.ChestName));
                 }
             }
         }

@@ -13,43 +13,42 @@
 
 package de.jatitv.wonderbagshop.commands;
 
-import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
-import de.jatitv.wonderbagshop.main.Main;
+import de.jatitv.wonderbagshop.defultValue.*;
+import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class Shop {
 
     public static void openShop(Player player){
 
-        File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
-        YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
-
         if (DefultValue.UseChest_and_Item){
 
             Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*4, DefultValue.GUI_Name);
 
+            ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+            ItemMeta itemMetaglass = glass.getItemMeta();
+            itemMetaglass.setDisplayName(" ");
+            glass.setItemMeta(itemMetaglass);
+            glass.setAmount(1);
+            for(int i = 0; i<9*4;i++){inventory.setItem(i, glass);}
+
             ItemStack item = new ItemStack(Material.CHEST);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName(DefultValue_WB1.Name);
+            itemMeta.setDisplayName(DefultValueChest_1.Name);
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
+            lore.add(DefultValueChest_1.price + " " + DefultValue.Currency);
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
-            if(DefultValue.ItemNumbers){
+            if (DefultValue.ItemNumbers){
                 item.setAmount(1);
             } else {
                 item.setAmount(1);
@@ -58,13 +57,13 @@ public class Shop {
 
             ItemStack item2 = new ItemStack(Material.CHEST);
             ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName(DefultValue_WB2.Name);
+            itemMeta2.setDisplayName(DefultValue_WB2_Chest.Name);
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
-            lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
+            lore2.add(DefultValue_WB2_Chest.price + " " + DefultValue.Currency);
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);
-            if(DefultValue.ItemNumbers){
+            if (DefultValue.ItemNumbers){
                 item2.setAmount(2);
             } else {
                 item2.setAmount(1);
@@ -73,10 +72,10 @@ public class Shop {
 
             ItemStack item3 = new ItemStack(Material.CHEST);
             ItemMeta itemMeta3 = item3.getItemMeta();
-            itemMeta3.setDisplayName(DefultValue_WB3.Name);
+            itemMeta3.setDisplayName(DefultValue_WB3_Chest.Name);
             ArrayList<String> lore3 = new ArrayList<>();
             lore3.add("§8-------------");
-            lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
+            lore3.add(DefultValue_WB3_Chest.price + " " + DefultValue.Currency);
             itemMeta3.setLore(lore3);
             item3.setItemMeta(itemMeta3);
             if(DefultValue.ItemNumbers){
@@ -86,12 +85,12 @@ public class Shop {
             }
             inventory.setItem(15, item3);
 
-            ItemStack item4 = new ItemStack(Material.valueOf(DefultValue.Item));
+            ItemStack item4 = new ItemStack(Material.valueOf(DefultValue_WB1_Item.Item));
             ItemMeta itemMeta4 = item4.getItemMeta();
-            itemMeta4.setDisplayName(DefultValue_WB1.Name);
+            itemMeta4.setDisplayName(DefultValueChest_1.Name);
             ArrayList<String> lore4 = new ArrayList<>();
             lore4.add("§8-------------");
-            lore4.add(DefultValue_WB1.price + " " + DefultValue.Currency);
+            lore4.add(DefultValueChest_1.price + " " + DefultValue.Currency);
             itemMeta4.setLore(lore4);
             item4.setItemMeta(itemMeta4);
             if(DefultValue.ItemNumbers){
@@ -101,13 +100,13 @@ public class Shop {
             }
             inventory.setItem(20, item4);
 
-            ItemStack item5 = new ItemStack(Material.valueOf(DefultValue.Item));
+            ItemStack item5 = new ItemStack(Material.valueOf(DefultValue_WB2_Item.Item));
             ItemMeta itemMeta5 = item5.getItemMeta();
-            itemMeta5.setDisplayName(DefultValue_WB2.Name);
+            itemMeta5.setDisplayName(DefultValue_WB2_Chest.Name);
             ArrayList<String> lore5 = new ArrayList<>();
             lore5.add("§8-------------");
-            lore5.add(DefultValue_WB2.price + " " + DefultValue.Currency);
-            itemMeta2.setLore(lore5);
+            lore5.add(DefultValue_WB2_Chest.price + " " + DefultValue.Currency);
+            itemMeta5.setLore(lore5);
             item5.setItemMeta(itemMeta5);
             if(DefultValue.ItemNumbers){
                 item5.setAmount(2);
@@ -116,12 +115,12 @@ public class Shop {
             }
             inventory.setItem(22, item5);
 
-            ItemStack item6 = new ItemStack(Material.valueOf(DefultValue.Item));
+            ItemStack item6 = new ItemStack(Material.valueOf(DefultValue_WB3_Item.Item));
             ItemMeta itemMeta6 = item6.getItemMeta();
-            itemMeta6.setDisplayName(DefultValue_WB3.Name);
+            itemMeta6.setDisplayName(DefultValue_WB3_Chest.Name);
             ArrayList<String> lore6 = new ArrayList<>();
             lore6.add("§8-------------");
-            lore6.add(DefultValue_WB3.price + " " + DefultValue.Currency);
+            lore6.add(DefultValue_WB3_Chest.price + " " + DefultValue.Currency);
             itemMeta6.setLore(lore6);
             item6.setItemMeta(itemMeta6);
             if(DefultValue.ItemNumbers){
@@ -138,15 +137,22 @@ public class Shop {
             if (DefultValue.UseChest){
                 Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
+                ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+                ItemMeta itemMetaglass = glass.getItemMeta();
+                itemMetaglass.setDisplayName(" ");
+                glass.setItemMeta(itemMetaglass);
+                glass.setAmount(1);
+                for(int i = 0; i<9*3;i++){inventory.setItem(i, glass);}
+
                 ItemStack item = new ItemStack(Material.CHEST);
                 ItemMeta itemMeta = item.getItemMeta();
-                itemMeta.setDisplayName(DefultValue_WB1.Name);
+                itemMeta.setDisplayName(DefultValueChest_1.Name);
                 ArrayList<String> lore = new ArrayList<>();
                 lore.add("§8-------------");
-                lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
+                lore.add(DefultValueChest_1.price + " " + DefultValue.Currency);
                 itemMeta.setLore(lore);
                 item.setItemMeta(itemMeta);
-                if(DefultValue.ItemNumbers){
+                if (DefultValue.ItemNumbers){
                     item.setAmount(1);
                 } else {
                     item.setAmount(1);
@@ -155,13 +161,13 @@ public class Shop {
 
                 ItemStack item2 = new ItemStack(Material.CHEST);
                 ItemMeta itemMeta2 = item2.getItemMeta();
-                itemMeta2.setDisplayName(DefultValue_WB2.Name);
+                itemMeta2.setDisplayName(DefultValue_WB2_Chest.Name);
                 ArrayList<String> lore2 = new ArrayList<>();
                 lore2.add("§8-------------");
-                lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
+                lore2.add(DefultValue_WB2_Chest.price + " " + DefultValue.Currency);
                 itemMeta2.setLore(lore2);
                 item2.setItemMeta(itemMeta2);
-                if(DefultValue.ItemNumbers){
+                if (DefultValue.ItemNumbers){
                     item2.setAmount(2);
                 } else {
                     item2.setAmount(1);
@@ -170,10 +176,10 @@ public class Shop {
 
                 ItemStack item3 = new ItemStack(Material.CHEST);
                 ItemMeta itemMeta3 = item3.getItemMeta();
-                itemMeta3.setDisplayName(DefultValue_WB3.Name);
+                itemMeta3.setDisplayName(DefultValue_WB3_Chest.Name);
                 ArrayList<String> lore3 = new ArrayList<>();
                 lore3.add("§8-------------");
-                lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
+                lore3.add(DefultValue_WB3_Chest.price + " " + DefultValue.Currency);
                 itemMeta3.setLore(lore3);
                 item3.setItemMeta(itemMeta3);
                 if(DefultValue.ItemNumbers){
@@ -187,12 +193,19 @@ public class Shop {
             } else {
                 Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
 
-                ItemStack item = new ItemStack(Material.valueOf(DefultValue.Item));
+                ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+                ItemMeta itemMetaglass = glass.getItemMeta();
+                itemMetaglass.setDisplayName(" ");
+                glass.setItemMeta(itemMetaglass);
+                glass.setAmount(1);
+                for(int i = 0; i<9*3;i++){inventory.setItem(i, glass);}
+
+                ItemStack item = new ItemStack(Material.valueOf(DefultValue_WB1_Item.Item));
                 ItemMeta itemMeta = item.getItemMeta();
-                itemMeta.setDisplayName(DefultValue_WB1.Name);
+                itemMeta.setDisplayName(DefultValueChest_1.Name);
                 ArrayList<String> lore = new ArrayList<>();
                 lore.add("§8-------------");
-                lore.add(DefultValue_WB1.price + " " + DefultValue.Currency);
+                lore.add(DefultValueChest_1.price + " " + DefultValue.Currency);
                 itemMeta.setLore(lore);
                 item.setItemMeta(itemMeta);
                 if(DefultValue.ItemNumbers){
@@ -202,12 +215,12 @@ public class Shop {
                 }
                 inventory.setItem(11, item);
 
-                ItemStack item2 = new ItemStack(Material.valueOf(DefultValue.Item));
+                ItemStack item2 = new ItemStack(Material.valueOf(DefultValue_WB2_Item.Item));
                 ItemMeta itemMeta2 = item2.getItemMeta();
-                itemMeta2.setDisplayName(DefultValue_WB2.Name);
+                itemMeta2.setDisplayName(DefultValue_WB2_Chest.Name);
                 ArrayList<String> lore2 = new ArrayList<>();
                 lore2.add("§8-------------");
-                lore2.add(DefultValue_WB2.price + " " + DefultValue.Currency);
+                lore2.add(DefultValue_WB2_Chest.price + " " + DefultValue.Currency);
                 itemMeta2.setLore(lore2);
                 item2.setItemMeta(itemMeta2);
                 if(DefultValue.ItemNumbers){
@@ -217,12 +230,12 @@ public class Shop {
                 }
                 inventory.setItem(13, item2);
 
-                ItemStack item3 = new ItemStack(Material.valueOf(DefultValue.Item));
+                ItemStack item3 = new ItemStack(Material.valueOf(DefultValue_WB3_Item.Item));
                 ItemMeta itemMeta3 = item3.getItemMeta();
-                itemMeta3.setDisplayName(DefultValue_WB3.Name);
+                itemMeta3.setDisplayName(DefultValue_WB3_Chest.Name);
                 ArrayList<String> lore3 = new ArrayList<>();
                 lore3.add("§8-------------");
-                lore3.add(DefultValue_WB3.price + " " + DefultValue.Currency);
+                lore3.add(DefultValue_WB3_Chest.price + " " + DefultValue.Currency);
                 itemMeta3.setLore(lore3);
                 item3.setItemMeta(itemMeta3);
                 if(DefultValue.ItemNumbers){

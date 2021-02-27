@@ -28,16 +28,16 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ShopGift {
+public class ShopGive {
 
     public static void openShop(Player player) {
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
-        Player target = (ShopGift.ShopSendSender.get(player));
+        Player target = (ShopGive.ShopSendSender.get(player));
 
         if (DefultValue.UseChest_and_Item) {
-            Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*4, DefultValue.GUI_Name + " §8| §4gift");
+            Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*4, DefultValue.GUI_Name + " §8| §4give");
 
             ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
             ItemMeta itemMetaglass = glass.getItemMeta();
@@ -140,7 +140,7 @@ public class ShopGift {
 
         } else {
             if (DefultValue.UseChest){
-                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, DefultValue.GUI_Name + " §8| §4gift");
+                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, DefultValue.GUI_Name + " §8| §4give");
 
                 ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
                 ItemMeta itemMetaglass = glass.getItemMeta();
@@ -195,7 +195,7 @@ public class ShopGift {
                 inventory.setItem(15, item3);
                 player.openInventory(inventory);
             } else {
-                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, DefultValue.GUI_Name + " §8| §4gift");
+                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, DefultValue.GUI_Name + " §8| §4give");
 
                 ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
                 ItemMeta itemMetaglass = glass.getItemMeta();

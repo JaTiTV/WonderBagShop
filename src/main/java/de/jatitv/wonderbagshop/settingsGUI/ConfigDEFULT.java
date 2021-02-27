@@ -13,10 +13,9 @@
 
 package de.jatitv.wonderbagshop.settingsGUI;
 
-import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.main.Main;
+import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -47,10 +46,6 @@ public class ConfigDEFULT {
 
         yamlConfiguration_config.set("WonderBags.UseChest_and_Item", false);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was set to §9Config.yml§4!");
-
-        yamlConfiguration_config.set("WonderBags.Item", "PAPER");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBags Item §4was set to §9Config.yml§4!");
-
 
         yamlConfiguration_config.set("WonderBags.ChestDrop", false);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ChestDrop §4was set to §9Config.yml§4!");

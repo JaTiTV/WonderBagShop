@@ -10,8 +10,8 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 2.0_Snapshot_1
-main: de.jatitv.wonderbagshop.main.Main
+version: 2.0_Snapshot_2
+main: de.jatitv.wonderbagshop.system.Main
 api-version: 1.13
 softdepend:
   - Vault

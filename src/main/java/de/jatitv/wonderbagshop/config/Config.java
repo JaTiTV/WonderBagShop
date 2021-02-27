@@ -13,8 +13,8 @@
 
 package de.jatitv.wonderbagshop.config;
 
-import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.main.Main;
+import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -24,18 +24,25 @@ import java.io.IOException;
 
 public class Config {
 
-    public static void configCreate(){
+    public static void configCreate() throws InterruptedException {
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config.yml load...");
 
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
+        if (yamlConfiguration_config.contains("Plugin.UpdateCheckOnJoin")) {
+            DefultValue.UpdateCheckOnJoin = yamlConfiguration_config.getBoolean("Plugin.UpdateCheckOnJoin");
+        } else {
+            yamlConfiguration_config.set("Plugin.UpdateCheckOnJoin", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UpdateCheckOnJoin §4was added to §9Config.yml§4!");
+        }
+
         if(yamlConfiguration_config.contains("Shop.GUI_Name")){
             DefultValue.GUI_Name = replace(yamlConfiguration_config.getString("Shop.GUI_Name"));
         }else{
             yamlConfiguration_config.set("Shop.GUI_Name", "&2Wonder&6Bag&9Shop");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
         }
 
         if (yamlConfiguration_config.contains("Shop.Currency")) {
@@ -66,13 +73,6 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was added to §9Config.yml§4!");
         }
 
-        if(yamlConfiguration_config.contains("WonderBags.Item")){
-            DefultValue.Item = replace(yamlConfiguration_config.getString("WonderBags.Item"));
-        }else{
-            yamlConfiguration_config.set("WonderBags.Item", "PAPER");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBags Item §4was added to §9Config.yml§4!");
-        }
-
         if (yamlConfiguration_config.contains("WonderBags.ChestDrop")) {
             DefultValue.ChestDrop = yamlConfiguration_config.getBoolean("WonderBags.ChestDrop");
         } else {
@@ -94,7 +94,7 @@ public class Config {
             DefultValue.Sound_Shop_Buy_input = replace(yamlConfiguration_config.getString("Sound.Buy.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.Buy.Sound", "ENTITY_PLAYER_LEVELUP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Buy §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy §4was added to §9Config.yml§4!");
         }
 
 
@@ -108,7 +108,7 @@ public class Config {
             DefultValue.Sound_Shop_NoMoney_input = replace(yamlConfiguration_config.getString("Sound.NoMoney.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.NoMoney.Sound", "BLOCK_NOTE_BLOCK_HARP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6 Sound NoMoney §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney §4was added to §9Config.yml§4!");
         }
 
 
@@ -122,7 +122,7 @@ public class Config {
             DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Sound.NoInventorySpace.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
         }
 
 
@@ -136,7 +136,7 @@ public class Config {
             DefultValue.Sound_Give_input = replace(yamlConfiguration_config.getString("Sound.Give.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.Give.Sound", "ENTITY_PLAYER_LEVELUP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Give §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give §4was added to §9Config.yml§4!");
         }
 
 
@@ -150,7 +150,7 @@ public class Config {
             DefultValue.Sound_Gift_input = replace(yamlConfiguration_config.getString("Sound.Gift.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.Gift.Sound", "ENTITY_PLAYER_LEVELUP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Gift §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift §4was added to §9Config.yml§4!");
         }
 
 
@@ -164,7 +164,7 @@ public class Config {
             DefultValue.Sound_PlayerNotFound_input = replace(yamlConfiguration_config.getString("Sound.PlayerNotFound.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.PlayerNotFound.Sound", "ENTITY_PLAYER_LEVELUP");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Send §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Send §4was added to §9Config.yml§4!");
         }
 
 
@@ -178,7 +178,7 @@ public class Config {
             DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Sound.NoInventorySpace.Sound"));
         }else{
             yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
         }
 
         try {

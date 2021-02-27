@@ -13,11 +13,11 @@
 
 package de.jatitv.wonderbagshop.config;
 
-import de.jatitv.wonderbagshop.DefultValue.DefultValue;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB1;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB2;
-import de.jatitv.wonderbagshop.DefultValue.DefultValue_WB3;
-import de.jatitv.wonderbagshop.main.Main;
+import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defultValue.DefultValueChest_1;
+import de.jatitv.wonderbagshop.defultValue.DefultValue_WB2_Chest;
+import de.jatitv.wonderbagshop.defultValue.DefultValue_WB3_Chest;
+import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -26,7 +26,7 @@ import java.io.IOException;
 
 public class Messages {
 
-    public static void messagesCreate(){
+    public static void messagesCreate() throws InterruptedException {
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Messages.yml load...");
 
@@ -69,7 +69,8 @@ public class Messages {
                             "\n[prefix] &8'&b/wonderbagshop&8' &eOpens this help." +
                             "\n[prefix] &8'&b/wonderbagshop shop&8' &eOpens the shop." +
                             "\n[prefix] &8'&b/wonderbagshop gift &7<player>&8' &eGive away a WonderBag." +
-                            "\n[prefix] &8'&b/wonderbagshop give &7<player> <size>&8' &eGive a player a WonderBag." +
+                            "\n[prefix] &8'&b/wonderbagshop give &7<player>&8' &eGive a player a WonderBag." +
+                            "\n[prefix] &8'&b/wonderbagshop settings&8' &eEdit the Settings." +
                             "\n[prefix] &8'&b/wonderbagshop reload&8' &eReloads the Plugin." +
                             "\n[prefix]" +
                             "\n[prefix] &8----------------------------");
@@ -107,7 +108,7 @@ public class Messages {
         }
 
         if(yamlConfiguration_msg.contains("Give.Receiver")){
-            DefultValue.received = replace(yamlConfiguration_msg.getString("Give.Receiver"));
+            DefultValue.giveReceived = replace(yamlConfiguration_msg.getString("Give.Receiver"));
         }else{
             yamlConfiguration_msg.set("Give.Receiver", "[prefix] &2You have received a [wonderbag] &2from &6[sender]&2!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give Receiver §4was added to §9Messages.yml§4!");
@@ -121,7 +122,7 @@ public class Messages {
         }
 
         if(yamlConfiguration_msg.contains("Gift.Receiver")){
-            DefultValue.received = replace(yamlConfiguration_msg.getString("Gift.Receiver"));
+            DefultValue.giveReceived = replace(yamlConfiguration_msg.getString("Gift.Receiver"));
         }else{
             yamlConfiguration_msg.set("Gift.Receiver", "[prefix] &2You have received a [wonderbag] &2as a gift from &6[sender]&2!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Gift Receiver §4was added to §9Messages.yml§4!");
@@ -159,21 +160,9 @@ public class Messages {
 
     private static String replace(String Text) {
 
-        File WB1YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_1.yml");
-        YamlConfiguration yamlConfiguration_WB1 = YamlConfiguration.loadConfiguration(WB1YML);
-
-        File WB2YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_2.yml");
-        YamlConfiguration yamlConfiguration_WB2 = YamlConfiguration.loadConfiguration(WB2YML);
-
-        File WB3YML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/" + "WonderBag_3.yml");
-        YamlConfiguration yamlConfiguration_WB3 = YamlConfiguration.loadConfiguration(WB3YML);
-
         return Text.replace("[prefix]", DefultValue.Prefix).replace("&", "§").replace("[currency]", DefultValue.Currency)
                 .replace("[ue]", "ü").replace("[UE]", "Ü").replace("[oe]", "Ö").replace("[OE]", "Ö")
-                .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValue_WB1.Name)
-                .replace("[WB2Name]", DefultValue_WB2.Name).replace("[WB3Name]", DefultValue_WB3.Name)
-                .replace("[WB1Price]", String.valueOf(yamlConfiguration_WB1.get("Shop.price")))
-                .replace("[WB2Price]", String.valueOf(yamlConfiguration_WB2.get("Shop.price")))
-                .replace("[WB3Price]", String.valueOf(yamlConfiguration_WB3.get("Shop.price")));
+                .replace("[ae]", "ä").replace("[AE]", "Ä").replace("[WB1Name]", DefultValueChest_1.Name)
+                .replace("[WB2Name]", DefultValue_WB2_Chest.Name).replace("[WB3Name]", DefultValue_WB3_Chest.Name);
     }
 }

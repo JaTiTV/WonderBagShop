@@ -21,11 +21,25 @@ public class TODO {
 
     /** changes
      *
-     * kleine fixes
+     * Asynchroner Load und reload Um einen bug zu beheben (Config nicht vollständig)
      */
 
     // ToDo 2.0
 
     // ToDO Paper in gift und give hinzufügen
+
+    // ToDo Help
+
+    /**
+     * Wird noch hinzugefügt oder geändert:
+     * - Die benutzerdefinierten Items werden eine eigene yml erhalten mit eigenen Preisen, Item Mengen und eigene Item listen ✅
+     * - Sound für die Settings GUI (HC) ✅
+     * - Die Settings GUI ist noch nicht vollständig!
+     * - Benutzerdefinierte Items für /give und /gift ✅
+     * - GUI für /give ✅
+     * - Option um die Update_msg on Join zu deaktivieren ✅
+     * - Verschiedene Material Einstellmöglichkeiten für die benutzerdefinierten Items (z.B. WonderBag_1: IRON_BLOCK, WonderBag_2: GOLD_BLOCK, WonderBag_3: DIAMOND_BLOCK) ✅
+     * - Neue Nachrichten für benutzerdefinierte Items
+     */
 
 }

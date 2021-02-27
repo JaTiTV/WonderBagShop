@@ -56,6 +56,13 @@ public class WonderBag_1 {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag_1 Setting §6WonderBag ChestName §4was added to §9WonderBag_1.yml§4!");
         }
 
+        if(yamlConfiguration_WB1.contains("WonderBag.ItemName")){
+            DefultValue_WB1.ItemName = replace(yamlConfiguration_WB1.getString("WonderBag.ItemName"));
+        }else{
+            yamlConfiguration_WB1.set("WonderBag.ItemName", "&2Wonder&6Bag &9small");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag_1 Setting §6WonderBag ItemName §4was added to §9WonderBag_1.yml§4!");
+        }
+
         if(yamlConfiguration_WB1.contains("WonderBag.Item_amount_(1-9)")){
             DefultValue_WB1.Item_anz = Integer.valueOf(yamlConfiguration_WB1.getString("WonderBag.Item_amount_(1-9)"));
         }else{

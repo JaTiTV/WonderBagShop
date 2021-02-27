@@ -59,6 +59,13 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest §4was added to §9Config.yml§4!");
         }
 
+        if (yamlConfiguration_config.contains("WonderBags.UseChest_and_Item")) {
+            DefultValue.UseChest_and_Item = yamlConfiguration_config.getBoolean("WonderBags.UseChest_and_Item");
+        } else {
+            yamlConfiguration_config.set("WonderBags.UseChest_and_Item", false);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was added to §9Config.yml§4!");
+        }
+
         if(yamlConfiguration_config.contains("WonderBags.Item")){
             DefultValue.Item = replace(yamlConfiguration_config.getString("WonderBags.Item"));
         }else{

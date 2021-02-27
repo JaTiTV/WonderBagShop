@@ -57,10 +57,9 @@ public class GUIListener implements Listener {
                 switch (e.getCurrentItem().getAmount()) {
                     case 1:
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Config") && e.getCurrentItem().getType() == Material.PAPER) {
+                            player.closeInventory();
                             ConfigGUI.openConfig(player);
                         }
-                        break;
-                    default:
                         break;
 
                 }
@@ -76,6 +75,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -86,6 +86,7 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
@@ -99,6 +100,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -109,12 +111,39 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
                         case 3:
+                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Use Chest and Item") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
+                                yamlConfiguration_config.set("WonderBags.UseChest_and_Item", false);
+                                try {
+                                    yamlConfiguration_config.save(configYML);
+                                } catch (IOException tac) {
+                                    tac.printStackTrace();
+                                }
+                                player.closeInventory();
+                                Config.configCreate();
+                                ConfigGUI.openConfig(player);
+                            } else {
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Use Chest and Item") && e.getCurrentItem().getType() == Material.RED_WOOL) {
+                                    yamlConfiguration_config.set("WonderBags.UseChest_and_Item", true);
+                                    try {
+                                        yamlConfiguration_config.save(configYML);
+                                    } catch (IOException tac) {
+                                        tac.printStackTrace();
+                                    }
+                                    player.closeInventory();
+                                    Config.configCreate();
+                                    ConfigGUI.openConfig(player);
+                                }
+                            }
+
+
+                        case 4:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Chest Drop") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("WonderBags.ChestDrop", false);
                                 try {
@@ -122,6 +151,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -132,12 +162,13 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
-                        case 4:
+                        case 5:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Buy") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("Sound.Buy.Enable", false);
                                 try {
@@ -145,6 +176,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -155,12 +187,13 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
-                        case 5:
+                        case 6:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound No Money") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("Sound.NoMoney.Enable", false);
                                 try {
@@ -168,6 +201,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -178,12 +212,13 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
-                        case 6:
+                        case 7:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound No Inventory Space") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", false);
                                 try {
@@ -191,6 +226,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -201,12 +237,13 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
-                        case 7:
+                        case 8:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Give") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("Sound.Give.Enable", false);
                                 try {
@@ -214,6 +251,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -224,12 +262,13 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
-                        case 8:
+                        case 9:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Gift") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("Sound.Gift.Enable", false);
                                 try {
@@ -237,6 +276,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -247,12 +287,13 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
                             }
 
-                        case 9:
+                        case 10:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Player Not Found") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                                 yamlConfiguration_config.set("Sound.PlayerNotFound.Enable", false);
                                 try {
@@ -260,6 +301,7 @@ public class GUIListener implements Listener {
                                 } catch (IOException tac) {
                                     tac.printStackTrace();
                                 }
+                                player.closeInventory();
                                 Config.configCreate();
                                 ConfigGUI.openConfig(player);
                             } else {
@@ -270,6 +312,7 @@ public class GUIListener implements Listener {
                                     } catch (IOException tac) {
                                         tac.printStackTrace();
                                     }
+                                    player.closeInventory();
                                     Config.configCreate();
                                     ConfigGUI.openConfig(player);
                                 }
@@ -278,16 +321,16 @@ public class GUIListener implements Listener {
 
                         case 52:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Defult Config") && e.getCurrentItem().getType() == Material.ORANGE_WOOL) {
+                                player.closeInventory();
                                 ConfigGUI.resetConfig(player);
                             }
 
                             case 53:
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Settings") && e.getCurrentItem().getType() == Material.YELLOW_WOOL) {
+                                player.closeInventory();
                                 SettingsGUI.openSettings(player);
                             }
 
-                            break;
-                        default:
                             break;
                     }
 
@@ -301,10 +344,12 @@ public class GUIListener implements Listener {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§2Yes §4Reset the Config") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                             ConfigDEFULT.configDEFULTCreate();
                             Config.configCreate();
+                            player.closeInventory();
                             ConfigGUI.openConfig(player);
                         }
                     case 2:
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§cNO §4Do not reset Config") && e.getCurrentItem().getType() == Material.RED_WOOL) {
+                            player.closeInventory();
                             ConfigGUI.openConfig(player);
                         }
                 }

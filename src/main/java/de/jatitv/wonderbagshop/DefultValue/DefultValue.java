@@ -25,6 +25,7 @@ public class DefultValue {
     public static Boolean ItemNumbers = true;
 
     public static Boolean UseChest = true;
+    public static Boolean UseChest_and_Item = false;
     public static String Item = "PAPER";
     public static Boolean ChestDrop = false;
 

@@ -45,6 +45,9 @@ public class ConfigDEFULT {
         yamlConfiguration_config.set("WonderBags.UseChest", true);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest §4was set to §9Config.yml§4!");
 
+        yamlConfiguration_config.set("WonderBags.UseChest_and_Item", false);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was set to §9Config.yml§4!");
+
         yamlConfiguration_config.set("WonderBags.Item", "PAPER");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6WonderBags Item §4was set to §9Config.yml§4!");
 

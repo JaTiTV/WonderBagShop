@@ -19,6 +19,7 @@ public class DefultValue_WB3 {
     public static Integer price = 3000;
 
     public static String ChestName = "§2Wonder§6Bag §9large";
+    public static String ItemName = "§2Wonder§6Bag §9small";
     public static Integer Item_anz = 9;
 
     public static String Item1_Item = "DIAMOND";

@@ -39,7 +39,7 @@ public class ConfigGUI {
         if (DefultValue.ItemNumbers) {
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName(" ");
+            itemMeta.setDisplayName("§6Item Numbers");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
             lore.add("§7Set the Config §6ItemNumbers");
@@ -88,6 +88,32 @@ public class ConfigGUI {
             inventory.setItem(1, item);
         }
 
+        if (DefultValue.UseChest_and_Item){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Use Chest and Item");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6UseChest_and_Item");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(2, item);
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Use Chest and Item");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6UseChest_and_Item");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(2, item);
+        }
+
         if (DefultValue.ChestDrop){
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -99,7 +125,7 @@ public class ConfigGUI {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(2, item);
+            inventory.setItem(3, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -111,10 +137,10 @@ public class ConfigGUI {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(2, item);
+            inventory.setItem(3, item);
         }
 
-        ItemStack guiname = new ItemStack(Material.BLUE_WOOL);
+        ItemStack guiname = new ItemStack(Material.GRAY_WOOL);
         ItemMeta itemMetaguiname = guiname.getItemMeta();
         itemMetaguiname.setDisplayName("§6GUI_Name");
         ArrayList<String> loreguiname = new ArrayList<>();
@@ -126,7 +152,7 @@ public class ConfigGUI {
         guiname.setAmount(1);
         inventory.setItem(9, guiname);
 
-        ItemStack currency = new ItemStack(Material.BLUE_WOOL);
+        ItemStack currency = new ItemStack(Material.GRAY_WOOL);
         ItemMeta itemMetacurrency = currency.getItemMeta();
         itemMetacurrency.setDisplayName("§6Currency");
         ArrayList<String> lorecurrency = new ArrayList<>();
@@ -163,7 +189,7 @@ public class ConfigGUI {
             item.setAmount(1);
             inventory.setItem(27, item);
 
-            ItemStack item2 = new ItemStack(Material.BLUE_WOOL);
+            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName("§6Sound Buy Sound");
             ArrayList<String> lore2 = new ArrayList<>();
@@ -193,7 +219,6 @@ public class ConfigGUI {
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
             lore2.add("§7Set the sound §6Sound Buy Sound");
-            lore2.add("§4Activate the sound to be able to change it");
             lore2.add("§4Comming Soon!");
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);
@@ -214,7 +239,7 @@ public class ConfigGUI {
             item.setAmount(1);
             inventory.setItem(28, item);
 
-            ItemStack item2 = new ItemStack(Material.BLUE_WOOL);
+            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName("§6Sound No Money Sound");
             ArrayList<String> lore2 = new ArrayList<>();
@@ -244,7 +269,6 @@ public class ConfigGUI {
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
             lore2.add("§7Set the sound §6Sound No Money Sound");
-            lore2.add("§4Activate the sound to be able to change it");
             lore2.add("§4Comming Soon!");
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);
@@ -265,7 +289,7 @@ public class ConfigGUI {
             item.setAmount(1);
             inventory.setItem(29, item);
 
-            ItemStack item2 = new ItemStack(Material.BLUE_WOOL);
+            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName("§6Sound No Inventory Space Sound");
             ArrayList<String> lore2 = new ArrayList<>();
@@ -295,7 +319,6 @@ public class ConfigGUI {
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
             lore2.add("§7Set the sound §6Sound No Inventory Space Sound");
-            lore2.add("§4Activate the sound to be able to change it");
             lore2.add("§4Comming Soon!");
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);
@@ -316,7 +339,7 @@ public class ConfigGUI {
             item.setAmount(1);
             inventory.setItem(30, item);
 
-            ItemStack item2 = new ItemStack(Material.BLUE_WOOL);
+            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName("§6Sound Give Sound");
             ArrayList<String> lore2 = new ArrayList<>();
@@ -346,7 +369,6 @@ public class ConfigGUI {
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
             lore2.add("§7Set the sound §6Sound Give Sound");
-            lore2.add("§4Activate the sound to be able to change it");
             lore2.add("§4Comming Soon!");
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);
@@ -367,7 +389,7 @@ public class ConfigGUI {
             item.setAmount(1);
             inventory.setItem(31, item);
 
-            ItemStack item2 = new ItemStack(Material.BLUE_WOOL);
+            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName("§6Sound Gift Sound");
             ArrayList<String> lore2 = new ArrayList<>();
@@ -397,7 +419,6 @@ public class ConfigGUI {
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
             lore2.add("§7Set the sound §6Sound Gift Sound");
-            lore2.add("§4Activate the sound to be able to change it");
             lore2.add("§4Comming Soon!");
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);
@@ -418,7 +439,7 @@ public class ConfigGUI {
             item.setAmount(1);
             inventory.setItem(32, item);
 
-            ItemStack item2 = new ItemStack(Material.BLUE_WOOL);
+            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
             ItemMeta itemMeta2 = item2.getItemMeta();
             itemMeta2.setDisplayName("§6Sound Player Not Found Sound");
             ArrayList<String> lore2 = new ArrayList<>();
@@ -448,7 +469,6 @@ public class ConfigGUI {
             ArrayList<String> lore2 = new ArrayList<>();
             lore2.add("§8-------------");
             lore2.add("§7Set the sound §6Sound Player Not Found Sound");
-            lore2.add("§4Activate the sound to be able to change it");
             lore2.add("§4Comming Soon!");
             itemMeta2.setLore(lore2);
             item2.setItemMeta(itemMeta2);

@@ -27,12 +27,17 @@ public class TabComplete implements TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String lable, String[] args) {
-        if(sender instanceof Player) {
+        if (sender instanceof Player) {
             List<String> list = new ArrayList<>();
             Player player = (Player) sender;
             if (args.length == 0 || args.length == 1) {
                 if (args[0].isEmpty()) {
-                    if (player.hasPermission("wonderbagshop.command") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                    if (sender.hasPermission("wonderbagshop.command")
+                            || sender.hasPermission("wonderbagshop.command.info")
+                            || sender.hasPermission("wonderbagshop.command.give")
+                            || sender.hasPermission("wonderbagshop.command.gift")
+                            || sender.hasPermission("wonderbagshop.command.admin")
+                            || sender.isOp()) {
                         list.add("help");
                     }
                     if (player.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
@@ -55,34 +60,63 @@ public class TabComplete implements TabCompleter {
                     return list;
                 }
 
-                if (args[0].charAt(0) == 'i') {
-                    list.add("info");
-                } else if (args[0].charAt(0) == 'r' && args[0].length() < 3) {
-                    list.add("reload");
-                    list.add("rl");
-                } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'e') {
-                    list.add("reload");
-                } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'l') {
-                    list.add("rl");
-                } else if (args[0].charAt(0) == 'h') {
-                    list.add("help");
+
+                if (args[0].charAt(0) == 'h') {
+                    if (sender.hasPermission("wonderbagshop.command") || sender.hasPermission("wonderbagshop.command.info")
+                            || sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.gift")
+                            || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                        list.add("help");
+                    }
+
+                } else if (args[0].charAt(0) == 'i') {
+                    if (sender.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("info");
+                    }
+
                 } else if (args[0].charAt(0) == 'g' && args[0].length() < 3) {
-                    list.add("give");
-                    list.add("gift");
+                    if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("give");
+                    }
+                    if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("gift");
+                    }
+
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'v') {
-                    list.add("give");
+                    if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("give");
+                    }
+
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'f') {
-                    list.add("gift");
+                    if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("gift");
+                    }
+
+                } else if (args[0].charAt(0) == 'r' && args[0].length() < 3) {
+                    if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("reload");
+                        list.add("rl");
+                    }
+                } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'e') {
+                    if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("reload");
+                    }
+                } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'l') {
+                    if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("rl");
+                    }
+
                 } else if (args[0].charAt(0) == 's') {
-                    list.add("settings");
+                    if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("settings");
+                    }
                 }
                 return list;
-                }
+            }
             if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
                 Iterator var6 = Bukkit.getOnlinePlayers().iterator();
 
                 while (var6.hasNext()) {
-                    Player player1 = (Player)var6.next();
+                    Player player1 = (Player) var6.next();
                     list.add(player1.getName());
                 }
                 return list;
@@ -93,7 +127,7 @@ public class TabComplete implements TabCompleter {
                 Iterator var6 = Bukkit.getOnlinePlayers().iterator();
 
                 while (var6.hasNext()) {
-                    Player player1 = (Player)var6.next();
+                    Player player1 = (Player) var6.next();
                     list.add(player1.getName());
                 }
 

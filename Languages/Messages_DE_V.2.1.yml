@@ -1,0 +1,51 @@
+# Deutsche Messages.yml von WonderBagShop
+
+Do_not_remove_or_change:
+  Version: This file was created with version 2.1
+  BuildNr: 21
+  Autor: JaTiTV
+  Spigot: https://www.spigotmc.org/resources/wonderbagshop.89234/
+  Discord: 'You can find more information about WonderBagShop on Discord: https://discord.gg/vRyXFFterJ'
+  '--------------------------------------------': '--------------------------------------------'
+Plugin:
+  NoPermissionForCommand: '[prefix] &cF[ue]r &b[cmd] &cfehlt dir die Permission &6[perm]&c!'
+  NoPermission: '[prefix] &cDu hast keine Permission für &2Wonder&6Bag&9Shop!'
+  VaultNotSetUp: '[prefix] &4Vault / Economy nicht Installiert!'
+  SoundNotFound: '[prefix] &4Der Sound &6[sound] &4konnte nicht gefunden werden! Bitte überprüfe deine Einstellungen.'
+  Reload:
+    Start: '&6Plugin reload...'
+    End: '&2Plugin erfolgreich neu geladen.'
+Help:
+  Help: '&8''&b/wonderbagshop help&8'' &e[OE]ffnet diese help.'
+  Shop: '&8''&b/wonderbagshop&8'' &e[OE]ffnet den Shop.'
+  Info: '&8''&b/wonderbagshop info&8'' &eRufe die Infos von &2W&6B&9S &eauf.'
+  Gift: '&8''&b/wonderbagshop gift &7<player>&8'' &e[OE]ffne die gift GUI und verschenke eine WonderBag.'
+  Give: '&8''&b/wonderbagshop give &7<player>&8'' &e[OE]ffne die give GUI und gebe einem Spieler eine WonderBag.'
+  GiveConsole: '&8''&b/wonderbagshop give &7<player> <ChestSmall | ChestMedium | ChestLarge
+    | ItemSmall | ItemMedium | ItemLarge>&8'' &eGebe einem Spieler eine WonderBag. &4NUR FÜR DIE KONSOLE!'
+    Settings: '&8''&b/wonderbagshop settings&8'' &eBearbeite die Einstellungen.'
+  Reload: '&8''&b/wonderbagshop reload&8'' &eLade das Plugin neu.'
+Shop:
+  No_money: '[prefix] &cDu hast nicht gen[ue]gend Geld!'
+  NoInventorySpace: '[prefix] &cDu hast keinen Platz in deinem Inventar!'
+  Buy_msg: '[prefix] &2Du hast dir [wonderbag] &2f[ue]r &6[price] [currency] &2gekauft!'
+Give:
+  Sender: '[prefix] &2Du hast &6[player] &2eine [wonderbag] &2gegeben!'
+  Receiver: '[prefix] &2Du hast von &6[sender] &2eine [wonderbag]&2 bekommen.'
+Gift:
+  Sender: '[prefix] &2Du hast &6[player] &2eine [wonderbag] &2f[ue]r [price] &2geschenkt!'
+  Receiver: '[prefix] &2Du hast von &6[sender] &2eine [wonderbag] &2geschenkt bekommen.'
+Give_&_Gift:
+  PlayerNotFond: '[prefix] &cDer Spieler &6[player] &cwurde nicht gefunden oder ist nicht Online!.'
+  PlayerNoInventorySpace: '[prefix] &6[player] &chat keinen freien Platz in seinem Inventar!'
+
+# Nutze bitte für ä, ü, ö folgende Platzhalter
+#
+# ä = [ae]
+# Ä = [AE]
+#
+# ü = [ue]
+# Ü = [UE]
+#
+# ö = [oe]
+# Ö = [OE]

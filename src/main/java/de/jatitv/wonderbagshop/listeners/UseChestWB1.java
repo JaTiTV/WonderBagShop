@@ -45,7 +45,7 @@ public class UseChestWB1 implements Listener {
 
                 ItemStack Item1 = null;
                 Random a = new Random();
-                int zufallA = a.nextInt(30);
+                int zufallA = a.nextInt(70);
                 switch (zufallA) {
                     case 0:
                         Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -137,11 +137,132 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item1 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
+
                 }
 
                 ItemStack Item2 = null;
                 Random b = new Random();
-                int zufallB = b.nextInt(30);
+                int zufallB = b.nextInt(70);
                 switch (zufallB) {
                     case 0:
                         Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -233,11 +354,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item2 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item3 = null;
                 Random c = new Random();
-                int zufallC = c.nextInt(30);
+                int zufallC = c.nextInt(70);
                 switch (zufallC) {
                     case 0:
                         Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -329,11 +570,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item3 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item4 = null;
                 Random d = new Random();
-                int zufallD = d.nextInt(30);
+                int zufallD = d.nextInt(70);
                 switch (zufallD) {
                     case 0:
                         Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -425,11 +786,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item4 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item5 = null;
                 Random e = new Random();
-                int zufallE = e.nextInt(30);
+                int zufallE = e.nextInt(70);
                 switch (zufallE) {
                     case 0:
                         Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -521,11 +1002,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item5 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item6 = null;
                 Random f = new Random();
-                int zufallF = f.nextInt(30);
+                int zufallF = f.nextInt(70);
                 switch (zufallF) {
                     case 0:
                         Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -617,11 +1218,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item6 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item7 = null;
                 Random g = new Random();
-                int zufallG = g.nextInt(30);
+                int zufallG = g.nextInt(70);
                 switch (zufallG) {
                     case 0:
                         Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -713,11 +1434,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item7 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item8 = null;
                 Random h = new Random();
-                int zufallH = h.nextInt(30);
+                int zufallH = h.nextInt(70);
                 switch (zufallH) {
                     case 0:
                         Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -809,11 +1650,131 @@ public class UseChestWB1 implements Listener {
                     case 29:
                         Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
                         break;
+                    case 30:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item8 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
+                        break;
                 }
 
                 ItemStack Item9 = null;
                 Random i = new Random();
-                int zufallI = i.nextInt(30);
+                int zufallI = i.nextInt(70);
                 switch (zufallI) {
                     case 0:
                         Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item1_Item), DefultValueChest_1.Item1_StackSize);
@@ -904,6 +1865,126 @@ public class UseChestWB1 implements Listener {
                         break;
                     case 29:
                         Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item30_Item), DefultValueChest_1.Item30_StackSize);
+                        break;
+                    case 30:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item31_Item), DefultValueChest_1.Item31_StackSize);
+                        break;
+                    case 31:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item32_Item), DefultValueChest_1.Item32_StackSize);
+                        break;
+                    case 32:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item33_Item), DefultValueChest_1.Item33_StackSize);
+                        break;
+                    case 33:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item34_Item), DefultValueChest_1.Item34_StackSize);
+                        break;
+                    case 34:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item35_Item), DefultValueChest_1.Item35_StackSize);
+                        break;
+                    case 35:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item36_Item), DefultValueChest_1.Item36_StackSize);
+                        break;
+                    case 36:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item37_Item), DefultValueChest_1.Item37_StackSize);
+                        break;
+                    case 37:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item38_Item), DefultValueChest_1.Item38_StackSize);
+                        break;
+                    case 38:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item39_Item), DefultValueChest_1.Item39_StackSize);
+                        break;
+                    case 39:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item40_Item), DefultValueChest_1.Item40_StackSize);
+                        break;
+                    case 40:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item41_Item), DefultValueChest_1.Item41_StackSize);
+                        break;
+                    case 41:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item42_Item), DefultValueChest_1.Item42_StackSize);
+                        break;
+                    case 42:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item43_Item), DefultValueChest_1.Item43_StackSize);
+                        break;
+                    case 43:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item44_Item), DefultValueChest_1.Item44_StackSize);
+                        break;
+                    case 44:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item45_Item), DefultValueChest_1.Item45_StackSize);
+                        break;
+                    case 45:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item46_Item), DefultValueChest_1.Item46_StackSize);
+                        break;
+                    case 46:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item47_Item), DefultValueChest_1.Item47_StackSize);
+                        break;
+                    case 47:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item48_Item), DefultValueChest_1.Item48_StackSize);
+                        break;
+                    case 48:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item49_Item), DefultValueChest_1.Item49_StackSize);
+                        break;
+                    case 49:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item50_Item), DefultValueChest_1.Item50_StackSize);
+                        break;
+                    case 50:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item51_Item), DefultValueChest_1.Item51_StackSize);
+                        break;
+                    case 51:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item52_Item), DefultValueChest_1.Item52_StackSize);
+                        break;
+                    case 52:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item53_Item), DefultValueChest_1.Item53_StackSize);
+                        break;
+                    case 53:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item54_Item), DefultValueChest_1.Item54_StackSize);
+                        break;
+                    case 54:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item55_Item), DefultValueChest_1.Item55_StackSize);
+                        break;
+                    case 55:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item56_Item), DefultValueChest_1.Item56_StackSize);
+                        break;
+                    case 56:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item57_Item), DefultValueChest_1.Item57_StackSize);
+                        break;
+                    case 57:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item58_Item), DefultValueChest_1.Item58_StackSize);
+                        break;
+                    case 58:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item59_Item), DefultValueChest_1.Item59_StackSize);
+                        break;
+                    case 59:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item60_Item), DefultValueChest_1.Item60_StackSize);
+                        break;
+                    case 60:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item61_Item), DefultValueChest_1.Item61_StackSize);
+                        break;
+                    case 61:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item62_Item), DefultValueChest_1.Item62_StackSize);
+                        break;
+                    case 62:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item63_Item), DefultValueChest_1.Item63_StackSize);
+                        break;
+                    case 63:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item64_Item), DefultValueChest_1.Item64_StackSize);
+                        break;
+                    case 64:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item65_Item), DefultValueChest_1.Item65_StackSize);
+                        break;
+                    case 65:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item66_Item), DefultValueChest_1.Item66_StackSize);
+                        break;
+                    case 66:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item67_Item), DefultValueChest_1.Item67_StackSize);
+                        break;
+                    case 67:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item68_Item), DefultValueChest_1.Item68_StackSize);
+                        break;
+                    case 68:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item69_Item), DefultValueChest_1.Item69_StackSize);
+                        break;
+                    case 69:
+                        Item9 = new ItemStack(Material.getMaterial(DefultValueChest_1.Item70_Item), DefultValueChest_1.Item70_StackSize);
                         break;
                 }
 

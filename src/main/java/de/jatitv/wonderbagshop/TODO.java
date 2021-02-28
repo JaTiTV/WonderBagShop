@@ -22,13 +22,11 @@ public class TODO {
     /** changes
      *
      * Asynchroner Load und reload Um einen bug zu beheben (Config nicht vollständig)
+     *
+     * Items von 30 auf 70 erweitert
      */
 
     // ToDo 2.0
-
-    // ToDO Paper in gift und give hinzufügen
-
-    // ToDo Help
 
     /**
      * Wird noch hinzugefügt oder geändert:
@@ -41,5 +39,14 @@ public class TODO {
      * - Verschiedene Material Einstellmöglichkeiten für die benutzerdefinierten Items (z.B. WonderBag_1: IRON_BLOCK, WonderBag_2: GOLD_BLOCK, WonderBag_3: DIAMOND_BLOCK) ✅
      * - Neue Nachrichten für benutzerdefinierte Items
      */
+/*
+    Hier ist der erste und vielleicht sogar einzige Release Candidate.
+
+    Es wurden alle änderungen hinzugefügt die bei dem ersten Snapshot vorgesehen waren.
+    Genauere Infos findest du hier. BITTE GRÜNDLICH DURCHLESEN!
+
+    Sollten mir keine Fehler / Bugs mitgeteilt werden wird in naher Zukunft die 2.0 veröffentlicht.
+
+ */
 
 }

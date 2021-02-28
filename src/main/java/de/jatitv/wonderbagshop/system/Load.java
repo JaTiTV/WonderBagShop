@@ -16,10 +16,16 @@ package de.jatitv.wonderbagshop.system;
 import de.jatitv.wonderbagshop.config.*;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.YamlConfiguration;
+
+import java.io.File;
 
 public class Load {
 
     public static void LoadSend(String version) throws InterruptedException {
+        File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
+        YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2-----------------------------------------------------------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2 __          __             _           §6____               §9_____ _                 ");
@@ -34,6 +40,26 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Autor: §6JaTiTV");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Version: §6" + version);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+        if(Main.UpdateMSG){
+            int build = yamlConfiguration_config.getInt("Do_not_remove_or_change.BuildNr");
+            if (configYML.isFile()){
+                if (build != Main.Build) {
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-------------------------------");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(Main.UpdateInfo);
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-------------------------------");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                    Thread.sleep(20000);
+                }
+            }
+        }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Config.configCreate();
@@ -77,7 +103,7 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Vault.loadVault();
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
-        if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null || Bukkit.getPluginManager().getPlugin("Vault") == null){
+        if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null || Bukkit.getPluginManager().getPlugin("Vault") == null) {
             if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be found! §9Please download it here: " +
                         "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
@@ -86,7 +112,7 @@ public class Load {
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault could not be found! §9Please download it here: " +
                         "§6https://www.spigotmc.org/resources/vault.34315/§4\n" + DefultValue.PrefixHC);
             }
-            Thread.sleep(30000);
+            Thread.sleep(10000);
         }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2-----------------------------------------------------------------------------------");
     }

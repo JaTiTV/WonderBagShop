@@ -62,8 +62,8 @@ public class GiftEvent implements Listener {
                 e.setCancelled(true);
                 if (e.getCurrentItem().getType() == Material.CHEST) {
                     if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_1.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2_Chest.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3_Chest.Name)) {
+                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_2.Name)
+                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_3.Name)) {
                         boolean empty = false;
                         for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
                             if (target.getInventory().getItem(i) == null) {
@@ -116,13 +116,13 @@ public class GiftEvent implements Listener {
                                     break;
 
                                 case 2:
-                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2_Chest.Name)) {
-                                        if (Shop.buy(player, DefultValue_WB2_Chest.price)) {
+                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_2.Name)) {
+                                        if (Shop.buy(player, DefultValueChest_2.price)) {
                                             player.closeInventory();
 
                                             ItemStack item = new ItemStack(Material.CHEST);
                                             ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB2_Chest.DisplayName);
+                                            itemMeta.setDisplayName(DefultValueChest_2.DisplayName);
                                             ArrayList<String> lore = new ArrayList<>();
                                             itemMeta.setLore(lore);
                                             item.setItemMeta(itemMeta);
@@ -132,7 +132,7 @@ public class GiftEvent implements Listener {
                                             target.getInventory().addItem(nbti.getItem());
 
                                             player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB2_Chest.Name)
+                                                    .replace("[wonderbag]", DefultValueChest_2.Name)
                                                     .replace("[price]", String.valueOf(yamlConfiguration_WB2_Chest.get("Shop.price")))
                                                     .replace("[currency]", DefultValue.Currency));
                                             if (DefultValue.Sound_Shop_Buy_Enable) {
@@ -140,7 +140,7 @@ public class GiftEvent implements Listener {
                                             }
 
                                             target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB2_Chest.Name));
+                                                    .replace("[wonderbag]", DefultValueChest_2.Name));
                                             if (DefultValue.Sound_Gift_Enable) {
                                                 target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                             }
@@ -158,13 +158,13 @@ public class GiftEvent implements Listener {
                                     break;
 
                                 case 3:
-                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3_Chest.Name)) {
-                                        if (Shop.buy(player, DefultValue_WB3_Chest.price)) {
+                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_3.Name)) {
+                                        if (Shop.buy(player, DefultValueChest_3.price)) {
                                             player.closeInventory();
 
                                             ItemStack item = new ItemStack(Material.CHEST);
                                             ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB3_Chest.DisplayName);
+                                            itemMeta.setDisplayName(DefultValueChest_3.DisplayName);
                                             ArrayList<String> lore = new ArrayList<>();
                                             itemMeta.setLore(lore);
                                             item.setItemMeta(itemMeta);
@@ -174,7 +174,7 @@ public class GiftEvent implements Listener {
                                             target.getInventory().addItem(nbti.getItem());
 
                                             player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB3_Chest.Name)
+                                                    .replace("[wonderbag]", DefultValueChest_3.Name)
                                                     .replace("[price]", String.valueOf(yamlConfiguration_WB3_Chest.get("Shop.price")))
                                                     .replace("[currency]", DefultValue.Currency));
                                             if (DefultValue.Sound_Shop_Buy_Enable) {
@@ -182,7 +182,7 @@ public class GiftEvent implements Listener {
                                             }
 
                                             target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB3_Chest.Name));
+                                                    .replace("[wonderbag]", DefultValueChest_3.Name));
                                             if (DefultValue.Sound_Gift_Enable) {
                                                 target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                             }
@@ -213,12 +213,12 @@ public class GiftEvent implements Listener {
                     }
                 }
 
-                if (e.getCurrentItem().getType() == Material.valueOf(DefultValue_WB1_Item.Item)
-                        || e.getCurrentItem().getType() == Material.valueOf(DefultValue_WB2_Item.Item)
-                        || e.getCurrentItem().getType() == Material.valueOf(DefultValue_WB3_Item.Item)) {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB1_Item.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2_Item.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3_Item.Name)) {
+                if (e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_1.Item)
+                        || e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_2.Item)
+                        || e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {
+                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_1.Name)
+                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)
+                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
                         boolean empty = false;
                         for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
                             if (target.getInventory().getItem(i) == null) {
@@ -230,13 +230,13 @@ public class GiftEvent implements Listener {
                         if (empty) {
                             switch (e.getCurrentItem().getAmount()) {
                                 case 1:
-                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB1_Item.Name)) {
-                                        if (Shop.buy(player, DefultValue_WB1_Item.price)) {
+                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_1.Name)) {
+                                        if (Shop.buy(player, DefultValueItem_1.price)) {
                                             player.closeInventory();
 
-                                            ItemStack item = new ItemStack(Material.valueOf(DefultValue_WB1_Item.Item));
+                                            ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
                                             ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB1_Item.DisplayName);
+                                            itemMeta.setDisplayName(DefultValueItem_1.DisplayName);
                                             ArrayList<String> lore = new ArrayList<>();
                                             itemMeta.setLore(lore);
                                             item.setItemMeta(itemMeta);
@@ -246,7 +246,7 @@ public class GiftEvent implements Listener {
                                             target.getInventory().addItem(nbti.getItem());
 
                                             player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB1_Item.Name)
+                                                    .replace("[wonderbag]", DefultValueItem_1.Name)
                                                     .replace("[price]", String.valueOf(yamlConfiguration_WB1_Item.get("Shop.price")))
                                                     .replace("[currency]", DefultValue.Currency));
                                             if (DefultValue.Sound_Shop_Buy_Enable) {
@@ -276,13 +276,13 @@ public class GiftEvent implements Listener {
                                     break;
 
                                 case 2:
-                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB2_Item.Name)) {
-                                        if (Shop.buy(player, DefultValue_WB2_Item.price)) {
+                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)) {
+                                        if (Shop.buy(player, DefultValueItem_2.price)) {
                                             player.closeInventory();
 
-                                            ItemStack item = new ItemStack(Material.valueOf(DefultValue_WB2_Item.Item));
+                                            ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
                                             ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB2_Item.DisplayName);
+                                            itemMeta.setDisplayName(DefultValueItem_2.DisplayName);
                                             ArrayList<String> lore = new ArrayList<>();
                                             itemMeta.setLore(lore);
                                             item.setItemMeta(itemMeta);
@@ -292,7 +292,7 @@ public class GiftEvent implements Listener {
                                             target.getInventory().addItem(nbti.getItem());
 
                                             player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB2_Item.Name)
+                                                    .replace("[wonderbag]", DefultValueItem_2.Name)
                                                     .replace("[price]", String.valueOf(yamlConfiguration_WB2_Item.get("Shop.price")))
                                                     .replace("[currency]", DefultValue.Currency));
                                             if (DefultValue.Sound_Shop_Buy_Enable) {
@@ -300,7 +300,7 @@ public class GiftEvent implements Listener {
                                             }
 
                                             target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB2_Item.Name));
+                                                    .replace("[wonderbag]", DefultValueItem_2.Name));
                                             if (DefultValue.Sound_Gift_Enable) {
                                                 target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                             }
@@ -322,13 +322,13 @@ public class GiftEvent implements Listener {
                                     break;
 
                                 case 3:
-                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValue_WB3_Item.Name)) {
-                                        if (Shop.buy(player, DefultValue_WB3_Item.price)) {
+                                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
+                                        if (Shop.buy(player, DefultValueItem_3.price)) {
                                             player.closeInventory();
 
-                                            ItemStack item = new ItemStack(Material.valueOf(DefultValue_WB3_Item.Item));
+                                            ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
                                             ItemMeta itemMeta = item.getItemMeta();
-                                            itemMeta.setDisplayName(DefultValue_WB3_Item.DisplayName);
+                                            itemMeta.setDisplayName(DefultValueItem_3.DisplayName);
                                             ArrayList<String> lore = new ArrayList<>();
                                             itemMeta.setLore(lore);
                                             item.setItemMeta(itemMeta);
@@ -338,7 +338,7 @@ public class GiftEvent implements Listener {
                                             target.getInventory().addItem(nbti.getItem());
 
                                             player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB3_Item.Name)
+                                                    .replace("[wonderbag]", DefultValueItem_3.Name)
                                                     .replace("[price]", String.valueOf(yamlConfiguration_WB3_Item.get("Shop.price")))
                                                     .replace("[currency]", DefultValue.Currency));
                                             if (DefultValue.Sound_Shop_Buy_Enable) {
@@ -346,7 +346,7 @@ public class GiftEvent implements Listener {
                                             }
 
                                             target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                    .replace("[wonderbag]", DefultValue_WB3_Item.Name));
+                                                    .replace("[wonderbag]", DefultValueItem_3.Name));
                                             if (DefultValue.Sound_Gift_Enable) {
                                                 target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                             }

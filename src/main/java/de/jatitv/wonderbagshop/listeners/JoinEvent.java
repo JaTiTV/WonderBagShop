@@ -39,7 +39,7 @@ public class JoinEvent implements Listener {
                         "\n" + DefultValue.PrefixHC + "§cYou are using the §6" + foundVersion + " §cof WonderBagShop!" +
                         "\n" + DefultValue.PrefixHC + "§cThere may be errors and it is possible that not all functions work as they should!" +
                         "\n" + DefultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them." +
-                        "\n" + DefultValue.PrefixHC + "§7https://discord.com/invite/vRyXFFterJ");
+                        "\n" + DefultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
 
                 if (Main.Snapshot) {
                     new BukkitRunnable() {

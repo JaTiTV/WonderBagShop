@@ -13,7 +13,7 @@
 
 package de.jatitv.wonderbagshop.defultValue;
 
-public class DefultValue_WB1_Item {
+public class DefultValueItem_1 {
 
     public static String Name = "§2Wonder§6Bag§7: §9small";
     public static Integer price = 1000;
@@ -111,4 +111,126 @@ public class DefultValue_WB1_Item {
 
     public static String Item30_Item = "POISONOUS_POTATO";
     public static Integer Item30_StackSize = 1;
+
+    public static String Item31_Item = "DIAMOND_PICKAXE";
+    public static Integer Item31_StackSize = 1;
+
+    public static String Item32_Item = "DIAMOND_AXE";
+    public static Integer Item32_StackSize = 1;
+
+    public static String Item33_Item = "DIAMOND_HELMET";
+    public static Integer Item33_StackSize = 1;
+
+    public static String Item34_Item = "DIAMOND_CHESTPLATE";
+    public static Integer Item34_StackSize = 1;
+
+    public static String Item35_Item = "DIAMOND_BOOTS";
+    public static Integer Item35_StackSize = 1;
+
+    public static String Item36_Item = "ENCHANTED_GOLDEN_APPLE";
+    public static Integer Item36_StackSize = 1;
+
+    public static String Item37_Item = "EXPERIENCE_BOTTLE";
+    public static Integer Item37_StackSize = 1;
+
+    public static String Item38_Item = "EGG";
+    public static Integer Item38_StackSize = 1;
+
+    public static String Item39_Item = "END_STONE";
+    public static Integer Item39_StackSize = 1;
+
+    public static String Item40_Item = "DIAMOND_SHOVEL";
+    public static Integer Item40_StackSize = 1;
+
+    public static String Item41_Item = "FLINT_AND_STEEL";
+    public static Integer Item41_StackSize = 1;
+
+    public static String Item42_Item = "FIREWORK_ROCKET";
+    public static Integer Item42_StackSize = 1;
+
+    public static String Item43_Item = "APPLE";
+    public static Integer Item43_StackSize = 1;
+
+    public static String Item44_Item = "MELON_SLICE";
+    public static Integer Item44_StackSize = 1;
+
+    public static String Item45_Item = "BREAD";
+    public static Integer Item45_StackSize = 1;
+
+    public static String Item46_Item = "COOKED_MUTTON";
+    public static Integer Item46_StackSize = 1;
+
+    public static String Item47_Item = "CAKE";
+    public static Integer Item47_StackSize = 1;
+
+    public static String Item48_Item = "CARROT";
+    public static Integer Item48_StackSize = 1;
+
+    public static String Item49_Item = "BEETROOT_SOUP";
+    public static Integer Item49_StackSize = 1;
+
+    public static String Item50_Item = "SALMON";
+    public static Integer Item50_StackSize = 1;
+
+    public static String Item51_Item = "BAKED_POTATO";
+    public static Integer Item51_StackSize = 1;
+
+    public static String Item52_Item = "SWEET_BERRIES";
+    public static Integer Item52_StackSize = 1;
+
+    public static String Item53_Item = "PUMPKIN_PIE";
+    public static Integer Item53_StackSize = 1;
+
+    public static String Item54_Item = "POWERED_RAIL";
+    public static Integer Item54_StackSize = 1;
+
+    public static String Item55_Item = "RAIL";
+    public static Integer Item55_StackSize = 1;
+
+    public static String Item56_Item = "MINECART";
+    public static Integer Item56_StackSize = 1;
+
+    public static String Item57_Item = "SADDLE";
+    public static Integer Item57_StackSize = 1;
+
+    public static String Item58_Item = "SPRUCE_BOAT";
+    public static Integer Item58_StackSize = 1;
+
+    public static String Item59_Item = "PISTON";
+    public static Integer Item59_StackSize = 1;
+
+    public static String Item60_Item = "REDSTONE";
+    public static Integer Item60_StackSize = 1;
+
+    public static String Item61_Item = "REPEATER";
+    public static Integer Item61_StackSize = 1;
+
+    public static String Item62_Item = "SHIELD";
+    public static Integer Item62_StackSize = 1;
+
+    public static String Item63_Item = "SCUTE";
+    public static Integer Item63_StackSize = 1;
+
+    public static String Item64_Item = "POPPY";
+    public static Integer Item64_StackSize = 1;
+
+    public static String Item65_Item = "OAK_SIGN";
+    public static Integer Item65_StackSize = 1;
+
+    public static String Item66_Item = "CHAIN";
+    public static Integer Item66_StackSize = 1;
+
+    public static String Item67_Item = "LADDER";
+    public static Integer Item67_StackSize = 1;
+
+    public static String Item68_Item = "LIME_BED";
+    public static Integer Item68_StackSize = 1;
+
+    public static String Item69_Item = "COBWEB";
+    public static Integer Item69_StackSize = 1;
+
+    public static String Item70_Item = "SCAFFOLDING";
+    public static Integer Item70_StackSize = 1;
+
+
 }

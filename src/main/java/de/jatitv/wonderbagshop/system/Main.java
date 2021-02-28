@@ -29,26 +29,48 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
 public final class Main extends JavaPlugin {
 
     // Debug Settings
-    public static Boolean Snapshot = true;
+
     public static Boolean Bstats = true;
+
+    public static Boolean Snapshot = false;
+    public static int Build = 21;
+
+    public static Boolean UpdateMSG = true;
+    public static String UpdateInfo = DefultValue.PrefixHC + "§4You have just updated WonderBagShop! §6Here is some important information:" +
+            "§4\n" + DefultValue.PrefixHC +
+            "§4\n" + DefultValue.PrefixHC + "§4In version 2.0 / 2.1 some things have changed in the configuration! " +
+            "§4\n" + DefultValue.PrefixHC + "§4I strongly advise you to regenerate the complete folder of WonderBagShop to make sure that the plugin works without errors. " +
+            "§4\n" + DefultValue.PrefixHC + "§4If you encounter any errors please contact me via Discord: §6https://discord.com/invite/vRyXFFterJ" +
+            "§4\n" + DefultValue.PrefixHC +
+            "§4\n" + DefultValue.PrefixHC + "§2Sincerely JaTiTV";
+
+    public static String Autor = "JaTiTV";
+    public static String Spigot = "https://www.spigotmc.org/resources/wonderbagshop.89234/";
+    public static String Discord = "You can find more information about WonderBagShop on Discord: https://discord.gg/vRyXFFterJ";
+
+    // ---------------------------------------------
 
     public static Main plugin;
     public static Plugin a;
     public static Economy eco = null;
     public static String update_version = null;
-
+    public static Main getPlugin() {
+        return plugin;
+    }
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         Logger logger = this.getLogger();
-
 
         plugin = this;
         getCommand("wonderbagshop").setExecutor(new CmdExecuter());
@@ -88,6 +110,17 @@ public final class Main extends JavaPlugin {
         if (Main.Bstats) {
             int pluginId = 10342; // <-- Replace with the id of your plugin!
             Metrics metrics = new Metrics(this, pluginId);
+            metrics.addCustomChart(new Metrics.SimplePie("updatecheckonjoin", () -> String.valueOf(DefultValue.UpdateCheckOnJoin)));
+            metrics.addCustomChart(new Metrics.SimplePie("itemnumbers", () -> String.valueOf(DefultValue.ItemNumbers)));
+            metrics.addCustomChart(new Metrics.SimplePie("usechest", () -> String.valueOf(DefultValue.UseChest)));
+            metrics.addCustomChart(new Metrics.SimplePie("usechest_and_item", () -> String.valueOf(DefultValue.UseChest_and_Item)));
+            metrics.addCustomChart(new Metrics.SimplePie("chestdrop", () -> String.valueOf(DefultValue.ChestDrop)));
+            metrics.addCustomChart(new Metrics.SimplePie("sound_shop_buy_enable", () -> String.valueOf(DefultValue.Sound_Shop_Buy_Enable)));
+            metrics.addCustomChart(new Metrics.SimplePie("sound_shop_nomoney_enable", () -> String.valueOf(DefultValue.Sound_Shop_NoMoney_Enable)));
+            metrics.addCustomChart(new Metrics.SimplePie("sound_shop_noinventoryspace_enable", () -> String.valueOf(DefultValue.Sound_Shop_NoInventorySpace_Enable)));
+            metrics.addCustomChart(new Metrics.SimplePie("sound_give_enable", () -> String.valueOf(DefultValue.Sound_Give_Enable)));
+            metrics.addCustomChart(new Metrics.SimplePie("sound_gift_enable", () -> String.valueOf(DefultValue.Sound_Gift_Enable)));
+            metrics.addCustomChart(new Metrics.SimplePie("sound_playernotfound_enable", () -> String.valueOf(DefultValue.Sound_PlayerNotFound_Enable)));
         } else {
             new BukkitRunnable() {
                 @Override
@@ -124,12 +157,12 @@ public final class Main extends JavaPlugin {
                         "\n" + DefultValue.PrefixHC + "§4You are using the §6" + foundVersion + " §4of WonderBagShop!§6" +
                         "\n" + DefultValue.PrefixHC + "§4There may be errors and it is possible that not all functions work as they should!§6" +
                         "\n" + DefultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them!§6" +
-                        "\n" + DefultValue.PrefixHC + "§7https://discord.com/invite/vRyXFFterJ");
+                        "\n" + DefultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
                 String SnapshotPlayer = (DefultValue.PrefixHC + "§4Please note!" +
                         "\n" + DefultValue.PrefixHC + "§cYou are using the §6" + foundVersion + " §cof WonderBagShop!" +
                         "\n" + DefultValue.PrefixHC + "§cThere may be errors and it is possible that not all functions work as they should!" +
                         "\n" + DefultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them." +
-                        "\n" + DefultValue.PrefixHC + "§7https://discord.com/invite/vRyXFFterJ");
+                        "\n" + DefultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
 
                 if (Main.Snapshot) {
                     new BukkitRunnable() {
@@ -209,7 +242,5 @@ public final class Main extends JavaPlugin {
         Disable.disableSend(getDescription().getVersion());
     }
 
-    public static Main getPlugin() {
-        return plugin;
-    }
+
 }

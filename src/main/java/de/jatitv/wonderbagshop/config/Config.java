@@ -31,6 +31,26 @@ public class Config {
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
+
+        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Version")) {
+            yamlConfiguration_config.set("Do_not_remove_or_change.Version", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        }
+
+        yamlConfiguration_config.set("Do_not_remove_or_change.BuildNr", Main.Build);
+        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Autor")) {
+            yamlConfiguration_config.set("Do_not_remove_or_change.Autor", Main.Autor);
+        }
+        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Spigot")) {
+            yamlConfiguration_config.set("Do_not_remove_or_change.Spigot", Main.Spigot);
+        }
+        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Discord")) {
+            yamlConfiguration_config.set("Do_not_remove_or_change.Discord", Main.Discord);
+        }
+        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.--------------------------------------------")) {
+            yamlConfiguration_config.set("Do_not_remove_or_change.--------------------------------------------", "--------------------------------------------");
+        }
+
+
         if (yamlConfiguration_config.contains("Plugin.UpdateCheckOnJoin")) {
             DefultValue.UpdateCheckOnJoin = yamlConfiguration_config.getBoolean("Plugin.UpdateCheckOnJoin");
         } else {
@@ -38,9 +58,9 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UpdateCheckOnJoin §4was added to §9Config.yml§4!");
         }
 
-        if(yamlConfiguration_config.contains("Shop.GUI_Name")){
+        if (yamlConfiguration_config.contains("Shop.GUI_Name")) {
             DefultValue.GUI_Name = replace(yamlConfiguration_config.getString("Shop.GUI_Name"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Shop.GUI_Name", "&2Wonder&6Bag&9Shop");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
         }
@@ -90,9 +110,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.Buy.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.Buy.Sound")){
+        if (yamlConfiguration_config.contains("Sound.Buy.Sound")) {
             DefultValue.Sound_Shop_Buy_input = replace(yamlConfiguration_config.getString("Sound.Buy.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.Buy.Sound", "ENTITY_PLAYER_LEVELUP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy §4was added to §9Config.yml§4!");
         }
@@ -104,9 +124,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.NoMoney.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.NoMoney.Sound")){
+        if (yamlConfiguration_config.contains("Sound.NoMoney.Sound")) {
             DefultValue.Sound_Shop_NoMoney_input = replace(yamlConfiguration_config.getString("Sound.NoMoney.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.NoMoney.Sound", "BLOCK_NOTE_BLOCK_HARP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney §4was added to §9Config.yml§4!");
         }
@@ -118,9 +138,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.NoInventorySpace.Sound")){
+        if (yamlConfiguration_config.contains("Sound.NoInventorySpace.Sound")) {
             DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Sound.NoInventorySpace.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
         }
@@ -132,9 +152,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.Give.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.Give.Sound")){
+        if (yamlConfiguration_config.contains("Sound.Give.Sound")) {
             DefultValue.Sound_Give_input = replace(yamlConfiguration_config.getString("Sound.Give.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.Give.Sound", "ENTITY_PLAYER_LEVELUP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give §4was added to §9Config.yml§4!");
         }
@@ -146,9 +166,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.Gift.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.Gift.Sound")){
+        if (yamlConfiguration_config.contains("Sound.Gift.Sound")) {
             DefultValue.Sound_Gift_input = replace(yamlConfiguration_config.getString("Sound.Gift.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.Gift.Sound", "ENTITY_PLAYER_LEVELUP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift §4was added to §9Config.yml§4!");
         }
@@ -160,9 +180,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.PlayerNotFound.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound PlayerNotFound Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.PlayerNotFound.Sound")){
+        if (yamlConfiguration_config.contains("Sound.PlayerNotFound.Sound")) {
             DefultValue.Sound_PlayerNotFound_input = replace(yamlConfiguration_config.getString("Sound.PlayerNotFound.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.PlayerNotFound.Sound", "ENTITY_PLAYER_LEVELUP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Send §4was added to §9Config.yml§4!");
         }
@@ -174,9 +194,9 @@ public class Config {
             yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
         }
-        if(yamlConfiguration_config.contains("Sound.NoInventorySpace.Sound")){
+        if (yamlConfiguration_config.contains("Sound.NoInventorySpace.Sound")) {
             DefultValue.Sound_Shop_NoInventorySpace_input = replace(yamlConfiguration_config.getString("Sound.NoInventorySpace.Sound"));
-        }else{
+        } else {
             yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
         }
@@ -187,53 +207,76 @@ public class Config {
             e.printStackTrace();
         }
 
-        Sound sound_Buy = Sound.valueOf(DefultValue.Sound_Shop_Buy_input);
-        if(sound_Buy == null){
+        try {
+            Sound sound_Buy = Sound.valueOf(DefultValue.Sound_Shop_Buy_input);
+            if (sound_Buy != null) {
+                DefultValue.Sound_Shop_Buy = sound_Buy;
+            }
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
+                    .replace("[sound]", "§8Buy: §6" + DefultValue.Sound_Shop_Buy_input) + "§4\n§4\n§4\n");
             DefultValue.Sound_Shop_Buy = Sound.ENTITY_PLAYER_LEVELUP;
-        }else{
-            DefultValue.Sound_Shop_Buy = sound_Buy;
         }
 
-        Sound sound_NoMoney = Sound.valueOf(DefultValue.Sound_Shop_NoMoney_input);
-        if(sound_NoMoney == null){
+        try {
+            Sound sound_NoMoney = Sound.valueOf(DefultValue.Sound_Shop_NoMoney_input);
+            if (sound_NoMoney != null) {
+                DefultValue.Sound_Shop_NoMoney = sound_NoMoney;
+            }
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
+                    .replace("[sound]", "§8NoMoney: §6" + DefultValue.Sound_Shop_NoMoney_input) + "§4\n§4\n§4\n");
             DefultValue.Sound_Shop_NoMoney = Sound.BLOCK_NOTE_BLOCK_BASS;
-        }else{
-            DefultValue.Sound_Shop_NoMoney = sound_NoMoney;
         }
 
-        Sound sound_NoInventorySpace = Sound.valueOf(DefultValue.Sound_Shop_NoInventorySpace_input);
-        if(sound_NoInventorySpace == null){
+        try {
+            Sound sound_NoInventorySpace = Sound.valueOf(DefultValue.Sound_Shop_NoInventorySpace_input);
+            if (sound_NoInventorySpace != null) {
+                DefultValue.Sound_Shop_NoInventorySpace = sound_NoInventorySpace;
+            }
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
+                    .replace("[sound]", "§8NoInventorySpace: §6" + DefultValue.Sound_Shop_NoInventorySpace_input) + "§4\n§4\n§4\n");
             DefultValue.Sound_Shop_NoInventorySpace = Sound.BLOCK_NOTE_BLOCK_GUITAR;
-        }else{
-            DefultValue.Sound_Shop_NoInventorySpace = sound_NoInventorySpace;
         }
 
-        Sound sound_Give = Sound.valueOf(DefultValue.Sound_Give_input);
-        if(sound_Give == null){
+        try {
+            Sound sound_Give = Sound.valueOf(DefultValue.Sound_Give_input);
+            if (sound_Give != null) {
+                DefultValue.Sound_Give = sound_Give;
+            }
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
+                    .replace("[sound]", "§8Give: §6" + DefultValue.Sound_Give_input) + "§4\n§4\n§4\n");
             DefultValue.Sound_Give = Sound.ENTITY_PLAYER_LEVELUP;
-        }else{
-            DefultValue.Sound_Give = sound_Give;
         }
 
-        Sound sound_Gift = Sound.valueOf(DefultValue.Sound_Gift_input);
-        if(sound_Gift == null){
+        try {
+            Sound sound_Gift = Sound.valueOf(DefultValue.Sound_Gift_input);
+            if (sound_Gift != null) {
+                DefultValue.Sound_Gift = sound_Gift;
+            }
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
+                    .replace("[sound]", "§8Gift: §6" + DefultValue.Sound_Gift_input) + "§4\n§4\n§4\n");
             DefultValue.Sound_Gift = Sound.ENTITY_PLAYER_LEVELUP;
-        }else{
-            DefultValue.Sound_Gift = sound_Gift;
         }
 
-        Sound sound_PlayerNotFound = Sound.valueOf(DefultValue.Sound_PlayerNotFound_input);
-        if(sound_PlayerNotFound == null){
+        try {
+            Sound sound_PlayerNotFound = Sound.valueOf(DefultValue.Sound_PlayerNotFound_input);
+            if (sound_PlayerNotFound != null) {
+                DefultValue.Sound_PlayerNotFound = sound_PlayerNotFound;
+            }
+        } catch (Exception e) {
+            Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
+                    .replace("[sound]", "§8PlayerNotFound: §6" + DefultValue.Sound_PlayerNotFound_input) + "§4\n§4\n§4\n");
             DefultValue.Sound_PlayerNotFound = Sound.ENTITY_PLAYER_LEVELUP;
-        }else{
-            DefultValue.Sound_PlayerNotFound = sound_PlayerNotFound;
         }
-
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config.yml loaded successfully.");
     }
 
-    public static void configDisable(){
+    public static void configDisable() {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config.yml successfully deactivated.");
     }
 

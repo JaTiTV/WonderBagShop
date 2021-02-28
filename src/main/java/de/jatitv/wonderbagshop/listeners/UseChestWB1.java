@@ -29,11 +29,6 @@ import java.util.Random;
 
 public class UseChestWB1 implements Listener {
 
-
-    /**
-     * PlaceEvent WonderBag 1
-     */
-
     @EventHandler
     public void onPlaceWB1(BlockPlaceEvent event) {
         Block block = event.getBlock();

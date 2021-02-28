@@ -46,6 +46,9 @@ public class TabComplete implements TabCompleter {
                     if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("give");
                     }
+                    if (player.hasPermission("wonderbagshop.command.giveall") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("giveall");
+                    }
                     if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("gift");
                     }
@@ -77,6 +80,9 @@ public class TabComplete implements TabCompleter {
                     if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("give");
                     }
+                    if (player.hasPermission("wonderbagshop.command.giveall") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("giveall");
+                    }
                     if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("gift");
                     }
@@ -84,6 +90,9 @@ public class TabComplete implements TabCompleter {
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'v') {
                     if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("give");
+                    }
+                    if (player.hasPermission("wonderbagshop.command.giveall") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+                        list.add("giveall");
                     }
 
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'f') {

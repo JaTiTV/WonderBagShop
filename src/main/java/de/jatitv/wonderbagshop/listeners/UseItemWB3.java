@@ -38,7 +38,7 @@ public class UseItemWB3 implements Listener {
     @EventHandler
     public void onInteractWB3(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if (event.getItem() != null) {
+        if (event.getItem() != null && !player.getItemInHand().getType().isAir()) {
             ItemStack item = player.getItemInHand();
             NBTItem nbti = new NBTItem(item);
             if (event.getItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {

@@ -95,9 +95,18 @@ public class DefultValue {
                 if (sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
                     sender.sendMessage(PrefixHC + " " + HelpGive);
                 }
+                if (sender.hasPermission("wonderbagshop.command.giveall") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                    sender.sendMessage(PrefixHC + " " + HelpGiveAll);
+                }
             } else {
-                sender.sendMessage(PrefixHC + " " + HelpGive);
-                sender.sendMessage(PrefixHC + " " + HelpGiveConsole);
+                if (sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                    sender.sendMessage(PrefixHC + " " + HelpGive);
+                    sender.sendMessage(PrefixHC + " " + HelpGiveConsole);
+                }
+                if (sender.hasPermission("wonderbagshop.command.giveall") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                    sender.sendMessage(PrefixHC + " " + HelpGiveAll);
+                    sender.sendMessage(PrefixHC + " " + HelpGiveAllConsole);
+                }
             }
             if (sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
                 sender.sendMessage(PrefixHC + " " + HelpSettings);
@@ -116,9 +125,13 @@ public class DefultValue {
     public static String HelpShop        = "§8'§b/wonderbagshop§8' §eOpens the shop GUI.";
     public static String HelpInfo        = "§8'§b/wonderbagshop info§8' §eCall the info about §2W§6B§9S§e.";
     public static String HelpGift        = "§8'§b/wonderbagshop gift §7<player>§8' §eOpens the gift GUI and Give away a WonderBag.";
+
     public static String HelpGive        = "§8'§b/wonderbagshop give §7<player>§8' §eOpens the give GUI and Give a player a WonderBag.";
+    public static String HelpGiveAll     = "§8'§b/wonderbagshop giveall§8' §eOpens the give GUI and Give all player a WonderBag.";
     public static String HelpGiveConsole = "§8'§b/wonderbagshop give §7<player> <ChestSmall | ChestMedium | ChestLarge | ItemSmall | ItemMedium | ItemLarge>§8'" +
             " §eGive a player a WonderBag. §4Only for the console!";
+    public static String HelpGiveAllConsole = "§8'§b/wonderbagshop giveall §7<ChestSmall | ChestMedium | ChestLarge | ItemSmall | ItemMedium | ItemLarge>§8'\" +\n" +
+            "            \" §eGive all player a WonderBag. §4Only for the console!";
     public static String HelpSettings    = "§8'§b/wonderbagshop settings§8' §eEdit the Settings.";
     public static String HelpReload      = "§8'§b/wonderbagshop reload§8' §eReloads the Plugin.";
 

@@ -61,48 +61,31 @@ public class Load {
             }
         }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Config.configCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBagChest_1.WB1ChestCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBagChest_2.WB2ChestCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBagChest_3.WB3ChestCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBagItem_1.WB1ItemCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBagItem_2.WB2ItemCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         WonderBagItem_3.WB3ItemCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Messages.messagesCreate();
         Thread.sleep(1000);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Vault.loadVault();
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null || Bukkit.getPluginManager().getPlugin("Vault") == null) {
             if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be found! §9Please download it here: " +

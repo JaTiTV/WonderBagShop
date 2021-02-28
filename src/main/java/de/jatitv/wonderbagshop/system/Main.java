@@ -42,12 +42,12 @@ public final class Main extends JavaPlugin {
     public static Boolean Bstats = true;
 
     public static Boolean Snapshot = false;
-    public static int Build = 21;
+    public static int Build = 22;
 
     public static Boolean UpdateMSG = true;
     public static String UpdateInfo = DefultValue.PrefixHC + "§4You have just updated WonderBagShop! §6Here is some important information:" +
             "§4\n" + DefultValue.PrefixHC +
-            "§4\n" + DefultValue.PrefixHC + "§4In version 2.0 / 2.1 some things have changed in the configuration! " +
+            "§4\n" + DefultValue.PrefixHC + "§4In version 2.0 some things have changed in the configuration! " +
             "§4\n" + DefultValue.PrefixHC + "§4I strongly advise you to regenerate the complete folder of WonderBagShop to make sure that the plugin works without errors. " +
             "§4\n" + DefultValue.PrefixHC + "§4If you encounter any errors please contact me via Discord: §6https://discord.com/invite/vRyXFFterJ" +
             "§4\n" + DefultValue.PrefixHC +
@@ -86,6 +86,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new ShopEvent(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GiftEvent(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GiveEvent(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GiveAllEvent(), this);
 
         Bukkit.getServer().getPluginManager().registerEvents(new UseChestWB1(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new UseChestWB2(), this);

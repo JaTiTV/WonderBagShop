@@ -123,13 +123,25 @@ public class Messages {
             yamlConfiguration_msg.set("Help.Give", "&8'&b/wonderbagshop give &7<player>&8' &eOpens the give GUI and Give a player a WonderBag.");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help Give §4was added to §9Messages.yml§4!");
         }
+        if (yamlConfiguration_msg.contains("Help.Giveall")) {
+            DefultValue.HelpGiveAll = replace(yamlConfiguration_msg.getString("Help.Giveall"));
+        } else {
+            yamlConfiguration_msg.set("Help.Giveall", "&8'&b/wonderbagshop giveall&8' &eOpens the give GUI and Give a player all WonderBag.");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help Giveall §4was added to §9Messages.yml§4!");
+        }
         if (yamlConfiguration_msg.contains("Help.GiveConsole")) {
             DefultValue.HelpGiveConsole = replace(yamlConfiguration_msg.getString("Help.GiveConsole"));
         } else {
-            // ToDo
             yamlConfiguration_msg.set("Help.GiveConsole", "&8'&b/wonderbagshop give &7<player> " +
                     "<ChestSmall | ChestMedium | ChestLarge | ItemSmall | ItemMedium | ItemLarge>&8' &eGive a player a WonderBag. &4Only for the console!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help GiveConsole §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Help.GiveallConsole")) {
+            DefultValue.HelpGiveAllConsole = replace(yamlConfiguration_msg.getString("Help.GiveallConsole"));
+        } else {
+            yamlConfiguration_msg.set("Help.GiveallConsole", "&8'&b/wonderbagshop give &7<player> " +
+                    "<ChestSmall | ChestMedium | ChestLarge | ItemSmall | ItemMedium | ItemLarge>&8' &eGive all player a WonderBag. &4Only for the console!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help GiveallConsole §4was added to §9Messages.yml§4!");
         }
         if (yamlConfiguration_msg.contains("Help.Settings")) {
             DefultValue.HelpSettings = replace(yamlConfiguration_msg.getString("Help.Settings"));
@@ -182,14 +194,14 @@ public class Messages {
         }
 
         if (yamlConfiguration_msg.contains("Gift.Sender")) {
-            DefultValue.give = replace(yamlConfiguration_msg.getString("Gift.Sender"));
+            DefultValue.gift = replace(yamlConfiguration_msg.getString("Gift.Sender"));
         } else {
             yamlConfiguration_msg.set("Gift.Sender", "[prefix] &2You gift &6[player] &2a [wonderbag] &2for &6[price] [currency]&2!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Gift Sender §4was added to §9Messages.yml§4!");
         }
 
         if (yamlConfiguration_msg.contains("Gift.Receiver")) {
-            DefultValue.giveReceived = replace(yamlConfiguration_msg.getString("Gift.Receiver"));
+            DefultValue.giftReceived = replace(yamlConfiguration_msg.getString("Gift.Receiver"));
         } else {
             yamlConfiguration_msg.set("Gift.Receiver", "[prefix] &2You have received a [wonderbag] &2as a gift from &6[sender]&2!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Gift Receiver §4was added to §9Messages.yml§4!");

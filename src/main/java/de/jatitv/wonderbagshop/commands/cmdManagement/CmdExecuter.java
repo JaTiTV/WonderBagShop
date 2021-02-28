@@ -15,6 +15,7 @@ package de.jatitv.wonderbagshop.commands.cmdManagement;
 
 import de.jatitv.wonderbagshop.commands.*;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.listeners.GiveAllEvent;
 import de.jatitv.wonderbagshop.system.Main;
 import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings;
 import org.bukkit.Bukkit;
@@ -111,6 +112,25 @@ public class CmdExecuter implements CommandExecutor {
                                     "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
                         }
                         break;
+                    case "giveall":
+                        if (Bukkit.getPluginManager().getPlugin("NBTAPI") != null) {
+                            if (player.hasPermission("wonderbagshop.command.giveall") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+
+                                ShopGiveAll.openShop(player);
+
+
+                            } else {
+                                player.sendMessage(DefultValue.NoPermissionForCommand.replace("[cmd]", "/wonderbagshop give")
+                                        .replace("[perm]", "wonderbagshop.command.give"));
+                            }
+                        } else {
+                            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! " +
+                                    "§9Please download it here: §6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                            player.sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! §9Please download it here: " +
+                                    "§6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                        }
+                        break;
+
 
                     case "gift":
                         if (Bukkit.getPluginManager().getPlugin("NBTAPI") != null) {
@@ -171,7 +191,7 @@ public class CmdExecuter implements CommandExecutor {
                     case "help":
                     default:
                         //if (player.hasPermission("wonderbagshop.command") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
-                            DefultValue.Help(sender);
+                        DefultValue.Help(sender);
                         //} else {
                         //    player.sendMessage(DefultValue.NoPermissionForCommand.replace("[cmd]", "/wonderbagshop help")
                         //            .replace("[perm]", "wonderbagshop.command"));
@@ -225,6 +245,20 @@ public class CmdExecuter implements CommandExecutor {
                                 if (DefultValue.Sound_PlayerNotFound_Enable) {
                                 }
                             }
+                        } else {
+                            DefultValue.Help(sender);
+                        }
+                        break;
+                    case "giveall":
+                        if (args.length == 2) {
+
+                            if (Bukkit.getPluginManager().getPlugin("NBTAPI") != null) {
+                                ConsoleGiveAll.giveCommand(sender, args[1]);
+                            } else {
+                                sender.sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be connected / found! " +
+                                        "§9Please download it here: §6https://www.spigotmc.org/resources/nbt-api.7939/§4\n" + DefultValue.PrefixHC);
+                            }
+
                         } else {
                             DefultValue.Help(sender);
                         }

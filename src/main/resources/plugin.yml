@@ -10,7 +10,7 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 2.1
+version: 2.2
 main: de.jatitv.wonderbagshop.system.Main
 api-version: 1.13
 softdepend:
@@ -34,6 +34,8 @@ permissions:
   wonderbagshop.command.info:
     default: op
   wonderbagshop.command.give:
+    default: op
+  wonderbagshop.command.giveall:
     default: op
   wonderbagshop.command.gift:
     default: op

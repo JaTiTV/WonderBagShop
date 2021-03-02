@@ -1,0 +1,3 @@
+/wbs giveall -> Sobald ein spieler ein volles Inventar hat wird der vorgang abgebrochen. Wird in der Version 2.3 gefixt
+
+ItemNumbers -> Wenn die Funktion ItemNumbers auf false steht können WonderBag 2 und WonderBag 3 nicht gekauft werden egal ob Chest oder Item. Betrift auch /wbs give, /wbs gift, wbs giveall

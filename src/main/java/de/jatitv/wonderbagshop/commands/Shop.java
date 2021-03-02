@@ -14,6 +14,7 @@
 package de.jatitv.wonderbagshop.commands;
 
 import de.jatitv.wonderbagshop.defultValue.*;
+import de.jatitv.wonderbagshop.listeners.ShopEvent;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -27,8 +28,9 @@ import java.util.ArrayList;
 
 public class Shop {
 
-    public static void openShop(Player player){
 
+
+    public static void openShop(Player player){
         if (DefultValue.UseChest_and_Item){
 
             Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*4, DefultValue.GUI_Name);

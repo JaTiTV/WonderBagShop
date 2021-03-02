@@ -26,140 +26,147 @@ public class ConsoleGiveAll {
                     break;
                 }
             }
-            if (empty) {
-                if (wb.equals("ChestSmall")) {
-                    ItemStack item = new ItemStack(Material.CHEST);
-                    ItemMeta itemMeta = item.getItemMeta();
-                    itemMeta.setDisplayName(DefultValueChest_1.DisplayName);
-                    ArrayList<String> lore = new ArrayList<>();
-                    itemMeta.setLore(lore);
-                    item.setItemMeta(itemMeta);
-                    item.setAmount(1);
-                    NBTItem nbti = new NBTItem(item);
-                    nbti.setBoolean("loot_chest_1", true);
+            if (wb.equals("ChestSmall")) {
+                ItemStack item = new ItemStack(Material.CHEST);
+                ItemMeta itemMeta = item.getItemMeta();
+                itemMeta.setDisplayName(DefultValueChest_1.DisplayName);
+                ArrayList<String> lore = new ArrayList<>();
+                itemMeta.setLore(lore);
+                item.setItemMeta(itemMeta);
+                item.setAmount(1);
+                NBTItem nbti = new NBTItem(item);
+                nbti.setBoolean("loot_chest_1", true);
+                if (empty) {
                     target.getInventory().addItem(nbti.getItem());
-
-                    sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
-                            .replace("[wonderbag]", DefultValueChest_1.Name));
-
                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                             .replace("[wonderbag]", DefultValueChest_1.Name));
                     if (DefultValue.Sound_Give_Enable) {
                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                     }
-                } else {
-                    if (wb.equals("ChestMedium")) {
-                        ItemStack item = new ItemStack(Material.CHEST);
-                        ItemMeta itemMeta = item.getItemMeta();
-                        itemMeta.setDisplayName(DefultValueChest_2.DisplayName);
-                        ArrayList<String> lore = new ArrayList<>();
-                        itemMeta.setLore(lore);
-                        item.setItemMeta(itemMeta);
-                        item.setAmount(1);
-                        NBTItem nbti = new NBTItem(item);
-                        nbti.setBoolean("loot_chest_2", true);
+                } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
+                        .replace("[wonderbag]", DefultValueChest_1.Name));
+
+
+            } else {
+                if (wb.equals("ChestMedium")) {
+                    ItemStack item = new ItemStack(Material.CHEST);
+                    ItemMeta itemMeta = item.getItemMeta();
+                    itemMeta.setDisplayName(DefultValueChest_2.DisplayName);
+                    ArrayList<String> lore = new ArrayList<>();
+                    itemMeta.setLore(lore);
+                    item.setItemMeta(itemMeta);
+                    item.setAmount(1);
+                    NBTItem nbti = new NBTItem(item);
+                    nbti.setBoolean("loot_chest_2", true);
+                    if (empty) {
                         target.getInventory().addItem(nbti.getItem());
-
-                        sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
-                                .replace("[wonderbag]", DefultValueChest_2.Name));
-
                         target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                 .replace("[wonderbag]", DefultValueChest_2.Name));
                         if (DefultValue.Sound_Give_Enable) {
                             target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                         }
-                    } else {
-                        if (wb.equals("ChestLarge")) {
-                            ItemStack item = new ItemStack(Material.CHEST);
-                            ItemMeta itemMeta = item.getItemMeta();
-                            itemMeta.setDisplayName(DefultValueChest_3.DisplayName);
-                            ArrayList<String> lore = new ArrayList<>();
-                            itemMeta.setLore(lore);
-                            item.setItemMeta(itemMeta);
-                            item.setAmount(1);
-                            NBTItem nbti = new NBTItem(item);
-                            nbti.setBoolean("loot_chest_3", true);
+                    } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                    sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
+                            .replace("[wonderbag]", DefultValueChest_2.Name));
+
+                } else {
+                    if (wb.equals("ChestLarge")) {
+                        ItemStack item = new ItemStack(Material.CHEST);
+                        ItemMeta itemMeta = item.getItemMeta();
+                        itemMeta.setDisplayName(DefultValueChest_3.DisplayName);
+                        ArrayList<String> lore = new ArrayList<>();
+                        itemMeta.setLore(lore);
+                        item.setItemMeta(itemMeta);
+                        item.setAmount(1);
+                        NBTItem nbti = new NBTItem(item);
+                        nbti.setBoolean("loot_chest_3", true);
+                        if (empty) {
                             target.getInventory().addItem(nbti.getItem());
-
-                            sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
-                                    .replace("[wonderbag]", DefultValueChest_3.Name));
-
                             target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                     .replace("[wonderbag]", DefultValueChest_3.Name));
                             if (DefultValue.Sound_Give_Enable) {
                                 target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                             }
-                        } else {
-                            if (wb.equals("ItemSmall")) {
-                                ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
-                                ItemMeta itemMeta = item.getItemMeta();
-                                itemMeta.setDisplayName(DefultValueItem_1.DisplayName);
-                                ArrayList<String> lore = new ArrayList<>();
-                                itemMeta.setLore(lore);
-                                item.setItemMeta(itemMeta);
-                                item.setAmount(1);
-                                NBTItem nbti = new NBTItem(item);
-                                nbti.setBoolean("loot_item_1", true);
+                        } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                        sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
+                                .replace("[wonderbag]", DefultValueChest_3.Name));
+
+
+                    } else {
+                        if (wb.equals("ItemSmall")) {
+                            ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
+                            ItemMeta itemMeta = item.getItemMeta();
+                            itemMeta.setDisplayName(DefultValueItem_1.DisplayName);
+                            ArrayList<String> lore = new ArrayList<>();
+                            itemMeta.setLore(lore);
+                            item.setItemMeta(itemMeta);
+                            item.setAmount(1);
+                            NBTItem nbti = new NBTItem(item);
+                            nbti.setBoolean("loot_item_1", true);
+                            if (empty) {
                                 target.getInventory().addItem(nbti.getItem());
-
-                                sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueItem_1.Name));
-
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueChest_1.Name));
                                 if (DefultValue.Sound_Give_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
-                            } else {
-                                if (wb.equals("ItemMedium")) {
-                                    ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueItem_2.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_item_2", true);
+                            } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                            sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
+                                    .replace("[wonderbag]", DefultValueItem_1.Name));
+
+
+                        } else {
+                            if (wb.equals("ItemMedium")) {
+                                ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
+                                ItemMeta itemMeta = item.getItemMeta();
+                                itemMeta.setDisplayName(DefultValueItem_2.DisplayName);
+                                ArrayList<String> lore = new ArrayList<>();
+                                itemMeta.setLore(lore);
+                                item.setItemMeta(itemMeta);
+                                item.setAmount(1);
+                                NBTItem nbti = new NBTItem(item);
+                                nbti.setBoolean("loot_item_2", true);
+                                if (empty) {
                                     target.getInventory().addItem(nbti.getItem());
-
-                                    sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueItem_2.Name));
-
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_2.Name));
                                     if (DefultValue.Sound_Give_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
-                                } else {
-                                    if (wb.equals("ItemLarge")) {
-                                        ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
-                                        ItemMeta itemMeta = item.getItemMeta();
-                                        itemMeta.setDisplayName(DefultValueItem_3.DisplayName);
-                                        ArrayList<String> lore = new ArrayList<>();
-                                        itemMeta.setLore(lore);
-                                        item.setItemMeta(itemMeta);
-                                        item.setAmount(1);
-                                        NBTItem nbti = new NBTItem(item);
-                                        nbti.setBoolean("loot_item_3", true);
+                                } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                                sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
+                                        .replace("[wonderbag]", DefultValueItem_2.Name));
+
+
+                            } else {
+                                if (wb.equals("ItemLarge")) {
+                                    ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
+                                    ItemMeta itemMeta = item.getItemMeta();
+                                    itemMeta.setDisplayName(DefultValueItem_3.DisplayName);
+                                    ArrayList<String> lore = new ArrayList<>();
+                                    itemMeta.setLore(lore);
+                                    item.setItemMeta(itemMeta);
+                                    item.setAmount(1);
+                                    NBTItem nbti = new NBTItem(item);
+                                    nbti.setBoolean("loot_item_3", true);
+                                    if (empty) {
                                         target.getInventory().addItem(nbti.getItem());
-
-                                        sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueItem_3.Name));
-
                                         target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueItem_3.Name));
                                         if (DefultValue.Sound_Give_Enable) {
                                             target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                         }
-                                    } else DefultValue.Help(sender);
-                                }
+                                    } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                                    sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_3.Name));
+
+
+                                } else DefultValue.Help(sender);
                             }
                         }
                     }
                 }
-            } else {
-                sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
             }
         }
     }

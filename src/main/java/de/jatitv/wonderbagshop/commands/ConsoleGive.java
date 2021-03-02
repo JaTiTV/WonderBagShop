@@ -47,6 +47,10 @@ public class ConsoleGive {
                 if (DefultValue.Sound_Give_Enable) {
                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                 }
+
+                if (DefultValue.Debug){
+                    Bukkit.getConsoleSender().sendMessage("§4 Onlineplayer: §6" + Bukkit.getPlayer(Bukkit.getName()));
+                }
             } else {
                 if (wb.equals("ChestMedium")) {
                     ItemStack item = new ItemStack(Material.CHEST);

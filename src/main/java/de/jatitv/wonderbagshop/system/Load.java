@@ -26,6 +26,10 @@ public class Load {
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
+        if (yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)") > 3) {
+            yamlConfiguration_config.set("Plugin.Debug.DebugStage_(1-3)", 3);
+        }
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2-----------------------------------------------------------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2 __          __             _           §6____               §9_____ _                 ");
@@ -40,10 +44,23 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Autor: §6JaTiTV");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Version: §6" + version);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
-        if(Main.UpdateMSG){
+        if (yamlConfiguration_config.getBoolean("Plugin.Debug.Enable")) {
+            int DebugStage = yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-------------------------------");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Debugmodus is enable on stage: §6" + DebugStage + " §4!!!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-------------------------------");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+            Thread.sleep(5000);
+        }
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Plugin load...");
+        if (Main.UpdateMSG) {
             int build = yamlConfiguration_config.getInt("Do_not_remove_or_change.BuildNr");
-            if (configYML.isFile()){
+            if (configYML.isFile()) {
                 if (build != Main.Build) {
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
@@ -57,35 +74,60 @@ public class Load {
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Thread.sleep(20000);
-                }
+                } else Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+            } else {
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6Thanks for downloading and installing WonderBagShop");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+                Thread.sleep(5000);
             }
         }
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         Config.configCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         WonderBagChest_1.WB1ChestCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         WonderBagChest_2.WB2ChestCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         WonderBagChest_3.WB3ChestCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         WonderBagItem_1.WB1ItemCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         WonderBagItem_2.WB2ItemCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         WonderBagItem_3.WB3ItemCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         Messages.messagesCreate();
         Thread.sleep(1000);
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
         Vault.loadVault();
+
         if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null || Bukkit.getPluginManager().getPlugin("Vault") == null) {
             if (Bukkit.getPluginManager().getPlugin("NBTAPI") == null) {
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4NBTAPI could not be found! §9Please download it here: " +
@@ -97,6 +139,8 @@ public class Load {
             }
             Thread.sleep(10000);
         }
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Plugin loaded successfully.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2-----------------------------------------------------------------------------------");
     }
 }

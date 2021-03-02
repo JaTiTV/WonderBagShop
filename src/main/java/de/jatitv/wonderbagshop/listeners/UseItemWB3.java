@@ -3,6 +3,8 @@
 
 package de.jatitv.wonderbagshop.listeners;
 
+import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defultValue.DefultValueItem_1;
 import de.jatitv.wonderbagshop.defultValue.DefultValueItem_3;
 import de.jatitv.wonderbagshop.defultValue.DefultValueItem_3;
 import de.jatitv.wonderbagshop.system.Main;
@@ -30,6 +32,9 @@ public class UseItemWB3 implements Listener {
             for (int i = 0; i < 8; i++) {
                 if (ice.getInventory().getItem(i) != null) {
                     ice.getPlayer().getLocation().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                        Bukkit.getConsoleSender().sendMessage("§6" + ice.getPlayer().getLocation().getWorld().getName() + " §4closed GUI §6" + DefultValueItem_3.DisplayName);
+                    }
                 }
             }
         }
@@ -44,7 +49,9 @@ public class UseItemWB3 implements Listener {
             if (event.getItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {
                 if (nbti.hasKey("loot_item_3")) {
                     Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 1, "§6§9§l§r" + DefultValueItem_3.DisplayName);
-
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                        Bukkit.getConsoleSender().sendMessage("§6" + event.getPlayer().getDisplayName() + " §4used §6" + DefultValueItem_3.DisplayName);
+                    }
                     ItemStack Item1 = null;
                     Random a = new Random();
                     int zufallA = a.nextInt(70);
@@ -2018,47 +2025,28 @@ public class UseItemWB3 implements Listener {
                         inventory.addItem(Item9);
                     }
                     player.openInventory(inventory);
-
                     event.setCancelled(true);
-                    new BukkitRunnable() {
-                        @Override
-                        public void run() {
-                            for (int iam = 0; iam < 8; iam++) {
-                                ItemStack itm = player.getInventory().getItem(iam);
-                                NBTItem nbti2 = new NBTItem(itm);
-                                if (itm != null && nbti2.hasKey("loot_item_3")) {
-                                    int amt = itm.getAmount() - 1;
-                                    itm.setAmount(amt);
-                                    player.getInventory().setItem(iam, amt > 0 ? itm : null);
-                                    player.updateInventory();
-                                    break;
-                                }
-                            }
-                        }
-                    }.runTaskLater(Main.getPlugin(), 5L);
-                        /*
-                        for (int iam = 0; iam < 8; iam++) {
-                            ItemStack itm = player.getInventory().getItem(iam);
-                            if (player.getInventory().getItem(iam) != null) {
-                                NBTItem nbti2 = new NBTItem(itm);
-                                if (itm != null && nbti2.hasKey("loot_chest_3")) {
-                                    int amt = itm.getAmount() - 1;
-                                    itm.setAmount(amt);
-                                    final Player f_player = player;
-                                    final ItemStack new_item = amt > 0 ? itm : null;
-                                    final int old_item = iam;
-                                    new BukkitRunnable() {
-                                        @Override
-                                        public void run() {
-                                            f_player.getInventory().setItem(old_item, new_item);
-                                            f_player.updateInventory();
+
+
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                for (int iam = 0; iam < 8; iam++) {
+                                    ItemStack itm = player.getInventory().getItem(iam);
+                                    NBTItem nbti2 = new NBTItem(itm);
+                                    if (itm != null && nbti2.hasKey("loot_item_3")) {
+                                        int amt = itm.getAmount() - 1;
+                                        itm.setAmount(amt);
+                                        player.getInventory().setItem(iam, amt > 0 ? itm : null);
+                                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                                            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player.getDisplayName() + " §4set WB3 Item -1");
                                         }
-                                    }.runTaskLater(Main.getPlugin(), 5L);
-                                    break;
+                                        player.updateInventory();
+                                        break;
+                                    }
                                 }
                             }
-                        }
-                         */
+                        }.runTaskLater(Main.getPlugin(), 5L);
                 }
             }
         }

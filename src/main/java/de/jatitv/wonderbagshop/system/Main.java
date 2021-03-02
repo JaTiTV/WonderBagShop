@@ -18,6 +18,8 @@ import de.jatitv.wonderbagshop.defultValue.DefultValue;
 import de.jatitv.wonderbagshop.listeners.*;
 import de.jatitv.wonderbagshop.commands.cmdManagement.CmdExecuter;
 import de.jatitv.wonderbagshop.commands.cmdManagement.CmdExecuter_wbsrl;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_ConfigSound_Listener;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_ConfigTitle_Listener;
 import de.jatitv.wonderbagshop.settingsGUI.GUI_Config_Listener;
 import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings_Listener;
 import net.milkbowl.vault.economy.Economy;
@@ -29,20 +31,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
 public final class Main extends JavaPlugin {
 
     // Debug Settings
 
-    public static Boolean Bstats = true;
+    public static Boolean Bstats = false;
 
-    public static Boolean Snapshot = false;
-    public static int Build = 22;
+    public static Boolean Snapshot = true;
+    public static int Build = 2302;
+
 
     public static Boolean UpdateMSG = true;
     public static String UpdateInfo = DefultValue.PrefixHC + "§4You have just updated WonderBagShop! §6Here is some important information:" +
@@ -63,6 +63,7 @@ public final class Main extends JavaPlugin {
     public static Plugin a;
     public static Economy eco = null;
     public static String update_version = null;
+
     public static Main getPlugin() {
         return plugin;
     }
@@ -73,13 +74,22 @@ public final class Main extends JavaPlugin {
         Logger logger = this.getLogger();
 
         plugin = this;
+
+
+        a = this;
+
+        try {
+            Load.LoadSend(getDescription().getVersion());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         getCommand("wonderbagshop").setExecutor(new CmdExecuter());
         getCommand("wbs").setExecutor(new CmdExecuter());
         getCommand("wonderbagshop").setTabCompleter(new TabComplete());
         getCommand("wbs").setTabCompleter(new TabComplete());
         getCommand("wbsrl").setExecutor(new CmdExecuter_wbsrl());
 
-        a = this;
 
         Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
 
@@ -99,13 +109,10 @@ public final class Main extends JavaPlugin {
 
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_Settings_Listener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_Config_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_ConfigSound_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_ConfigTitle_Listener(), this);
 
 
-        try {
-            Load.LoadSend(getDescription().getVersion());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
 
         if (Main.Bstats) {

@@ -41,6 +41,6 @@ public class Vault {
         }
     }
     public static void vaultDisable(){
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Vault / Economy successfully deactivated." + DefultValue.PrefixHC + "§4\n");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Vault / Economy successfully deactivated.");
     }
 }

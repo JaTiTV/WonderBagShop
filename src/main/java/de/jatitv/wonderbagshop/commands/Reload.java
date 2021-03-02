@@ -15,8 +15,10 @@ package de.jatitv.wonderbagshop.commands;
 
 import de.jatitv.wonderbagshop.config.*;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.system.Main;
 import de.jatitv.wonderbagshop.system.Vault;
 import org.bukkit.Bukkit;
+import org.bukkit.Warning;
 import org.bukkit.entity.Player;
 
 public class Reload {
@@ -88,7 +90,10 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Plugin successfully reloaded.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
 
-        player.sendMessage(DefultValue.PrefixHC + DefultValue.ReloadEnd);
+        if(DefultValue.Title_Reload_Enable && DefultValue.Title_Enable){
+            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Reload, 10, 70, 20);
+        } else player.sendMessage(DefultValue.PrefixHC + DefultValue.ReloadEnd);
+
     }
     public static void reloadConfirmConsole() throws InterruptedException {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
@@ -154,5 +159,7 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Plugin successfully reloaded.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+
+
     }
 }

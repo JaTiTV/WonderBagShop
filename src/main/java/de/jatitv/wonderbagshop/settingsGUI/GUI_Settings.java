@@ -130,6 +130,17 @@ public class GUI_Settings {
         wb3item.setAmount(1);
         inventory.setItem(42, wb3item);
 
+        ItemStack rl = new ItemStack(Material.ANVIL);
+        ItemMeta itemMetarl = rl.getItemMeta();
+        itemMetarl.setDisplayName("§6WBS Reload");
+        ArrayList<String> lorerl = new ArrayList<>();
+        lorerl.add("§8-------------");
+        lorerl.add("§7Reload the Plugin");
+        itemMetarl.setLore(lorerl);
+        rl.setItemMeta(itemMetarl);
+        rl.setAmount(1);
+        inventory.setItem(4, rl);
+
         player.openInventory(inventory);
 
     }

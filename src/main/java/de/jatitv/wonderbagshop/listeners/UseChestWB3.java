@@ -13,9 +13,12 @@
 
 package de.jatitv.wonderbagshop.listeners;
 
+import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defultValue.DefultValueChest_1;
 import de.jatitv.wonderbagshop.defultValue.DefultValueChest_3;
 import de.jatitv.wonderbagshop.system.Main;
 import de.tr7zw.nbtapi.NBTItem;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
@@ -37,6 +40,9 @@ public class UseChestWB3 implements Listener {
         if (block.getType() == Material.CHEST) {
             if (nbti.hasKey("loot_chest_3")) {
                 Chest chest = (Chest) block.getState();
+                if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                    Bukkit.getConsoleSender().sendMessage("§6" + event.getPlayer().getDisplayName() + " §4used §6" + DefultValueChest_3.DisplayName);
+                }
 
                 ItemStack Item1 = null;
                 Random a = new Random();

@@ -28,7 +28,9 @@ public class Messages {
 
     public static void messagesCreate() throws InterruptedException {
 
+
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Messages.yml load...");
+
 
         File messagesYML = new File(Main.thisp().getDataFolder().getPath(), "Messages.yml");
         YamlConfiguration yamlConfiguration_msg = YamlConfiguration.loadConfiguration(messagesYML);
@@ -139,7 +141,7 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Help.GiveallConsole")) {
             DefultValue.HelpGiveAllConsole = replace(yamlConfiguration_msg.getString("Help.GiveallConsole"));
         } else {
-            yamlConfiguration_msg.set("Help.GiveallConsole", "&8'&b/wonderbagshop give &7<player> " +
+            yamlConfiguration_msg.set("Help.GiveallConsole", "&8'&b/wonderbagshop giveall &7<player> " +
                     "<ChestSmall | ChestMedium | ChestLarge | ItemSmall | ItemMedium | ItemLarge>&8' &eGive all player a WonderBag. &4Only for the console!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Help GiveallConsole §4was added to §9Messages.yml§4!");
         }
@@ -221,6 +223,61 @@ public class Messages {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give_&_Gift PlayerNoInventorySpace §4was added to §9Messages.yml§4!");
         }
 
+        if (yamlConfiguration_msg.contains("Title.Reload")) {
+            DefultValue.Title_Reload = replace(yamlConfiguration_msg.getString("Title.Reload"));
+        } else {
+            yamlConfiguration_msg.set("Title.Reload", "&2Plugin successfully reloaded.");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Reload §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.No_money")) {
+            DefultValue.Title_No_money = replace(yamlConfiguration_msg.getString("Title.No_money"));
+        } else {
+            yamlConfiguration_msg.set("Title.No_money", "&cYou do not have enough money!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title No_money §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.NoInventorySpace")) {
+            DefultValue.Title_NoInventorySpace = replace(yamlConfiguration_msg.getString("Title.NoInventorySpace"));
+        } else {
+            yamlConfiguration_msg.set("Title.NoInventorySpace", "&cNo free inventory space!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title NoInventorySpace §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.Give.Sender")) {
+            DefultValue.Title_give = replace(yamlConfiguration_msg.getString("Title.Give.Sender"));
+        } else {
+            yamlConfiguration_msg.set("Title.Give.Sender", "&bYou gave &6[player] &2b [wonderbag]&b!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Give Sender §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.Give.Receiver")) {
+            DefultValue.Title_giveReceived = replace(yamlConfiguration_msg.getString("Title.Give.Receiver"));
+        } else {
+            yamlConfiguration_msg.set("Title.Give.Receiver", "&bYou have received a [wonderbag] &bfrom &6[sender]&b!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Give Receiver §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.Gift.Sender")) {
+            DefultValue.Title_gift = replace(yamlConfiguration_msg.getString("Title.Gift.Sender"));
+        } else {
+            yamlConfiguration_msg.set("Title.Gift.Sender", "&bYou gift &6[player] &ba [wonderbag] &bfor &6[price] [currency]&b!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Gift Sender §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.Gift.Receiver")) {
+            DefultValue.Title_gift_Received = replace(yamlConfiguration_msg.getString("Title.Gift.Receiver"));
+        } else {
+            yamlConfiguration_msg.set("Title.Gift.Receiver", "&bYou have received a [wonderbag] &bas a gift from &6[sender]&b!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Gift Receiver §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.Give_&_Gift.PlayerNotFond")) {
+            DefultValue.Title_PlayerNotFound = replace(yamlConfiguration_msg.getString("Title.Give_&_Gift.PlayerNotFond"));
+        } else {
+            yamlConfiguration_msg.set("Title.Give_&_Gift.PlayerNotFond", "&cThe player &6[player] &cwas not found or is not online!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Give_&_Gift PlayerNotFond §4was added to §9Messages.yml§4!");
+        }
+        if (yamlConfiguration_msg.contains("Title.Give_&_Gift.PlayerNoInventorySpace")) {
+            DefultValue.Title_PlayerNoInventorySpace = replace(yamlConfiguration_msg.getString("Title.Give_&_Gift.PlayerNoInventorySpace"));
+        } else {
+            yamlConfiguration_msg.set("Title.Give_&_Gift.PlayerNoInventorySpace", "&6[player] &chas no free inventory space available!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Give_&_Gift PlayerNoInventorySpace §4was added to §9Messages.yml§4!");
+        }
+
 
         try {
             yamlConfiguration_msg.save(messagesYML);
@@ -229,6 +286,7 @@ public class Messages {
         }
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Messages.yml loaded successfully.");
+
     }
 
     public static void messagesDisable() {

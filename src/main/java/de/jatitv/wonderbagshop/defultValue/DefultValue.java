@@ -21,6 +21,8 @@ public class DefultValue {
 
     // Config
 
+    public static boolean Debug = false;
+    public static int DebugStage = 1;
     public static Boolean UpdateCheckOnJoin = true;
 
     public static String Currency = "$";
@@ -29,10 +31,14 @@ public class DefultValue {
     public static Boolean ItemNumbers = true;
 
     public static Boolean UseChest = true;
-    public static Boolean UseChest_and_Item = false;
+    public static Boolean UseChest_and_Item = true;
     public static Boolean ChestDrop = false;
 
+    public static Boolean Title_Enable = true;
+
     // Sound
+
+    public static Boolean Sound_Enable = true;
 
     public static Boolean Sound_Shop_Buy_Enable = true;
     public static Sound Sound_Shop_Buy = Sound.ENTITY_PLAYER_LEVELUP;
@@ -144,8 +150,33 @@ public class DefultValue {
     public static String gift = "§8[§2W§6B§9S§8] §2You gift §6[player] §2a [wonderbag] §2for §6[price] [currency]§2!";
     public static String giftReceived = "§8[§2W§6B§9S§8] §2You have received a [wonderbag] §2as a gift from §6[sender]§2!";
 
+    public static String PlayerNotFound = "§8[§2W§6B§9S§8] §cThe player §6[player] §cwas not found or is not online!";
     public static String PlayerNoInventorySpace = "§8[§2W§6B§9S§8] §6[player] §chas no free inventory space available!";
-    public static String PlayerNotFound = "§8[§2W§6B§9S§8] §cThe player §6[player]§c was not found or is not online!";
 
     public static String Buy_msg = "§8[§2W§6B§9S§8] §2You bought [wonderbag] §2for §6[price] [currency]§2!";
+
+
+    public static Boolean Title_Reload_Enable = true;
+    public static String Title_Reload = "§bPlugin successfully reloaded.";
+    public static Boolean Title_No_money_Enable = true;
+    public static String Title_No_money = "§cYou do not have enough money!";
+    public static Boolean Title_NoInventorySpace_Enable = true;
+    public static String Title_NoInventorySpace = "§cNo free inventory space!";
+
+    public static Boolean Title_give_Enable = true;
+    public static String Title_give = "§bYou gave §6[player] §ba [wonderbag]§b!";
+    public static Boolean Title_giveReceived_Enable = true;
+    public static String Title_giveReceived = "§bYou have received a [wonderbag] §bfrom §6[sender]§b!";
+
+    public static Boolean Title_gift_Enable = true;
+    public static String Title_gift = "§bYou gift §6[player] §ba [wonderbag] §bfor §6[price] [currency]§b!";
+    public static Boolean Title_giftReceived_Enable = true;
+    public static String Title_gift_Received = "§bYou have received a [wonderbag] §bas a gift from §6[sender]§b!";
+
+    public static Boolean Title_PlayerNotFound_Enable = true;
+    public static String Title_PlayerNotFound = "§cThe player §6[player] §cwas not found or is not online!";
+
+    public static Boolean Title_PlayerNoInventorySpace_Enable = true;
+    public static String Title_PlayerNoInventorySpace = "§6[player] §chas no free inventory space available!";
+
 }

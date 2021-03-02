@@ -19,34 +19,16 @@ public class TODO {
 
     // ToDo Wenn ihr ideen habt oder Wünsche denn meldet sie mir via Discord: https://discord.gg/vRyXFFterJ
 
-    /** changes
-     *
-     * Asynchroner Load und reload Um einen bug zu beheben (Config nicht vollständig)
-     *
-     * Items von 30 auf 70 erweitert
+    /*
+    debug 1:
+    Shop, give, gift
+
+    debug 2:
+    useItem, placeChest, BreakChest
+
+    debug 3:
+    All Debug (Spam!)
      */
 
-    // ToDo 2.0
-
-    /**
-     * Wird noch hinzugefügt oder geändert:
-     * - Die benutzerdefinierten Items werden eine eigene yml erhalten mit eigenen Preisen, Item Mengen und eigene Item listen ✅
-     * - Sound für die Settings GUI (HC) ✅
-     * - Die Settings GUI ist noch nicht vollständig!
-     * - Benutzerdefinierte Items für /give und /gift ✅
-     * - GUI für /give ✅
-     * - Option um die Update_msg on Join zu deaktivieren ✅
-     * - Verschiedene Material Einstellmöglichkeiten für die benutzerdefinierten Items (z.B. WonderBag_1: IRON_BLOCK, WonderBag_2: GOLD_BLOCK, WonderBag_3: DIAMOND_BLOCK) ✅
-     * - Neue Nachrichten für benutzerdefinierte Items
-     */
-/*
-    Hier ist der erste und vielleicht sogar einzige Release Candidate.
-
-    Es wurden alle änderungen hinzugefügt die bei dem ersten Snapshot vorgesehen waren.
-    Genauere Infos findest du hier. BITTE GRÜNDLICH DURCHLESEN!
-
-    Sollten mir keine Fehler / Bugs mitgeteilt werden wird in naher Zukunft die 2.0 veröffentlicht.
-
- */
-
+    // ToDo 2.3.21 Titel + Settings GUI + Debug vervollständigen  + Settings Title
 }

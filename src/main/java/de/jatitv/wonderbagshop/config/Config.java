@@ -26,14 +26,16 @@ public class Config {
 
     public static void configCreate() throws InterruptedException {
 
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config.yml load...");
 
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
 
-        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Version")) {
-            yamlConfiguration_config.set("Do_not_remove_or_change.Version", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Config.yml load...");
+
+
+        if (!yamlConfiguration_config.contains("Do_not_remove_or_change.Created")) {
+            yamlConfiguration_config.set("Do_not_remove_or_change.Created", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
         }
 
         yamlConfiguration_config.set("Do_not_remove_or_change.BuildNr", Main.Build);
@@ -56,6 +58,26 @@ public class Config {
         } else {
             yamlConfiguration_config.set("Plugin.UpdateCheckOnJoin", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UpdateCheckOnJoin §4was added to §9Config.yml§4!");
+        }
+
+        if (yamlConfiguration_config.contains("Plugin.Debug.Enable")) {
+            DefultValue.Debug = yamlConfiguration_config.getBoolean("Plugin.Debug.Enable");
+        } else {
+            yamlConfiguration_config.set("Plugin.Debug.Enable", false);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Debug Enable §4was added to §9Config.yml§4!");
+        }
+
+        if (yamlConfiguration_config.contains("Plugin.Debug.DebugStage_(1-3)")) {
+            DefultValue.DebugStage = yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)");
+        } else {
+            yamlConfiguration_config.set("Plugin.Debug.DebugStage_(1-3)", 1);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6DebugStage §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)") > 3){
+            yamlConfiguration_config.set("Plugin.Debug.DebugStage_(1-3)", 3);
+        }
+        if (yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)") < 1){
+            yamlConfiguration_config.set("Plugin.Debug.DebugStage_(1-3)", 1);
         }
 
         if (yamlConfiguration_config.contains("Shop.GUI_Name")) {
@@ -89,7 +111,7 @@ public class Config {
         if (yamlConfiguration_config.contains("WonderBags.UseChest_and_Item")) {
             DefultValue.UseChest_and_Item = yamlConfiguration_config.getBoolean("WonderBags.UseChest_and_Item");
         } else {
-            yamlConfiguration_config.set("WonderBags.UseChest_and_Item", false);
+            yamlConfiguration_config.set("WonderBags.UseChest_and_Item", true);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was added to §9Config.yml§4!");
         }
 
@@ -103,6 +125,13 @@ public class Config {
         /**
          *Sound
          */
+
+        if (yamlConfiguration_config.contains("Sound.Enable")) {
+            DefultValue.Sound_Enable = yamlConfiguration_config.getBoolean("Sound.Enable");
+        } else {
+            yamlConfiguration_config.set("Sound.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Enable §4was added to §9Config.yml§4!");
+        }
 
         if (yamlConfiguration_config.contains("Sound.Buy.Enable")) {
             DefultValue.Sound_Shop_Buy_Enable = yamlConfiguration_config.getBoolean("Sound.Buy.Enable");
@@ -201,6 +230,73 @@ public class Config {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
         }
 
+        /**
+         * Title
+         */
+
+        if (yamlConfiguration_config.contains("Title.Enable")) {
+            DefultValue.Title_Enable = yamlConfiguration_config.getBoolean("Title.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title Enable §4was added to §9Config.yml§4!");
+        }
+
+        if (yamlConfiguration_config.contains("Title.Reload.Enable")) {
+            DefultValue.Title_Reload_Enable = yamlConfiguration_config.getBoolean("Title.Reload.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.Reload.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title Reload Enable §4was added to §9Config.yml§4!");
+        }
+
+        if (yamlConfiguration_config.contains("Title.No_money.Enable")) {
+            DefultValue.Title_No_money_Enable = yamlConfiguration_config.getBoolean("Title.No_money.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.No_money.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title No_money Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.NoInventorySpace.Enable")) {
+            DefultValue.Title_NoInventorySpace_Enable = yamlConfiguration_config.getBoolean("Title.NoInventorySpace.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.NoInventorySpace.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title NoInventorySpace Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.give.Enable")) {
+            DefultValue.Title_give_Enable = yamlConfiguration_config.getBoolean("Title.give.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.give.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title give Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.giveReceived.Enable")) {
+            DefultValue.Title_giveReceived_Enable = yamlConfiguration_config.getBoolean("Title.giveReceived.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.giveReceived.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title giveReceived Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.gift.Enable")) {
+            DefultValue.Title_gift_Enable = yamlConfiguration_config.getBoolean("Title.gift.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.gift.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title gift Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.giftReceived.Enable")) {
+            DefultValue.Title_giftReceived_Enable = yamlConfiguration_config.getBoolean("Title.giftReceived.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.giftReceived.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title giftReceived Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.PlayerNoInventorySpace.Enable")) {
+            DefultValue.Title_PlayerNoInventorySpace_Enable = yamlConfiguration_config.getBoolean("Title.PlayerNoInventorySpace.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.PlayerNoInventorySpace.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title PlayerNoInventorySpace Enable §4was added to §9Config.yml§4!");
+        }
+        if (yamlConfiguration_config.contains("Title.PlayerNotFound.Enable")) {
+            DefultValue.Title_PlayerNotFound_Enable = yamlConfiguration_config.getBoolean("Title.PlayerNotFound.Enable");
+        } else {
+            yamlConfiguration_config.set("Title.PlayerNotFound.Enable", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title PlayerNotFound Enable §4was added to §9Config.yml§4!");
+        }
+
         try {
             yamlConfiguration_config.save(configYML);
         } catch (IOException e) {
@@ -274,6 +370,7 @@ public class Config {
         }
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config.yml loaded successfully.");
+
     }
 
     public static void configDisable() {

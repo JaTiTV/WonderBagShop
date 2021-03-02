@@ -13,6 +13,7 @@
 
 package de.jatitv.wonderbagshop.commands.cmdManagement;
 
+import de.jatitv.wonderbagshop.defultValue.DefultValue;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -30,8 +31,17 @@ public class TabComplete implements TabCompleter {
         if (sender instanceof Player) {
             List<String> list = new ArrayList<>();
             Player player = (Player) sender;
+            if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + Bukkit.getName() + " used TabComplete by wbs");
+            }
+
             if (args.length == 0 || args.length == 1) {
                 if (args[0].isEmpty()) {
+
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + Bukkit.getName() + " used TabComplete §4args.length == 0 || args.length == 1");
+                    }
+
                     if (sender.hasPermission("wonderbagshop.command")
                             || sender.hasPermission("wonderbagshop.command.info")
                             || sender.hasPermission("wonderbagshop.command.give")
@@ -65,6 +75,9 @@ public class TabComplete implements TabCompleter {
 
 
                 if (args[0].charAt(0) == 'h') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'h'");
+                    }
                     if (sender.hasPermission("wonderbagshop.command") || sender.hasPermission("wonderbagshop.command.info")
                             || sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.gift")
                             || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
@@ -72,11 +85,17 @@ public class TabComplete implements TabCompleter {
                     }
 
                 } else if (args[0].charAt(0) == 'i') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'i'");
+                    }
                     if (sender.hasPermission("wonderbagshop.command.info") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("info");
                     }
 
                 } else if (args[0].charAt(0) == 'g' && args[0].length() < 3) {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'g' && args[0].length() < 3");
+                    }
                     if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("give");
                     }
@@ -88,6 +107,9 @@ public class TabComplete implements TabCompleter {
                     }
 
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'v') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'g' && args[0].charAt(2) == 'v'");
+                    }
                     if (player.hasPermission("wonderbagshop.command.give") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("give");
                     }
@@ -96,25 +118,40 @@ public class TabComplete implements TabCompleter {
                     }
 
                 } else if (args[0].charAt(0) == 'g' && args[0].charAt(2) == 'f') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'g' && args[0].charAt(2) == 'f'");
+                    }
                     if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("gift");
                     }
 
                 } else if (args[0].charAt(0) == 'r' && args[0].length() < 3) {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'r' && args[0].length() < 3");
+                    }
                     if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("reload");
                         list.add("rl");
                     }
                 } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'e') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'r' && args[0].charAt(1) == 'e'");
+                    }
                     if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("reload");
                     }
                 } else if (args[0].charAt(0) == 'r' && args[0].charAt(1) == 'l') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 'r' && args[0].charAt(1) == 'l'");
+                    }
                     if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("rl");
                     }
 
                 } else if (args[0].charAt(0) == 's') {
+                    if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args[0].charAt(0) == 's'");
+                    }
                     if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         list.add("settings");
                     }
@@ -122,6 +159,9 @@ public class TabComplete implements TabCompleter {
                 return list;
             }
             if (args.length == 2 && args[0].equalsIgnoreCase("give")) {
+                if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args.length == 2 && args[0].equalsIgnoreCase(\"give\"");
+                }
                 Iterator var6 = Bukkit.getOnlinePlayers().iterator();
 
                 while (var6.hasNext()) {
@@ -133,6 +173,9 @@ public class TabComplete implements TabCompleter {
             }
 
             if (args.length == 2 && args[0].equalsIgnoreCase("gift")) {
+                if (DefultValue.Debug && DefultValue.DebugStage > 2){
+                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player + " used TabComplete §4args.length == 2 && args[0].equalsIgnoreCase(\"gift\"");
+                }
                 Iterator var6 = Bukkit.getOnlinePlayers().iterator();
 
                 while (var6.hasNext()) {

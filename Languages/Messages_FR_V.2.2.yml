@@ -1,0 +1,45 @@
+# French Messages.yml from WonderBagShop
+# Version: 1.5
+
+Do_not_remove_or_change:
+  Version: Ce fichier a été créé avec la version 2.3.0.2
+  BuildNr: 2302
+  Autor: JaTiTV
+  Spigot: https://www.spigotmc.org/resources/wonderbagshop.89234/
+  Discord: 'Plus d''informations à propos de WonderBagShop sur Discord: https://discord.com/invite/vRyXFFterJ'
+  '--------------------------------------------': '--------------------------------------------'
+Plugin:
+  NoPermissionForCommand: '[prefix] &cPour utiliser &b[cmd] &cil vous manque la permission &6[perm]&c!'
+  NoPermission: '[prefix] &cVous n''avez pas la permission pour &2Wonder&6Bag&9Shop!'
+  VaultNotSetUp: '[prefix] &4Vault / Economie non installé!'
+  SoundNotFound: '[prefix] &4Le son &6[sound] &4n''a pas pu être trouvé ! Vérifiez vos paramètres.'
+  Reload:
+    Start: '&6Plugin en train de recharger...'
+    End: '&2Plugin rechargé.'
+Help:
+  Help: '&8''&b/wonderbagshop help&8'' &eOuvre cette aide.'
+  Shop: '&8''&b/wonderbagshop&8'' &eOuvre le magasin.'
+  Info: '&8''&b/wonderbagshop info&8'' &eAffiche les infos à propos de &2W&6B&9S&e.'
+  Gift: '&8''&b/wonderbagshop gift &7<joueur>&8'' &eOuvre le menu des cadeaux et offre un WonderBag.'
+  Give: '&8''&b/wonderbagshop give &7<player>&8'' &eOuvre le menu des cadeaux et donne un WonderBag.'
+  Giveall: '&8''&b/wonderbagshop giveall&8'' &eOuvre le menu des cadeaux et donne à tous les joueurs un WonderBag.'
+  GiveConsole: '&8''&b/wonderbagshop give &7<player> <ChestSmall | ChestMedium | ChestLarge
+    | ItemSmall | ItemMedium | ItemLarge>&8'' &eOffre un Wonderbag. &4Seulement depuis la console !'
+  GiveallConsole: '&8''&b/wonderbagshop giveall &7<player> <ChestSmall | ChestMedium
+    | ChestLarge | ItemSmall | ItemMedium | ItemLarge>&8'' &eOffre à tout le monde un WonderBag.
+    &4Seulement depuis la console!'
+  Settings: '&8''&b/wonderbagshop settings&8'' &eModifie les paramètres.'
+  Reload: '&8''&b/wonderbagshop reload&8'' &eRecharge le plugin.'
+Shop:
+  No_money: '[prefix] &cVous n''avez pas assez d''argent !'
+  NoInventorySpace: '[prefix] &cPas d''espace libre !'
+  Buy_msg: '[prefix] &2Vous avez acheté [wonderbag] &2pour &6[price] [currency]&2!'
+Give:
+  Sender: '[prefix] &2Vous avez donné à &6[player] &2un [wonderbag]&2!'
+  Receiver: '[prefix] &2Vous avez reçu un [wonderbag] &2de la part de &6[sender]&2!'
+Gift:
+  Sender: '[prefix] &2Vous avez offert à &6[player] &un [wonderbag] &2pour &6[price] [currency]&2!'
+  Receiver: '[prefix] &2Vous avez reçu un [wonderbag] &2comme cadeau de &6[sender]&2!'
+Give_&_Gift:
+  PlayerNotFond: '[prefix] &cLe joueur &6[player] &cn''a pas été trouvé ou n''est pas en ligne !.'
+  PlayerNoInventorySpace: '[prefix] &6[player] &cn''a pas de place libre dans son inventaire !'

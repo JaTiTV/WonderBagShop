@@ -26,6 +26,7 @@ public class ConsoleGiveAll {
                     break;
                 }
             }
+
             if (wb.equals("ChestSmall")) {
                 ItemStack item = new ItemStack(Material.CHEST);
                 ItemMeta itemMeta = item.getItemMeta();
@@ -38,6 +39,11 @@ public class ConsoleGiveAll {
                 nbti.setBoolean("loot_chest_1", true);
                 if (empty) {
                     target.getInventory().addItem(nbti.getItem());
+
+                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
+                    }
                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                             .replace("[wonderbag]", DefultValueChest_1.Name));
                     if (DefultValue.Sound_Give_Enable) {
@@ -61,6 +67,10 @@ public class ConsoleGiveAll {
                     nbti.setBoolean("loot_chest_2", true);
                     if (empty) {
                         target.getInventory().addItem(nbti.getItem());
+                        if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
+                        }
                         target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                 .replace("[wonderbag]", DefultValueChest_2.Name));
                         if (DefultValue.Sound_Give_Enable) {
@@ -83,6 +93,10 @@ public class ConsoleGiveAll {
                         nbti.setBoolean("loot_chest_3", true);
                         if (empty) {
                             target.getInventory().addItem(nbti.getItem());
+                            if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                        .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
+                            }
                             target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                     .replace("[wonderbag]", DefultValueChest_3.Name));
                             if (DefultValue.Sound_Give_Enable) {
@@ -106,6 +120,10 @@ public class ConsoleGiveAll {
                             nbti.setBoolean("loot_item_1", true);
                             if (empty) {
                                 target.getInventory().addItem(nbti.getItem());
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueChest_1.Name));
                                 if (DefultValue.Sound_Give_Enable) {
@@ -129,6 +147,10 @@ public class ConsoleGiveAll {
                                 nbti.setBoolean("loot_item_2", true);
                                 if (empty) {
                                     target.getInventory().addItem(nbti.getItem());
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
+                                    }
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_2.Name));
                                     if (DefultValue.Sound_Give_Enable) {
@@ -137,7 +159,6 @@ public class ConsoleGiveAll {
                                 } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueItem_2.Name));
-
 
                             } else {
                                 if (wb.equals("ItemLarge")) {
@@ -152,6 +173,10 @@ public class ConsoleGiveAll {
                                     nbti.setBoolean("loot_item_3", true);
                                     if (empty) {
                                         target.getInventory().addItem(nbti.getItem());
+                                        if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
+                                        }
                                         target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueItem_3.Name));
                                         if (DefultValue.Sound_Give_Enable) {
@@ -160,8 +185,6 @@ public class ConsoleGiveAll {
                                     } else sender.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                     sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_3.Name));
-
-
                                 } else DefultValue.Help(sender);
                             }
                         }

@@ -18,10 +18,6 @@ import de.jatitv.wonderbagshop.defultValue.DefultValue;
 import de.jatitv.wonderbagshop.listeners.*;
 import de.jatitv.wonderbagshop.commands.cmdManagement.CmdExecuter;
 import de.jatitv.wonderbagshop.commands.cmdManagement.CmdExecuter_wbsrl;
-import de.jatitv.wonderbagshop.settingsGUI.GUI_ConfigSound_Listener;
-import de.jatitv.wonderbagshop.settingsGUI.GUI_ConfigTitle_Listener;
-import de.jatitv.wonderbagshop.settingsGUI.GUI_Config_Listener;
-import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings_Listener;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -38,24 +34,25 @@ public final class Main extends JavaPlugin {
 
     // Debug Settings
 
-    public static Boolean Bstats = false;
+    public static Boolean Bstats = true;
 
-    public static Boolean Snapshot = true;
-    public static int Build = 2302;
-
+    public static Boolean Snapshot = false;
 
     public static Boolean UpdateMSG = true;
     public static String UpdateInfo = DefultValue.PrefixHC + "§4You have just updated WonderBagShop! §6Here is some important information:" +
             "§4\n" + DefultValue.PrefixHC +
-            "§4\n" + DefultValue.PrefixHC + "§4In version 2.0 some things have changed in the configuration! " +
-            "§4\n" + DefultValue.PrefixHC + "§4I strongly advise you to regenerate the complete folder of WonderBagShop to make sure that the plugin works without errors. " +
+            "§4\n" + DefultValue.PrefixHC + "§4In the version 2.3.0, a critical bug was fixed that was responsible for the config not being created correctly." +
+            "§4\n" + DefultValue.PrefixHC + "§4Therefore, you must urgently recreate it!" +
+            "§4\n" + DefultValue.PrefixHC + "§4Otherwise I can not guarantee that the plugin will work properly." +
             "§4\n" + DefultValue.PrefixHC + "§4If you encounter any errors please contact me via Discord: §6https://discord.com/invite/vRyXFFterJ" +
             "§4\n" + DefultValue.PrefixHC +
             "§4\n" + DefultValue.PrefixHC + "§2Sincerely JaTiTV";
 
     public static String Autor = "JaTiTV";
     public static String Spigot = "https://www.spigotmc.org/resources/wonderbagshop.89234/";
-    public static String Discord = "You can find more information about WonderBagShop on Discord: https://discord.gg/vRyXFFterJ";
+    public static String Discord = "You want to discuss and decide about current bugs, planned updates, new features?\n" +
+            "Then come to our Discord. https://discord.gg/vRyXFFterJ";
+    public static String DiscordLoad = "https://discord.gg/vRyXFFterJ";
 
     // ---------------------------------------------
 
@@ -111,6 +108,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_Config_Listener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_ConfigSound_Listener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_ConfigTitle_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Chat_Listener(), this);
 
 
 

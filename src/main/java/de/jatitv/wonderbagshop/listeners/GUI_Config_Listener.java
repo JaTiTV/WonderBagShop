@@ -11,10 +11,11 @@
 //                                                     |___/                   |_|
 // ___________________________________________________________________________________
 
-package de.jatitv.wonderbagshop.settingsGUI;
+package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.config.Config;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.settingsGUI.*;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -144,7 +145,6 @@ public class GUI_Config_Listener implements Listener {
                             Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set DebugStage +1");
                         }
                     }
-
                 }
 
 
@@ -460,6 +460,28 @@ public class GUI_Config_Listener implements Listener {
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
                             Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Player Not Found to §6true");
                         }
+                    }
+                }
+
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6GUI_Name") && e.getCurrentItem().getType() == Material.YELLOW_WOOL) {
+                    GUI_Chat_Listener.EditChat.put(player,"GUI_Name");
+                    player.sendMessage(DefultValue.SettingsGUIchatSet.replace("[setting]", "GUI_Name"));
+                    player.sendMessage(DefultValue.SettingsGUIchatCancel);
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    player.closeInventory();
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4click GUI_Name");
+                    }
+                }
+
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Currency") && e.getCurrentItem().getType() == Material.YELLOW_WOOL) {
+                    GUI_Chat_Listener.EditChat.put(player,"Currency");
+                    player.sendMessage(DefultValue.SettingsGUIchatSet.replace("[setting]", "Currency"));
+                    player.sendMessage(DefultValue.SettingsGUIchatCancel);
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    player.closeInventory();
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4click Currency");
                     }
                 }
 

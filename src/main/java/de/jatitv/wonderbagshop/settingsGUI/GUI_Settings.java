@@ -64,7 +64,7 @@ public class GUI_Settings {
         ArrayList<String> lorewb1chest = new ArrayList<>();
         lorewb1chest.add("§8-------------");
         lorewb1chest.add("§7Edit the §6Chest small.yml");
-        lorewb1chest.add("§4Comming Soon!");
+        lorewb1chest.add("§4Comming in version 2.4!");
         itemMetawb1chest.setLore(lorewb1chest);
         wb1chest.setItemMeta(itemMetawb1chest);
         wb1chest.setAmount(1);
@@ -76,7 +76,7 @@ public class GUI_Settings {
         ArrayList<String> lorewb2chest = new ArrayList<>();
         lorewb2chest.add("§8-------------");
         lorewb2chest.add("§7Edit the §6Chest medium.yml");
-        lorewb2chest.add("§4Comming Soon!");
+        lorewb2chest.add("§4Comming version 2.4!");
         itemMetawb2chest.setLore(lorewb2chest);
         wb2chest.setItemMeta(itemMetawb2chest);
         wb2chest.setAmount(1);
@@ -88,7 +88,7 @@ public class GUI_Settings {
         ArrayList<String> lorewb3chest = new ArrayList<>();
         lorewb3chest.add("§8-------------");
         lorewb3chest.add("§7Edit the §6Chest large.yml");
-        lorewb3chest.add("§4Comming Soon!");
+        lorewb3chest.add("§4Comming version 2.4!");
         itemMetawb3chest.setLore(lorewb3chest);
         wb3chest.setItemMeta(itemMetawb3chest);
         wb3chest.setAmount(1);
@@ -100,7 +100,7 @@ public class GUI_Settings {
         ArrayList<String> lorewb1item = new ArrayList<>();
         lorewb1item.add("§8-------------");
         lorewb1item.add("§7Edit the §6Item small.yml");
-        lorewb1item.add("§4Comming Soon!");
+        lorewb1item.add("§4Comming version 2.4!");
         itemMetawb1item.setLore(lorewb1item);
         wb1item.setItemMeta(itemMetawb1item);
         wb1item.setAmount(1);
@@ -112,7 +112,7 @@ public class GUI_Settings {
         ArrayList<String> lorewb2item = new ArrayList<>();
         lorewb2item.add("§8-------------");
         lorewb2item.add("§7Edit the §6Item medium.yml");
-        lorewb2item.add("§4Comming Soon!");
+        lorewb2item.add("§4Comming version 2.4!");
         itemMetawb2item.setLore(lorewb2item);
         wb2item.setItemMeta(itemMetawb2item);
         wb2item.setAmount(1);
@@ -124,7 +124,7 @@ public class GUI_Settings {
         ArrayList<String> lorewb3item = new ArrayList<>();
         lorewb3item.add("§8-------------");
         lorewb3item.add("§7Edit the §6Item large.yml");
-        lorewb3item.add("§4Comming Soon!");
+        lorewb3item.add("§4Comming version 2.4!");
         itemMetawb3item.setLore(lorewb3item);
         wb3item.setItemMeta(itemMetawb3item);
         wb3item.setAmount(1);
@@ -144,5 +144,4 @@ public class GUI_Settings {
         player.openInventory(inventory);
 
     }
-
 }

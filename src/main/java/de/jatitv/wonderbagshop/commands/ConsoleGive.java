@@ -42,6 +42,10 @@ public class ConsoleGive {
                 sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                         .replace("[wonderbag]", DefultValueChest_1.Name));
 
+                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
+                }
                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                         .replace("[wonderbag]", DefultValueChest_1.Name));
                 if (DefultValue.Sound_Give_Enable) {
@@ -67,6 +71,10 @@ public class ConsoleGive {
                     sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                             .replace("[wonderbag]", DefultValueChest_2.Name));
 
+                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
+                    }
                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                             .replace("[wonderbag]", DefultValueChest_2.Name));
                     if (DefultValue.Sound_Give_Enable) {
@@ -88,6 +96,10 @@ public class ConsoleGive {
                         sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                                 .replace("[wonderbag]", DefultValueChest_3.Name));
 
+                        if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
+                        }
                         target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                 .replace("[wonderbag]", DefultValueChest_3.Name));
                         if (DefultValue.Sound_Give_Enable) {
@@ -109,6 +121,10 @@ public class ConsoleGive {
                             sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                                     .replace("[wonderbag]", DefultValueItem_1.Name));
 
+                            if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                        .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
+                            }
                             target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                     .replace("[wonderbag]", DefultValueChest_1.Name));
                             if (DefultValue.Sound_Give_Enable) {
@@ -130,6 +146,10 @@ public class ConsoleGive {
                                 sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueItem_2.Name));
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueItem_2.Name));
                                 if (DefultValue.Sound_Give_Enable) {
@@ -151,6 +171,10 @@ public class ConsoleGive {
                                     sender.sendMessage(DefultValue.give.replace("[sender]", "Console").replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_3.Name));
 
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", "Console")
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
+                                    }
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_3.Name));
                                     if (DefultValue.Sound_Give_Enable) {

@@ -33,23 +33,18 @@ public class WonderBagItem_1 {
         YamlConfiguration yamlConfiguration_WB1_Item = YamlConfiguration.loadConfiguration(WB1ItemYML);
 
 
-        if (!yamlConfiguration_WB1_Item.contains("Do_not_remove_or_change.Version")) {
-            yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.Version", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        if (!yamlConfiguration_WB1_Item.contains("Do_not_remove_or_change.Created")) {
+            yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.Created", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
         }
 
-        yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.BuildNr", Main.Build);
-        if (!yamlConfiguration_WB1_Item.contains("Do_not_remove_or_change.Autor")) {
+        yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.Version", Main.getPlugin().getDescription().getVersion());
+
             yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.Autor", Main.Autor);
-        }
-        if (!yamlConfiguration_WB1_Item.contains("Do_not_remove_or_change.Spigot")) {
+
             yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.Spigot", Main.Spigot);
-        }
-        if (!yamlConfiguration_WB1_Item.contains("Do_not_remove_or_change.Discord")) {
+
             yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.Discord", Main.Discord);
-        }
-        if (!yamlConfiguration_WB1_Item.contains("Do_not_remove_or_change.--------------------------------------------")) {
-            yamlConfiguration_WB1_Item.set("Do_not_remove_or_change.--------------------------------------------", "--------------------------------------------");
-        }
+
 
         // Shop
 

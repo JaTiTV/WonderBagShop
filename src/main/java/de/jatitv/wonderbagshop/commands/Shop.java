@@ -89,10 +89,10 @@ public class Shop {
 
             ItemStack item4 = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
             ItemMeta itemMeta4 = item4.getItemMeta();
-            itemMeta4.setDisplayName(DefultValueChest_1.Name);
+            itemMeta4.setDisplayName(DefultValueItem_1.Name);
             ArrayList<String> lore4 = new ArrayList<>();
             lore4.add("§8-------------");
-            lore4.add(DefultValueChest_1.price + " " + DefultValue.Currency);
+            lore4.add(DefultValueItem_1.price + " " + DefultValue.Currency);
             itemMeta4.setLore(lore4);
             item4.setItemMeta(itemMeta4);
             if(DefultValue.ItemNumbers){
@@ -104,10 +104,10 @@ public class Shop {
 
             ItemStack item5 = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
             ItemMeta itemMeta5 = item5.getItemMeta();
-            itemMeta5.setDisplayName(DefultValueChest_2.Name);
+            itemMeta5.setDisplayName(DefultValueItem_2.Name);
             ArrayList<String> lore5 = new ArrayList<>();
             lore5.add("§8-------------");
-            lore5.add(DefultValueChest_2.price + " " + DefultValue.Currency);
+            lore5.add(DefultValueItem_2.price + " " + DefultValue.Currency);
             itemMeta5.setLore(lore5);
             item5.setItemMeta(itemMeta5);
             if(DefultValue.ItemNumbers){
@@ -119,10 +119,10 @@ public class Shop {
 
             ItemStack item6 = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
             ItemMeta itemMeta6 = item6.getItemMeta();
-            itemMeta6.setDisplayName(DefultValueChest_3.Name);
+            itemMeta6.setDisplayName(DefultValueItem_3.Name);
             ArrayList<String> lore6 = new ArrayList<>();
             lore6.add("§8-------------");
-            lore6.add(DefultValueChest_3.price + " " + DefultValue.Currency);
+            lore6.add(DefultValueItem_3.price + " " + DefultValue.Currency);
             itemMeta6.setLore(lore6);
             item6.setItemMeta(itemMeta6);
             if(DefultValue.ItemNumbers){
@@ -204,10 +204,10 @@ public class Shop {
 
                 ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
                 ItemMeta itemMeta = item.getItemMeta();
-                itemMeta.setDisplayName(DefultValueChest_1.Name);
+                itemMeta.setDisplayName(DefultValueItem_1.Name);
                 ArrayList<String> lore = new ArrayList<>();
                 lore.add("§8-------------");
-                lore.add(DefultValueChest_1.price + " " + DefultValue.Currency);
+                lore.add(DefultValueItem_1.price + " " + DefultValue.Currency);
                 itemMeta.setLore(lore);
                 item.setItemMeta(itemMeta);
                 if(DefultValue.ItemNumbers){
@@ -219,10 +219,10 @@ public class Shop {
 
                 ItemStack item2 = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
                 ItemMeta itemMeta2 = item2.getItemMeta();
-                itemMeta2.setDisplayName(DefultValueChest_2.Name);
+                itemMeta2.setDisplayName(DefultValueItem_2.Name);
                 ArrayList<String> lore2 = new ArrayList<>();
                 lore2.add("§8-------------");
-                lore2.add(DefultValueChest_2.price + " " + DefultValue.Currency);
+                lore2.add(DefultValueItem_2.price + " " + DefultValue.Currency);
                 itemMeta2.setLore(lore2);
                 item2.setItemMeta(itemMeta2);
                 if(DefultValue.ItemNumbers){
@@ -234,10 +234,10 @@ public class Shop {
 
                 ItemStack item3 = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
                 ItemMeta itemMeta3 = item3.getItemMeta();
-                itemMeta3.setDisplayName(DefultValueChest_3.Name);
+                itemMeta3.setDisplayName(DefultValueItem_3.Name);
                 ArrayList<String> lore3 = new ArrayList<>();
                 lore3.add("§8-------------");
-                lore3.add(DefultValueChest_3.price + " " + DefultValue.Currency);
+                lore3.add(DefultValueItem_3.price + " " + DefultValue.Currency);
                 itemMeta3.setLore(lore3);
                 item3.setItemMeta(itemMeta3);
                 if(DefultValue.ItemNumbers){

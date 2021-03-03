@@ -11,10 +11,13 @@
 //                                                     |___/                   |_|
 // ___________________________________________________________________________________
 
-package de.jatitv.wonderbagshop.settingsGUI;
+package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.config.Config;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_Config;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_ConfigSound;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -42,10 +45,45 @@ public class GUI_ConfigSound_Listener implements Listener {
         Player player = (Player) e.getWhoClicked();
         if (e.getInventory() != null && e.getCurrentItem() != null) {
 
-            if (e.getWhoClicked().getOpenInventory().getTitle().equals("§2W§6B§9S §7| §4Settings §7| §9Config §7| §6Sound")) {
+            if (e.getWhoClicked().getOpenInventory().getTitle().equals("§2W§6B§9S §7| §4Settings §7| §9Config §7| §aSound")) {
                 File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
                 YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
                 e.setCancelled(true);
+
+
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
+                    yamlConfiguration_config.set("Sound.Enable", false);
+                    try {
+                        yamlConfiguration_config.save(configYML);
+                    } catch (IOException tac) {
+                        tac.printStackTrace();
+                    }
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    player.closeInventory();
+                    Config.configCreate();
+                    GUI_ConfigSound.openSound(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound to §6false");
+                    }
+                } else {
+                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound") && e.getCurrentItem().getType() == Material.RED_WOOL) {
+                        yamlConfiguration_config.set("Sound.Enable", true);
+                        try {
+                            yamlConfiguration_config.save(configYML);
+                        } catch (IOException tac) {
+                            tac.printStackTrace();
+                        }
+                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                        player.closeInventory();
+                        Config.configCreate();
+                        GUI_ConfigSound.openSound(player);
+                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound to §6true");
+                        }
+                    }
+                }
+
+
 
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Buy") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
                     yamlConfiguration_config.set("Sound.Buy.Enable", false);

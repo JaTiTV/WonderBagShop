@@ -11,10 +11,12 @@
 //                                                     |___/                   |_|
 // ___________________________________________________________________________________
 
-package de.jatitv.wonderbagshop.settingsGUI;
+package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.commands.Reload;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_Config;
+import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -53,12 +55,14 @@ public class GUI_Settings_Listener implements Listener {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     player.closeInventory();
                     Reload.reloadConfirmPlayer(player);
-                    new BukkitRunnable() {
-                        @Override
-                        public void run() {
-                            GUI_Settings.openSettings(player);
-                        }
-                    }.runTaskLater(Main.getPlugin(), 100L);
+                    if(DefultValue.Title_Reload_Enable && DefultValue.Title_Enable) {
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Settings.openSettings(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 100L);
+                    } else GUI_Settings.openSettings(player);
 
                     if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Config");

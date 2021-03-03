@@ -33,23 +33,16 @@ public class WonderBagItem_3 {
         YamlConfiguration yamlConfiguration_WB3_Item = YamlConfiguration.loadConfiguration(WB3ItemYML);
 
 
-        if (!yamlConfiguration_WB3_Item.contains("Do_not_remove_or_change.Version")) {
-            yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Version", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        if (!yamlConfiguration_WB3_Item.contains("Do_not_remove_or_change.Created")) {
+            yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Created", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        }
+        yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Version", Main.getPlugin().getDescription().getVersion());
 
-        }
-        yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.BuildNr", Main.Build);
-        if (!yamlConfiguration_WB3_Item.contains("Do_not_remove_or_change.Autor")) {
-            yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Autor", Main.Autor);
-        }
-        if (!yamlConfiguration_WB3_Item.contains("Do_not_remove_or_change.Spigot")) {
-            yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Spigot", Main.Spigot);
-        }
-        if (!yamlConfiguration_WB3_Item.contains("Do_not_remove_or_change.Discord")) {
-            yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Discord", Main.Discord);
-        }
-        if (!yamlConfiguration_WB3_Item.contains("Do_not_remove_or_change.--------------------------------------------")) {
-            yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.--------------------------------------------", "--------------------------------------------");
-        }
+        yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Autor", Main.Autor);
+
+        yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Spigot", Main.Spigot);
+
+        yamlConfiguration_WB3_Item.set("Do_not_remove_or_change.Discord", Main.Discord);
 
         // Shop
 
@@ -89,7 +82,7 @@ public class WonderBagItem_3 {
             yamlConfiguration_WB3_Item.set("WonderBag.Item_amount_(1-9)", DefultValueItem_3.Item_anz);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6WonderBag Item_amount_(1-9) §4was added to §9WonderBag Item large.yml§4!");
         }
-        if (yamlConfiguration_WB3_Item.getInt("WonderBag.Item_amount_(1-9)") > 9){
+        if (yamlConfiguration_WB3_Item.getInt("WonderBag.Item_amount_(1-9)") > 9) {
             yamlConfiguration_WB3_Item.set("WonderBag.Item_amount_(1-9)", 9);
         }
 

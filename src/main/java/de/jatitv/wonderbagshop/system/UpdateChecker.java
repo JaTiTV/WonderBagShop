@@ -36,7 +36,6 @@ public class UpdateChecker {
         Bukkit.getScheduler().runTaskAsynchronously(this.plugin, () -> {
             try {
                 InputStream inputStream = (new URL("https://api.spigotmc.org/legacy/update.php?resource=" + this.resourceId)).openStream();
-
                 try {
                     Scanner scanner = new Scanner(inputStream);
 
@@ -50,10 +49,8 @@ public class UpdateChecker {
                         } catch (Throwable var7) {
                             var8.addSuppressed(var7);
                         }
-
                         throw var8;
                     }
-
                     scanner.close();
                 } catch (Throwable var9) {
                     if (inputStream != null) {
@@ -63,10 +60,8 @@ public class UpdateChecker {
                             var9.addSuppressed(var6);
                         }
                     }
-
                     throw var9;
                 }
-
                 if (inputStream != null) {
                     inputStream.close();
                 }

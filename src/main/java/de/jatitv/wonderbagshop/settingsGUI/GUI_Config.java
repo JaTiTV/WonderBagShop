@@ -23,6 +23,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -228,25 +229,29 @@ public class GUI_Config {
             inventory.setItem(15, item);
         }
 
-        ItemStack guiname = new ItemStack(Material.GRAY_WOOL);
+        ItemStack guiname = new ItemStack(Material.YELLOW_WOOL);
         ItemMeta itemMetaguiname = guiname.getItemMeta();
         itemMetaguiname.setDisplayName("§6GUI_Name");
         ArrayList<String> loreguiname = new ArrayList<>();
         loreguiname.add("§8-------------");
         loreguiname.add("§7Set the §6GUI_Name");
-        loreguiname.add("§4Comming Soon!");
+        loreguiname.add("§8-------------");
+        loreguiname.add("§2Current:");
+        loreguiname.add(DefultValue.GUI_Name);
         itemMetaguiname.setLore(loreguiname);
         guiname.setItemMeta(itemMetaguiname);
         guiname.setAmount(1);
         inventory.setItem(19, guiname);
 
-        ItemStack currency = new ItemStack(Material.GRAY_WOOL);
+        ItemStack currency = new ItemStack(Material.YELLOW_WOOL);
         ItemMeta itemMetacurrency = currency.getItemMeta();
         itemMetacurrency.setDisplayName("§6Currency");
         ArrayList<String> lorecurrency = new ArrayList<>();
         lorecurrency.add("§8-------------");
         lorecurrency.add("§7Set the §6Currency");
-        lorecurrency.add("§4Comming Soon!");
+        lorecurrency.add("§8-------------");
+        lorecurrency.add("§2Current:");
+        lorecurrency.add(DefultValue.Currency);
         itemMetacurrency.setLore(lorecurrency);
         currency.setItemMeta(itemMetacurrency);
         currency.setAmount(1);
@@ -297,27 +302,31 @@ public class GUI_Config {
         item2.setAmount(1);
         inventory.setItem(49, item2);
 
-        ItemStack next = new ItemStack(Material.YELLOW_WOOL);
-        ItemMeta itemMetanext = next.getItemMeta();
+        ItemStack back = new ItemStack(Material.PLAYER_HEAD);
+        SkullMeta itemMetaback = (SkullMeta) back.getItemMeta();
+        itemMetaback.setDisplayName("§6Back");
+        ArrayList<String> loreback = new ArrayList<>();
+        loreback.add("§8-------------");
+        loreback.add("§4Switch to the back");
+        loreback.add("§4Comming version 2.4!");
+        itemMetaback.setLore(loreback);
+        itemMetaback.setOwner("MHF_ArrowLeft");
+        back.setItemMeta(itemMetaback);
+        back.setAmount(1);
+        inventory.setItem(45, back);
+
+        ItemStack next = new ItemStack(Material.PLAYER_HEAD);
+        SkullMeta itemMetanext = (SkullMeta) next.getItemMeta();
         itemMetanext.setDisplayName("§6Next");
         ArrayList<String> lorenext = new ArrayList<>();
         lorenext.add("§8-------------");
         lorenext.add("§4Switch to the next");
+        lorenext.add("§4Comming version 2.4!");
         itemMetanext.setLore(lorenext);
+        itemMetanext.setOwner("MHF_ArrowRight");
         next.setItemMeta(itemMetanext);
         next.setAmount(1);
         inventory.setItem(53, next);
-
-        ItemStack back = new ItemStack(Material.YELLOW_WOOL);
-        ItemMeta itemMetaback = back.getItemMeta();
-        itemMetaback.setDisplayName("§6Next");
-        ArrayList<String> loreback = new ArrayList<>();
-        loreback.add("§8-------------");
-        loreback.add("§4Switch to the back");
-        itemMetaback.setLore(loreback);
-        back.setItemMeta(itemMetaback);
-        back.setAmount(1);
-        inventory.setItem(45, back);
 
         player.openInventory(inventory);
     }

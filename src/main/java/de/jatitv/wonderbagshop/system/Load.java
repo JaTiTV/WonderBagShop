@@ -43,6 +43,8 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Autor: §6JaTiTV");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Version: §6" + version);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Spigot: §6" + Main.Spigot);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Discord: §6" + Main.DiscordLoad);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         if (yamlConfiguration_config.getBoolean("Plugin.Debug.Enable")) {
             int DebugStage = yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)");
@@ -57,9 +59,9 @@ public class Load {
         }
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Plugin load...");
         if (Main.UpdateMSG) {
-            int build = yamlConfiguration_config.getInt("Do_not_remove_or_change.BuildNr");
+            String ver = (String) yamlConfiguration_config.get("Do_not_remove_or_change.Version");
             if (configYML.isFile()) {
-                if (build != Main.Build) {
+                if (ver == null){
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
@@ -74,7 +76,25 @@ public class Load {
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
                     Thread.sleep(20000);
-                } else Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+                } else {
+                    if (!ver.equals(Main.getPlugin().getDescription().getVersion())) {
+
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-------------------------------");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(Main.UpdateInfo);
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-------------------------------");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
+                        Thread.sleep(20000);
+                    } else Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
+                }
             } else {
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");
                 Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4");

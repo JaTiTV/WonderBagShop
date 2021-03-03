@@ -65,19 +65,26 @@ public class GiveEvent implements Listener {
                                 nbti.setBoolean("loot_chest_1", true);
                                 target.getInventory().addItem(nbti.getItem());
 
-                                player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueChest_1.Name));
+                                if (DefultValue.Title_Give_Enable && DefultValue.Title_Enable){
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Give.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
+                                } else {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueChest_1.Name));
+                                }
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueChest_1.Name));
                                 if (DefultValue.Sound_Give_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
-
-
                             }
 
 
@@ -96,19 +103,26 @@ public class GiveEvent implements Listener {
                                 nbti.setBoolean("loot_chest_2", true);
                                 target.getInventory().addItem(nbti.getItem());
 
-                                player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueChest_2.Name));
+                                if (DefultValue.Title_Give_Enable && DefultValue.Title_Enable){
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Give.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
+                                } else {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueChest_2.Name));
+                                }
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueChest_2.Name));
                                 if (DefultValue.Sound_Give_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
-
-
                             }
 
 
@@ -127,26 +141,35 @@ public class GiveEvent implements Listener {
                                 nbti.setBoolean("loot_chest_3", true);
                                 target.getInventory().addItem(nbti.getItem());
 
-                                player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueChest_3.Name));
+                                if (DefultValue.Title_Give_Enable && DefultValue.Title_Enable){
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Give.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
+                                } else {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueChest_3.Name));
+                                }
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueChest_3.Name));
                                 if (DefultValue.Sound_Give_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
-
-
                             }
-
-
                         } else {
                             e.setCancelled(true);
                             player.closeInventory();
-                            player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                            if (DefultValue.Title_PlayerNoInventorySpace_Enable && DefultValue.Title_Enable) {
+                                player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
+                                        , 10, 70, 20);
+                            } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+
                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
 
                             if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
@@ -187,14 +210,23 @@ public class GiveEvent implements Listener {
                                 nbti.setBoolean("loot_item_1", true);
                                 target.getInventory().addItem(nbti.getItem());
 
-                                player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueItem_1.Name));
+                                if (DefultValue.Title_Give_Enable && DefultValue.Title_Enable){
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Give.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
+                                } else {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_1.Name));
+                                }
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueChest_1.Name));
+                                        .replace("[wonderbag]", DefultValueItem_1.Name));
                                 if (DefultValue.Sound_Give_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
@@ -202,8 +234,6 @@ public class GiveEvent implements Listener {
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
-
-
                             }
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)) {
@@ -221,12 +251,21 @@ public class GiveEvent implements Listener {
                                 nbti.setBoolean("loot_item_2", true);
                                 target.getInventory().addItem(nbti.getItem());
 
-                                player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueItem_2.Name));
+                                if (DefultValue.Title_Give_Enable && DefultValue.Title_Enable){
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Give.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
+                                } else {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_2.Name));
+                                }
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueItem_2.Name));
                                 if (DefultValue.Sound_Give_Enable) {
@@ -236,8 +275,6 @@ public class GiveEvent implements Listener {
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
-
-
                             }
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
@@ -255,24 +292,35 @@ public class GiveEvent implements Listener {
                                 nbti.setBoolean("loot_item_3", true);
                                 target.getInventory().addItem(nbti.getItem());
 
-                                player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                        .replace("[wonderbag]", DefultValueItem_3.Name));
+                                if (DefultValue.Title_Give_Enable && DefultValue.Title_Enable){
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Give.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
+                                } else {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_3.Name));
+                                }
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                 }
 
+                                if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                    target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                            .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
+                                }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueItem_3.Name));
                                 if (DefultValue.Sound_Give_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
                             }
-
-
                         } else {
                             e.setCancelled(true);
                             player.closeInventory();
-                            player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                            if (DefultValue.Title_PlayerNoInventorySpace_Enable && DefultValue.Title_Enable) {
+                                player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
+                                        , 10, 70, 20);
+                            } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+
                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
 
                             if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
@@ -281,7 +329,6 @@ public class GiveEvent implements Listener {
                         }
                     }
                 }
-
             }
         }
     }

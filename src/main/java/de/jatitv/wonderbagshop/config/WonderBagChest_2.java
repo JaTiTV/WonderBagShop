@@ -33,23 +33,18 @@ public class WonderBagChest_2 {
         YamlConfiguration yamlConfiguration_WB2_Chest = YamlConfiguration.loadConfiguration(WB2ChestYML);
 
 
-        if (!yamlConfiguration_WB2_Chest.contains("Do_not_remove_or_change.Version")) {
-            yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Version", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        if (!yamlConfiguration_WB2_Chest.contains("Do_not_remove_or_change.Created")) {
+            yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Created", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
         }
 
-        yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.BuildNr", Main.Build);
-        if (!yamlConfiguration_WB2_Chest.contains("Do_not_remove_or_change.Autor")) {
-            yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Autor", Main.Autor);
-        }
-        if (!yamlConfiguration_WB2_Chest.contains("Do_not_remove_or_change.Spigot")) {
-            yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Spigot", Main.Spigot);
-        }
-        if (!yamlConfiguration_WB2_Chest.contains("Do_not_remove_or_change.Discord")) {
-            yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Discord", Main.Discord);
-        }
-        if (!yamlConfiguration_WB2_Chest.contains("Do_not_remove_or_change.--------------------------------------------")) {
-            yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.--------------------------------------------", "--------------------------------------------");
-        }
+        yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Version", Main.getPlugin().getDescription().getVersion());
+
+        yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Autor", Main.Autor);
+
+        yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Spigot", Main.Spigot);
+
+        yamlConfiguration_WB2_Chest.set("Do_not_remove_or_change.Discord", Main.Discord);
+
 
         // Shop
 
@@ -82,7 +77,7 @@ public class WonderBagChest_2 {
             yamlConfiguration_WB2_Chest.set("WonderBag.Item_amount_(1-9)", DefultValueChest_2.Item_anz);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6WonderBag Item_amount_(1-9) §4was added to §9WonderBag Chest medium.yml§4!");
         }
-        if (yamlConfiguration_WB2_Chest.getInt("WonderBag.Item_amount_(1-9)") > 9){
+        if (yamlConfiguration_WB2_Chest.getInt("WonderBag.Item_amount_(1-9)") > 9) {
             yamlConfiguration_WB2_Chest.set("WonderBag.Item_amount_(1-9)", 9);
         }
 

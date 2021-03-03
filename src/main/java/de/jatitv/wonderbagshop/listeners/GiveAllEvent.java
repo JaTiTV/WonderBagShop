@@ -68,17 +68,24 @@ public class GiveAllEvent implements Listener {
                                 NBTItem nbti = new NBTItem(item);
                                 nbti.setBoolean("loot_chest_1", true);
                                 if (empty) {
+
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueChest_1.Name));
+                                    if (DefultValue.Debug){
+                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB1 Chest to §6" + target.getDisplayName());
+                                    }
+
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
+                                    }
                                     target.getInventory().addItem(nbti.getItem());
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueChest_1.Name));
                                     if (DefultValue.Sound_Give_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
-                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_1.Name));
-                                    if (DefultValue.Debug){
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB1 Chest to §6" + target.getDisplayName());
-                                    }
+
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
@@ -100,17 +107,23 @@ public class GiveAllEvent implements Listener {
                                 NBTItem nbti = new NBTItem(item);
                                 nbti.setBoolean("loot_chest_2", true);
                                 if (empty) {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueChest_2.Name));
+                                    if (DefultValue.Debug){
+                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB2 Chest to §6" + target.getDisplayName());
+                                    }
+
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
+                                    }
                                     target.getInventory().addItem(nbti.getItem());
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueChest_2.Name));
                                     if (DefultValue.Sound_Give_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
-                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_2.Name));
-                                    if (DefultValue.Debug){
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB2 Chest to §6" + target.getDisplayName());
-                                    }
+
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
@@ -132,17 +145,23 @@ public class GiveAllEvent implements Listener {
                                 NBTItem nbti = new NBTItem(item);
                                 nbti.setBoolean("loot_chest_3", true);
                                 if (empty) {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueChest_3.Name));
+                                    if (DefultValue.Debug){
+                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB3 Chest to §6" + target.getDisplayName());
+                                    }
+
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
+                                    }
                                     target.getInventory().addItem(nbti.getItem());
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueChest_3.Name));
                                     if (DefultValue.Sound_Give_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
-                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_3.Name));
-                                    if (DefultValue.Debug){
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB3 Chest to §6" + target.getDisplayName());
-                                    }
+
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
@@ -178,18 +197,25 @@ public class GiveAllEvent implements Listener {
                                 NBTItem nbti = new NBTItem(item);
                                 nbti.setBoolean("loot_item_1", true);
                                 if (empty) {
-                                    target.getInventory().addItem(nbti.getItem());
 
-                                    target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_1.Name));
-                                    if (DefultValue.Sound_Give_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
-                                    }
+
                                     player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_1.Name));
                                     if (DefultValue.Debug){
                                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB1 Item to §6" + target.getDisplayName());
                                     }
+
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
+                                    }
+                                    target.getInventory().addItem(nbti.getItem());
+                                    target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_1.Name));
+                                    if (DefultValue.Sound_Give_Enable) {
+                                        target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
+                                    }
+
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
@@ -211,17 +237,23 @@ public class GiveAllEvent implements Listener {
                                 NBTItem nbti = new NBTItem(item);
                                 nbti.setBoolean("loot_item_2", true);
                                 if (empty) {
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_2.Name));
+                                    if (DefultValue.Debug){
+                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB2 Item to §6" + target.getDisplayName());
+                                    }
+
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
+                                    }
                                     target.getInventory().addItem(nbti.getItem());
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_2.Name));
                                     if (DefultValue.Sound_Give_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
-                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueItem_2.Name));
-                                    if (DefultValue.Debug){
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB2 Item to §6" + target.getDisplayName());
-                                    }
+
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
@@ -242,17 +274,24 @@ public class GiveAllEvent implements Listener {
                                 NBTItem nbti = new NBTItem(item);
                                 nbti.setBoolean("loot_item_3", true);
                                 if (empty) {
+
+                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                            .replace("[wonderbag]", DefultValueItem_3.Name));
+                                    if (DefultValue.Debug){
+                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB3 Item to §6" + target.getDisplayName());
+                                    }
+
+                                    if (DefultValue.Title_GiveReceived_Enable && DefultValue.Title_Enable) {
+                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiveReceived.replace("[sender]", player.getName())
+                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
+                                    }
                                     target.getInventory().addItem(nbti.getItem());
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_3.Name));
                                     if (DefultValue.Sound_Give_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
-                                    player.sendMessage(DefultValue.give.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueItem_3.Name));
-                                    if (DefultValue.Debug){
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4give WB3 Item to §6" + target.getDisplayName());
-                                    }
+
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
                                 if (DefultValue.Sound_Shop_Buy_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);

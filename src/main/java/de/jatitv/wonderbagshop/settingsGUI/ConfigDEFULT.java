@@ -29,26 +29,40 @@ public class ConfigDEFULT {
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
 
+        yamlConfiguration_config.set("Plugin.UpdateCheckOnJoin", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UpdateCheckOnJoin §4was added to §9Config.yml§4!");
+
+
+        yamlConfiguration_config.set("Plugin.Debug.Enable", false);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Debug Enable §4was added to §9Config.yml§4!");
+
+
+        yamlConfiguration_config.set("Plugin.Debug.DebugStage_(1-3)", 1);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6DebugStage §4was added to §9Config.yml§4!");
+
+
         yamlConfiguration_config.set("Shop.GUI_Name", "&2Wonder&6Bag&9Shop");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6ShopName_GUI §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ShopName_GUI §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Shop.Currency", "$");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Currency §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Shop.ItemNumbers", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ItemNumbers §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("WonderBags.UseChest", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest §4was added to §9Config.yml§4!");
 
-        yamlConfiguration_config.set("WonderBags.UseChest_and_Item", false);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was set to §9Config.yml§4!");
+
+        yamlConfiguration_config.set("WonderBags.UseChest_and_Item", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6UseChest_and_Item §4was added to §9Config.yml§4!");
+
 
         yamlConfiguration_config.set("WonderBags.ChestDrop", false);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ChestDrop §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ChestDrop §4was added to §9Config.yml§4!");
 
 
         /**
@@ -56,59 +70,103 @@ public class ConfigDEFULT {
          */
 
 
+        yamlConfiguration_config.set("Sound.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Enable §4was added to §9Config.yml§4!");
+
+
         yamlConfiguration_config.set("Sound.Buy.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy Enable §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy Enable §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.Buy.Sound", "ENTITY_PLAYER_LEVELUP");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Buy §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Buy §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.NoMoney.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney Enable §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney Enable §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.NoMoney.Sound", "BLOCK_NOTE_BLOCK_HARP");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6 Sound NoMoney §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoMoney §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound NoInventorySpace §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.Give.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give Enable §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give Enable §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.Give.Sound", "ENTITY_PLAYER_LEVELUP");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Give §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Give §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.Gift.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift Enable §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift Enable §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.Gift.Sound", "ENTITY_PLAYER_LEVELUP");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Gift §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Gift §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.PlayerNotFound.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound PlayerNotFound Enable §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound PlayerNotFound Enable §4was added to §9Config.yml§4!");
+
 
         yamlConfiguration_config.set("Sound.PlayerNotFound.Sound", "ENTITY_PLAYER_LEVELUP");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound Send §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Send §4was added to §9Config.yml§4!");
 
 
         yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was set to §9Config.yml§4!");
-
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace Enable §4was added to §9Config.yml§4!");
 
         yamlConfiguration_config.set("Sound.NoInventorySpace.Sound", "BLOCK_NOTE_BLOCK_GUITAR");
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Shop Setting §6Sound NoInventorySpace §4was set to §9Config.yml§4!");
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound NoInventorySpace §4was added to §9Config.yml§4!");
+
+
+        /**
+         * Title
+         */
+
+
+        yamlConfiguration_config.set("Title.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title Enable §4was added to §9Config.yml§4!");
+
+
+        yamlConfiguration_config.set("Title.Reload.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title Reload Enable §4was added to §9Config.yml§4!");
+
+
+        yamlConfiguration_config.set("Title.NoMoney.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title NoM oney Enable §4was added to §9Config.yml§4!");
+
+
+        yamlConfiguration_config.set("Title.NoInventorySpace.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title NoInventorySpace Enable §4was added to §9Config.yml§4!");
+
+        yamlConfiguration_config.set("Title.Give.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title Give Enable §4was added to §9Config.yml§4!");
+
+
+        yamlConfiguration_config.set("Title.GiveReceived.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title GiveReceived Enable §4was added to §9Config.yml§4!");
+
+        yamlConfiguration_config.set("Title.Gift.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title Gift Enable §4was added to §9Config.yml§4!");
+
+        yamlConfiguration_config.set("Title.GiftReceived.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title GiftReceived Enable §4was added to §9Config.yml§4!");
+
+        yamlConfiguration_config.set("Title.PlayerNoInventorySpace.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title PlayerNoInventorySpace Enable §4was added to §9Config.yml§4!");
+
+        yamlConfiguration_config.set("Title.PlayerNotFound.Enable", true);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Title PlayerNotFound Enable §4was added to §9Config.yml§4!");
 
 
         try {

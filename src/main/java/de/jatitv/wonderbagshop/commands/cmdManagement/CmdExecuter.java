@@ -90,7 +90,10 @@ public class CmdExecuter implements CommandExecutor {
                                         ShopGive.ShopSendSender.put(player, Bukkit.getPlayer(args[1]));
                                         ShopGive.openShop(player);
                                     } else {
-                                        player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
+                                        if(DefultValue.Title_PlayerNotFound_Enable && DefultValue.Title_Enable){
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNotFound.replace("[player]", args[1])
+                                                    , 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
                                         if (DefultValue.Sound_PlayerNotFound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_PlayerNotFound, 3, 1);
                                         }
@@ -141,7 +144,10 @@ public class CmdExecuter implements CommandExecutor {
                                         ShopGift.ShopSendSender.put(player, Bukkit.getPlayer(args[1]));
                                         ShopGift.openShop(player);
                                     } else {
-                                        player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
+                                        if(DefultValue.Title_PlayerNotFound_Enable && DefultValue.Title_Enable){
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNotFound.replace("[player]", args[1])
+                                                    , 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
                                         if (DefultValue.Sound_PlayerNotFound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_PlayerNotFound, 3, 1);
                                         }

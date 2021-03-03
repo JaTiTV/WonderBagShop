@@ -30,315 +30,318 @@ import java.util.ArrayList;
 public class GUI_ConfigTitle {
 
     public static void openTitel(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 5, "§2W§6B§9S §7| §4Settings §7| §9Config §7| §6Title");
+        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 6, "§2W§6B§9S §7| §4Settings §7| §9Config §7| §aTitle");
 
         ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta itemMetaglass = glass.getItemMeta();
         itemMetaglass.setDisplayName(" ");
         glass.setItemMeta(itemMetaglass);
         glass.setAmount(1);
-        for(int i = 0; i<9*5;i++){inventory.setItem(i, glass);}
+        for(int i = 0; i<9*6;i++){inventory.setItem(i, glass);}
 
 
-        if (DefultValue.Sound_Shop_Buy_Enable){
+        if (DefultValue.Title_Enable) {
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Buy");
+            itemMeta.setDisplayName("§6Title");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound Buy");
+            lore.add("§7Set the Config §6Title");
             lore.add("§7to §cfalse");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(10, item);
-
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Buy Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Buy Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(19, item2);
+            inventory.setItem(4, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Buy");
+            itemMeta.setDisplayName("§6Title");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound Buy");
+            lore.add("§7Set the Config §6Title");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(10, item);
-
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Buy Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Buy Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(19, item2);
+            inventory.setItem(4, item);
         }
 
-        if (DefultValue.Sound_Shop_NoMoney_Enable){
+
+        if (DefultValue.Title_Reload_Enable){
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound No Money");
+            itemMeta.setDisplayName("§6Title Reload");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound NoMoney");
+            lore.add("§7Set the Config §6Reload");
             lore.add("§7to §cfalse");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(11, item);
+            inventory.setItem(18, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound No Money Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound No Money Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(20, item2);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound No Money");
+            itemMeta.setDisplayName("§6Title Reload");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound NoMoney");
+            lore.add("§7Set the Config §6Reload");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(11, item);
-
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound No Money Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound No Money Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(20, item2);
+            inventory.setItem(18, item);
         }
 
-        if (DefultValue.Sound_Shop_NoInventorySpace_Enable){
+        if (DefultValue.Title_Buy_Enable){
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound No Inventory Space");
+            itemMeta.setDisplayName("§6Title Buy");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound NoInventorySpace");
+            lore.add("§7Set the Config §6Buy");
             lore.add("§7to §cfalse");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(12, item);
+            inventory.setItem(19, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound No Inventory Space Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound No Inventory Space Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(21, item2);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound No Inventory Space");
+            itemMeta.setDisplayName("§6Title Buy");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound NoInventorySpace");
+            lore.add("§7Set the Config §6Buy");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(12, item);
-
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound No Inventory Space Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound No Inventory Space Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(21, item2);
+            inventory.setItem(19, item);
         }
 
-        if (DefultValue.Sound_Give_Enable){
+
+        if (DefultValue.Title_No_money_Enable){
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Give");
+            itemMeta.setDisplayName("§6Title No money");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound Give");
+            lore.add("§7Set the Config §6NoMoney");
             lore.add("§7to §cfalse");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(14, item);
+            inventory.setItem(20, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Give Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Give Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(23, item2);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Give");
+            itemMeta.setDisplayName("§6Title No money");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound Give");
+            lore.add("§7Set the Config §6NoMoney");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(14, item);
-
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Give Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Give Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(23, item2);
+            inventory.setItem(20, item);
         }
 
-        if (DefultValue.Sound_Gift_Enable){
+        if (DefultValue.Title_NoInventorySpace_Enable){
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Gift");
+            itemMeta.setDisplayName("§6Title No Inventory Space");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound Gift");
+            lore.add("§7Set the Config §6NoInventorySpace");
             lore.add("§7to §cfalse");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(15, item);
+            inventory.setItem(21, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Gift Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Gift Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(24, item2);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Gift");
+            itemMeta.setDisplayName("§6Title No Inventory Space");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound Gift");
+            lore.add("§7Set the Config §6NoInventorySpace");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(15, item);
+            inventory.setItem(21, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Gift Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Gift Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(24, item2);
         }
 
-        if (DefultValue.Sound_PlayerNotFound_Enable){
+        if (DefultValue.Title_Give_Enable){
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Player Not Found");
+            itemMeta.setDisplayName("§6Title Give");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound PlayerNotFound");
+            lore.add("§7Set the Config §6Give");
             lore.add("§7to §cfalse");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(16, item);
+            inventory.setItem(22, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Player Not Found Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Player Not Found Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(25, item2);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName("§6Sound Player Not Found");
+            itemMeta.setDisplayName("§6Title Give");
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
-            lore.add("§7Set the Config §6Sound PlayerNotFound");
+            lore.add("§7Set the Config §6Give");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(16, item);
+            inventory.setItem(22, item);
 
-            ItemStack item2 = new ItemStack(Material.GRAY_WOOL);
-            ItemMeta itemMeta2 = item2.getItemMeta();
-            itemMeta2.setDisplayName("§6Sound Player Not Found Sound");
-            ArrayList<String> lore2 = new ArrayList<>();
-            lore2.add("§8-------------");
-            lore2.add("§7Set the sound §6Sound Player Not Found Sound");
-            lore2.add("§4Comming Soon!");
-            itemMeta2.setLore(lore2);
-            item2.setItemMeta(itemMeta2);
-            item2.setAmount(1);
-            inventory.setItem(25, item2);
+        }
 
+        if (DefultValue.Title_GiveReceived_Enable){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Give Received");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6GiveReceived");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(23, item);
+
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Give Received");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6GiveReceived");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(23, item);
+
+        }
+
+        if (DefultValue.Title_Gift_Enable){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Gift");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6Gift");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(24, item);
+
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Gift");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6Gift");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(24, item);
+
+        }
+
+        if (DefultValue.Title_GiftReceived_Enable){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Gift Received");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6GiftReceived");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(25, item);
+
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Gift Received");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6GiftReceived");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(25, item);
+
+        }
+
+        if (DefultValue.Title_PlayerNoInventorySpace_Enable){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Player No Inventory Space");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6PlayerNoInventorySpace");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(26, item);
+
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Player No Inventory Space");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6PlayerNoInventorySpace");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(26, item);
+
+        }
+
+        if (DefultValue.Title_PlayerNotFound_Enable){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Player Not Found");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6PlayerNotFound");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(27, item);
+
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Title Player Not Found");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6PlayerNotFound");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(7, item);
 
         }
 

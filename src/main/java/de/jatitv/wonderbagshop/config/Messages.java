@@ -36,23 +36,18 @@ public class Messages {
         YamlConfiguration yamlConfiguration_msg = YamlConfiguration.loadConfiguration(messagesYML);
 
 
-        if (!yamlConfiguration_msg.contains("Do_not_remove_or_change.Version")) {
-            yamlConfiguration_msg.set("Do_not_remove_or_change.Version", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
+        if (!yamlConfiguration_msg.contains("Do_not_remove_or_change.Created")) {
+            yamlConfiguration_msg.set("Do_not_remove_or_change.Created", "This file was created with version " + Main.getPlugin().getDescription().getVersion());
         }
 
-        yamlConfiguration_msg.set("Do_not_remove_or_change.BuildNr", Main.Build);
-        if (!yamlConfiguration_msg.contains("Do_not_remove_or_change.Autor")) {
-            yamlConfiguration_msg.set("Do_not_remove_or_change.Autor", Main.Autor);
-        }
-        if (!yamlConfiguration_msg.contains("Do_not_remove_or_change.Spigot")) {
-            yamlConfiguration_msg.set("Do_not_remove_or_change.Spigot", "https://www.spigotmc.org/resources/wonderbagshop.89234/");
-        }
-        if (!yamlConfiguration_msg.contains("Do_not_remove_or_change.Discord")) {
-            yamlConfiguration_msg.set("Do_not_remove_or_change.Discord", "You can find more information about WonderBagShop on Discord: https://discord.com/invite/vRyXFFterJ");
-        }
-        if (!yamlConfiguration_msg.contains("Do_not_remove_or_change.--------------------------------------------")) {
-            yamlConfiguration_msg.set("Do_not_remove_or_change.--------------------------------------------", "--------------------------------------------");
-        }
+        yamlConfiguration_msg.set("Do_not_remove_or_change.Version", Main.getPlugin().getDescription().getVersion());
+
+        yamlConfiguration_msg.set("Do_not_remove_or_change.Autor", Main.Autor);
+
+        yamlConfiguration_msg.set("Do_not_remove_or_change.Spigot", "https://www.spigotmc.org/resources/wonderbagshop.89234/");
+
+        yamlConfiguration_msg.set("Do_not_remove_or_change.Discord", "You can find more information about WonderBagShop on Discord: https://discord.com/invite/vRyXFFterJ");
+
 
 
         if (yamlConfiguration_msg.contains("Plugin.NoPermissionForCommand")) {
@@ -229,6 +224,12 @@ public class Messages {
             yamlConfiguration_msg.set("Title.Reload", "&2Plugin successfully reloaded.");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Reload §4was added to §9Messages.yml§4!");
         }
+        if (yamlConfiguration_msg.contains("Title.Buy")) {
+            DefultValue.Title_Buy = replace(yamlConfiguration_msg.getString("Title.Buy"));
+        } else {
+            yamlConfiguration_msg.set("Title.Buy", "§2You bought [wonderbag] §2for §6[price] [currency]§2!");
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Buy §4was added to §9Messages.yml§4!");
+        }
         if (yamlConfiguration_msg.contains("Title.No_money")) {
             DefultValue.Title_No_money = replace(yamlConfiguration_msg.getString("Title.No_money"));
         } else {
@@ -242,25 +243,25 @@ public class Messages {
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title NoInventorySpace §4was added to §9Messages.yml§4!");
         }
         if (yamlConfiguration_msg.contains("Title.Give.Sender")) {
-            DefultValue.Title_give = replace(yamlConfiguration_msg.getString("Title.Give.Sender"));
+            DefultValue.Title_Give = replace(yamlConfiguration_msg.getString("Title.Give.Sender"));
         } else {
             yamlConfiguration_msg.set("Title.Give.Sender", "&bYou gave &6[player] &2b [wonderbag]&b!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Give Sender §4was added to §9Messages.yml§4!");
         }
         if (yamlConfiguration_msg.contains("Title.Give.Receiver")) {
-            DefultValue.Title_giveReceived = replace(yamlConfiguration_msg.getString("Title.Give.Receiver"));
+            DefultValue.Title_GiveReceived = replace(yamlConfiguration_msg.getString("Title.Give.Receiver"));
         } else {
             yamlConfiguration_msg.set("Title.Give.Receiver", "&bYou have received a [wonderbag] &bfrom &6[sender]&b!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Give Receiver §4was added to §9Messages.yml§4!");
         }
         if (yamlConfiguration_msg.contains("Title.Gift.Sender")) {
-            DefultValue.Title_gift = replace(yamlConfiguration_msg.getString("Title.Gift.Sender"));
+            DefultValue.Title_Gift = replace(yamlConfiguration_msg.getString("Title.Gift.Sender"));
         } else {
             yamlConfiguration_msg.set("Title.Gift.Sender", "&bYou gift &6[player] &ba [wonderbag] &bfor &6[price] [currency]&b!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Gift Sender §4was added to §9Messages.yml§4!");
         }
         if (yamlConfiguration_msg.contains("Title.Gift.Receiver")) {
-            DefultValue.Title_gift_Received = replace(yamlConfiguration_msg.getString("Title.Gift.Receiver"));
+            DefultValue.Title_GiftReceived = replace(yamlConfiguration_msg.getString("Title.Gift.Receiver"));
         } else {
             yamlConfiguration_msg.set("Title.Gift.Receiver", "&bYou have received a [wonderbag] &bas a gift from &6[sender]&b!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Gift Receiver §4was added to §9Messages.yml§4!");

@@ -30,7 +30,7 @@ import java.util.ArrayList;
 public class GUI_ConfigSound {
 
     public static void openSound(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 5, "§2W§6B§9S §7| §4Settings §7| §9Config §7| §6Sound");
+        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 5, "§2W§6B§9S §7| §4Settings §7| §9Config §7| §aSound");
 
         ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta itemMetaglass = glass.getItemMeta();
@@ -38,6 +38,34 @@ public class GUI_ConfigSound {
         glass.setItemMeta(itemMetaglass);
         glass.setAmount(1);
         for(int i = 0; i<9*5;i++){inventory.setItem(i, glass);}
+
+
+
+        if (DefultValue.Sound_Enable) {
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Sound");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6Sound");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(4, item);
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Sound");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6Sound");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(4, item);
+        }
 
 
         if (DefultValue.Sound_Shop_Buy_Enable){

@@ -156,6 +156,9 @@ public class DefultValue {
     public static String Buy_msg = "§8[§2W§6B§9S§8] §2You bought [wonderbag] §2for §6[price] [currency]§2!";
 
 
+    public static Boolean Title_Buy_Enable = true;
+    public static String Title_Buy = "§2You bought [wonderbag] §2for §6[price] [currency]§2!";
+
     public static Boolean Title_Reload_Enable = true;
     public static String Title_Reload = "§bPlugin successfully reloaded.";
     public static Boolean Title_No_money_Enable = true;
@@ -163,20 +166,26 @@ public class DefultValue {
     public static Boolean Title_NoInventorySpace_Enable = true;
     public static String Title_NoInventorySpace = "§cNo free inventory space!";
 
-    public static Boolean Title_give_Enable = true;
-    public static String Title_give = "§bYou gave §6[player] §ba [wonderbag]§b!";
-    public static Boolean Title_giveReceived_Enable = true;
-    public static String Title_giveReceived = "§bYou have received a [wonderbag] §bfrom §6[sender]§b!";
+    public static Boolean Title_Give_Enable = true;
+    public static String Title_Give = "§bYou gave §6[player] §ba [wonderbag]§b!";
+    public static Boolean Title_GiveReceived_Enable = true;
+    public static String Title_GiveReceived = "§bYou have received a [wonderbag] §bfrom §6[sender]§b!";
 
-    public static Boolean Title_gift_Enable = true;
-    public static String Title_gift = "§bYou gift §6[player] §ba [wonderbag] §bfor §6[price] [currency]§b!";
-    public static Boolean Title_giftReceived_Enable = true;
-    public static String Title_gift_Received = "§bYou have received a [wonderbag] §bas a gift from §6[sender]§b!";
+    public static Boolean Title_Gift_Enable = true;
+    public static String Title_Gift = "§bYou gift §6[player] §ba [wonderbag] §bfor §6[price] [currency]§b!";
+    public static Boolean Title_GiftReceived_Enable = true;
+    public static String Title_GiftReceived = "§bYou have received a [wonderbag] §bas a gift from §6[sender]§b!";
 
     public static Boolean Title_PlayerNotFound_Enable = true;
     public static String Title_PlayerNotFound = "§cThe player §6[player] §cwas not found or is not online!";
 
     public static Boolean Title_PlayerNoInventorySpace_Enable = true;
     public static String Title_PlayerNoInventorySpace = "§6[player] §chas no free inventory space available!";
+
+
+    public static String SettingsGUIchatSet = "§eEnter the new value for §6[setting] §ein the chat.";
+    public static String SettingsGUIchatSetTo = "§6[setting] §esuccessfully set to: §6";
+    public static String SettingsGUIchatCancel = "§eEnter §8'§6cancel§8' §eto abort.";
+    public static String SettingsGUIchatIsCanceled = "§eThe §6[setting] §esetting was canceled.";
 
 }

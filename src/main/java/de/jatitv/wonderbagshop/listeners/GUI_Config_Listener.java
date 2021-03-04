@@ -273,6 +273,39 @@ public class GUI_Config_Listener implements Listener {
                         }
                     }
                 }
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Remove Chest in creative mode") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
+                    yamlConfiguration_config.set("WonderBags.RemoveChestInCreativemode", false);
+                    try {
+                        yamlConfiguration_config.save(configYML);
+                    } catch (IOException tac) {
+                        tac.printStackTrace();
+                    }
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    player.closeInventory();
+                    Config.configCreate();
+                    GUI_Config.openConfig(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Remove Chest in creative mode to §6false");
+                    }
+                } else {
+                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Remove Chest in creative mode") && e.getCurrentItem().getType() == Material.RED_WOOL) {
+                        yamlConfiguration_config.set("WonderBags.RemoveChestInCreativemode", true);
+                        try {
+                            yamlConfiguration_config.save(configYML);
+                        } catch (IOException tac) {
+                            tac.printStackTrace();
+                        }
+                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                        player.closeInventory();
+                        Config.configCreate();
+                        GUI_Config.openConfig(player);
+                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Remove Chest in creative mode to §6true");
+                        }
+                    }
+                }
+
+
 
 
 

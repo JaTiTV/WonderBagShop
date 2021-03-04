@@ -14,6 +14,7 @@
 package de.jatitv.wonderbagshop.settingsGUI;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -27,7 +28,6 @@ public class GUI_Settings {
 
     public static void openSettings(Player player) {
         Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*6, "§2Wonder§6Bag§9Shop §7| §4Settings");
-
         ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta itemMetaglass = glass.getItemMeta();
         itemMetaglass.setDisplayName(" ");

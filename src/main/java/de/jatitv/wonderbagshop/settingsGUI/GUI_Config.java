@@ -188,7 +188,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(14, item);
+            inventory.setItem(13, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -200,7 +200,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(14, item);
+            inventory.setItem(13, item);
         }
 
         if (DefultValue.ChestDrop){
@@ -214,7 +214,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(15, item);
+            inventory.setItem(14, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -222,6 +222,32 @@ public class GUI_Config {
             ArrayList<String> lore = new ArrayList<>();
             lore.add("§8-------------");
             lore.add("§7Set the Config §6ChestDrop");
+            lore.add("§7to §2true");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(14, item);
+        }
+
+        if (DefultValue.RemoveChestInCreativemode){
+            ItemStack item = new ItemStack(Material.GREEN_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Remove Chest in creative mode");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6RemoveChestInCreativemode");
+            lore.add("§7to §cfalse");
+            itemMeta.setLore(lore);
+            item.setItemMeta(itemMeta);
+            item.setAmount(1);
+            inventory.setItem(15, item);
+        } else {
+            ItemStack item = new ItemStack(Material.RED_WOOL);
+            ItemMeta itemMeta = item.getItemMeta();
+            itemMeta.setDisplayName("§6Remove Chest in creative mode");
+            ArrayList<String> lore = new ArrayList<>();
+            lore.add("§8-------------");
+            lore.add("§7Set the Config §6RemoveChestInCreativemode");
             lore.add("§7to §2true");
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);

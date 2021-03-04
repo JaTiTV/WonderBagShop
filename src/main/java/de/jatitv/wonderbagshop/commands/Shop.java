@@ -33,7 +33,7 @@ public class Shop {
     public static void openShop(Player player){
         if (DefultValue.UseChest_and_Item){
 
-            Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*4, DefultValue.GUI_Name);
+            Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*4, "§6§8§9§r" + DefultValue.GUI_Name);
 
             ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
             ItemMeta itemMetaglass = glass.getItemMeta();
@@ -137,7 +137,7 @@ public class Shop {
 
         } else {
             if (DefultValue.UseChest){
-                Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, DefultValue.GUI_Name);
+                Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9*3, "§6§8§9§r" + DefultValue.GUI_Name);
 
                 ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
                 ItemMeta itemMetaglass = glass.getItemMeta();

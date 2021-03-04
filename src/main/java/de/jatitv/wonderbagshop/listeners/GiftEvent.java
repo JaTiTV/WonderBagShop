@@ -36,408 +36,410 @@ public class GiftEvent implements Listener {
 
         if (!(e.getWhoClicked() instanceof Player)) return;
         Player player = (Player) e.getWhoClicked();
-        Player target = (ShopGift.ShopSendSender.get(player));
-        if (e.getInventory() != null && e.getCurrentItem() != null) {
-            if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.GUI_Name + " §8| §4gift")) {
-                e.setCancelled(true);
-                if (e.getCurrentItem().getType() == Material.CHEST) {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_1.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_2.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_3.Name)) {
-                        boolean empty = false;
-                        for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
-                            if (target.getInventory().getItem(i) == null) {
-                                empty = true;
+        if (player.hasPermission("wonderbagshop.command.gift") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
+            Player target = (ShopGift.ShopSendSender.get(player));
+            if (e.getInventory() != null && e.getCurrentItem() != null) {
+                if (e.getWhoClicked().getOpenInventory().getTitle().equals("§9§5§6§4§r" + DefultValue.GUI_Name + " §8| §4gift")) {
+                    e.setCancelled(true);
+                    if (e.getCurrentItem().getType() == Material.CHEST) {
+                        if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_1.Name)
+                                || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_2.Name)
+                                || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_3.Name)) {
+                            boolean empty = false;
+                            for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
+                                if (target.getInventory().getItem(i) == null) {
+                                    empty = true;
 
-                                break;
-                            }
-                        }
-                        if (empty) {
-
-                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_1.Name)) {
-                                if (Shop.buy(player, DefultValueChest_1.price)) {
-                                    player.closeInventory();
-
-                                    ItemStack item = new ItemStack(Material.CHEST);
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueChest_1.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_chest_1", true);
-                                    target.getInventory().addItem(nbti.getItem());
-
-                                    if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name)
-                                                .replace("[price]", String.valueOf(DefultValueChest_1.price))
-                                                .replace("[currency]", DefultValue.Currency), 10, 70, 20);
-                                    } else {
-                                        player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueChest_1.Name)
-                                                .replace("[price]", String.valueOf(DefultValueChest_1.price))
-                                                .replace("[currency]", DefultValue.Currency));
-                                    }
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
-
-
-                                    if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
-                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
-                                    }
-                                    target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_1.Name));
-                                    if (DefultValue.Sound_Gift_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
-                                    }
-                                    if (DefultValue.Debug) {
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB1 Chest to §6" + target.getDisplayName());
-                                    }
-
-                                } else {
-                                    player.closeInventory();
-                                    if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
-                                    } else player.sendMessage(DefultValue.No_money);
-
-                                    if (DefultValue.Sound_Shop_NoMoney_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
-                                    }
+                                    break;
                                 }
                             }
+                            if (empty) {
+
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_1.Name)) {
+                                    if (Shop.buy(player, DefultValueChest_1.price)) {
+                                        player.closeInventory();
+
+                                        ItemStack item = new ItemStack(Material.CHEST);
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValueChest_1.DisplayName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_chest_1", true);
+                                        target.getInventory().addItem(nbti.getItem());
+
+                                        if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueChest_1.price))
+                                                    .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        } else {
+                                            player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                    .replace("[wonderbag]", DefultValueChest_1.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueChest_1.price))
+                                                    .replace("[currency]", DefultValue.Currency));
+                                        }
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
 
 
-                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_2.Name)) {
-                                if (Shop.buy(player, DefultValueChest_2.price)) {
-                                    player.closeInventory();
+                                        if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_1.Name), 10, 70, 20);
+                                        }
+                                        target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                .replace("[wonderbag]", DefultValueChest_1.Name));
+                                        if (DefultValue.Sound_Gift_Enable) {
+                                            target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
+                                        }
+                                        if (DefultValue.Debug) {
+                                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB1 Chest to §6" + target.getDisplayName());
+                                        }
 
-                                    ItemStack item = new ItemStack(Material.CHEST);
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueChest_2.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_chest_2", true);
-                                    target.getInventory().addItem(nbti.getItem());
-
-                                    if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name)
-                                                .replace("[price]", String.valueOf(DefultValueChest_2.price))
-                                                .replace("[currency]", DefultValue.Currency), 10, 70, 20);
                                     } else {
-                                        player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueChest_2.Name)
-                                                .replace("[price]", String.valueOf(DefultValueChest_2.price))
-                                                .replace("[currency]", DefultValue.Currency));
-                                    }
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
+                                        player.closeInventory();
+                                        if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.No_money);
 
-
-                                    if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
-                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
-                                    }
-                                    target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_2.Name));
-                                    if (DefultValue.Sound_Gift_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
-                                    }
-                                    if (DefultValue.Debug) {
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB2 Chest to §6" + target.getDisplayName());
-                                    }
-
-                                } else {
-                                    player.closeInventory();
-                                    if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
-                                    } else player.sendMessage(DefultValue.No_money);
-
-                                    if (DefultValue.Sound_Shop_NoMoney_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
                                     }
                                 }
-                            }
 
-                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_3.Name)) {
-                                if (Shop.buy(player, DefultValueChest_3.price)) {
-                                    player.closeInventory();
 
-                                    ItemStack item = new ItemStack(Material.CHEST);
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueChest_3.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_chest_3", true);
-                                    target.getInventory().addItem(nbti.getItem());
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_2.Name)) {
+                                    if (Shop.buy(player, DefultValueChest_2.price)) {
+                                        player.closeInventory();
 
-                                    if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name)
-                                                .replace("[price]", String.valueOf(DefultValueChest_3.price))
-                                                .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        ItemStack item = new ItemStack(Material.CHEST);
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValueChest_2.DisplayName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_chest_2", true);
+                                        target.getInventory().addItem(nbti.getItem());
+
+                                        if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueChest_2.price))
+                                                    .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        } else {
+                                            player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                    .replace("[wonderbag]", DefultValueChest_2.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueChest_2.price))
+                                                    .replace("[currency]", DefultValue.Currency));
+                                        }
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+
+                                        if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_2.Name), 10, 70, 20);
+                                        }
+                                        target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                .replace("[wonderbag]", DefultValueChest_2.Name));
+                                        if (DefultValue.Sound_Gift_Enable) {
+                                            target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
+                                        }
+                                        if (DefultValue.Debug) {
+                                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB2 Chest to §6" + target.getDisplayName());
+                                        }
+
                                     } else {
-                                        player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueChest_3.Name)
-                                                .replace("[price]", String.valueOf(DefultValueChest_3.price))
-                                                .replace("[currency]", DefultValue.Currency));
-                                    }
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
+                                        player.closeInventory();
+                                        if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.No_money);
 
-
-                                    if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
-                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
-                                    }
-                                    target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_3.Name));
-                                    if (DefultValue.Sound_Gift_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
-                                    }
-                                    if (DefultValue.Debug) {
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB3 Chest to §6" + target.getDisplayName());
-                                    }
-
-                                } else {
-                                    player.closeInventory();
-                                    if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
-                                    } else player.sendMessage(DefultValue.No_money);
-
-                                    if (DefultValue.Sound_Shop_NoMoney_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
                                     }
                                 }
-                            }
 
-                        } else {
-                            e.setCancelled(true);
-                            player.closeInventory();
-                            if (DefultValue.Title_PlayerNoInventorySpace_Enable && DefultValue.Title_Enable) {
-                                player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
-                                        , 10, 70, 20);
-                            } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_3.Name)) {
+                                    if (Shop.buy(player, DefultValueChest_3.price)) {
+                                        player.closeInventory();
 
-                            if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
-                                player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
+                                        ItemStack item = new ItemStack(Material.CHEST);
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValueChest_3.DisplayName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_chest_3", true);
+                                        target.getInventory().addItem(nbti.getItem());
+
+                                        if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueChest_3.price))
+                                                    .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        } else {
+                                            player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                    .replace("[wonderbag]", DefultValueChest_3.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueChest_3.price))
+                                                    .replace("[currency]", DefultValue.Currency));
+                                        }
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+
+                                        if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueChest_3.Name), 10, 70, 20);
+                                        }
+                                        target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                .replace("[wonderbag]", DefultValueChest_3.Name));
+                                        if (DefultValue.Sound_Gift_Enable) {
+                                            target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
+                                        }
+                                        if (DefultValue.Debug) {
+                                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB3 Chest to §6" + target.getDisplayName());
+                                        }
+
+                                    } else {
+                                        player.closeInventory();
+                                        if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.No_money);
+
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
+                                    }
+                                }
+
+                            } else {
+                                e.setCancelled(true);
+                                player.closeInventory();
+                                if (DefultValue.Title_PlayerNoInventorySpace_Enable && DefultValue.Title_Enable) {
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
+                                            , 10, 70, 20);
+                                } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+
+                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
+                                    player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
+                                }
                             }
                         }
                     }
-                }
 
-                if (e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_1.Item)
-                        || e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_2.Item)
-                        || e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_1.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)
-                            || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
-                        boolean empty = false;
-                        for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
-                            if (target.getInventory().getItem(i) == null) {
-                                empty = true;
+                    if (e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_1.Item)
+                            || e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_2.Item)
+                            || e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {
+                        if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_1.Name)
+                                || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)
+                                || e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
+                            boolean empty = false;
+                            for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
+                                if (target.getInventory().getItem(i) == null) {
+                                    empty = true;
 
-                                break;
-                            }
-                        }
-                        if (empty) {
-
-                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_1.Name)) {
-                                if (Shop.buy(player, DefultValueItem_1.price)) {
-                                    player.closeInventory();
-
-                                    ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueItem_1.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_item_1", true);
-                                    target.getInventory().addItem(nbti.getItem());
-
-                                    if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name)
-                                                .replace("[price]", String.valueOf(DefultValueItem_1.price))
-                                                .replace("[currency]", DefultValue.Currency), 10, 70, 20);
-                                    }  else {
-                                        player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueItem_1.Name)
-                                                .replace("[price]", String.valueOf(DefultValueItem_1.price))
-                                                .replace("[currency]", DefultValue.Currency));
-                                    }
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
-
-
-                                    if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
-                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
-                                    }
-                                    target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueChest_1.Name));
-                                    if (DefultValue.Sound_Gift_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
-                                    }
-
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
-
-                                    if (DefultValue.Debug) {
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB1 Item to §6" + target.getDisplayName());
-                                    }
-                                } else {
-                                    player.closeInventory();
-
-                                    if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
-                                    } else player.sendMessage(DefultValue.No_money);
-
-                                    if (DefultValue.Sound_Shop_NoMoney_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
-                                    }
-
+                                    break;
                                 }
-
                             }
+                            if (empty) {
 
-                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)) {
-                                if (Shop.buy(player, DefultValueItem_2.price)) {
-                                    player.closeInventory();
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_1.Name)) {
+                                    if (Shop.buy(player, DefultValueItem_1.price)) {
+                                        player.closeInventory();
 
-                                    ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueItem_2.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_item_2", true);
-                                    target.getInventory().addItem(nbti.getItem());
+                                        ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_1.Item));
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValueItem_1.DisplayName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_item_1", true);
+                                        target.getInventory().addItem(nbti.getItem());
 
-                                    if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name)
-                                                .replace("[price]", String.valueOf(DefultValueItem_2.price))
-                                                .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueItem_1.price))
+                                                    .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        } else {
+                                            player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                    .replace("[wonderbag]", DefultValueItem_1.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueItem_1.price))
+                                                    .replace("[currency]", DefultValue.Currency));
+                                        }
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+
+                                        if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_1.Name), 10, 70, 20);
+                                        }
+                                        target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                .replace("[wonderbag]", DefultValueChest_1.Name));
+                                        if (DefultValue.Sound_Gift_Enable) {
+                                            target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
+                                        }
+
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+                                        if (DefultValue.Debug) {
+                                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB1 Item to §6" + target.getDisplayName());
+                                        }
                                     } else {
-                                        player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueItem_2.Name)
-                                                .replace("[price]", String.valueOf(DefultValueItem_2.price))
-                                                .replace("[currency]", DefultValue.Currency));
-                                    }
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        player.closeInventory();
+
+                                        if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.No_money);
+
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
+
                                     }
 
-                                    if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
-                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
-                                    }
-                                    target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueItem_2.Name));
-                                    if (DefultValue.Sound_Gift_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
-                                    }
-
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
-                                    if (DefultValue.Debug) {
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB2 Item to §6" + target.getDisplayName());
-                                    }
-
-                                } else {
-                                    player.closeInventory();
-                                    if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
-                                    } else player.sendMessage(DefultValue.No_money);
-
-                                    if (DefultValue.Sound_Shop_NoMoney_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
-                                    }
                                 }
-                            }
 
-                            if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
-                                if (Shop.buy(player, DefultValueItem_3.price)) {
-                                    player.closeInventory();
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_2.Name)) {
+                                    if (Shop.buy(player, DefultValueItem_2.price)) {
+                                        player.closeInventory();
 
-                                    ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
-                                    ItemMeta itemMeta = item.getItemMeta();
-                                    itemMeta.setDisplayName(DefultValueItem_3.DisplayName);
-                                    ArrayList<String> lore = new ArrayList<>();
-                                    itemMeta.setLore(lore);
-                                    item.setItemMeta(itemMeta);
-                                    item.setAmount(1);
-                                    NBTItem nbti = new NBTItem(item);
-                                    nbti.setBoolean("loot_item_3", true);
-                                    target.getInventory().addItem(nbti.getItem());
+                                        ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_2.Item));
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValueItem_2.DisplayName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_item_2", true);
+                                        target.getInventory().addItem(nbti.getItem());
 
-                                    if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name)
-                                                .replace("[price]", String.valueOf(DefultValueItem_3.price))
-                                                .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueItem_2.price))
+                                                    .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        } else {
+                                            player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                    .replace("[wonderbag]", DefultValueItem_2.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueItem_2.price))
+                                                    .replace("[currency]", DefultValue.Currency));
+                                        }
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+
+                                        if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_2.Name), 10, 70, 20);
+                                        }
+                                        target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                .replace("[wonderbag]", DefultValueItem_2.Name));
+                                        if (DefultValue.Sound_Gift_Enable) {
+                                            target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
+                                        }
+
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+                                        if (DefultValue.Debug) {
+                                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB2 Item to §6" + target.getDisplayName());
+                                        }
+
                                     } else {
-                                        player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                                .replace("[wonderbag]", DefultValueItem_3.Name)
-                                                .replace("[price]", String.valueOf(DefultValueItem_3.price))
-                                                .replace("[currency]", DefultValue.Currency));
-                                    }
-                                    if (DefultValue.Sound_Shop_Buy_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
-                                    }
-                                    if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
-                                        target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
-                                                .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
-                                    }
-                                    target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
-                                            .replace("[wonderbag]", DefultValueItem_3.Name));
-                                    if (DefultValue.Sound_Gift_Enable) {
-                                        target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
-                                    }
-                                    if (DefultValue.Debug) {
-                                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB3 Item to §6" + target.getDisplayName());
-                                    }
-                                } else {
-                                    player.closeInventory();
-                                    if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
-                                        player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
-                                    } else player.sendMessage(DefultValue.No_money);
+                                        player.closeInventory();
+                                        if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.No_money);
 
-                                    if (DefultValue.Sound_Shop_NoMoney_Enable) {
-                                        player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
                                     }
                                 }
-                            }
-                        } else {
-                            e.setCancelled(true);
-                            player.closeInventory();
-                            if (DefultValue.Title_PlayerNoInventorySpace_Enable && DefultValue.Title_Enable) {
-                                player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
-                                        , 10, 70, 20);
-                            } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
 
-                            if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
-                                player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
+                                if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueItem_3.Name)) {
+                                    if (Shop.buy(player, DefultValueItem_3.price)) {
+                                        player.closeInventory();
+
+                                        ItemStack item = new ItemStack(Material.valueOf(DefultValueItem_3.Item));
+                                        ItemMeta itemMeta = item.getItemMeta();
+                                        itemMeta.setDisplayName(DefultValueItem_3.DisplayName);
+                                        ArrayList<String> lore = new ArrayList<>();
+                                        itemMeta.setLore(lore);
+                                        item.setItemMeta(itemMeta);
+                                        item.setAmount(1);
+                                        NBTItem nbti = new NBTItem(item);
+                                        nbti.setBoolean("loot_item_3", true);
+                                        target.getInventory().addItem(nbti.getItem());
+
+                                        if (DefultValue.Title_Gift_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_Gift.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueItem_3.price))
+                                                    .replace("[currency]", DefultValue.Currency), 10, 70, 20);
+                                        } else {
+                                            player.sendMessage(DefultValue.gift.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                    .replace("[wonderbag]", DefultValueItem_3.Name)
+                                                    .replace("[price]", String.valueOf(DefultValueItem_3.price))
+                                                    .replace("[currency]", DefultValue.Currency));
+                                        }
+                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
+                                        }
+                                        if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
+                                            target.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_GiftReceived.replace("[sender]", player.getName())
+                                                    .replace("[player]", target.getName()).replace("[wonderbag]", DefultValueItem_3.Name), 10, 70, 20);
+                                        }
+                                        target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
+                                                .replace("[wonderbag]", DefultValueItem_3.Name));
+                                        if (DefultValue.Sound_Gift_Enable) {
+                                            target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
+                                        }
+                                        if (DefultValue.Debug) {
+                                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4gift WB3 Item to §6" + target.getDisplayName());
+                                        }
+                                    } else {
+                                        player.closeInventory();
+                                        if (DefultValue.Title_No_money_Enable && DefultValue.Title_Enable) {
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
+                                        } else player.sendMessage(DefultValue.No_money);
+
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                            player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
+                                        }
+                                    }
+                                }
+                            } else {
+                                e.setCancelled(true);
+                                player.closeInventory();
+                                if (DefultValue.Title_PlayerNoInventorySpace_Enable && DefultValue.Title_Enable) {
+                                    player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
+                                            , 10, 70, 20);
+                                } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
+
+                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
+                                    player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
+                                }
                             }
                         }
                     }

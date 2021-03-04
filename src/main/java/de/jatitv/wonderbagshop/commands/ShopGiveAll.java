@@ -37,7 +37,7 @@ public class ShopGiveAll {
         Player target = (ShopGiveAll.ShopSendSender.get(player));
 
         if (DefultValue.UseChest_and_Item) {
-            Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*4, DefultValue.GUI_Name + " §8| §4giveall");
+            Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*4, "§9§4§a§b§9§5§r" + DefultValue.GUI_Name + " §8| §4giveall");
 
             ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
             ItemMeta itemMetaglass = glass.getItemMeta();
@@ -140,7 +140,7 @@ public class ShopGiveAll {
 
         } else {
             if (DefultValue.UseChest){
-                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, DefultValue.GUI_Name + " §8| §4giveall");
+                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, "§9§4§a§b§9§5§r" + DefultValue.GUI_Name + " §8| §4giveall");
 
                 ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
                 ItemMeta itemMetaglass = glass.getItemMeta();
@@ -195,7 +195,7 @@ public class ShopGiveAll {
                 inventory.setItem(15, item3);
                 player.openInventory(inventory);
             } else {
-                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, DefultValue.GUI_Name + " §8| §4giveall");
+                Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, "§9§4§a§b§9§5§r" + DefultValue.GUI_Name + " §8| §4giveall");
 
                 ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
                 ItemMeta itemMetaglass = glass.getItemMeta();

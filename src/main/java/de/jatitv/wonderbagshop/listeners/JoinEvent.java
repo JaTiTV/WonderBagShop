@@ -25,7 +25,6 @@ public class JoinEvent implements Listener {
 
     @EventHandler
     public void onJoinEvent(PlayerJoinEvent event) {
-
         Player player = event.getPlayer();
         if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
             if (Main.update_version != null) {
@@ -40,7 +39,6 @@ public class JoinEvent implements Listener {
                         "\n" + DefultValue.PrefixHC + "§cThere may be errors and it is possible that not all functions work as they should!" +
                         "\n" + DefultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them." +
                         "\n" + DefultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
-
                 if (Main.Snapshot) {
                     new BukkitRunnable() {
                         @Override
@@ -73,8 +71,6 @@ public class JoinEvent implements Listener {
                             player.sendMessage(discord);
                         }
                     }.runTaskLater(Main.getPlugin(), 200L);
-
-
                 }
             }
         }

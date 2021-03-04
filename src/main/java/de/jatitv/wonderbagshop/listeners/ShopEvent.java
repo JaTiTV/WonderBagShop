@@ -37,7 +37,7 @@ public class ShopEvent implements Listener {
         if (!(e.getWhoClicked() instanceof Player)) return;
         Player player = (Player) e.getWhoClicked();
         if (e.getInventory() != null && e.getCurrentItem() != null) {
-            if (e.getWhoClicked().getOpenInventory().getTitle().equals(DefultValue.GUI_Name)) {
+            if (e.getWhoClicked().getOpenInventory().getTitle().equals("§6§8§9§r" + DefultValue.GUI_Name)) {
                 e.setCancelled(true);
                 if (e.getCurrentItem().getType() == Material.CHEST) {
                     if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefultValueChest_1.Name)

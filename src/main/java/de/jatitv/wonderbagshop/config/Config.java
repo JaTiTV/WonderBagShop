@@ -116,6 +116,13 @@ public class Config{
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6ChestDrop §4was added to §9Config.yml§4!");
         }
 
+        if (yamlConfiguration_config.contains("WonderBags.RemoveChestInCreativemode")) {
+            DefultValue.RemoveChestInCreativemode = yamlConfiguration_config.getBoolean("WonderBags.RemoveChestInCreativemode");
+        } else {
+            yamlConfiguration_config.set("WonderBags.RemoveChestInCreativemode", true);
+            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6RemoveChestInCreativemode §4was added to §9Config.yml§4!");
+        }
+
         /**
          *Sound
          */

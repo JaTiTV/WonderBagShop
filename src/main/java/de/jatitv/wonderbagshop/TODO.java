@@ -19,16 +19,4 @@ public class TODO {
 
     // ToDo Wenn ihr ideen habt oder Wünsche denn meldet sie mir via Discord: https://discord.gg/vRyXFFterJ
 
-    /*
-    debug 1:
-    Shop, give, gift
-
-    debug 2:
-    useItem, placeChest, BreakChest
-
-    debug 3:
-    All Debug (Spam!)
-     */
-
-    // ToDo 2.3.21 Titel + Settings GUI + Debug vervollständigen  + Settings Title + Default Config
 }

@@ -33,6 +33,7 @@ public class DefultValue {
     public static Boolean UseChest = true;
     public static Boolean UseChest_and_Item = true;
     public static Boolean ChestDrop = false;
+    public static Boolean RemoveChestInCreativemode = true;
 
     public static Boolean Title_Enable = true;
 

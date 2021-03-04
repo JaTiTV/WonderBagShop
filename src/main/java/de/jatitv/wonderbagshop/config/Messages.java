@@ -227,7 +227,7 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Title.Buy")) {
             DefultValue.Title_Buy = replace(yamlConfiguration_msg.getString("Title.Buy"));
         } else {
-            yamlConfiguration_msg.set("Title.Buy", "§2You bought [wonderbag] §2for §6[price] [currency]§2!");
+            yamlConfiguration_msg.set("Title.Buy", "&2You bought [wonderbag] &2for &6[price] [currency]&2!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Title Buy §4was added to §9Messages.yml§4!");
         }
         if (yamlConfiguration_msg.contains("Title.No_money")) {

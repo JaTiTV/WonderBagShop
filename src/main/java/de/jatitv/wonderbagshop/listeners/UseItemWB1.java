@@ -12,6 +12,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockDropItemEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
@@ -28,7 +29,7 @@ public class UseItemWB1 implements Listener {
     @EventHandler
     public void InventoryClose(InventoryCloseEvent ice) {
         if (ice.getView().getTitle().equals("§6§9§l§r" + DefultValueItem_1.DisplayName)) {
-            if (DefultValue.Debug && DefultValue.DebugStage > 1){
+            if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                 Bukkit.getConsoleSender().sendMessage("§6" + ice.getPlayer().getLocation().getWorld().getName() + " §4closed GUI §6" + DefultValueItem_1.DisplayName);
             }
             for (int i = 0; i < 8; i++) {
@@ -50,7 +51,7 @@ public class UseItemWB1 implements Listener {
             if (event.getItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {
                 if (nbti.hasKey("loot_item_1")) {
                     Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 1, "§6§9§l§r" + DefultValueItem_1.DisplayName);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                         Bukkit.getConsoleSender().sendMessage("§6" + event.getPlayer().getDisplayName() + " §4used §6" + DefultValueItem_1.DisplayName);
                     }
                     ItemStack Item1 = null;
@@ -2029,17 +2030,18 @@ public class UseItemWB1 implements Listener {
                     event.setCancelled(true);
 
 
-                        new BukkitRunnable() {
-                            @Override
-                            public void run() {
-                                for (int iam = 0; iam < 8; iam++) {
-                                    ItemStack itm = player.getInventory().getItem(iam);
-                                    NBTItem nbti2 = new NBTItem(itm);
-                                    if (itm != null && nbti2.hasKey("loot_item_1")) {
+                    new BukkitRunnable() {
+                        @Override
+                        public void run() {
+                            for (int iam = 0; iam < 9; iam++) {
+                                ItemStack itm = player.getInventory().getItem(iam);
+                                if (itm != null) {
+                                NBTItem nbti2 = new NBTItem(itm);
+                                    if (nbti2.hasKey("loot_item_1")) {
                                         int amt = itm.getAmount() - 1;
                                         itm.setAmount(amt);
                                         player.getInventory().setItem(iam, amt > 0 ? itm : null);
-                                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                                        if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                                             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§6" + player.getDisplayName() + " §4set WB1 Item -1");
                                         }
                                         player.updateInventory();
@@ -2047,7 +2049,8 @@ public class UseItemWB1 implements Listener {
                                     }
                                 }
                             }
-                        }.runTaskLater(Main.getPlugin(), 5L);
+                        }
+                    }.runTaskLater(Main.getPlugin(), 5L);
                 }
             }
         }

@@ -31,7 +31,7 @@ import java.util.ArrayList;
 public class GUI_Config {
 
     public static void openConfig(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*6, "§2W§6B§9S §7| §4Settings §7| §9Config");
+        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9*5, "§2W§6B§9S §7| §4Settings §7| §9Config");
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);
 
@@ -40,7 +40,7 @@ public class GUI_Config {
         itemMetaglass.setDisplayName(" ");
         glass.setItemMeta(itemMetaglass);
         glass.setAmount(1);
-        for(int i = 0; i<9*6;i++){inventory.setItem(i, glass);}
+        for(int i = 0; i<9*5;i++){inventory.setItem(i, glass);}
 
         if (DefultValue.UpdateCheckOnJoin) {
             ItemStack item = new ItemStack(Material.GREEN_WOOL);
@@ -53,7 +53,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(3, item);
+            inventory.setItem(21, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -65,7 +65,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(3, item);
+            inventory.setItem(21, item);
         }
 
         if (DefultValue.Debug) {
@@ -79,7 +79,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(4, item);
+            inventory.setItem(22, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -91,7 +91,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(4, item);
+            inventory.setItem(22, item);
         }
 
         if (DefultValue.Debug) {
@@ -107,7 +107,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)"));
-            inventory.setItem(5, item);
+            inventory.setItem(23, item);
         } else {
             ItemStack item = new ItemStack(Material.BLUE_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -121,7 +121,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)"));
-            inventory.setItem(5, item);
+            inventory.setItem(23, item);
         }
 
 
@@ -136,7 +136,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(11, item);
+            inventory.setItem(2, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -148,7 +148,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(11, item);
+            inventory.setItem(2, item);
         }
 
         if (DefultValue.UseChest){
@@ -162,7 +162,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(12, item);
+            inventory.setItem(3, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -174,7 +174,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(12, item);
+            inventory.setItem(3, item);
         }
 
         if (DefultValue.UseChest_and_Item){
@@ -188,7 +188,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(13, item);
+            inventory.setItem(4, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -200,7 +200,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(13, item);
+            inventory.setItem(4, item);
         }
 
         if (DefultValue.ChestDrop){
@@ -214,7 +214,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(14, item);
+            inventory.setItem(5, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -226,7 +226,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(14, item);
+            inventory.setItem(5, item);
         }
 
         if (DefultValue.RemoveChestInCreativemode){
@@ -240,7 +240,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(15, item);
+            inventory.setItem(6, item);
         } else {
             ItemStack item = new ItemStack(Material.RED_WOOL);
             ItemMeta itemMeta = item.getItemMeta();
@@ -252,7 +252,7 @@ public class GUI_Config {
             itemMeta.setLore(lore);
             item.setItemMeta(itemMeta);
             item.setAmount(1);
-            inventory.setItem(15, item);
+            inventory.setItem(6, item);
         }
 
         ItemStack guiname = new ItemStack(Material.YELLOW_WOOL);
@@ -267,7 +267,7 @@ public class GUI_Config {
         itemMetaguiname.setLore(loreguiname);
         guiname.setItemMeta(itemMetaguiname);
         guiname.setAmount(1);
-        inventory.setItem(19, guiname);
+        inventory.setItem(10, guiname);
 
         ItemStack currency = new ItemStack(Material.YELLOW_WOOL);
         ItemMeta itemMetacurrency = currency.getItemMeta();
@@ -281,7 +281,7 @@ public class GUI_Config {
         itemMetacurrency.setLore(lorecurrency);
         currency.setItemMeta(itemMetacurrency);
         currency.setAmount(1);
-        inventory.setItem(25, currency);
+        inventory.setItem(16, currency);
 
         ItemStack sound = new ItemStack(Material.ORANGE_WOOL);
         ItemMeta itemMetasound = sound.getItemMeta();
@@ -292,7 +292,7 @@ public class GUI_Config {
         itemMetasound.setLore(loresound);
         sound.setItemMeta(itemMetasound);
         sound.setAmount(1);
-        inventory.setItem(27, sound);
+        inventory.setItem(18, sound);
 
         ItemStack titel = new ItemStack(Material.ORANGE_WOOL);
         ItemMeta itemMetatitel = titel.getItemMeta();
@@ -303,19 +303,7 @@ public class GUI_Config {
         itemMetatitel.setLore(loretitel);
         titel.setItemMeta(itemMetatitel);
         titel.setAmount(1);
-        inventory.setItem(35, titel);
-
-
-        ItemStack reset = new ItemStack(Material.ENCHANTING_TABLE);
-        ItemMeta itemMetareset = reset.getItemMeta();
-        itemMetareset.setDisplayName("§6Defult Config");
-        ArrayList<String> lorereset = new ArrayList<>();
-        lorereset.add("§8-------------");
-        lorereset.add("§4Reset to the default §6Config.yml");
-        itemMetareset.setLore(lorereset);
-        reset.setItemMeta(itemMetareset);
-        reset.setAmount(1);
-        inventory.setItem(31, reset);
+        inventory.setItem(26, titel);
 
         ItemStack item2 = new ItemStack(Material.LOOM);
         ItemMeta itemMeta2 = item2.getItemMeta();
@@ -326,8 +314,8 @@ public class GUI_Config {
         itemMeta2.setLore(lore2);
         item2.setItemMeta(itemMeta2);
         item2.setAmount(1);
-        inventory.setItem(49, item2);
-
+        inventory.setItem(40, item2);
+/*
         ItemStack back = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta itemMetaback = (SkullMeta) back.getItemMeta();
         itemMetaback.setDisplayName("§6Back");
@@ -339,7 +327,7 @@ public class GUI_Config {
         itemMetaback.setOwner("MHF_ArrowLeft");
         back.setItemMeta(itemMetaback);
         back.setAmount(1);
-        inventory.setItem(45, back);
+        inventory.setItem(36, back);
 
         ItemStack next = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta itemMetanext = (SkullMeta) next.getItemMeta();
@@ -352,42 +340,9 @@ public class GUI_Config {
         itemMetanext.setOwner("MHF_ArrowRight");
         next.setItemMeta(itemMetanext);
         next.setAmount(1);
-        inventory.setItem(53, next);
+        inventory.setItem(44, next);
 
-        player.openInventory(inventory);
-    }
-    public static void resetConfig(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 1, "§2W§6B§9S §7| §4RESET §7| §9Config");
-
-        ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
-        ItemMeta itemMetaglass = glass.getItemMeta();
-        itemMetaglass.setDisplayName(" ");
-        glass.setItemMeta(itemMetaglass);
-        glass.setAmount(1);
-        for(int i = 0; i<9*1;i++){inventory.setItem(i, glass);}
-
-        ItemStack item = new ItemStack(Material.GREEN_WOOL);
-        ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName("§2Yes §4Reset the Config");
-        ArrayList<String> lore = new ArrayList<>();
-        lore.add("§8-------------");
-        lore.add("§4Reset to the default §6Config.yml");
-        itemMeta.setLore(lore);
-        item.setItemMeta(itemMeta);
-        item.setAmount(1);
-        inventory.setItem(3, item);
-
-        ItemStack item2 = new ItemStack(Material.RED_WOOL);
-        ItemMeta itemMeta2 = item2.getItemMeta();
-        itemMeta2.setDisplayName("§cNO §4Do not reset Config");
-        ArrayList<String> lore2 = new ArrayList<>();
-        lore2.add("§8-------------");
-        lore2.add("§4Go back to §2W§6B§9S §7| §4Settings §7| §9Config");
-        itemMeta2.setLore(lore2);
-        item2.setItemMeta(itemMeta2);
-        item2.setAmount(1);
-        inventory.setItem(5, item2);
-
+ */
 
         player.openInventory(inventory);
     }

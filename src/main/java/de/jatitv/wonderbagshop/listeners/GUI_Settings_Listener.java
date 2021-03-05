@@ -15,8 +15,10 @@ package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.commands.Reload;
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
-import de.jatitv.wonderbagshop.settingsGUI.GUI_Config;
-import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings;
+import de.jatitv.wonderbagshop.defultValue.DefultValueItem_1;
+import de.jatitv.wonderbagshop.defultValue.DefultValueItem_2;
+import de.jatitv.wonderbagshop.defultValue.DefultValueItem_3;
+import de.jatitv.wonderbagshop.settingsGUI.*;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -44,10 +46,60 @@ public class GUI_Settings_Listener implements Listener {
 
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Config") && e.getCurrentItem().getType() == Material.CRAFTING_TABLE) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Config");
+                    }
+                }
+
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Wonderbag Chest small") && e.getCurrentItem().getType() == Material.CHEST) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    // player.closeInventory();
+                    GUI_Chest1.openConfigChest1(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Wonderbag Chest small");
+                    }
+                }
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Wonderbag Chest medium") && e.getCurrentItem().getType() == Material.CHEST) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    // player.closeInventory();
+                    GUI_Chest2.openConfigChest2(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Wonderbag Chest medium");
+                    }
+                }
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Wonderbag Chest large") && e.getCurrentItem().getType() == Material.CHEST) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    // player.closeInventory();
+                    GUI_Chest3.openConfigChest3(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Wonderbag Chest large");
+                    }
+                }
+
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Wonderbag Item small") && e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_1.Item)) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    // player.closeInventory();
+                    GUI_Item1.openConfigItem1(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Wonderbag Item small");
+                    }
+                }
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Wonderbag Item medium") && e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_2.Item)) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    // player.closeInventory();
+                    GUI_Item2.openConfigItem2(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Wonderbag Item medium");
+                    }
+                }
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Wonderbag Item large") && e.getCurrentItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {
+                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+                    // player.closeInventory();
+                    GUI_Item3.openConfigItem3(player);
+                    if (DefultValue.Debug && DefultValue.DebugStage > 1) {
+                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Wonderbag Item large");
                     }
                 }
 

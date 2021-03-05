@@ -59,7 +59,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -74,7 +74,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -93,7 +93,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -108,7 +108,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -124,7 +124,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -139,7 +139,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -155,7 +155,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -170,7 +170,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -186,7 +186,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -201,7 +201,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -217,7 +217,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -232,7 +232,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -248,7 +248,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -263,7 +263,7 @@ public class GUI_ConfigSound_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_ConfigSound.openSound(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -274,7 +274,7 @@ public class GUI_ConfigSound_Listener implements Listener {
 
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Back to Config") && e.getCurrentItem().getType() == Material.CRAFTING_TABLE) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4Back to Config");
@@ -283,7 +283,7 @@ public class GUI_ConfigSound_Listener implements Listener {
 
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Settings") && e.getCurrentItem().getType() == Material.LOOM) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     GUI_Settings.openSettings(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Settings");

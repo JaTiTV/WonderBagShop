@@ -4,8 +4,6 @@
 package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
-import de.jatitv.wonderbagshop.defultValue.DefultValueItem_1;
-import de.jatitv.wonderbagshop.defultValue.DefultValueItem_3;
 import de.jatitv.wonderbagshop.defultValue.DefultValueItem_3;
 import de.jatitv.wonderbagshop.system.Main;
 import de.tr7zw.nbtapi.NBTItem;
@@ -28,7 +26,7 @@ public class UseItemWB3 implements Listener {
     @EventHandler
     public void InventoryClose(InventoryCloseEvent ice) {
         if ((ice.getView().getTitle().equals("§6§9§l§r" + DefultValueItem_3.DisplayName))) {
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 9; i++) {
                 if (ice.getInventory().getItem(i) != null) {
                     ice.getPlayer().getLocation().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
                     if (DefultValue.Debug && DefultValue.DebugStage > 1) {

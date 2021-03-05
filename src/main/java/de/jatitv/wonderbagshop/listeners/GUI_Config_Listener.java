@@ -56,7 +56,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -71,7 +71,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -89,7 +89,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -104,7 +104,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -113,7 +113,7 @@ public class GUI_Config_Listener implements Listener {
                     }
                 }
 
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Debug Stage")) {
+                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Debug Stage") && e.getCurrentItem().getType() == Material.BLUE_WOOL) {
                     int i = yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)");
                     if (e.isRightClick()){
                         yamlConfiguration_config.set("Plugin.Debug.DebugStage_(1-3)", i + 1);
@@ -123,7 +123,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -138,11 +138,11 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set DebugStage +1");
+                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set DebugStage -1");
                         }
                     }
                 }
@@ -156,7 +156,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -171,7 +171,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -187,7 +187,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -203,7 +203,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -219,7 +219,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -234,7 +234,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -250,7 +250,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -265,7 +265,7 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -281,7 +281,7 @@ public class GUI_Config_Listener implements Listener {
                         tac.printStackTrace();
                     }
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     Config.configCreate();
                     GUI_Config.openConfig(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
@@ -296,202 +296,11 @@ public class GUI_Config_Listener implements Listener {
                             tac.printStackTrace();
                         }
                         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
+                        // player.closeInventory();
                         Config.configCreate();
                         GUI_Config.openConfig(player);
                         if (DefultValue.Debug && DefultValue.DebugStage > 1){
                             Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Remove Chest in creative mode to §6true");
-                        }
-                    }
-                }
-
-
-
-
-
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Buy") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    yamlConfiguration_config.set("Sound.Buy.Enable", false);
-                    try {
-                        yamlConfiguration_config.save(configYML);
-                    } catch (IOException tac) {
-                        tac.printStackTrace();
-                    }
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    Config.configCreate();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Buy to §6false");
-                    }
-                } else {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Buy") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                        yamlConfiguration_config.set("Sound.Buy.Enable", true);
-                        try {
-                            yamlConfiguration_config.save(configYML);
-                        } catch (IOException tac) {
-                            tac.printStackTrace();
-                        }
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
-                        Config.configCreate();
-                        GUI_Config.openConfig(player);
-                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Buy to §6true");
-                        }
-                    }
-                }
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound No Money") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    yamlConfiguration_config.set("Sound.NoMoney.Enable", false);
-                    try {
-                        yamlConfiguration_config.save(configYML);
-                    } catch (IOException tac) {
-                        tac.printStackTrace();
-                    }
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    Config.configCreate();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound No Money to §6false");
-                    }
-                } else {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound No Money") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                        yamlConfiguration_config.set("Sound.NoMoney.Enable", true);
-                        try {
-                            yamlConfiguration_config.save(configYML);
-                        } catch (IOException tac) {
-                            tac.printStackTrace();
-                        }
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
-                        Config.configCreate();
-                        GUI_Config.openConfig(player);
-                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound No Money to §6true");
-                        }
-                    }
-                }
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound No Inventory Space") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", false);
-                    try {
-                        yamlConfiguration_config.save(configYML);
-                    } catch (IOException tac) {
-                        tac.printStackTrace();
-                    }
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    Config.configCreate();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound No Inventory Space to §6false");
-                    }
-                } else {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound No Inventory Space") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                        yamlConfiguration_config.set("Sound.NoInventorySpace.Enable", true);
-                        try {
-                            yamlConfiguration_config.save(configYML);
-                        } catch (IOException tac) {
-                            tac.printStackTrace();
-                        }
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
-                        Config.configCreate();
-                        GUI_Config.openConfig(player);
-                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound No Inventory Space to §6true");
-                        }
-                    }
-                }
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Give") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    yamlConfiguration_config.set("Sound.Give.Enable", false);
-                    try {
-                        yamlConfiguration_config.save(configYML);
-                    } catch (IOException tac) {
-                        tac.printStackTrace();
-                    }
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    Config.configCreate();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Give to §6false");
-                    }
-                } else {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Give") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                        yamlConfiguration_config.set("Sound.Give.Enable", true);
-                        try {
-                            yamlConfiguration_config.save(configYML);
-                        } catch (IOException tac) {
-                            tac.printStackTrace();
-                        }
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
-                        Config.configCreate();
-                        GUI_Config.openConfig(player);
-                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Give to §6true");
-                        }
-                    }
-                }
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Gift") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    yamlConfiguration_config.set("Sound.Gift.Enable", false);
-                    try {
-                        yamlConfiguration_config.save(configYML);
-                    } catch (IOException tac) {
-                        tac.printStackTrace();
-                    }
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    Config.configCreate();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Gift to §6false");
-                    }
-                } else {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Gift") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                        yamlConfiguration_config.set("Sound.Gift.Enable", true);
-                        try {
-                            yamlConfiguration_config.save(configYML);
-                        } catch (IOException tac) {
-                            tac.printStackTrace();
-                        }
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
-                        Config.configCreate();
-                        GUI_Config.openConfig(player);
-                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Gift to §6true");
-                        }
-                    }
-                }
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Player Not Found") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    yamlConfiguration_config.set("Sound.PlayerNotFound.Enable", false);
-                    try {
-                        yamlConfiguration_config.save(configYML);
-                    } catch (IOException tac) {
-                        tac.printStackTrace();
-                    }
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    Config.configCreate();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Player Not Found to §6false");
-                    }
-                } else {
-                    if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Player Not Found") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                        yamlConfiguration_config.set("Sound.PlayerNotFound.Enable", true);
-                        try {
-                            yamlConfiguration_config.save(configYML);
-                        } catch (IOException tac) {
-                            tac.printStackTrace();
-                        }
-                        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                        player.closeInventory();
-                        Config.configCreate();
-                        GUI_Config.openConfig(player);
-                        if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                            Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4set Sound Player Not Found to §6true");
                         }
                     }
                 }
@@ -520,7 +329,7 @@ public class GUI_Config_Listener implements Listener {
 
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Sound Config") && e.getCurrentItem().getType() == Material.ORANGE_WOOL) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     GUI_ConfigSound.openSound(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Sound Config");
@@ -529,25 +338,16 @@ public class GUI_Config_Listener implements Listener {
 
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Title Config") && e.getCurrentItem().getType() == Material.ORANGE_WOOL) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     GUI_ConfigTitle.openTitel(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Title Config");
                     }
                 }
 
-
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Defult Config") && e.getCurrentItem().getType() == Material.ENCHANTING_TABLE) {
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_FLUTE, 3, 1);
-                    player.closeInventory();
-                    GUI_Config.resetConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Defult Config");
-                    }
-                }
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§6Settings") && e.getCurrentItem().getType() == Material.LOOM) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
+                    // player.closeInventory();
                     GUI_Settings.openSettings(player);
                     if (DefultValue.Debug && DefultValue.DebugStage > 1){
                         Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4open Settings");
@@ -556,32 +356,7 @@ public class GUI_Config_Listener implements Listener {
                 if (e.getCurrentItem().getType() == Material.GRAY_WOOL || e.getCurrentItem().getType() == Material.BLACK_STAINED_GLASS_PANE) {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 3, 1);
                 }
-            }
-            if (e.getWhoClicked().getOpenInventory().getTitle().equals("§2W§6B§9S §7| §4RESET §7| §9Config")) {
-                e.setCancelled(true);
 
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§2Yes §4Reset the Config") && e.getCurrentItem().getType() == Material.GREEN_WOOL) {
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_FLUTE, 3, 1);
-                    ConfigDEFULT.configDEFULTCreate();
-                    Config.configCreate();
-                    player.closeInventory();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4RESET THE CONFIG");
-                    }
-                }
-                if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§cNO §4Do not reset Config") && e.getCurrentItem().getType() == Material.RED_WOOL) {
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
-                    player.closeInventory();
-                    GUI_Config.openConfig(player);
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
-                        Bukkit.getConsoleSender().sendMessage("§6" + player.getDisplayName() + " §4back to Config from reset");
-                    }
-                }
-
-                if (e.getCurrentItem().getType() == Material.GRAY_WOOL || e.getCurrentItem().getType() == Material.BLACK_STAINED_GLASS_PANE) {
-                    player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BASS, 3, 1);
-                }
             }
         }
     }

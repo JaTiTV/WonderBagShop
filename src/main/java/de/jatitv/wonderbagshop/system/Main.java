@@ -106,6 +106,15 @@ public final class Main extends JavaPlugin {
 
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_Settings_Listener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_Config_Listener(), this);
+
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Chest1_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Chest2_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Chest3_Listener(), this);
+
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Item1_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Item2_Listener(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new GUI_Item3_Listener(), this);
+
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_ConfigSound_Listener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_ConfigTitle_Listener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new GUI_Chat_Listener(), this);

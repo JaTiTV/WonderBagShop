@@ -58,7 +58,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Shop.price")) {
-            DefultValueChest_1.price = Integer.valueOf(yamlConfiguration_WB1_Chest.getString("Shop.price"));
+            DefultValueChest_1.price = (yamlConfiguration_WB1_Chest.getInt("Shop.price"));
         } else {
             yamlConfiguration_WB1_Chest.set("Shop.price", DefultValueChest_1.price);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop price §4was added to §9WonderBag Chest small.yml§4!");
@@ -81,6 +81,9 @@ public class WonderBagChest_1 {
         }
         if (yamlConfiguration_WB1_Chest.getInt("WonderBag.Item_amount_(1-9)") > 9) {
             yamlConfiguration_WB1_Chest.set("WonderBag.Item_amount_(1-9)", 9);
+        }
+        if (yamlConfiguration_WB1_Chest.getInt("WonderBag.Item_amount_(1-9)") < 1) {
+            yamlConfiguration_WB1_Chest.set("WonderBag.Item_amount_(1-9)", 1);
         }
 
         // Items

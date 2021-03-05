@@ -207,7 +207,7 @@ public class Messages {
         if (yamlConfiguration_msg.contains("Give_&_Gift.PlayerNotFond")) {
             DefultValue.PlayerNotFound = replace(yamlConfiguration_msg.getString("Give_&_Gift.PlayerNotFond"));
         } else {
-            yamlConfiguration_msg.set("Give_&_Gift.PlayerNotFond", "[prefix] &cThe player &6[player] &cwas not found or is not online!.");
+            yamlConfiguration_msg.set("Give_&_Gift.PlayerNotFond", "[prefix] &cThe player &6[player] &cwas not found or is not online!");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Message §6Give_&_Gift PlayerNotFond §4was added to §9Messages.yml§4!");
         }
 

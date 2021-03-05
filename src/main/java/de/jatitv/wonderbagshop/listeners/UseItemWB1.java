@@ -9,12 +9,9 @@ import de.jatitv.wonderbagshop.system.Main;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockDropItemEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
@@ -32,7 +29,7 @@ public class UseItemWB1 implements Listener {
             if (DefultValue.Debug && DefultValue.DebugStage > 1) {
                 Bukkit.getConsoleSender().sendMessage("§6" + ice.getPlayer().getLocation().getWorld().getName() + " §4closed GUI §6" + DefultValueItem_1.DisplayName);
             }
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 9; i++) {
                 if (ice.getInventory().getItem(i) != null) {
                     ice.getPlayer().getLocation().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
 

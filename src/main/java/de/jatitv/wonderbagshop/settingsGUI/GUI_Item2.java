@@ -13,9 +13,7 @@
 
 package de.jatitv.wonderbagshop.settingsGUI;
 
-import de.jatitv.wonderbagshop.defultValue.DefultValue;
-import de.jatitv.wonderbagshop.defultValue.DefultValueChest_1;
-import de.jatitv.wonderbagshop.system.Main;
+import de.jatitv.wonderbagshop.defultValue.DefultValueItem_2;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -29,12 +27,12 @@ import org.bukkit.inventory.meta.SkullMeta;
 import java.io.File;
 import java.util.ArrayList;
 
-public class GUI_Chest1 {
+public class GUI_Item2 {
 
-    public static void openConfigChest1(Player player) {
-        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, "§2W§6B§9S §7| §4Settings §7| §2W§6B§7§9Chest: §9small");
-        File WB1ChestYML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/Chest/" + "small.yml");
-        YamlConfiguration yamlConfiguration_WB1_Chest = YamlConfiguration.loadConfiguration(WB1ChestYML);
+    public static void openConfigItem2(Player player) {
+        Inventory inventory = Bukkit.createInventory((InventoryHolder) null, 9 * 3, "§2W§6B§9S §7| §4Settings §7| §2W§6B§7§9Item: §9medium");
+        File WB2ItemYML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/Item/" + "medium.yml");
+        YamlConfiguration yamlConfiguration_WB2_Item = YamlConfiguration.loadConfiguration(WB2ItemYML);
 
         ItemStack glass = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
         ItemMeta itemMetaglass = glass.getItemMeta();
@@ -53,7 +51,7 @@ public class GUI_Chest1 {
         loreName.add("§7Set the §6Shop Name");
         loreName.add("§8-------------");
         loreName.add("§2Current:");
-        loreName.add(DefultValueChest_1.Name);
+        loreName.add(DefultValueItem_2.Name);
         itemMetaName.setLore(loreName);
         Name.setItemMeta(itemMetaName);
         Name.setAmount(1);
@@ -65,7 +63,7 @@ public class GUI_Chest1 {
         ArrayList<String> lorePrice = new ArrayList<>();
         lorePrice.add("§8-------------");
         lorePrice.add("§2Current:");
-        lorePrice.add(String.valueOf(yamlConfiguration_WB1_Chest.getInt("Shop.price")));
+        lorePrice.add(String.valueOf(yamlConfiguration_WB2_Item.getInt("Shop.price")));
         lorePrice.add("§7Set the §6Shop Price");
         lorePrice.add("§2Right click to increase");
         lorePrice.add("§2Left click to decrease");
@@ -83,7 +81,7 @@ public class GUI_Chest1 {
         loreDisplayName.add("§7Set the §6WonderBag DisplayName");
         loreDisplayName.add("§8-------------");
         loreDisplayName.add("§2Current:");
-        loreDisplayName.add(DefultValueChest_1.DisplayName);
+        loreDisplayName.add(DefultValueItem_2.DisplayName);
         itemMetaDisplayName.setLore(loreDisplayName);
         DisplayName.setItemMeta(itemMetaDisplayName);
         DisplayName.setAmount(1);
@@ -99,7 +97,7 @@ public class GUI_Chest1 {
         loreItem_amount.add("§2Left click to decrease");
         itemMetaItem_amount.setLore(loreItem_amount);
         Item_amount.setItemMeta(itemMetaItem_amount);
-        Item_amount.setAmount(yamlConfiguration_WB1_Chest.getInt("WonderBag.Item_amount_(1-9)"));
+        Item_amount.setAmount(yamlConfiguration_WB2_Item.getInt("WonderBag.Item_amount_(1-9)"));
         inventory.setItem(6, Item_amount);
 
         ItemStack item2 = new ItemStack(Material.LOOM);
@@ -136,6 +134,7 @@ public class GUI_Chest1 {
         next.setItemMeta(itemMetanext);
         next.setAmount(1);
         inventory.setItem(26, next);
+
  */
 
         player.openInventory(inventory);

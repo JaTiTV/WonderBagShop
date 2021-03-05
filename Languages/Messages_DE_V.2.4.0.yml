@@ -1,12 +1,11 @@
 # Deutsche Messages.yml von WonderBagShop
 
 Do_not_remove_or_change:
-  Version: This file was created with version 2.2
-  BuildNr: 22
+  Created: This file was created with version 2.4.0
+  Version: 2.4.0
   Autor: JaTiTV
   Spigot: https://www.spigotmc.org/resources/wonderbagshop.89234/
-  Discord: 'You can find more information about WonderBagShop on Discord: https://discord.gg/vRyXFFterJ'
-  '--------------------------------------------': '--------------------------------------------'
+  Discord: 'You can find more information about WonderBagShop on Discord: https://discord.com/invite/vRyXFFterJ'
 Plugin:
   NoPermissionForCommand: '[prefix] &cF[ue]r &b[cmd] &cfehlt dir die Permission &6[perm]&c!'
   NoPermission: '[prefix] &cDu hast keine Permission für &2Wonder&6Bag&9Shop!'

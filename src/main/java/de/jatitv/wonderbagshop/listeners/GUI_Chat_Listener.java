@@ -12,7 +12,9 @@ import org.bukkit.Sound;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -46,19 +48,84 @@ public class GUI_Chat_Listener implements Listener {
     YamlConfiguration yamlConfiguration_WB3_Item = YamlConfiguration.loadConfiguration(WB3ItemYML);
 
     @EventHandler
-    public void onChat(PlayerChatEvent playerChatEvent) {
+    public void onChat(AsyncPlayerChatEvent playerChatEvent) {
         Player player = playerChatEvent.getPlayer();
         if (EditChat.containsKey(player)) {
             if (playerChatEvent.getMessage().equals("cancel")) {
                 player.sendMessage(DefultValue.SettingsGUIchatIsCanceled.replace("[setting]", EditChat.get(player)));
+                switch (EditChat.get(player)) {
+                    case "GUI_Name":
+                    case "Currency":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Config.openConfig(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                    //Chest 1
+                    case "Shop Name Chest1":
+                    case "WonderBag DisplayName Chest1":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Chest1.openConfigChest1(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                    //Chest 2
+                    case "Shop Name Chest2":
+                    case "WonderBag DisplayName Chest2":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Chest2.openConfigChest2(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                    //Chest 3
+                    case "Shop Name Chest3":
+                    case "WonderBag DisplayName Chest3":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Chest3.openConfigChest3(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                    //Item 1
+                    case "Shop Name Item1":
+                    case "WonderBag DisplayName Item1":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Item1.openConfigItem1(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                    //Item 2
+                    case "Shop Name Item2":
+                    case "WonderBag DisplayName Item2":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Item2.openConfigItem2(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                    //Item 3
+                    case "Shop Name Item3":
+                    case "WonderBag DisplayName Item3":
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                GUI_Item3.openConfigItem3(player);
+                            }
+                        }.runTaskLater(Main.getPlugin(), 30L);
+                        break;
+                }
                 playerChatEvent.setCancelled(true);
                 EditChat.remove(player);
-                new BukkitRunnable() {
-                    @Override
-                    public void run() {
-                        GUI_Config.openConfig(player);
-                    }
-                }.runTaskLater(Main.getPlugin(), 30L);
                 return;
             }
             switch (EditChat.get(player)) {
@@ -75,8 +142,10 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "GUI_Name") + DefultValue.GUI_Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
+
                     new BukkitRunnable() {
                         @Override
                         public void run() {
@@ -84,11 +153,8 @@ public class GUI_Chat_Listener implements Listener {
                         }
                     }.runTaskLater(Main.getPlugin(), 30L);
                     break;
-
-
                 case "Currency":
                     yamlConfiguration_config.set("Shop.Currency", playerChatEvent.getMessage());
-
                     playerChatEvent.setCancelled(true);
                     try {
                         yamlConfiguration_config.save(configYML);
@@ -100,6 +166,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Currency") + DefultValue.Currency);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -110,7 +177,7 @@ public class GUI_Chat_Listener implements Listener {
                     }.runTaskLater(Main.getPlugin(), 30L);
                     break;
 
-            //Chest 1
+                //Chest 1
                 case "Shop Name Chest1":
                     yamlConfiguration_WB1_Chest.set("Shop.Name", playerChatEvent.getMessage());
                     playerChatEvent.setCancelled(true);
@@ -124,6 +191,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Shop Name Chest small") + DefultValueChest_1.Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -147,6 +215,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "WonderBag DisplayName Chest small") + DefultValueChest_1.DisplayName);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -171,6 +240,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Shop Name Chest medium") + DefultValueChest_2.Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -194,6 +264,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "WonderBag DisplayName Chest medium") + DefultValueChest_2.DisplayName);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -218,6 +289,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Shop Name Chest large") + DefultValueChest_3.Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -241,6 +313,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "WonderBag DisplayName Chest large") + DefultValueChest_3.DisplayName);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -266,6 +339,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Shop Name Item small") + DefultValueItem_1.Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -289,6 +363,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "WonderBag DisplayName Item small") + DefultValueItem_1.DisplayName);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -313,6 +388,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Shop Name Item medium") + DefultValueItem_2.Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -336,6 +412,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "WonderBag DisplayName Item medium") + DefultValueItem_2.DisplayName);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -360,6 +437,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "Shop Name Item large") + DefultValueItem_3.Name);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {
@@ -383,6 +461,7 @@ public class GUI_Chat_Listener implements Listener {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    EditChat.remove(player);
                     player.sendMessage(DefultValue.SettingsGUIchatSetTo.replace("[setting]", "WonderBag DisplayName Item large") + DefultValueItem_3.DisplayName);
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_HAT, 3, 1);
                     new BukkitRunnable() {

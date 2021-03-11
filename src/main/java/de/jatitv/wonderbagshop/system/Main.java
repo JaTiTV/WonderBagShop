@@ -211,8 +211,7 @@ public final class Main extends JavaPlugin {
                     }
                 });
             }
-        }, 0L, 20*60*60L);
-
+        },0L, 20*60*60L);
     }
 
     public static Plugin thisp() {

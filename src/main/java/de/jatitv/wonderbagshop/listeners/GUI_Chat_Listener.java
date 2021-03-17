@@ -1,6 +1,5 @@
 // This claas was created by JaTiTV
 
-
 package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.config.*;
@@ -12,10 +11,8 @@ import org.bukkit.Sound;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;

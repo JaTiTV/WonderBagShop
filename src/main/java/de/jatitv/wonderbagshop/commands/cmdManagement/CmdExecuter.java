@@ -196,12 +196,7 @@ public class CmdExecuter implements CommandExecutor {
 
                     case "help":
                     default:
-                        //if (player.hasPermission("wonderbagshop.command") || player.hasPermission("wonderbagshop.admin") || player.isOp()) {
                         DefultValue.Help(sender);
-                        //} else {
-                        //    player.sendMessage(DefultValue.NoPermissionForCommand.replace("[cmd]", "/wonderbagshop help")
-                        //            .replace("[perm]", "wonderbagshop.command"));
-                        //}
                         break;
 
                 }

@@ -44,9 +44,9 @@ public class Messages {
 
         yamlConfiguration_msg.set("Do_not_remove_or_change.Autor", Main.Autor);
 
-        yamlConfiguration_msg.set("Do_not_remove_or_change.Spigot", "https://www.spigotmc.org/resources/wonderbagshop.89234/");
+        yamlConfiguration_msg.set("Do_not_remove_or_change.Spigot", Main.Spigot);
 
-        yamlConfiguration_msg.set("Do_not_remove_or_change.Discord", "You can find more information about WonderBagShop on Discord: https://discord.com/invite/vRyXFFterJ");
+        yamlConfiguration_msg.set("Do_not_remove_or_change.Discord", Main.Discord);
 
 
 

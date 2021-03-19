@@ -48,7 +48,7 @@ public class ConsoleGive {
                 }
                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                         .replace("[wonderbag]", DefultValueChest_1.Name));
-                if (DefultValue.Sound_Give_Enable) {
+                if (DefultValue.Sound_Give_Enable && DefultValue.Sound_Enable) {
                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                 }
 
@@ -77,7 +77,7 @@ public class ConsoleGive {
                     }
                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                             .replace("[wonderbag]", DefultValueChest_2.Name));
-                    if (DefultValue.Sound_Give_Enable) {
+                    if (DefultValue.Sound_Give_Enable && DefultValue.Sound_Enable) {
                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                     }
                 } else {
@@ -102,7 +102,7 @@ public class ConsoleGive {
                         }
                         target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                 .replace("[wonderbag]", DefultValueChest_3.Name));
-                        if (DefultValue.Sound_Give_Enable) {
+                        if (DefultValue.Sound_Give_Enable && DefultValue.Sound_Enable) {
                             target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                         }
                     } else {
@@ -127,7 +127,7 @@ public class ConsoleGive {
                             }
                             target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                     .replace("[wonderbag]", DefultValueChest_1.Name));
-                            if (DefultValue.Sound_Give_Enable) {
+                            if (DefultValue.Sound_Give_Enable && DefultValue.Sound_Enable) {
                                 target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                             }
                         } else {
@@ -152,7 +152,7 @@ public class ConsoleGive {
                                 }
                                 target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                         .replace("[wonderbag]", DefultValueItem_2.Name));
-                                if (DefultValue.Sound_Give_Enable) {
+                                if (DefultValue.Sound_Give_Enable && DefultValue.Sound_Enable) {
                                     target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                 }
                             } else {
@@ -177,7 +177,7 @@ public class ConsoleGive {
                                     }
                                     target.sendMessage(DefultValue.giveReceived.replace("[sender]", "Console").replace("[player]", target.getName())
                                             .replace("[wonderbag]", DefultValueItem_3.Name));
-                                    if (DefultValue.Sound_Give_Enable) {
+                                    if (DefultValue.Sound_Give_Enable && DefultValue.Sound_Enable) {
                                         target.playSound(target.getLocation(), DefultValue.Sound_Give, 3, 1);
                                     }
                                 } else DefultValue.Help(sender);

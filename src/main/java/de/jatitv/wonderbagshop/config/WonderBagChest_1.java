@@ -58,7 +58,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Shop.price")) {
-            DefultValueChest_1.price = (yamlConfiguration_WB1_Chest.getInt("Shop.price"));
+            DefultValueChest_1.price = (yamlConfiguration_WB1_Chest.getDouble("Shop.price"));
         } else {
             yamlConfiguration_WB1_Chest.set("Shop.price", DefultValueChest_1.price);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop price §4was added to §9WonderBag Chest small.yml§4!");
@@ -89,7 +89,7 @@ public class WonderBagChest_1 {
         // Items
 
         if (yamlConfiguration_WB1_Chest.contains("Item1.Item")) {
-            DefultValueChest_1.Item1_Item = (yamlConfiguration_WB1_Chest.getString("Item1.Item"));
+            DefultValueChest_1.Item1_Item = (yamlConfiguration_WB1_Chest.getString("Item1.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item1.Item", DefultValueChest_1.Item1_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item1 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -102,7 +102,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item2.Item")) {
-            DefultValueChest_1.Item2_Item = (yamlConfiguration_WB1_Chest.getString("Item2.Item"));
+            DefultValueChest_1.Item2_Item = (yamlConfiguration_WB1_Chest.getString("Item2.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item2.Item", DefultValueChest_1.Item2_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item2 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -115,7 +115,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item3.Item")) {
-            DefultValueChest_1.Item3_Item = (yamlConfiguration_WB1_Chest.getString("Item3.Item"));
+            DefultValueChest_1.Item3_Item = (yamlConfiguration_WB1_Chest.getString("Item3.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item3.Item", DefultValueChest_1.Item3_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item3 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -128,7 +128,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item4.Item")) {
-            DefultValueChest_1.Item4_Item = (yamlConfiguration_WB1_Chest.getString("Item4.Item"));
+            DefultValueChest_1.Item4_Item = (yamlConfiguration_WB1_Chest.getString("Item4.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item4.Item", DefultValueChest_1.Item4_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item4 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -141,7 +141,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item5.Item")) {
-            DefultValueChest_1.Item5_Item = (yamlConfiguration_WB1_Chest.getString("Item5.Item"));
+            DefultValueChest_1.Item5_Item = (yamlConfiguration_WB1_Chest.getString("Item5.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item5.Item", DefultValueChest_1.Item5_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item5 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -154,7 +154,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item6.Item")) {
-            DefultValueChest_1.Item6_Item = (yamlConfiguration_WB1_Chest.getString("Item6.Item"));
+            DefultValueChest_1.Item6_Item = (yamlConfiguration_WB1_Chest.getString("Item6.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item6.Item", DefultValueChest_1.Item6_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item6 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -167,7 +167,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item7.Item")) {
-            DefultValueChest_1.Item7_Item = (yamlConfiguration_WB1_Chest.getString("Item7.Item"));
+            DefultValueChest_1.Item7_Item = (yamlConfiguration_WB1_Chest.getString("Item7.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item7.Item", DefultValueChest_1.Item7_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item7 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -180,7 +180,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item8.Item")) {
-            DefultValueChest_1.Item8_Item = (yamlConfiguration_WB1_Chest.getString("Item8.Item"));
+            DefultValueChest_1.Item8_Item = (yamlConfiguration_WB1_Chest.getString("Item8.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item8.Item", DefultValueChest_1.Item8_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item8 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -193,7 +193,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item9.Item")) {
-            DefultValueChest_1.Item9_Item = (yamlConfiguration_WB1_Chest.getString("Item9.Item"));
+            DefultValueChest_1.Item9_Item = (yamlConfiguration_WB1_Chest.getString("Item9.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item9.Item", DefultValueChest_1.Item9_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item9 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -206,7 +206,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item10.Item")) {
-            DefultValueChest_1.Item10_Item = (yamlConfiguration_WB1_Chest.getString("Item10.Item"));
+            DefultValueChest_1.Item10_Item = (yamlConfiguration_WB1_Chest.getString("Item10.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item10.Item", DefultValueChest_1.Item10_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item10 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -219,7 +219,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item11.Item")) {
-            DefultValueChest_1.Item11_Item = (yamlConfiguration_WB1_Chest.getString("Item11.Item"));
+            DefultValueChest_1.Item11_Item = (yamlConfiguration_WB1_Chest.getString("Item11.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item11.Item", DefultValueChest_1.Item11_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item11 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -232,7 +232,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item12.Item")) {
-            DefultValueChest_1.Item12_Item = (yamlConfiguration_WB1_Chest.getString("Item12.Item"));
+            DefultValueChest_1.Item12_Item = (yamlConfiguration_WB1_Chest.getString("Item12.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item12.Item", DefultValueChest_1.Item12_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item12 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -245,7 +245,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item13.Item")) {
-            DefultValueChest_1.Item13_Item = (yamlConfiguration_WB1_Chest.getString("Item13.Item"));
+            DefultValueChest_1.Item13_Item = (yamlConfiguration_WB1_Chest.getString("Item13.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item13.Item", DefultValueChest_1.Item13_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item13 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -258,7 +258,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item14.Item")) {
-            DefultValueChest_1.Item14_Item = (yamlConfiguration_WB1_Chest.getString("Item14.Item"));
+            DefultValueChest_1.Item14_Item = (yamlConfiguration_WB1_Chest.getString("Item14.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item14.Item", DefultValueChest_1.Item14_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item14 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -271,7 +271,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item15.Item")) {
-            DefultValueChest_1.Item15_Item = (yamlConfiguration_WB1_Chest.getString("Item15.Item"));
+            DefultValueChest_1.Item15_Item = (yamlConfiguration_WB1_Chest.getString("Item15.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item15.Item", DefultValueChest_1.Item15_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item15 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -284,7 +284,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item16.Item")) {
-            DefultValueChest_1.Item16_Item = (yamlConfiguration_WB1_Chest.getString("Item16.Item"));
+            DefultValueChest_1.Item16_Item = (yamlConfiguration_WB1_Chest.getString("Item16.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item16.Item", DefultValueChest_1.Item16_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item16 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -297,7 +297,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item17.Item")) {
-            DefultValueChest_1.Item17_Item = (yamlConfiguration_WB1_Chest.getString("Item17.Item"));
+            DefultValueChest_1.Item17_Item = (yamlConfiguration_WB1_Chest.getString("Item17.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item17.Item", DefultValueChest_1.Item17_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item17 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -310,7 +310,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item18.Item")) {
-            DefultValueChest_1.Item18_Item = (yamlConfiguration_WB1_Chest.getString("Item18.Item"));
+            DefultValueChest_1.Item18_Item = (yamlConfiguration_WB1_Chest.getString("Item18.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item18.Item", DefultValueChest_1.Item18_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item18 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -323,7 +323,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item19.Item")) {
-            DefultValueChest_1.Item19_Item = (yamlConfiguration_WB1_Chest.getString("Item19.Item"));
+            DefultValueChest_1.Item19_Item = (yamlConfiguration_WB1_Chest.getString("Item19.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item19.Item", DefultValueChest_1.Item19_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item19 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -336,7 +336,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item20.Item")) {
-            DefultValueChest_1.Item20_Item = (yamlConfiguration_WB1_Chest.getString("Item20.Item"));
+            DefultValueChest_1.Item20_Item = (yamlConfiguration_WB1_Chest.getString("Item20.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item20.Item", DefultValueChest_1.Item20_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item20 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -349,7 +349,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item21.Item")) {
-            DefultValueChest_1.Item21_Item = (yamlConfiguration_WB1_Chest.getString("Item21.Item"));
+            DefultValueChest_1.Item21_Item = (yamlConfiguration_WB1_Chest.getString("Item21.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item21.Item", DefultValueChest_1.Item21_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item21 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -362,7 +362,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item22.Item")) {
-            DefultValueChest_1.Item22_Item = (yamlConfiguration_WB1_Chest.getString("Item22.Item"));
+            DefultValueChest_1.Item22_Item = (yamlConfiguration_WB1_Chest.getString("Item22.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item22.Item", DefultValueChest_1.Item22_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item22 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -375,7 +375,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item23.Item")) {
-            DefultValueChest_1.Item23_Item = (yamlConfiguration_WB1_Chest.getString("Item23.Item"));
+            DefultValueChest_1.Item23_Item = (yamlConfiguration_WB1_Chest.getString("Item23.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item23.Item", DefultValueChest_1.Item23_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item23 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -388,7 +388,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item24.Item")) {
-            DefultValueChest_1.Item24_Item = (yamlConfiguration_WB1_Chest.getString("Item24.Item"));
+            DefultValueChest_1.Item24_Item = (yamlConfiguration_WB1_Chest.getString("Item24.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item24.Item", DefultValueChest_1.Item24_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item24 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -401,7 +401,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item25.Item")) {
-            DefultValueChest_1.Item25_Item = (yamlConfiguration_WB1_Chest.getString("Item25.Item"));
+            DefultValueChest_1.Item25_Item = (yamlConfiguration_WB1_Chest.getString("Item25.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item25.Item", DefultValueChest_1.Item25_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item25 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -414,7 +414,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item26.Item")) {
-            DefultValueChest_1.Item26_Item = (yamlConfiguration_WB1_Chest.getString("Item26.Item"));
+            DefultValueChest_1.Item26_Item = (yamlConfiguration_WB1_Chest.getString("Item26.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item26.Item", DefultValueChest_1.Item26_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item26 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -427,7 +427,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item27.Item")) {
-            DefultValueChest_1.Item27_Item = (yamlConfiguration_WB1_Chest.getString("Item27.Item"));
+            DefultValueChest_1.Item27_Item = (yamlConfiguration_WB1_Chest.getString("Item27.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item27.Item", DefultValueChest_1.Item27_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item27 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -440,7 +440,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item28.Item")) {
-            DefultValueChest_1.Item28_Item = (yamlConfiguration_WB1_Chest.getString("Item28.Item"));
+            DefultValueChest_1.Item28_Item = (yamlConfiguration_WB1_Chest.getString("Item28.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item28.Item", DefultValueChest_1.Item28_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item28 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -453,7 +453,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item29.Item")) {
-            DefultValueChest_1.Item29_Item = (yamlConfiguration_WB1_Chest.getString("Item29.Item"));
+            DefultValueChest_1.Item29_Item = (yamlConfiguration_WB1_Chest.getString("Item29.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item29.Item", DefultValueChest_1.Item29_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item29 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -466,7 +466,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item30.Item")) {
-            DefultValueChest_1.Item30_Item = (yamlConfiguration_WB1_Chest.getString("Item30.Item"));
+            DefultValueChest_1.Item30_Item = (yamlConfiguration_WB1_Chest.getString("Item30.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item30.Item", DefultValueChest_1.Item30_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item30 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -479,7 +479,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item31.Item")) {
-            DefultValueChest_1.Item31_Item = (yamlConfiguration_WB1_Chest.getString("Item31.Item"));
+            DefultValueChest_1.Item31_Item = (yamlConfiguration_WB1_Chest.getString("Item31.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item31.Item", DefultValueChest_1.Item31_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item31 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -492,7 +492,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item32.Item")) {
-            DefultValueChest_1.Item32_Item = (yamlConfiguration_WB1_Chest.getString("Item32.Item"));
+            DefultValueChest_1.Item32_Item = (yamlConfiguration_WB1_Chest.getString("Item32.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item32.Item", DefultValueChest_1.Item32_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item32 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -505,7 +505,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item33.Item")) {
-            DefultValueChest_1.Item33_Item = (yamlConfiguration_WB1_Chest.getString("Item33.Item"));
+            DefultValueChest_1.Item33_Item = (yamlConfiguration_WB1_Chest.getString("Item33.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item33.Item", DefultValueChest_1.Item33_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item33 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -518,7 +518,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item34.Item")) {
-            DefultValueChest_1.Item34_Item = (yamlConfiguration_WB1_Chest.getString("Item34.Item"));
+            DefultValueChest_1.Item34_Item = (yamlConfiguration_WB1_Chest.getString("Item34.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item34.Item", DefultValueChest_1.Item34_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item34 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -531,7 +531,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item35.Item")) {
-            DefultValueChest_1.Item35_Item = (yamlConfiguration_WB1_Chest.getString("Item35.Item"));
+            DefultValueChest_1.Item35_Item = (yamlConfiguration_WB1_Chest.getString("Item35.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item35.Item", DefultValueChest_1.Item35_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item35 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -544,7 +544,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item36.Item")) {
-            DefultValueChest_1.Item36_Item = (yamlConfiguration_WB1_Chest.getString("Item36.Item"));
+            DefultValueChest_1.Item36_Item = (yamlConfiguration_WB1_Chest.getString("Item36.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item36.Item", DefultValueChest_1.Item36_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item36 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -557,7 +557,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item37.Item")) {
-            DefultValueChest_1.Item37_Item = (yamlConfiguration_WB1_Chest.getString("Item37.Item"));
+            DefultValueChest_1.Item37_Item = (yamlConfiguration_WB1_Chest.getString("Item37.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item37.Item", DefultValueChest_1.Item37_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item37 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -570,7 +570,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item38.Item")) {
-            DefultValueChest_1.Item38_Item = (yamlConfiguration_WB1_Chest.getString("Item38.Item"));
+            DefultValueChest_1.Item38_Item = (yamlConfiguration_WB1_Chest.getString("Item38.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item38.Item", DefultValueChest_1.Item38_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item38 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -583,7 +583,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item39.Item")) {
-            DefultValueChest_1.Item39_Item = (yamlConfiguration_WB1_Chest.getString("Item39.Item"));
+            DefultValueChest_1.Item39_Item = (yamlConfiguration_WB1_Chest.getString("Item39.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item39.Item", DefultValueChest_1.Item39_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item39 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -596,7 +596,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item40.Item")) {
-            DefultValueChest_1.Item40_Item = (yamlConfiguration_WB1_Chest.getString("Item40.Item"));
+            DefultValueChest_1.Item40_Item = (yamlConfiguration_WB1_Chest.getString("Item40.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item40.Item", DefultValueChest_1.Item40_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item40 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -609,7 +609,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item41.Item")) {
-            DefultValueChest_1.Item41_Item = (yamlConfiguration_WB1_Chest.getString("Item41.Item"));
+            DefultValueChest_1.Item41_Item = (yamlConfiguration_WB1_Chest.getString("Item41.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item41.Item", DefultValueChest_1.Item41_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item41 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -622,7 +622,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item42.Item")) {
-            DefultValueChest_1.Item42_Item = (yamlConfiguration_WB1_Chest.getString("Item42.Item"));
+            DefultValueChest_1.Item42_Item = (yamlConfiguration_WB1_Chest.getString("Item42.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item42.Item", DefultValueChest_1.Item42_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item42 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -635,7 +635,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item43.Item")) {
-            DefultValueChest_1.Item43_Item = (yamlConfiguration_WB1_Chest.getString("Item43.Item"));
+            DefultValueChest_1.Item43_Item = (yamlConfiguration_WB1_Chest.getString("Item43.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item43.Item", DefultValueChest_1.Item43_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item43 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -648,7 +648,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item44.Item")) {
-            DefultValueChest_1.Item44_Item = (yamlConfiguration_WB1_Chest.getString("Item44.Item"));
+            DefultValueChest_1.Item44_Item = (yamlConfiguration_WB1_Chest.getString("Item44.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item44.Item", DefultValueChest_1.Item44_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item44 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -661,7 +661,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item45.Item")) {
-            DefultValueChest_1.Item45_Item = (yamlConfiguration_WB1_Chest.getString("Item45.Item"));
+            DefultValueChest_1.Item45_Item = (yamlConfiguration_WB1_Chest.getString("Item45.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item45.Item", DefultValueChest_1.Item45_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item45 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -674,7 +674,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item46.Item")) {
-            DefultValueChest_1.Item46_Item = (yamlConfiguration_WB1_Chest.getString("Item46.Item"));
+            DefultValueChest_1.Item46_Item = (yamlConfiguration_WB1_Chest.getString("Item46.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item46.Item", DefultValueChest_1.Item46_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item46 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -687,7 +687,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item47.Item")) {
-            DefultValueChest_1.Item47_Item = (yamlConfiguration_WB1_Chest.getString("Item47.Item"));
+            DefultValueChest_1.Item47_Item = (yamlConfiguration_WB1_Chest.getString("Item47.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item47.Item", DefultValueChest_1.Item47_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item47 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -700,7 +700,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item48.Item")) {
-            DefultValueChest_1.Item48_Item = (yamlConfiguration_WB1_Chest.getString("Item48.Item"));
+            DefultValueChest_1.Item48_Item = (yamlConfiguration_WB1_Chest.getString("Item48.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item48.Item", DefultValueChest_1.Item48_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item48 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -713,7 +713,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item49.Item")) {
-            DefultValueChest_1.Item49_Item = (yamlConfiguration_WB1_Chest.getString("Item49.Item"));
+            DefultValueChest_1.Item49_Item = (yamlConfiguration_WB1_Chest.getString("Item49.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item49.Item", DefultValueChest_1.Item49_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item49 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -726,7 +726,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item50.Item")) {
-            DefultValueChest_1.Item50_Item = (yamlConfiguration_WB1_Chest.getString("Item50.Item"));
+            DefultValueChest_1.Item50_Item = (yamlConfiguration_WB1_Chest.getString("Item50.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item50.Item", DefultValueChest_1.Item50_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item50 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -739,7 +739,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item51.Item")) {
-            DefultValueChest_1.Item51_Item = (yamlConfiguration_WB1_Chest.getString("Item51.Item"));
+            DefultValueChest_1.Item51_Item = (yamlConfiguration_WB1_Chest.getString("Item51.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item51.Item", DefultValueChest_1.Item51_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item51 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -752,7 +752,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item52.Item")) {
-            DefultValueChest_1.Item52_Item = (yamlConfiguration_WB1_Chest.getString("Item52.Item"));
+            DefultValueChest_1.Item52_Item = (yamlConfiguration_WB1_Chest.getString("Item52.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item52.Item", DefultValueChest_1.Item52_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item52 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -765,7 +765,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item53.Item")) {
-            DefultValueChest_1.Item53_Item = (yamlConfiguration_WB1_Chest.getString("Item53.Item"));
+            DefultValueChest_1.Item53_Item = (yamlConfiguration_WB1_Chest.getString("Item53.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item53.Item", DefultValueChest_1.Item53_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item53 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -778,7 +778,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item54.Item")) {
-            DefultValueChest_1.Item54_Item = (yamlConfiguration_WB1_Chest.getString("Item54.Item"));
+            DefultValueChest_1.Item54_Item = (yamlConfiguration_WB1_Chest.getString("Item54.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item54.Item", DefultValueChest_1.Item54_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item54 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -791,7 +791,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item55.Item")) {
-            DefultValueChest_1.Item55_Item = (yamlConfiguration_WB1_Chest.getString("Item55.Item"));
+            DefultValueChest_1.Item55_Item = (yamlConfiguration_WB1_Chest.getString("Item55.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item55.Item", DefultValueChest_1.Item55_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item55 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -804,7 +804,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item56.Item")) {
-            DefultValueChest_1.Item56_Item = (yamlConfiguration_WB1_Chest.getString("Item56.Item"));
+            DefultValueChest_1.Item56_Item = (yamlConfiguration_WB1_Chest.getString("Item56.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item56.Item", DefultValueChest_1.Item56_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item56 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -817,7 +817,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item57.Item")) {
-            DefultValueChest_1.Item57_Item = (yamlConfiguration_WB1_Chest.getString("Item57.Item"));
+            DefultValueChest_1.Item57_Item = (yamlConfiguration_WB1_Chest.getString("Item57.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item57.Item", DefultValueChest_1.Item57_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item57 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -830,7 +830,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item58.Item")) {
-            DefultValueChest_1.Item58_Item = (yamlConfiguration_WB1_Chest.getString("Item58.Item"));
+            DefultValueChest_1.Item58_Item = (yamlConfiguration_WB1_Chest.getString("Item58.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item58.Item", DefultValueChest_1.Item58_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item58 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -843,7 +843,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item59.Item")) {
-            DefultValueChest_1.Item59_Item = (yamlConfiguration_WB1_Chest.getString("Item59.Item"));
+            DefultValueChest_1.Item59_Item = (yamlConfiguration_WB1_Chest.getString("Item59.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item59.Item", DefultValueChest_1.Item59_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item59 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -856,7 +856,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item60.Item")) {
-            DefultValueChest_1.Item60_Item = (yamlConfiguration_WB1_Chest.getString("Item60.Item"));
+            DefultValueChest_1.Item60_Item = (yamlConfiguration_WB1_Chest.getString("Item60.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item60.Item", DefultValueChest_1.Item60_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item60 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -869,7 +869,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item61.Item")) {
-            DefultValueChest_1.Item61_Item = (yamlConfiguration_WB1_Chest.getString("Item61.Item"));
+            DefultValueChest_1.Item61_Item = (yamlConfiguration_WB1_Chest.getString("Item61.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item61.Item", DefultValueChest_1.Item61_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item61 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -882,7 +882,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item62.Item")) {
-            DefultValueChest_1.Item62_Item = (yamlConfiguration_WB1_Chest.getString("Item62.Item"));
+            DefultValueChest_1.Item62_Item = (yamlConfiguration_WB1_Chest.getString("Item62.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item62.Item", DefultValueChest_1.Item62_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item62 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -895,7 +895,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item63.Item")) {
-            DefultValueChest_1.Item63_Item = (yamlConfiguration_WB1_Chest.getString("Item63.Item"));
+            DefultValueChest_1.Item63_Item = (yamlConfiguration_WB1_Chest.getString("Item63.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item63.Item", DefultValueChest_1.Item63_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item63 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -908,7 +908,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item64.Item")) {
-            DefultValueChest_1.Item64_Item = (yamlConfiguration_WB1_Chest.getString("Item64.Item"));
+            DefultValueChest_1.Item64_Item = (yamlConfiguration_WB1_Chest.getString("Item64.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item64.Item", DefultValueChest_1.Item64_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item64 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -921,7 +921,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item65.Item")) {
-            DefultValueChest_1.Item65_Item = (yamlConfiguration_WB1_Chest.getString("Item65.Item"));
+            DefultValueChest_1.Item65_Item = (yamlConfiguration_WB1_Chest.getString("Item65.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item65.Item", DefultValueChest_1.Item65_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item65 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -934,7 +934,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item66.Item")) {
-            DefultValueChest_1.Item66_Item = (yamlConfiguration_WB1_Chest.getString("Item66.Item"));
+            DefultValueChest_1.Item66_Item = (yamlConfiguration_WB1_Chest.getString("Item66.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item66.Item", DefultValueChest_1.Item66_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item66 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -947,7 +947,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item67.Item")) {
-            DefultValueChest_1.Item67_Item = (yamlConfiguration_WB1_Chest.getString("Item67.Item"));
+            DefultValueChest_1.Item67_Item = (yamlConfiguration_WB1_Chest.getString("Item67.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item67.Item", DefultValueChest_1.Item67_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item67 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -960,7 +960,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item68.Item")) {
-            DefultValueChest_1.Item68_Item = (yamlConfiguration_WB1_Chest.getString("Item68.Item"));
+            DefultValueChest_1.Item68_Item = (yamlConfiguration_WB1_Chest.getString("Item68.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item68.Item", DefultValueChest_1.Item8_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item68 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -973,7 +973,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item69.Item")) {
-            DefultValueChest_1.Item69_Item = (yamlConfiguration_WB1_Chest.getString("Item69.Item"));
+            DefultValueChest_1.Item69_Item = (yamlConfiguration_WB1_Chest.getString("Item69.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item69.Item", DefultValueChest_1.Item69_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item69 Item §4was added to §9WonderBag Chest small.yml§4!");
@@ -986,7 +986,7 @@ public class WonderBagChest_1 {
         }
 
         if (yamlConfiguration_WB1_Chest.contains("Item70.Item")) {
-            DefultValueChest_1.Item70_Item = (yamlConfiguration_WB1_Chest.getString("Item70.Item"));
+            DefultValueChest_1.Item70_Item = (yamlConfiguration_WB1_Chest.getString("Item70.Item").toUpperCase().replace(".", "_"));
         } else {
             yamlConfiguration_WB1_Chest.set("Item70.Item", DefultValueChest_1.Item70_Item);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Item70 Item §4was added to §9WonderBag Chest small.yml§4!");

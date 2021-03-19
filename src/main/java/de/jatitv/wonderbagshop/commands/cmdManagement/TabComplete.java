@@ -46,7 +46,7 @@ public class TabComplete implements TabCompleter {
                             || sender.hasPermission("wonderbagshop.command.info")
                             || sender.hasPermission("wonderbagshop.command.give")
                             || sender.hasPermission("wonderbagshop.command.gift")
-                            || sender.hasPermission("wonderbagshop.command.admin")
+                            || sender.hasPermission("wonderbagshop.admin")
                             || sender.isOp()) {
                         list.add("help");
                     }
@@ -80,7 +80,7 @@ public class TabComplete implements TabCompleter {
                     }
                     if (sender.hasPermission("wonderbagshop.command") || sender.hasPermission("wonderbagshop.command.info")
                             || sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.gift")
-                            || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                            || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                         list.add("help");
                     }
 

@@ -14,7 +14,6 @@
 package de.jatitv.wonderbagshop.commands;
 
 import de.jatitv.wonderbagshop.defultValue.*;
-import de.jatitv.wonderbagshop.listeners.ShopEvent;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -255,7 +254,7 @@ public class Shop {
 
 
     }
-    public static boolean buy(Player p, Integer preis){
+    public static boolean buy(Player p, Double preis){
         if(Main.eco == null ){
             p.sendMessage(DefultValue.Prefix+ "\n" + DefultValue.VaultNotSetUp + "\n" + DefultValue.Prefix);
         }else {

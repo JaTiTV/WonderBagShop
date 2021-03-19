@@ -81,7 +81,7 @@ public class GiftEvent implements Listener {
                                                     .replace("[price]", String.valueOf(DefultValueChest_1.price))
                                                     .replace("[currency]", DefultValue.Currency));
                                         }
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
 
@@ -92,7 +92,7 @@ public class GiftEvent implements Listener {
                                         }
                                         target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueChest_1.Name));
-                                        if (DefultValue.Sound_Gift_Enable) {
+                                        if (DefultValue.Sound_Gift_Enable && DefultValue.Sound_Enable) {
                                             target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                         }
                                         if (DefultValue.Debug) {
@@ -105,7 +105,7 @@ public class GiftEvent implements Listener {
                                             player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
                                         } else player.sendMessage(DefultValue.No_money);
 
-                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
                                         }
                                     }
@@ -138,7 +138,7 @@ public class GiftEvent implements Listener {
                                                     .replace("[price]", String.valueOf(DefultValueChest_2.price))
                                                     .replace("[currency]", DefultValue.Currency));
                                         }
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
 
@@ -149,7 +149,7 @@ public class GiftEvent implements Listener {
                                         }
                                         target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueChest_2.Name));
-                                        if (DefultValue.Sound_Gift_Enable) {
+                                        if (DefultValue.Sound_Gift_Enable && DefultValue.Sound_Enable) {
                                             target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                         }
                                         if (DefultValue.Debug) {
@@ -162,7 +162,7 @@ public class GiftEvent implements Listener {
                                             player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
                                         } else player.sendMessage(DefultValue.No_money);
 
-                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
                                         }
                                     }
@@ -194,7 +194,7 @@ public class GiftEvent implements Listener {
                                                     .replace("[price]", String.valueOf(DefultValueChest_3.price))
                                                     .replace("[currency]", DefultValue.Currency));
                                         }
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
 
@@ -218,7 +218,7 @@ public class GiftEvent implements Listener {
                                             player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
                                         } else player.sendMessage(DefultValue.No_money);
 
-                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
                                         }
                                     }
@@ -232,7 +232,7 @@ public class GiftEvent implements Listener {
                                             , 10, 70, 20);
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
 
-                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
+                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable && DefultValue.Sound_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
                                 }
                             }
@@ -281,7 +281,7 @@ public class GiftEvent implements Listener {
                                                     .replace("[price]", String.valueOf(DefultValueItem_1.price))
                                                     .replace("[currency]", DefultValue.Currency));
                                         }
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
 
@@ -292,11 +292,11 @@ public class GiftEvent implements Listener {
                                         }
                                         target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueChest_1.Name));
-                                        if (DefultValue.Sound_Gift_Enable) {
+                                        if (DefultValue.Sound_Gift_Enable && DefultValue.Sound_Enable) {
                                             target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                         }
 
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
 
@@ -310,7 +310,7 @@ public class GiftEvent implements Listener {
                                             player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
                                         } else player.sendMessage(DefultValue.No_money);
 
-                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
                                         }
 
@@ -344,7 +344,7 @@ public class GiftEvent implements Listener {
                                                     .replace("[price]", String.valueOf(DefultValueItem_2.price))
                                                     .replace("[currency]", DefultValue.Currency));
                                         }
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
 
@@ -354,11 +354,11 @@ public class GiftEvent implements Listener {
                                         }
                                         target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueItem_2.Name));
-                                        if (DefultValue.Sound_Gift_Enable) {
+                                        if (DefultValue.Sound_Gift_Enable && DefultValue.Sound_Enable) {
                                             target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                         }
 
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
                                         if (DefultValue.Debug) {
@@ -371,7 +371,7 @@ public class GiftEvent implements Listener {
                                             player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
                                         } else player.sendMessage(DefultValue.No_money);
 
-                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
                                         }
                                     }
@@ -403,7 +403,7 @@ public class GiftEvent implements Listener {
                                                     .replace("[price]", String.valueOf(DefultValueItem_3.price))
                                                     .replace("[currency]", DefultValue.Currency));
                                         }
-                                        if (DefultValue.Sound_Shop_Buy_Enable) {
+                                        if (DefultValue.Sound_Shop_Buy_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_Buy, 3, 1);
                                         }
                                         if (DefultValue.Title_GiftReceived_Enable && DefultValue.Title_Enable) {
@@ -412,7 +412,7 @@ public class GiftEvent implements Listener {
                                         }
                                         target.sendMessage(DefultValue.giftReceived.replace("[sender]", player.getName()).replace("[player]", target.getName())
                                                 .replace("[wonderbag]", DefultValueItem_3.Name));
-                                        if (DefultValue.Sound_Gift_Enable) {
+                                        if (DefultValue.Sound_Gift_Enable && DefultValue.Sound_Enable) {
                                             target.playSound(target.getLocation(), DefultValue.Sound_Gift, 3, 1);
                                         }
                                         if (DefultValue.Debug) {
@@ -424,7 +424,7 @@ public class GiftEvent implements Listener {
                                             player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_No_money, 10, 70, 20);
                                         } else player.sendMessage(DefultValue.No_money);
 
-                                        if (DefultValue.Sound_Shop_NoMoney_Enable) {
+                                        if (DefultValue.Sound_Shop_NoMoney_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoMoney, 3, 1);
                                         }
                                     }
@@ -437,7 +437,7 @@ public class GiftEvent implements Listener {
                                             , 10, 70, 20);
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
 
-                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable) {
+                                if (DefultValue.Sound_Shop_NoInventorySpace_Enable && DefultValue.Sound_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
                                 }
                             }

@@ -16,7 +16,7 @@ package de.jatitv.wonderbagshop.defultValue;
 public class DefultValueItem_2 {
 
     public static String Name = "§2Wonder§6Bag§7: §9medium";
-    public static Integer price = 2000;
+    public static Double price = 2000.00;
     public static String Item = "PAPER";
 
     public static String DisplayName = "§2Wonder§6Bag §9medium";

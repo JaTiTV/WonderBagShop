@@ -84,41 +84,41 @@ public class DefultValue {
                 || sender.hasPermission("wonderbagshop.command.info")
                 || sender.hasPermission("wonderbagshop.command.give")
                 || sender.hasPermission("wonderbagshop.command.gift")
-                || sender.hasPermission("wonderbagshop.command.admin")
+                || sender.hasPermission("wonderbagshop.admin")
                 || sender.isOp()) {
             sender.sendMessage(PrefixHC + " §8----- §2Wonder§6Bag§9Shop §chelp §8-----");
             sender.sendMessage(PrefixHC);
-            if (sender.hasPermission("wonderbagshop.command") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+            if (sender.hasPermission("wonderbagshop.command") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                 sender.sendMessage(PrefixHC + " " + HelpHelp);
                 sender.sendMessage(PrefixHC + " " + HelpShop);
             }
-            if (sender.hasPermission("wonderbagshop.command.info") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+            if (sender.hasPermission("wonderbagshop.command.info") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                 sender.sendMessage(PrefixHC + " " + HelpInfo);
             }
-            if (sender.hasPermission("wonderbagshop.command.gift") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+            if (sender.hasPermission("wonderbagshop.command.gift") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                 sender.sendMessage(PrefixHC + " " + HelpGift);
             }
             if (sender instanceof Player) {
-                if (sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                if (sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                     sender.sendMessage(PrefixHC + " " + HelpGive);
                 }
-                if (sender.hasPermission("wonderbagshop.command.giveall") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                if (sender.hasPermission("wonderbagshop.command.giveall") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                     sender.sendMessage(PrefixHC + " " + HelpGiveAll);
                 }
             } else {
-                if (sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                if (sender.hasPermission("wonderbagshop.command.give") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                     sender.sendMessage(PrefixHC + " " + HelpGive);
                     sender.sendMessage(PrefixHC + " " + HelpGiveConsole);
                 }
-                if (sender.hasPermission("wonderbagshop.command.giveall") || sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+                if (sender.hasPermission("wonderbagshop.command.giveall") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                     sender.sendMessage(PrefixHC + " " + HelpGiveAll);
                     sender.sendMessage(PrefixHC + " " + HelpGiveAllConsole);
                 }
             }
-            if (sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+            if (sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                 sender.sendMessage(PrefixHC + " " + HelpSettings);
             }
-            if (sender.hasPermission("wonderbagshop.command.admin") || sender.isOp()) {
+            if (sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
                 sender.sendMessage(PrefixHC + " " + HelpReload);
             }
             sender.sendMessage(PrefixHC);

@@ -44,7 +44,7 @@ public class Load {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Autor: §6JaTiTV");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Version: §6" + version);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Spigot: §6" + Main.Spigot);
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Discord: §6" + Main.DiscordLoad);
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Discord: §6" + Main.DiscordLink);
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         if (yamlConfiguration_config.getBoolean("Plugin.Debug.Enable")) {
             int DebugStage = yamlConfiguration_config.getInt("Plugin.Debug.DebugStage_(1-3)");

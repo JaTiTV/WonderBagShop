@@ -18,6 +18,7 @@ import de.jatitv.wonderbagshop.defultValue.DefultValue;
 import de.jatitv.wonderbagshop.listeners.GiveAllEvent;
 import de.jatitv.wonderbagshop.system.Main;
 import de.jatitv.wonderbagshop.settingsGUI.GUI_Settings;
+import de.tr7zw.nbtapi.plugin.tests.Test;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -55,8 +56,8 @@ public class CmdExecuter implements CommandExecutor {
                             sender.sendMessage(DefultValue.PrefixHC + "§2This plugin was developed by §9JaTiTV");
                             sender.sendMessage(DefultValue.PrefixHC + "§2");
                             sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
-                            sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
-                            sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §e" + Main.DiscordLink);
+                            sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §e" + Main.Spigot);
                             sender.sendMessage(DefultValue.PrefixHC + "§2");
                             sender.sendMessage(DefultValue.PrefixHC + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
                             sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");
@@ -91,8 +92,7 @@ public class CmdExecuter implements CommandExecutor {
                                         ShopGive.openShop(player);
                                     } else {
                                         if(DefultValue.Title_PlayerNotFound_Enable && DefultValue.Title_Enable){
-                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNotFound.replace("[player]", args[1])
-                                                    , 10, 70, 20);
+                                            player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNotFound.replace("[player]", args[1]));
                                         } else player.sendMessage(DefultValue.PlayerNotFound.replace("[player]", args[1]));
                                         if (DefultValue.Sound_PlayerNotFound_Enable && DefultValue.Sound_Enable) {
                                             player.playSound(player.getLocation(), DefultValue.Sound_PlayerNotFound, 3, 1);
@@ -214,8 +214,8 @@ public class CmdExecuter implements CommandExecutor {
                         sender.sendMessage(DefultValue.PrefixHC + "§2This plugin was developed by §9JaTiTV");
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Twitch: §ehttps://www.twitch.tv/jatitv");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §ehttps://discord.gg/vRyXFFterJ");
-                        sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
+                        sender.sendMessage(DefultValue.PrefixHC + "§2Support-Discord: §e"  + Main.DiscordLink);
+                        sender.sendMessage(DefultValue.PrefixHC + "§2Spigot: §e" + Main.Spigot);
                         sender.sendMessage(DefultValue.PrefixHC + "§2");
                         sender.sendMessage(DefultValue.PrefixHC + "§2Version: §6" + Main.getPlugin().getDescription().getVersion());
                         sender.sendMessage(DefultValue.PrefixHC + "§8-----------------------------");

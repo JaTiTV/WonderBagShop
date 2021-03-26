@@ -40,7 +40,7 @@ public class UseItemWB2 implements Listener {
     @EventHandler
     public void onInteractWB2(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if (event.getItem() != null && !player.getItemInHand().getType().isAir()) {
+        if (event.getItem() != null && !player.getItemInHand().equals(DefultValueItem_2.Item)) {
             ItemStack item = player.getItemInHand();
             NBTItem nbti = new NBTItem(item);
             if (event.getItem().getType() == Material.valueOf(DefultValueItem_2.Item)) {

@@ -52,7 +52,7 @@ public final class Main extends JavaPlugin {
     public static String Spigot = "https://www.spigotmc.org/resources/wonderbagshop.89234/";
     public static String Discord = "You want to discuss and decide about current bugs, planned updates, new features?\n" +
             "Then come to our Discord. https://discord.gg/vRyXFFterJ";
-    public static String DiscordLoad = "https://discord.gg/vRyXFFterJ";
+    public static String DiscordLink = "https://discord.gg/vRyXFFterJ";
 
     // ---------------------------------------------
 
@@ -164,8 +164,8 @@ public final class Main extends JavaPlugin {
 
                 (new UpdateChecker((JavaPlugin) Main.thisp(), 89234)).getVersion((version) -> {
                     String foundVersion = Main.thisp().getDescription().getVersion();
+                    update_version = version;
                     if (!foundVersion.equalsIgnoreCase(version)) {
-                        update_version = version;
                         String updateFound = (DefultValue.PrefixHC + "§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
                         String yourVersion = (DefultValue.PrefixHC + "§6Your version §c" + foundVersion);
                         String currentVersion = (DefultValue.PrefixHC + "§6Current version: §a" + version);

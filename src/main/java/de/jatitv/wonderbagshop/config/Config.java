@@ -213,7 +213,7 @@ public class Config{
         if (yamlConfiguration_config.contains("Sound.PlayerNotFound.Sound")) {
             DefultValue.Sound_PlayerNotFound_input = replace(yamlConfiguration_config.getString("Sound.PlayerNotFound.Sound").toUpperCase().replace(".", "_"));
         } else {
-            yamlConfiguration_config.set("Sound.PlayerNotFound.Sound", "ENTITY_PLAYER_LEVELUP");
+            yamlConfiguration_config.set("Sound.PlayerNotFound.Sound", "BLOCK_NOTE_BLOCK_HARP");
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Sound Send §4was added to §9Config.yml§4!");
         }
 
@@ -360,7 +360,7 @@ public class Config{
         } catch (Exception e) {
             Bukkit.getConsoleSender().sendMessage("§4\n§4\n§4\n" + DefultValue.SoundNotFound.replace("[prefix]", DefultValue.Prefix)
                     .replace("[sound]", "§8PlayerNotFound: §6" + DefultValue.Sound_PlayerNotFound_input) + "§4\n§4\n§4\n");
-            DefultValue.Sound_PlayerNotFound = Sound.ENTITY_PLAYER_LEVELUP;
+            DefultValue.Sound_PlayerNotFound = Sound.BLOCK_NOTE_BLOCK_HARP;
         }
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Config.yml loaded successfully.");

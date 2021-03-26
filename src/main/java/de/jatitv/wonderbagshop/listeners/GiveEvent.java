@@ -171,8 +171,6 @@ public class GiveEvent implements Listener {
                                             , 10, 70, 20);
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
 
-                                player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
-
                                 if (DefultValue.Sound_Shop_NoInventorySpace_Enable && DefultValue.Sound_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
                                 }
@@ -321,8 +319,6 @@ public class GiveEvent implements Listener {
                                     player.sendTitle("§2Wonder§6Bag§9Shop", DefultValue.Title_PlayerNoInventorySpace.replace("[player]", target.getName())
                                             , 10, 70, 20);
                                 } else player.sendMessage(DefultValue.PlayerNoInventorySpace.replace("[player]", target.getName()));
-
-                                player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);
 
                                 if (DefultValue.Sound_Shop_NoInventorySpace_Enable && DefultValue.Sound_Enable) {
                                     player.playSound(player.getLocation(), DefultValue.Sound_Shop_NoInventorySpace, 3, 1);

@@ -4,6 +4,7 @@
 package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defultValue.DefultValueItem_1;
 import de.jatitv.wonderbagshop.defultValue.DefultValueItem_3;
 import de.jatitv.wonderbagshop.system.Main;
 import de.tr7zw.nbtapi.NBTItem;
@@ -40,7 +41,7 @@ public class UseItemWB3 implements Listener {
     @EventHandler
     public void onInteractWB3(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if (event.getItem() != null && !player.getItemInHand().getType().isAir()) {
+        if (event.getItem() != null && !player.getItemInHand().equals(DefultValueItem_3.Item)) {
             ItemStack item = player.getItemInHand();
             NBTItem nbti = new NBTItem(item);
             if (event.getItem().getType() == Material.valueOf(DefultValueItem_3.Item)) {

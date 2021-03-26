@@ -54,7 +54,7 @@ public class WonderBagItem_3 {
         }
 
         if (yamlConfiguration_WB3_Item.contains("Shop.price")) {
-            DefultValueItem_3.price = Integer.valueOf(yamlConfiguration_WB3_Item.getString("Shop.price"));
+            DefultValueItem_3.price = Double.valueOf(yamlConfiguration_WB3_Item.getString("Shop.price"));
         } else {
             yamlConfiguration_WB3_Item.set("Shop.price", DefultValueItem_3.price);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop price §4was added to §9WonderBag Item large.yml§4!");

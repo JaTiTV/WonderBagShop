@@ -30,7 +30,7 @@ public class WonderBagChest_1 {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag Chest small.yml load...");
 
 
-        File WB1ChestYML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/Chest/" + "small.yml");
+        File WB1ChestYML = new File(Main.thisp().getDataFolder().getPath(), "/WonderBags/Chest/" + "small.yml");
         YamlConfiguration yamlConfiguration_WB1_Chest = YamlConfiguration.loadConfiguration(WB1ChestYML);
 
 

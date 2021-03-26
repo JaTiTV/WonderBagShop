@@ -10,9 +10,10 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
+prefix: WonderBagShop
 version: 2.4.2
-main: de.jatitv.wonderbagshop.system.Main
 api-version: 1.13
+main: de.jatitv.wonderbagshop.system.Main
 softdepend:
   - Vault
   - NBTAPI

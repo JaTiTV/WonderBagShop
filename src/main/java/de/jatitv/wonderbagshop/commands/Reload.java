@@ -159,7 +159,5 @@ public class Reload {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Plugin successfully reloaded.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-
     }
 }

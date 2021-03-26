@@ -29,7 +29,7 @@ public class WonderBagChest_2 {
 
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4WonderBag Chest medium.yml load...");
 
-        File WB2ChestYML = new File(Bukkit.getServer().getPluginManager().getPlugin("WonderBagShop").getDataFolder() + "/WonderBags/Chest/" + "medium.yml");
+        File WB2ChestYML = new File(Main.thisp().getDataFolder().getPath(), "/WonderBags/Chest/" + "medium.yml");
         YamlConfiguration yamlConfiguration_WB2_Chest = YamlConfiguration.loadConfiguration(WB2ChestYML);
 
 
@@ -56,7 +56,7 @@ public class WonderBagChest_2 {
         }
 
         if (yamlConfiguration_WB2_Chest.contains("Shop.price")) {
-            DefultValueChest_2.price = Integer.valueOf(yamlConfiguration_WB2_Chest.getString("Shop.price"));
+            DefultValueChest_2.price = (yamlConfiguration_WB2_Chest.getDouble("Shop.price"));
         } else {
             yamlConfiguration_WB2_Chest.set("Shop.price", DefultValueChest_2.price);
             Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Setting §6Shop price §4was added to §9WonderBag Chest medium.yml§4!");

@@ -36,38 +36,8 @@ public class Disable {
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
 
-        Config.configDisable();
 
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        Messages.messagesDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        WonderBagChest_1.WB1ChestDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        WonderBagChest_2.WB2ChestDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        WonderBagChest_3.WB3ChestDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-        WonderBagItem_1.WB1ItemDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        WonderBagItem_2.WB2ItemDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        WonderBagItem_3.WB3ItemDisable();
-
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§8-------------------------------");
-
-        Vault.vaultDisable();
+        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Plugin successfully disabled.");
         Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4-----------------------------------------------------------------------------------");
     }
 }

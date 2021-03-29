@@ -20,5 +20,15 @@ public class TODO {
     // ToDo Wenn ihr ideen habt oder Wünsche denn meldet sie mir via Discord: https://discord.gg/vRyXFFterJ
 
 
-    // ToDo  FillItem in Config
+    // ToDo  .toUpperCase() zu Materialien / Sounds in der Config
+
+
+    // ToDo 3.0.0
+
+    // ToDo✅ Create msg bei erst load deaktivieren
+    // ToDO✅ Multi Lang (EN, DE, FR, NO)
+    // ToDo✅ bypass Permission für den Shop
+    // ToDo✅ Remove Use Item Option Default: true
+
+
 }

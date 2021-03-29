@@ -10,10 +10,9 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-prefix: WonderBagShop
-version: 2.4.2
-api-version: 1.13
+version: 2.5.0
 main: de.jatitv.wonderbagshop.system.Main
+api-version: 1.13
 softdepend:
   - Vault
   - NBTAPI
@@ -25,11 +24,17 @@ website: https://www.spigotmc.org/resources/wonderbagshop.89234/
 commands:
   wonderbagshop:
     description: Open the WonderBagShop.
-  wbs:
-    description: Open the WonderBagShop.
-  wbsrl:
-    description: Reload the WonderBagShop Plugin.
+    aliases: [wbs]
 permissions:
+  wonderbagshop.admin:
+    default: op
+    children:
+      wonderbagshop.command: true
+      wonderbagshop.command.info: true
+      wonderbagshop.command.give: true
+      wonderbagshop.command.giveall: true
+      wonderbagshop.command.gift: true
+      wonderbagshop.shop.bypass: true
   wonderbagshop.command:
     default: op
   wonderbagshop.command.info:
@@ -40,5 +45,5 @@ permissions:
     default: op
   wonderbagshop.command.gift:
     default: op
-  wonderbagshop.admin:
+  wonderbagshop.shop.bypass:
     default: op

@@ -13,7 +13,7 @@
 
 package de.jatitv.wonderbagshop.listeners;
 
-import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defaultValue.DefaultValue;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,18 +27,18 @@ public class JoinEvent implements Listener {
     public void onJoinEvent(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
-            if (Main.update_version != null) {
-                String foundVersion = Main.getPlugin().getDescription().getVersion();
-                String updateFound = (DefultValue.PrefixHC + "§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
-                String yourVersion = (DefultValue.PrefixHC + "§6Your version §c" + foundVersion);
-                String currentVersion = (DefultValue.PrefixHC + "§6Current version: §a" + Main.update_version);
-                String downloadVersion = (DefultValue.PrefixHC + "§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
-                String discord = (DefultValue.PrefixHC + "§6You can find more information about §8[§2Wonder§6Bag§9Shop§8]§6 on Discord: §ehttps://discord.com/invite/vRyXFFterJ");
-                String Snapshot = (DefultValue.PrefixHC + "§4Please note!" +
-                        "\n" + DefultValue.PrefixHC + "§cYou are using the §6" + foundVersion + " §cof WonderBagShop!" +
-                        "\n" + DefultValue.PrefixHC + "§cThere may be errors and it is possible that not all functions work as they should!" +
-                        "\n" + DefultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them." +
-                        "\n" + DefultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
+            String foundVersion = Main.getPlugin().getDescription().getVersion();
+            if (!foundVersion.equals(Main.update_version)) {
+                String updateFound = (DefaultValue.PrefixHC + "§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
+                String yourVersion = (DefaultValue.PrefixHC + "§6Your version §c" + foundVersion);
+                String currentVersion = (DefaultValue.PrefixHC + "§6Current version: §a" + Main.update_version);
+                String downloadVersion = (DefaultValue.PrefixHC + "§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
+                String discord = (DefaultValue.PrefixHC + "§6You can find more information about §8[§2Wonder§6Bag§9Shop§8]§6 on Discord: §ehttps://discord.com/invite/vRyXFFterJ");
+                String Snapshot = (DefaultValue.PrefixHC + "§4Please note!" +
+                        "\n" + DefaultValue.PrefixHC + "§cYou are using the §6" + foundVersion + " §cof WonderBagShop!" +
+                        "\n" + DefaultValue.PrefixHC + "§cThere may be errors and it is possible that not all functions work as they should!" +
+                        "\n" + DefaultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them." +
+                        "\n" + DefaultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
                 if (Main.Snapshot) {
                     new BukkitRunnable() {
                         @Override
@@ -59,7 +59,7 @@ public class JoinEvent implements Listener {
                         }
                     }.runTaskLater(Main.getPlugin(), 200L);
                 }
-                if (DefultValue.UpdateCheckOnJoin && !Main.Snapshot) {
+                if (DefaultValue.UpdateCheckOnJoin && !Main.Snapshot) {
                     new BukkitRunnable() {
                         @Override
                         public void run() {

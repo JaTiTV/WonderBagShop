@@ -13,7 +13,7 @@
 
 package de.jatitv.wonderbagshop.system;
 
-import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defaultValue.DefaultValue;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -26,21 +26,21 @@ public class Vault {
             if(rsp != null){
                 Main.eco = rsp.getProvider();
                 if(Main.eco != null){
-                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§2Vault / Economy successfully connected!");
+                    Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2Vault / Economy successfully connected!");
                 }else{
-                    Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Economy could not be connected / found!" + DefultValue.PrefixHC + "§4\n");
+                    Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4\n" + DefaultValue.PrefixHC + "§4Economy could not be connected / found!" + "§4\n" + DefaultValue.PrefixHC);
                     Thread.sleep(10000);
                 }
             }else{
-                Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Economy could not be connected / found!" + DefultValue.PrefixHC + "§4\n");
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4\n" + DefaultValue.PrefixHC + "§4Economy could not be connected / found!" + "§4\n" + DefaultValue.PrefixHC);
                 Thread.sleep(10000);
             }
         }else{
-            Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4\n" + DefultValue.PrefixHC + "§4Vault / Economy could not be connected / found!" + DefultValue.PrefixHC + "§4\n");
+            Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4\n" + DefaultValue.PrefixHC + "§4Vault / Economy could not be connected / found!" + "§4\n" + DefaultValue.PrefixHC);
             Thread.sleep(10000);
         }
     }
     public static void vaultDisable(){
-        Bukkit.getConsoleSender().sendMessage(DefultValue.PrefixHC + "§4Vault / Economy successfully deactivated.");
+        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4Vault / Economy successfully deactivated.");
     }
 }

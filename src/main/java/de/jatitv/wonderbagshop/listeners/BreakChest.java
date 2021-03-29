@@ -13,8 +13,7 @@
 
 package de.jatitv.wonderbagshop.listeners;
 
-import de.jatitv.wonderbagshop.defultValue.DefultValue;
-import de.jatitv.wonderbagshop.defultValue.DefultValueChest_3;
+import de.jatitv.wonderbagshop.defaultValue.DefaultValue;
 import de.jatitv.wonderbagshop.system.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -30,13 +29,13 @@ public class BreakChest implements Listener {
     public void onBlockBreak(BlockBreakEvent e) {
         Block block = e.getBlock();
 
-        if (DefultValue.ChestDrop){
+        if (DefaultValue.ChestDrop){
             if (block.getType() == Material.CHEST){
                 if(block.hasMetadata("WB1MD58625")){
                     block.setType(Material.AIR);
                     e.getBlock().getLocation().getWorld().dropItem(e.getBlock().getLocation(), new ItemStack(Material.CHEST));
                     block.removeMetadata("WB1MD58625", Main.getPlugin());
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                    if (DefaultValue.Debug && DefaultValue.DebugStage > 1){
                         Bukkit.getConsoleSender().sendMessage("§6" + e.getPlayer().getDisplayName() + " §4break WonderBag and drop 1 Chest");
                     }
                 }
@@ -46,7 +45,7 @@ public class BreakChest implements Listener {
                 if(block.hasMetadata("WB1MD58625")){
                     block.setType(Material.AIR);
                     block.removeMetadata("WB1MD58625", Main.getPlugin());
-                    if (DefultValue.Debug && DefultValue.DebugStage > 1){
+                    if (DefaultValue.Debug && DefaultValue.DebugStage > 1){
                         Bukkit.getConsoleSender().sendMessage("§6" + e.getPlayer().getDisplayName() + " §4break WonderBag");
                     }
                 }

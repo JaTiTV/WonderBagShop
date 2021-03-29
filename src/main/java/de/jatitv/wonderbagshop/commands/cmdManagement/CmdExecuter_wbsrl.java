@@ -13,8 +13,9 @@
 
 package de.jatitv.wonderbagshop.commands.cmdManagement;
 
-import de.jatitv.wonderbagshop.commands.Reload;
-import de.jatitv.wonderbagshop.defultValue.DefultValue;
+import de.jatitv.wonderbagshop.defaultValue.DefaultValue;
+import de.jatitv.wonderbagshop.system.Main;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,29 +26,24 @@ public class CmdExecuter_wbsrl implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
-            Player player = (Player) sender;
-            if (args.length == 0) {
-                if (sender.hasPermission("wonderbagshop.command.reload") || sender.hasPermission("wonderbagshop.admin") || sender.isOp()){
-                    try {
-                        Reload.reloadConfirmPlayer((Player) sender);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    sender.sendMessage(DefultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
-                            .replace("[perm]", "wonderbagshop.command.reload"));
-                }
-            }
-        } else {
-            if (args.length == 0) {
-                try {
-                    Reload.reloadConfirmConsole();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }else {
-                sender.sendMessage("§8[§2Wonder§6Bag§9Shop§8] §cThis command is only for players!");
+
+        Player player = (Player) sender;
+        if (args.length == 0) {
+            if (sender.hasPermission("wonderbagshop.admin") || sender.isOp()) {
+                if (sender instanceof Player) sender.sendMessage(DefaultValue.PrefixHC + DefaultValue.ReloadStart);
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§8-------------------------------");
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§6Plugin reload...");
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§8-------------------------------");
+
+                Bukkit.getServer().getPluginManager().getPlugin(Main.plugin.getName()).onEnable();
+
+                if (sender instanceof Player) sender.sendMessage(DefaultValue.PrefixHC + DefaultValue.ReloadEnd);
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§8-------------------------------");
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2Plugin successfully reloaded.");
+                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§8-------------------------------");
+            } else {
+                sender.sendMessage(DefaultValue.NoPermission.replace("[cmd]", "/wonderbagshop reload")
+                        .replace("[perm]", "wonderbagshop.command.reload"));
             }
         }
         return false;

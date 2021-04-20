@@ -37,7 +37,6 @@ public class GUI_Chest1_Listener implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) throws InterruptedException {
-
         Player player = (Player) e.getWhoClicked();
         if (e.getInventory() != null && e.getCurrentItem() != null) {
             if (e.getWhoClicked().getOpenInventory().getTitle().equals(GUI_Chest1.GUI_Chest1_name)) {

@@ -42,7 +42,7 @@ public final class Main extends JavaPlugin {
 
     public static Boolean Snapshot = false;
 
-    public static Boolean UpdateMSG = true;
+    public static Boolean UpdateMSG = false;
     public static String UpdateInfo = DefaultValue.PrefixHC + "§4You have just updated WonderBagShop! §6Here is some important information:" +
             "§4\n" + DefaultValue.PrefixHC +
             "§4\n" + DefaultValue.PrefixHC + "§4In the version 2.3.0, a critical bug was fixed that was responsible for the config not being created correctly." +

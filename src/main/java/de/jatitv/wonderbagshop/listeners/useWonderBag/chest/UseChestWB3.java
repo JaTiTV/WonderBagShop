@@ -36,7 +36,7 @@ public class UseChestWB3 implements Listener {
     @EventHandler
     public void onPlaceWB3(BlockPlaceEvent event) {
         Player player = event.getPlayer();
-        if (event.getBlock() != null && player.getItemInHand().getType() != Material.AIR) {
+        if (event.getBlock() != null && player.getItemInHand().getType() != Material.AIR && event.getItemInHand() != null) {
             Block block = event.getBlock();
             ItemStack item = event.getItemInHand();
             NBTItem nbti = new NBTItem(item);

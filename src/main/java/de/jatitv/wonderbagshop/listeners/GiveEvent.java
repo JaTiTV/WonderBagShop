@@ -51,7 +51,6 @@ public class GiveEvent implements Listener {
                             for (int i = 0; i < target.getInventory().getSize() - 5; i++) {
                                 if (target.getInventory().getItem(i) == null) {
                                     empty = true;
-
                                     break;
                                 }
                             }

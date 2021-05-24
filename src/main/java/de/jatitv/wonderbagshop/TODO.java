@@ -19,4 +19,6 @@ public class TODO {
 
     // ToDo Wenn ihr ideen habt oder Wünsche denn meldet sie mir via Discord: https://discord.gg/vRyXFFterJ
 
+    // ToDo Reload Bug
+
 }

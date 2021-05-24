@@ -27,12 +27,13 @@ public class UseItemWB3 implements Listener {
     @EventHandler
     public void InventoryClose(InventoryCloseEvent ice) {
         if (ice.getView().getTitle().equals(name)) {
+            if (DefaultValue.Debug && DefaultValue.DebugStage > 1) {
+                Bukkit.getConsoleSender().sendMessage("§6" + ice.getPlayer().getLocation().getWorld().getName() + " §4closed GUI §6" + DefaultValueItem_3.DisplayName);
+            }
             for (int i = 0; i < 9; i++) {
                 if (ice.getInventory().getItem(i) != null) {
                     ice.getPlayer().getLocation().getWorld().dropItem(ice.getPlayer().getLocation(), ice.getInventory().getItem(i));
-                    if (DefaultValue.Debug && DefaultValue.DebugStage > 1) {
-                        Bukkit.getConsoleSender().sendMessage("§6" + ice.getPlayer().getLocation().getWorld().getName() + " §4closed GUI §6" + DefaultValueItem_3.DisplayName);
-                    }
+
                 }
             }
         }

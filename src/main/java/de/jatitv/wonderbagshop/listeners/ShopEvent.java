@@ -30,6 +30,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 
@@ -61,7 +62,12 @@ public class ShopEvent implements Listener {
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefaultValueChest_1.Name)) {
                                 if (player.hasPermission("wonderbagshop.shop.bypass") || Shop.buy(player, DefaultValueChest_1.price)) {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
 
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
@@ -89,7 +95,12 @@ public class ShopEvent implements Listener {
                                     }
 
                                 } else {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     if (DefaultValue.Title_No_money_Enable && DefaultValue.Title_Enable) {
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_No_money, 10, 70, 20);
                                     } else player.sendMessage(DefaultValue.No_money);
@@ -100,7 +111,12 @@ public class ShopEvent implements Listener {
                             }
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefaultValueChest_2.Name)) {
                                 if (player.hasPermission("wonderbagshop.shop.bypass") || Shop.buy(player, DefaultValueChest_2.price)) {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
 
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
@@ -128,7 +144,12 @@ public class ShopEvent implements Listener {
                                     }
 
                                 } else {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     if (DefaultValue.Title_No_money_Enable && DefaultValue.Title_Enable) {
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_No_money, 10, 70, 20);
                                     } else player.sendMessage(DefaultValue.No_money);
@@ -141,7 +162,12 @@ public class ShopEvent implements Listener {
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefaultValueChest_3.Name)) {
                                 if (player.hasPermission("wonderbagshop.shop.bypass") || Shop.buy(player, DefaultValueChest_3.price)) {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
 
                                     ItemStack item = new ItemStack(Material.CHEST);
                                     ItemMeta itemMeta = item.getItemMeta();
@@ -168,7 +194,12 @@ public class ShopEvent implements Listener {
                                         player.playSound(player.getLocation(), DefaultValue.Sound_Shop_Buy, 3, 1);
                                     }
                                 } else {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     if (DefaultValue.Title_No_money_Enable && DefaultValue.Title_Enable) {
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_No_money, 10, 70, 20);
                                     } else player.sendMessage(DefaultValue.No_money);
@@ -179,7 +210,12 @@ public class ShopEvent implements Listener {
                             }
                         } else {
                             e.setCancelled(true);
-                            player.closeInventory();
+                            new BukkitRunnable() {
+                                @Override
+                                public void run() {
+                                    player.closeInventory();
+                                }
+                            }.runTaskLater(Main.plugin, 1L);
                             if (DefaultValue.Title_NoInventorySpace_Enable && DefaultValue.Title_Enable) {
                                 player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_NoInventorySpace, 10, 70, 20);
                             } else player.sendMessage(DefaultValue.NoInventorySpace);
@@ -209,8 +245,14 @@ public class ShopEvent implements Listener {
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefaultValueItem_1.Name)) {
                                 if (player.hasPermission("wonderbagshop.shop.bypass") || Shop.buy(player, DefaultValueItem_1.price)) {
-                                    player.closeInventory();
 
+
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     ItemStack item = new ItemStack(Material.valueOf(DefaultValueItem_1.Item));
                                     ItemMeta itemMeta = item.getItemMeta();
                                     itemMeta.setDisplayName(DefaultValueItem_1.DisplayName);
@@ -221,6 +263,7 @@ public class ShopEvent implements Listener {
                                     NBTItem nbti = new NBTItem(item);
                                     nbti.setBoolean("loot_item_1", true);
                                     player.getInventory().addItem(nbti.getItem());
+
                                     if (DefaultValue.Title_Buy_Enable && DefaultValue.Title_Enable) {
                                         if (player.hasPermission("wonderbagshop.shop.bypass")) player.sendMessage(DefaultValue.Bypass);
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_Buy.replace("[wonderbag]", DefaultValueItem_1.Name)
@@ -237,7 +280,12 @@ public class ShopEvent implements Listener {
                                     }
 
                                 } else {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     if (DefaultValue.Title_No_money_Enable && DefaultValue.Title_Enable) {
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_No_money, 10, 70, 20);
                                     } else player.sendMessage(DefaultValue.No_money);
@@ -249,8 +297,12 @@ public class ShopEvent implements Listener {
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefaultValueItem_2.Name)) {
                                 if (player.hasPermission("wonderbagshop.shop.bypass") || Shop.buy(player, DefaultValueItem_2.price)) {
-                                    player.closeInventory();
-
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     ItemStack item = new ItemStack(Material.valueOf(DefaultValueItem_2.Item));
                                     ItemMeta itemMeta = item.getItemMeta();
                                     itemMeta.setDisplayName(DefaultValueItem_2.DisplayName);
@@ -277,7 +329,12 @@ public class ShopEvent implements Listener {
                                     }
 
                                 } else {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     if (DefaultValue.Title_No_money_Enable && DefaultValue.Title_Enable) {
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_No_money, 10, 70, 20);
                                     } else player.sendMessage(DefaultValue.No_money);
@@ -289,7 +346,12 @@ public class ShopEvent implements Listener {
 
                             if (e.getCurrentItem().getItemMeta().getDisplayName().equals(DefaultValueItem_3.Name)) {
                                 if (player.hasPermission("wonderbagshop.shop.bypass") || Shop.buy(player, DefaultValueItem_3.price)) {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
 
                                     ItemStack item = new ItemStack(Material.valueOf(DefaultValueItem_3.Item));
                                     ItemMeta itemMeta = item.getItemMeta();
@@ -317,7 +379,12 @@ public class ShopEvent implements Listener {
                                     }
 
                                 } else {
-                                    player.closeInventory();
+                                    new BukkitRunnable() {
+                                        @Override
+                                        public void run() {
+                                            player.closeInventory();
+                                        }
+                                    }.runTaskLater(Main.plugin, 1L);
                                     if (DefaultValue.Title_No_money_Enable && DefaultValue.Title_Enable) {
                                         player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_No_money, 10, 70, 20);
                                     } else player.sendMessage(DefaultValue.No_money);
@@ -329,7 +396,12 @@ public class ShopEvent implements Listener {
 
                         } else {
                             e.setCancelled(true);
-                            player.closeInventory();
+                            new BukkitRunnable() {
+                                @Override
+                                public void run() {
+                                    player.closeInventory();
+                                }
+                            }.runTaskLater(Main.plugin, 1L);
                             if (DefaultValue.Title_NoInventorySpace_Enable && DefaultValue.Title_Enable) {
                                 player.sendTitle("§2Wonder§6Bag§9Shop", DefaultValue.Title_NoInventorySpace, 10, 70, 20);
                             } else player.sendMessage(DefaultValue.NoInventorySpace);

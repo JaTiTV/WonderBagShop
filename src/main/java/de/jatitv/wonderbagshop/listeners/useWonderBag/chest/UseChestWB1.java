@@ -39,6 +39,9 @@ public class UseChestWB1 implements Listener {
         if (event.getBlock() != null && player.getItemInHand().getType() != Material.AIR && event.getItemInHand() != null) {
             Block block = event.getBlock();
             ItemStack item = event.getItemInHand();
+            if (item == null){
+                return;
+            }
             NBTItem nbti = new NBTItem(item);
             if (block.getType() == Material.CHEST) {
                 if (nbti.hasKey("loot_chest_1")) {

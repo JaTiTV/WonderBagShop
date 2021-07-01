@@ -15,6 +15,7 @@ package de.jatitv.wonderbagshop.system;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,6 +24,37 @@ import java.util.Scanner;
 import java.util.function.Consumer;
 
 public class UpdateChecker {
+
+    public static void onUpdateCheck() {
+        int taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.plugin, new Runnable() {
+            public void run() {
+                (new UpdateChecker(Main.plugin, Main.SpigotID)).getVersion((update_version) -> {
+                    String foundVersion = Main.plugin.getDescription().getVersion();
+                    Main.update_version = update_version;
+                    if (!foundVersion.equalsIgnoreCase(update_version)) {
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                Bukkit.getConsoleSender().sendMessage("§4=========== §8[§2Wonder§6Bag§9Shop§8] §4===========");
+                                Bukkit.getConsoleSender().sendMessage("§6A new version was found!");
+                                Bukkit.getConsoleSender().sendMessage("§6Your version: §c" + foundVersion + " §7- §6Current version: §a" + update_version);
+                                Bukkit.getConsoleSender().sendMessage("§6You can download it here: §e" + Main.Spigot);
+                                Bukkit.getConsoleSender().sendMessage("§6You can find more information on Discord: §e" + Main.Discord);
+                                Bukkit.getConsoleSender().sendMessage("§4=========== §8[§2Wonder§6Bag§9Shop§8] §4===========");
+                            }
+                        }.runTaskLater(Main.plugin, 600L);
+                    } else {
+                        new BukkitRunnable() {
+                            @Override
+                            public void run() {
+                                Bukkit.getConsoleSender().sendMessage(Main.Prefix + " §2No update found");
+                            }
+                        }.runTaskLater(Main.plugin, 120L);
+                    }
+                });
+            }
+        }, 0L, 20 * 60 * 60L);
+    }
 
     private JavaPlugin plugin;
     private int resourceId;

@@ -16,6 +16,7 @@ import java.io.File;
 public class Messages_Select {
 
     public static void selectCreate() {
+        Long long_ = Long.valueOf(System.currentTimeMillis());
 
         Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4Select language...");
 
@@ -81,7 +82,7 @@ public class Messages_Select {
         DefaultValue.Title_PlayerNotFound = replace(yamlConfiguration_msg.getString("Title.Give_&_Gift.PlayerNotFond"));
         DefaultValue.Title_PlayerNoInventorySpace = replace(yamlConfiguration_msg.getString("Title.Give_&_Gift.PlayerNoInventorySpace"));
 
-        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2Language successfully selected to: §6" + selectMSG);
+        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2Language successfully selected to: §6" + selectMSG + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
     }
 
 

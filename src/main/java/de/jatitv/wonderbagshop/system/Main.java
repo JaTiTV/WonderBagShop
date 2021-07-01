@@ -32,31 +32,28 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 
+import java.util.List;
 import java.util.logging.Logger;
 
 public final class Main extends JavaPlugin {
 
     // Debug Settings
 
+
+    public static String Prefix = "§8[§2Wonder§6Bag§9Shop§8]";
+
+    public static String Version;
+
+    public static List<String> Autor;
+    public static Integer SpigotID = 89234;
+    public static Integer BstatsID = 10342;
+    public static String Spigot = "https://www.spigotmc.org/resources/" + SpigotID;
+    public static String Discord = "https://discord.gg/vRyXFFterJ";
+
+
     public static Boolean Bstats = true;
 
     public static Boolean Snapshot = false;
-
-    public static Boolean UpdateMSG = false;
-    public static String UpdateInfo = DefaultValue.PrefixHC + "§4You have just updated WonderBagShop! §6Here is some important information:" +
-            "§4\n" + DefaultValue.PrefixHC +
-            "§4\n" + DefaultValue.PrefixHC + "§4In the version 2.3.0, a critical bug was fixed that was responsible for the config not being created correctly." +
-            "§4\n" + DefaultValue.PrefixHC + "§4Therefore, you must urgently recreate it!" +
-            "§4\n" + DefaultValue.PrefixHC + "§4Otherwise I can not guarantee that the plugin will work properly." +
-            "§4\n" + DefaultValue.PrefixHC + "§4If you encounter any errors please contact me via Discord: §6https://discord.com/invite/vRyXFFterJ" +
-            "§4\n" + DefaultValue.PrefixHC +
-            "§4\n" + DefaultValue.PrefixHC + "§2Sincerely JaTiTV";
-
-    public static String Autor = "JaTiTV";
-    public static String Spigot = "https://www.spigotmc.org/resources/wonderbagshop.89234/";
-    public static String Discord = "You want to discuss and decide about current bugs, planned updates, new features?\n" +
-            "Then come to our Discord. https://discord.gg/vRyXFFterJ";
-    public static String DiscordLoad = "https://discord.gg/vRyXFFterJ";
 
     // ---------------------------------------------
 
@@ -102,7 +99,7 @@ public final class Main extends JavaPlugin {
             return;
         }
         try {
-            Load.LoadSend(getDescription().getVersion());
+            Load.LoadSend(Prefix, Autor, Version, Spigot, Discord);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -144,7 +141,7 @@ public final class Main extends JavaPlugin {
 
 
         if (Main.Bstats) {
-            int pluginId = 10342; // <-- Replace with the id of your plugin!
+            int pluginId = BstatsID; // <-- Replace with the id of your plugin!
             Metrics metrics = new Metrics(this, pluginId);
             metrics.addCustomChart(new Metrics.SimplePie("updatecheckonjoin", () -> String.valueOf(DefaultValue.UpdateCheckOnJoin)));
             metrics.addCustomChart(new Metrics.SimplePie("itemnumbers", () -> String.valueOf(DefaultValue.ItemNumbers)));
@@ -178,61 +175,6 @@ public final class Main extends JavaPlugin {
         // Optional: Add custom charts
         // metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
 
-        int taskID = Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-
-
-            public void run() {
-
-                (new UpdateChecker((JavaPlugin) Main.thisp(), 89234)).getVersion((version) -> {
-                    String foundVersion = Main.thisp().getDescription().getVersion();
-                    update_version = version;
-                    if (!foundVersion.equalsIgnoreCase(version)) {
-                        String updateFound = (DefaultValue.PrefixHC + "§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
-                        String yourVersion = (DefaultValue.PrefixHC + "§6Your version §c" + foundVersion);
-                        String currentVersion = (DefaultValue.PrefixHC + "§6Current version: §a" + version);
-                        String downloadVersion = (DefaultValue.PrefixHC + "§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
-                        String discord = (DefaultValue.PrefixHC + "§6You can find more information about §8[§2Wonder§6Bag§9Shop§8]§6 on Discord: §ehttps://discord.com/invite/vRyXFFterJ");
-                        String SnapshotConsole = (DefaultValue.PrefixHC + "§6" +
-                                "\n" + DefaultValue.PrefixHC + "§4Please note!§6" +
-                                "\n" + DefaultValue.PrefixHC + "§4You are using the §6" + foundVersion + " §4of WonderBagShop!§6" +
-                                "\n" + DefaultValue.PrefixHC + "§4There may be errors and it is possible that not all functions work as they should!§6" +
-                                "\n" + DefaultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them!§6" +
-                                "\n" + DefaultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
-
-                        if (Main.Snapshot) {
-                            new BukkitRunnable() {
-                                @Override
-                                public void run() {
-                                    Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + " ");
-                                    Bukkit.getConsoleSender().sendMessage(SnapshotConsole);
-                                    Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + " ");
-                                }
-                            }.runTaskLater(Main.getPlugin(), 300L);
-                        }
-
-                        new BukkitRunnable() {
-                            @Override
-                            public void run() {
-                                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + " ");
-                                Bukkit.getConsoleSender().sendMessage(updateFound);
-                                Bukkit.getConsoleSender().sendMessage(yourVersion);
-                                Bukkit.getConsoleSender().sendMessage(currentVersion);
-                                Bukkit.getConsoleSender().sendMessage(downloadVersion);
-                                Bukkit.getConsoleSender().sendMessage(discord);
-                                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + " ");
-                            }
-                        }.runTaskLater(Main.getPlugin(), 600L);
-                    } else {
-                        new BukkitRunnable() {
-                            @Override
-                            public void run() {
-                                Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2No update found");
-                            }
-                        }.runTaskLater(Main.getPlugin(), 120L);
-                    }
-                });
-            }
-        }, 0L, 20 * 60 * 60L);
     }
 
     public static Plugin thisp() {
@@ -242,7 +184,12 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        if (minecraft1_8 | minecraft1_9 | minecraft1_10 | minecraft1_11 | minecraft1_12) return;
-        Disable.disableSend(getDescription().getVersion());
+        send.console(Main.Prefix + "§4============================= §8[§2Wonder§6Bag§9Shop§8] §4=============================");
+        send.console(Prefix + " §2Autor: §6" + String.valueOf(Autor).replace("[", "").replace("]", "") );
+        send.console(Prefix + " §2Version: §6" + Version);
+        send.console(Prefix + " §2Spigot: §6" + Spigot);
+        send.console(Prefix + " §2Discord: §6" + Discord);
+        send.console(Main.Prefix + " §4Plugin successfully disabled.");
+        send.console(Main.Prefix + "§4========================================================================");
     }
 }

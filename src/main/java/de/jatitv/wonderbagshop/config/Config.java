@@ -26,6 +26,7 @@ public class Config{
 
 
     public static void configCreate() throws InterruptedException {
+        Long long_ = Long.valueOf(System.currentTimeMillis());
 
         File configYML = new File(Main.thisp().getDataFolder().getPath(), "Config.yml");
         YamlConfiguration yamlConfiguration_config = YamlConfiguration.loadConfiguration(configYML);

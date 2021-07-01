@@ -42,6 +42,9 @@ public class UseChestWB3 implements Listener {
             if (item == null){
                 return;
             }
+            if (item.getType() == Material.AIR){
+                return;
+            }
             NBTItem nbti = new NBTItem(item);
             if (block.getType() == Material.CHEST) {
                 if (nbti.hasKey("loot_chest_3")) {

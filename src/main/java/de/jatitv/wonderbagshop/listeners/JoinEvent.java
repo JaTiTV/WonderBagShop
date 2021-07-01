@@ -15,62 +15,39 @@ package de.jatitv.wonderbagshop.listeners;
 
 import de.jatitv.wonderbagshop.defaultValue.DefaultValue;
 import de.jatitv.wonderbagshop.system.Main;
+import de.jatitv.wonderbagshop.system.TextBuilder;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class JoinEvent implements Listener {
 
     @EventHandler
-    public void onJoinEvent(PlayerJoinEvent event) {
+    public void onJoinEvent(PlayerLoginEvent event) {
         Player player = event.getPlayer();
+        String foundVersion = Main.plugin.getDescription().getVersion();
         if (player.hasPermission("wonderbagshop.admin") || player.isOp()) {
-            String foundVersion = Main.getPlugin().getDescription().getVersion();
             if (!foundVersion.equals(Main.update_version)) {
-                String updateFound = (DefaultValue.PrefixHC + "§6A new version of §8[§2Wonder§6Bag§9Shop§8]§6 was found!");
-                String yourVersion = (DefaultValue.PrefixHC + "§6Your version §c" + foundVersion);
-                String currentVersion = (DefaultValue.PrefixHC + "§6Current version: §a" + Main.update_version);
-                String downloadVersion = (DefaultValue.PrefixHC + "§6You can download it here: §ehttps://www.spigotmc.org/resources/wonderbagshop.89234/");
-                String discord = (DefaultValue.PrefixHC + "§6You can find more information about §8[§2Wonder§6Bag§9Shop§8]§6 on Discord: §ehttps://discord.com/invite/vRyXFFterJ");
-                String Snapshot = (DefaultValue.PrefixHC + "§4Please note!" +
-                        "\n" + DefaultValue.PrefixHC + "§cYou are using the §6" + foundVersion + " §cof WonderBagShop!" +
-                        "\n" + DefaultValue.PrefixHC + "§cThere may be errors and it is possible that not all functions work as they should!" +
-                        "\n" + DefaultValue.PrefixHC + "§2If there are any bugs, please report them to me via Discord so I can fix them." +
-                        "\n" + DefaultValue.PrefixHC + "§7https://discord.gg/vRyXFFterJ");
-                if (Main.Snapshot) {
+                if (DefaultValue.UpdateCheckOnJoin) {
                     new BukkitRunnable() {
                         @Override
                         public void run() {
-                            player.sendMessage("\n \n \n \n \n \n" + Snapshot);
+                            player.sendMessage("§4============ §8[§2Wonder§6Bag§9Shop§8] §4============");
+                            player.sendMessage("§6A new version was found!");
+                            TextComponent comp = new TextBuilder("§6Your version: §c" + foundVersion + " §7- §6Current version: §a" + Main.update_version)
+                                    .addHover("§6You can download it here: §e" + Main.Spigot).addClickEvent(ClickEvent.Action.OPEN_URL, Main.Spigot).build();
+                            player.spigot().sendMessage(comp);
+                            TextComponent comp2 = new TextBuilder("§6You can find more information on Discord.")
+                                    .addHover("§e" + Main.Discord).addClickEvent(ClickEvent.Action.OPEN_URL, Main.Discord).build();
+                            player.spigot().sendMessage(comp2);
+                            player.sendMessage("§4============ §8[§2Wonder§6Bag§9Shop§8] §4============");
                         }
-                    }.runTaskLater(Main.getPlugin(), 100L);
-
-                    new BukkitRunnable() {
-                        @Override
-                        public void run() {
-                            player.sendMessage("\n ");
-                            player.sendMessage(updateFound);
-                            player.sendMessage(yourVersion);
-                            player.sendMessage(currentVersion);
-                            player.sendMessage(downloadVersion);
-                            player.sendMessage(discord);
-                        }
-                    }.runTaskLater(Main.getPlugin(), 200L);
-                }
-                if (DefaultValue.UpdateCheckOnJoin && !Main.Snapshot) {
-                    new BukkitRunnable() {
-                        @Override
-                        public void run() {
-                            player.sendMessage("\n ");
-                            player.sendMessage(updateFound);
-                            player.sendMessage(yourVersion);
-                            player.sendMessage(currentVersion);
-                            player.sendMessage(downloadVersion);
-                            player.sendMessage(discord);
-                        }
-                    }.runTaskLater(Main.getPlugin(), 200L);
+                    }.runTaskLater(Main.plugin, 200L);
                 }
             }
         }

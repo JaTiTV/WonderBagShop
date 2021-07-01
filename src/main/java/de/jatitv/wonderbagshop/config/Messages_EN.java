@@ -24,6 +24,7 @@ import java.io.IOException;
 public class Messages_EN {
 
     public static void messagesCreate() throws InterruptedException {
+        Long long_ = Long.valueOf(System.currentTimeMillis());
 
 
         Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4en_EN_Messages.yml load...");
@@ -215,7 +216,7 @@ public class Messages_EN {
             e.printStackTrace();
         }
 
-        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2en_EN_Messages.yml loaded successfully.");
+        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2en_EN_Messages.yml loaded successfully." + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
 
     }
 

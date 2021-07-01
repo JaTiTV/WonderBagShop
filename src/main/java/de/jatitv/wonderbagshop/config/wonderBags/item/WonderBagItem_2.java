@@ -25,6 +25,7 @@ import java.io.IOException;
 public class WonderBagItem_2 {
 
     public static void WB2ItemCreate() throws InterruptedException {
+        Long long_ = Long.valueOf(System.currentTimeMillis());
 
 
         Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4WonderBag Item medium.yml load...");
@@ -1008,7 +1009,7 @@ public class WonderBagItem_2 {
         }
 
 
-        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2WonderBag Item medium.yml loaded successfully.");
+        Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§2WonderBag Item medium.yml loaded successfully." + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
 
     }
 

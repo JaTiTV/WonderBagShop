@@ -10,7 +10,7 @@
 # ___________________________________________________________________________________
 
 name: WonderBagShop
-version: 2.6.1
+version: 2.6.2
 main: de.jatitv.wonderbagshop.system.Main
 api-version: 1.13
 softdepend:

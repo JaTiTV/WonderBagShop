@@ -82,6 +82,8 @@ public final class Main extends JavaPlugin {
 
         plugin = this;
         a = this;
+        Autor = plugin.getDescription().getAuthors();
+        Version = plugin.getDescription().getVersion();
 
         minecraft1_8 = Bukkit.getServer().getClass().getPackage().getName().contains("1_8");
         minecraft1_9 = Bukkit.getServer().getClass().getPackage().getName().contains("1_9");

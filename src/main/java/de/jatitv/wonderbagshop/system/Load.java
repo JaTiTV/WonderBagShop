@@ -41,7 +41,7 @@ public class Load {
             }
         }
 
-        send.console(Main.Prefix + "§4============================= §8[§2Wonder§6Bag§9Shop§8] §4=============================");
+        send.console(DefaultValue.PrefixHC + "§4============================= §8[§2Wonder§6Bag§9Shop§8] §4=============================");
         send.console(DefaultValue.PrefixHC + "§2");
         send.console(DefaultValue.PrefixHC + "§2 __          __             _           §6____               §9_____ _                 ");
         send.console(DefaultValue.PrefixHC + "§2 \\ \\        / /            | |         §6|  _ \\             §9/ ____| |                ");
@@ -52,10 +52,10 @@ public class Load {
         send.console(DefaultValue.PrefixHC + "§2                                                    §6 __/ |                  §9| |    ");
         send.console(DefaultValue.PrefixHC + "§2                                                    §6|___/                   §9|_|    ");
         send.console(DefaultValue.PrefixHC + "§2");
-        send.console(Prefix + " §2Autor: §6" + String.valueOf(Autor).replace("[", "").replace("]", ""));
-        send.console(Prefix + " §2Version: §6" + Version);
-        send.console(Prefix + " §2Spigot: §6" + Spigot);
-        send.console(Prefix + " §2Discord: §6" + Discord);
+        send.console(DefaultValue.PrefixHC + "§2Autor: §6" + String.valueOf(Autor).replace("[", "").replace("]", ""));
+        send.console(DefaultValue.PrefixHC + "§2Version: §6" + Version);
+        send.console(DefaultValue.PrefixHC + "§2Spigot: §6" + Spigot);
+        send.console(DefaultValue.PrefixHC + "§2Discord: §6" + Discord);
 
         Bukkit.getConsoleSender().sendMessage(DefaultValue.PrefixHC + "§4Plugin load...");
 
@@ -98,7 +98,7 @@ public class Load {
         }
         UpdateChecker.onUpdateCheck();
         send.console(DefaultValue.PrefixHC + "§8-------------------------------");
-        send.console(Prefix + " §2Plugin loaded successfully." + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
-        send.console(Main.Prefix + "§4========================================================================");
+        send.console(DefaultValue.PrefixHC + "§2Plugin loaded successfully." + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
+        send.console(DefaultValue.PrefixHC + "§4========================================================================");
     }
 }

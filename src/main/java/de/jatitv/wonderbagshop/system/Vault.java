@@ -27,17 +27,17 @@ public class Vault {
             if(rsp != null){
                 Main.eco = rsp.getProvider();
                 if(Main.eco != null){
-                    send.console(Main.Prefix + " §2Vault / Economy successfully connected!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
+                    send.console(DefaultValue.PrefixHC + "§2Vault / Economy successfully connected!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
                 }else{
-                    send.console(Main.Prefix + " §4Economy could not be connected / found!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
+                    send.console(DefaultValue.PrefixHC + "§4Economy could not be connected / found!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
                     Thread.sleep(10000);
                 }
             }else{
-                send.console(Main.Prefix + " §4Economy could not be connected / found!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
+                send.console(DefaultValue.PrefixHC + "§4Economy could not be connected / found!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
                 Thread.sleep(10000);
             }
         }else{
-            send.console(Main.Prefix + " §4Vault / Economy could not be connected / found!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
+            send.console(DefaultValue.PrefixHC + "§4Vault / Economy could not be connected / found!" + " §7- §e" + (System.currentTimeMillis() - long_.longValue()) + "ms");
             Thread.sleep(10000);
         }
     }
